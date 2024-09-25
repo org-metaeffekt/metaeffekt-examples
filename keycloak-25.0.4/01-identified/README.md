@@ -17,6 +17,9 @@ This folder shows results from different tools capturing the identified software
 - run through spdx-java validator and provide result
 
 ### keycloak-25.0.4-spdx-2.3_syft.json
+
+```./syft quay.io/keycloak/keycloak:25.0.4 -o spdx-json | json_pp > keycloak-25.0.4-spdx-2.3_syft.json```
+
 - run through spdx-java validator and provide result
 - some checksums are corrupt showing 0000000000000000000000000000000000000000; verify / understand
 - missing artifacts (jars without version):
@@ -29,6 +32,9 @@ This folder shows results from different tools capturing the identified software
   - e.g. usr/share/terminfo/E/Eterm covered by ncurses-base-6.2
 
 ### keycloak-25.0.4-spdx-2.3_trivy.json
+
+```trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3_trivy.json quay.io/keycloak/keycloak:25.0.4```
+
 - run through spdx-java validator and provide result
 - interesting use of "attributionTexts" in the different elements; is this expected?
 - interesting use of sourceInfo for embedded files.

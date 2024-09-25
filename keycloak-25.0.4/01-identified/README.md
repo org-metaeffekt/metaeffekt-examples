@@ -18,7 +18,9 @@ This folder shows results from different tools capturing the identified software
 
 ### keycloak-25.0.4-spdx-2.3_syft.json
 
-```./syft quay.io/keycloak/keycloak:25.0.4 -o spdx-json | json_pp > keycloak-25.0.4-spdx-2.3_syft.json```
+```bash
+./syft quay.io/keycloak/keycloak:25.0.4 -o spdx-json | json_pp > keycloak-25.0.4-spdx-2.3_syft.json
+```
 
 - run through spdx-java validator and provide result
 - some checksums are corrupt showing 0000000000000000000000000000000000000000; verify / understand
@@ -33,7 +35,9 @@ This folder shows results from different tools capturing the identified software
 
 ### keycloak-25.0.4-spdx-2.3_trivy.json
 
-```trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3_trivy.json quay.io/keycloak/keycloak:25.0.4```
+```bash
+trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3_trivy.json quay.io/keycloak/keycloak:25.0.4
+```
 
 - run through spdx-java validator and provide result
 - interesting use of "attributionTexts" in the different elements; is this expected?

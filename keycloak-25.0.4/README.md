@@ -4,7 +4,7 @@ Obtaining the software asset:
 
     docker pull quay.io/keycloak/keycloak-25.0.4
 
-## Identified
+## Analyzed
 
 The software asset is analyzed applying different tool; the results are gathered. 
 This step only covers a pure identification of software components.

@@ -4,6 +4,28 @@ This folder shows results from different tools capturing the identified software
 It also includes the corresponding validation.txt files which contain the results of verifying the integrity of 
 the document through the use of the spdx-java-library.
 
+Trivy version: 
+
+```
+Version: 0.55.2
+Vulnerability DB:
+Version: 2
+UpdatedAt: 2024-09-25 12:18:48.835171446 +0000 UTC
+NextUpdate: 2024-09-25 18:18:48.835171095 +0000 UTC
+DownloadedAt: 2024-09-25 17:37:43.067741 +0000 UTC
+Java DB:
+Version: 1
+UpdatedAt: 2024-09-20 01:06:28.762321776 +0000 UTC
+NextUpdate: 2024-09-23 01:06:28.762321626 +0000 UTC
+DownloadedAt: 2024-09-25 17:41:27.963498 +0000 UTC
+```
+
+Syft Version:
+
+```
+syft 1.13.0
+```
+
 ## Observations and TODOs
 
 ### keycloak-25.0.4-spdx-2.3_spdx-exporter_current.json
@@ -50,7 +72,22 @@ trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3
   - "LGPLv2+ AND LGPLv2+ WITH exceptions AND GPL-2.0-or-later AND GPL-2.0-or-later WITH exceptions AND BSD-3-Clause AND Inner-Net AND ISC AND Unlicense AND GFDL"
 - sometimes only provides MD5 or SHA1 checksums
 
+### keycloak-25.0.4-spdx-exporter-v3.0.json
+
+- provide validation output
+
 ## Further Details to be added
 - export CycloneDX files using the different tools
 - also include scnacode extractcode results
 - optional: produce diffs of the given results
+
+## SPDX-Java Validation
+
+Simple code to reproduce the validation output:
+
+```java
+final File file = new File("keycloak-25.0.4-spdx-2.3_spdx-exporter_current.json");
+final SpdxDocument spdxDocument = SpdxToolsHelper.deserializeDocument(file);
+final List<String> verify = spdxDocument.verify("2.3");
+verify.forEach(System.out::println);
+```

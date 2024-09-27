@@ -1,5 +1,6 @@
 {
   "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
     "created" : "2024-09-26T18:46:14Z",
     "creators" : [ "Organization: {metaeffekt} GmbH", "Person: NONE", "Tool: {metaeffekt} SpdxExporterV2" ],

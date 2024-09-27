@@ -1,7 +1,7 @@
 # Analyzed
 
 This folder shows results from different tools capturing the identified software assets in the given container image.
-It also includes the corresponding validation.txt files which contain the results of verifying the integrity of 
+It also includes the corresponding validation.md files which contain the results of verifying the integrity of 
 the document through the use of the spdx-java-library.
 
 Trivy version: 

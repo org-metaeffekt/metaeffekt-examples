@@ -1,13 +1,24 @@
 ## Validation Results
 
-Validation errors and warnings (spdx-java validation for 2.3):
+### Validation Information
+
+Document name: keycloak-25.0.4-spdx-2.3_syft.json <br>
+Spec version: 2.3 <br>
+Creation date: Wed Oct 02 15:21:21 CEST 2024 <br>
+
+### Manual Adjustments
 
 Syft generally produces absolute file names in the fileName field. SPDX regards that as an error. When removing the
 slashes the document validates successfully without warning or error.
 
+### Additional Remarks
+
+No additional remarks.
+
+### Results
 ```
-Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/aliases in setup in setup in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak
 Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/bashrc in setup in setup in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak
+Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/aliases in setup in setup in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak
 Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/crypto-policies/back-ends/nss.config in crypto-policies in crypto-policies in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak
 Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/crypto-policies/config in crypto-policies in crypto-policies in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak
 Relationship error: File name name must be relative - the name must not start with a '/'.  Found /etc/crypto-policies/local.d/nss-p11-kit.config in nss in nss in p11-kit-trust in p11-kit-trust in alternatives in alternatives in glibc in glibc in basesystem in basesystem in filesystem in filesystem in bash in bash in ncurses-libs in ncurses-libs in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak in quay.io/keycloak/keycloak

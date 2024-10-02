@@ -1,7 +1,23 @@
 ## Validation Results
 
-Validation errors and warnings (spdx-java validation for 2.3):
+### Validation Information
+
+Document name: ae-example-keycloak-25.0.4.xlsx-spdx-v2.json <br>
+Spec version: 2.3 <br>
+Creation date: Wed Oct 02 16:03:03 CEST 2024 <br>
+
+### Manual Adjustments
+
+No manual adjustments were made.
+
+### Additional Remarks
+
+No additional remarks.
+
+### Results
+The following results were generated as described in the **Validation Process** section
+of the **README.md** and filtered to remove duplicate warnings or errors.
 
 ```
-<none>
+Document validation returned no errors or warnings.
 ```

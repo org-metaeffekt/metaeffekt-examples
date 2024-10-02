@@ -1,6 +1,16 @@
 ## Validation Results
 
-## Remark
+### Validation Information
+
+Document name: keycloak-25.0.4-spdx-2.3_trivy.json <br>
+Spec version: 2.3 <br>
+Creation date: Wed Oct 02 15:21:21 CEST 2024 <br>
+
+### Manual Adjustments
+
+The source document was manually corrected to it would deserialize.
+
+### Additional Remarks
 
 Document could not be validated:
 

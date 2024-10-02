@@ -81,13 +81,22 @@ trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3
 - also include scnacode extractcode results
 - optional: produce diffs of the given results
 
-## SPDX-Java Validation
+## Validation Process
 
 Simple code to reproduce the validation output:
 
+For Spdx 2.3
 ```java
 final File file = new File("keycloak-25.0.4-spdx-2.3_spdx-exporter_current.json");
 final SpdxDocument spdxDocument = SpdxToolsHelper.deserializeDocument(file);
 final List<String> verify = spdxDocument.verify("2.3");
+verify.forEach(System.out::println);
+```
+
+For Spdx 3.0.1
+```java
+final File file = new File("keycloak-25.0.4-spdx-3.0.1_spdx-exporter.json");
+final SpdxDocument spdxDocument = SpdxToolsHelper.deserializeDocument(file);
+final List<String> verify = spdxDocument.verify("3.0.1");
 verify.forEach(System.out::println);
 ```

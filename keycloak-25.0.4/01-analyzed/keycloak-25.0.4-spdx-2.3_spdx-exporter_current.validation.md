@@ -2,9 +2,9 @@
 
 ### Validation Information
 
-Document name: keycloak-25.0.4-spdx-2.3_syft.json <br>
+Document name: keycloak-25.0.4-spdx-2.3_spdx-exporter_current.json <br>
 Spec version: 2.3 <br>
-Creation date: Wed Oct 02 15:21:21 CEST 2024 <br>
+Creation date: Mon Oct 07 15:17:10 CEST 2024 <br>
 
 ### Manual Adjustments
 
@@ -19,5 +19,5 @@ The following results were generated as described in the **Validation Process** 
 of the **README.md** and filtered to remove duplicate warnings or errors.
 
 ```
-Missing required creators.
+Document validation returned no errors or warnings.
 ```

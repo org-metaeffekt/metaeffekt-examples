@@ -2,9 +2,9 @@
 
 ### Validation Information
 
-Document name: ae-example-keycloak-25.0.4.xlsx-spdx-v2.json <br>
+Document name: keycloak-25.0.4-spdx-2.3_spdx-exporter_new.json <br>
 Spec version: 2.3 <br>
-Creation date: Wed Oct 02 16:03:03 CEST 2024 <br>
+Creation date: Mon Oct 07 15:11:34 CEST 2024 <br>
 
 ### Manual Adjustments
 

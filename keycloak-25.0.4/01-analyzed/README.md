@@ -29,8 +29,8 @@ syft 1.13.0
 ## Observations and TODOs
 
 ### keycloak-25.0.4-spdx-2.3_spdx-exporter_current.json
-- do not insert generic PURLs; if the purl is yet unknown, omit it.
-- include fileName on package-level (relative path)
+- ~~do not insert generic PURLs; if the purl is yet unknown, omit it.~~
+- ~~include fileName on package-level (relative path)~~
 - consider plain name as name or <groupid>:<artifactId> (what about classifiers?); consider full maven notation for jars
   (identifies the file uniquely; competes with PURL)
  
@@ -74,7 +74,7 @@ trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3
 
 ### keycloak-25.0.4-spdx-exporter-v3.0.json
 
-- provide validation output
+- ~~provide validation output~~
 
 ## Further Details to be added
 - export CycloneDX files using the different tools

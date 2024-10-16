@@ -4,7 +4,7 @@
 
 Document name: keycloak-25.0.4-cyclone-dx-1.6_exporter.json <br>
 Spec version: 1.6 <br>
-Creation date: Wed Oct 09 16:20:43 CEST 2024 <br>
+Creation date: Wed Oct 16 16:15:30 CEST 2024 <br>
 
 ### Manual Adjustments
 

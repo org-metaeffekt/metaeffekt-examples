@@ -1,17 +1,17 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:cea7a074-bac9-46ac-958f-c5c953fba89b",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2024-10-09T14:20:43Z",
+    "timestamp" : "2024-10-16T14:15:30Z",
     "tools" : [ {
       "name" : "{metaeffekt} Kontinuum CycloneDX Exporter"
     } ],
-    "authors" : [ {
-      "name" : "NONE"
-    } ],
+    "authors" : [ { } ],
     "manufacturer" : {
-      "name" : "{metaeffekt} GmbH"
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com/" ]
     }
   },
   "components" : [ {

@@ -1,0 +1,315 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "This document uses metaeffekt universe version 1.10-SNAPSHOT.",
+    "created" : "2024-09-11T14:01:36Z",
+    "creators" : [ "Organization: metaeffekt GmbH (https://metaeffekt.com)", "Person: Contact (contact@metaeffekt.com)", "Tool: metaeffekt Kontinuum" ],
+    "licenseListVersion" : "3.25"
+  },
+  "name" : "bfoss24-001-keycloak-cli",
+  "dataLicense" : "CC0-1.0",
+  "hasExtractedLicensingInfos" : [ {
+    "licenseId" : "LicenseRef-ae-Apache",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-ae-BSD",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-ae-BSD-3-Clause-copyright-holder",
+    "extractedText" : "Copyright <YEAR> <COPYRIGHT HOLDER>\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\nlist of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\nthis list of conditions and the following disclaimer in the documentation\nand/or other materials provided with the distribution.\n\n3. Neither <variable3rdClause> may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY <copyrightHolderNoWarranty> \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL <copyrightHolderNoLiability> BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+  }, {
+    "licenseId" : "LicenseRef-ae-EDL-1.0",
+    "extractedText" : "Eclipse Distribution License - v 1.0\n\nCopyright (c) 2007, Eclipse Foundation, Inc. and its licensors.\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the\nfollowing conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nNeither the name of the Eclipse Foundation, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+  }, {
+    "licenseId" : "LicenseRef-ae-W3C",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-scancode-public-domain",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  } ],
+  "documentNamespace" : "https://metaeffekt.com/spdx/doc/95c3fc56-5327-404e-bc82-8ad118a3a708",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-gnrtd0",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "62ae28187ed2b062813da6a9d567bfee733c341582699b62dd980230729a0313"
+    } ],
+    "copyrightText" : "Copyright (c) 2000-2011 INRIA, France Telecom // All rights reserved.\nCopyright (c) 2000-2011 INRIA, France Telecom All rights reserved.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "(BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-BSD-3-Clause-copyright-holder)",
+    "licenseDeclared" : "(BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-BSD-3-Clause-copyright-holder)",
+    "name" : "byte-buddy-1.14.11.jar",
+    "versionInfo" : "1.14.11"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd1",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ec87bfb55f22cbd1b21e2190eeda28b2b312ed2a431ee49fbdcc01812d04a5e4"
+    } ],
+    "copyrightText" : "Copyright 2002-2024 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:generic/commons-codec.jar@1.16.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://commons.apache.org/proper/commons-codec/",
+    "licenseConcluded" : "(Beerware AND BSD-3-Clause AND Apache-2.0 AND LicenseRef-scancode-public-domain)",
+    "licenseDeclared" : "(Beerware AND LicenseRef-ae-BSD AND Apache-2.0 AND LicenseRef-scancode-public-domain)",
+    "name" : "commons-codec-1.16.1.jar",
+    "versionInfo" : "1.16.1"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd2",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "f12176263ea25f4e78bb4fa4b36d335a29738dde6a8123e1b6da89a655d150ff"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "http://www.jboss.org",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "versionInfo" : "1.0.0.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd3",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+    } ],
+    "copyrightText" : "Copyright 1999-2022 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "http://hc.apache.org/httpcomponents-client-ga",
+    "licenseConcluded" : "(MPL-2.0 AND Apache-2.0)",
+    "licenseDeclared" : "(MPL-2.0 AND Apache-2.0)",
+    "name" : "httpclient-4.5.14.jar",
+    "versionInfo" : "4.5.14"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd4",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+    } ],
+    "copyrightText" : "Copyright 2005-2022 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "http://hc.apache.org/httpcomponents-core-ga",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "httpcore-4.4.16.jar",
+    "versionInfo" : "4.4.16"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd5",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "55be130f6a68038088a261856c4e383ce79957a0fc1a29ecb213a9efd6ef4389"
+    } ],
+    "copyrightText" : "Copyright (c) 2021 The\nCopyright (c) 2022 Daniel Lemire. BSL\nCopyright (c) 2023 Werner Randelshofer, Switzerland\nCopyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)\nCopyright 2018-2020 Raffaello Giulietti\nCopyright 2020 Tim Buktu\nCopyright 2022 Tim Buktu",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/FasterXML/jackson-core",
+    "licenseConcluded" : "(BSD-2-Clause AND BSD-3-Clause AND Apache-2.0 AND MIT)",
+    "licenseDeclared" : "(LicenseRef-ae-BSD AND BSD-2-Clause AND Apache-2.0 AND MIT)",
+    "name" : "jackson-core-2.17.0.jar",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd6",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "d0ed5b54cb1b0bbb0828e24ce752a43a006dc188b34e3a4ae3238acc7b637418"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/FasterXML/jackson",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jackson-databind-2.17.0.jar",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd7",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "b090239968a0ae5a172472f4014dbd97133af9426d91bf4805a6ba5fd90d80f1"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd8",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "f53f578dd0eb4170c195a4e215c59a38abfb4123dcb95dd902fef92876499fbb"
+    } ],
+    "copyrightText" : "Copyright (c) 1997, 2021 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 1997, 2022 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 2018 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 2019, current.year Eclipse Foundation. All rights reserved.\nCopyright (c) 2021 Oracle and/or its affiliates. All rights reserved.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/jakartaee/jaf-api",
+    "licenseConcluded" : "(W3C AND BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-EDL-1.0 AND MIT AND GPL-2.0-only WITH Classpath-exception-2.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND OFL-1.1)",
+    "licenseDeclared" : "(W3C AND BSD-3-Clause AND LicenseRef-ae-EDL-1.0 AND MIT AND GPL-2.0-only WITH Classpath-exception-2.0 AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND (Apache-2.0 OR EPL-2.0) AND OFL-1.1)",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "versionInfo" : "2.1.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd9",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "7b119460de174195aca412dfed52ca0bbef0ece26c2d74301b6172cfadf4ff59"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "versionInfo" : "3.5.3.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd10",
+    "checksums" : [ {
+      "algorithm" : "MD5",
+      "checksumValue" : "7dbcacae59579b92f94cc1e333b445fd"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    }, {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    } ],
+    "copyrightText" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates\nCopyright (c) 2000-2011 INRIA, France Telecom\nCopyright (c) 2018 Oracle and/or its affiliates\nCopyright (c) 2019, current.year Eclipse Foundation\nCopyright (c) 2021 Oracle and/or its affiliates\nCopyright (c) 2021 The\nCopyright (c) 2022 Daniel Lemire. BSL\nCopyright (c) 2023 Werner Randelshofer, Switzerland\nCopyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)\nCopyright 2020 Tim Buktu\nCopyright 2022 Tim Buktu",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "(W3C AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-ae-EDL-1.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND MPL-2.0 AND Apache-2.0 AND GPL-2.0-only WITH Classpath-exception-2.0 AND MIT AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND OFL-1.1)",
+    "licenseDeclared" : "(GPL-2.0-only WITH Classpath-exception-2.0 AND W3C AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-ae-EDL-1.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND LicenseRef-ae-BSD AND MPL-2.0 AND Apache-2.0 AND MIT AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND (Apache-2.0 OR EPL-2.0) AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND OFL-1.1)",
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "versionInfo" : "25.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd11",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "b482278365efc155fe8de06aac2e715911df4abc01562391a958cae2ce941814"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "(Apache-2.0 AND LicenseRef-ae-Apache)",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "versionInfo" : "3.1.1"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd10"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd9"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd8"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd7"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd4"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd3"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd6"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd5"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd0"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd11"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd2"
+  }, {
+    "spdxElementId" : "SPDXRef-gnrtd10",
+    "relationshipType" : "CONTAINS",
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+  } ]
+}

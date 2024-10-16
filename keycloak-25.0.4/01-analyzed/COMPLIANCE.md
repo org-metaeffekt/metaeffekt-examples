@@ -55,16 +55,8 @@ and will not be repeated here. Fields not lead by "SBOM" should be considered co
 
 ## Section Specific Statements
 
-### Trivy and Svyft
+### Trivy and Syft
 
-Regarding Trivy and Svyft, we will not make any assumptions or predictions about their 
-level of compliance, as we have no insight into their operations, future development plans,
-or whether they intend to align with the BSI and NTIA guidelines at all.
-
-### Current development status
-
-
-### Future development
-
-
-
+Regarding Trivy and Syft, we will not make any assumptions or predictions about their level of compliance, as we have 
+no insight into their operations, future development plans, or whether they intend to align with the BSI TR or NTIA 
+guidelines in the future.

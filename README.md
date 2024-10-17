@@ -34,4 +34,4 @@ Commits require sign-off.
 
 The example structure follows a basline pipeline:
 
-[docs/basic-pipeline.png]
+![Basic Pipeline](docs/basic-pipeline.png)

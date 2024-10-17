@@ -29,3 +29,9 @@ Feel free to contribute. The general agreement is that your contribution must be
 (CC-BY-4.0) or Creative Commons Zero 1.0 (CC0-1.0).
 
 Commits require sign-off.
+
+## Process
+
+The example structure follows a basline pipeline:
+
+[docs/basic-pipeline.png]

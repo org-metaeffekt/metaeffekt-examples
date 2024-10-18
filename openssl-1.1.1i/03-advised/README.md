@@ -11,6 +11,6 @@ Please explore the following aspects:
 
 You can also use 
 
-https://metaeffekt.com/security/dashboards/openssl-1.1.1o-dashboard.html
+* https://metaeffekt.com/security/dashboards/openssl-1.1.1o-dashboard.html
 
 to assess the same dashboard directly.

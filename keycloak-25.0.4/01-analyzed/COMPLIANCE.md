@@ -28,9 +28,10 @@ with information. This does not mean that ALL components will have a value assig
 predict that MOST components will have a value assigned after stage completion.
 
 For all applicable
-- x : [Field exists] [Value exists]
-- o : [Field exists] [Value might exist]
-- _ : [Field might exist] [Value might exist]
+
+- x : Field exists | Value exists
+- o : Field exists | Value might exist
+- _ : Field might exist | Value might exist
 
 ### NTIA Minimum SBOM Elements
 
@@ -39,10 +40,10 @@ For all applicable
 | SBOM Author          | x                | x            | x          | x             | MUST exist    | analyzed           |
 | SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Version              |                  |              |            |               | SOME exist    | resolved           |
-| Unique Identifiers   |                  |              |            |               | SOME exist    |                    |
+| Version              | o                | o            |            | -             | SOME exist    | resolved           |
+| Unique Identifiers   | o                | o            |            | o             | SOME exist    |                    |
 | Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Supplier             |                  |              |            |               | SOME exist    |                    |
+| Supplier             | o                | o            |            | o             | SOME exist    |                    |
 
 ### TR-03183 Part 2
 
@@ -51,19 +52,19 @@ For all applicable
 | SBOM Creator         | x                | x            | x          | x             | MUST exist    | analyzed           |
 | SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed           |
 | SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Creator URL          | o                |              |            | x             | SOME exist    | resolved           |
+| Creator URL          | o                | o            |            | -             | SOME exist    | resolved           |
 | Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Version              | o                | o            | o          | -             | MUST exist    | resolved           |
 | Filename             | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Associated Licenses  | o                | o            |            |               | SOME exist    | scanned            |
 | Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned            |
-| Executable           | o                |              |            |               | NONE exist    |                    |
-| Archive              | o                |              |            | -             | SOME exist    |                    |
-| Structured           | o                |              |            | -             | SOME exist    |                    |
-| Source Code URI      | o                |              |            |               | NONE exist    | resolved           |
-| Deployable URI       | o                |              |            |               | SOME exist    | resolved           |
-| Unique Identifiers   | o                | o            | o          | o             | SOME exist    | resolved           |
+| Executable           | o                | o            |            |               | NONE exist    |                    |
+| Archive              | o                | o            |            | -             | SOME exist    |                    |
+| Structured           | o                | o            |            | -             | SOME exist    |                    |
+| Source Code URI      | o                | o            |            |               | NONE exist    | resolved           |
+| Deployable URI       | o                | o            |            |               | SOME exist    | resolved           |
+| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved           |
 | SHA-512 Hash         |                  |              |            |               | NONE exist    |                    |
 
 ## Section Specific Statements

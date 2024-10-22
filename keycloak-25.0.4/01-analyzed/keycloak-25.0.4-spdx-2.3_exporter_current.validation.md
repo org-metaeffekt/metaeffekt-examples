@@ -2,9 +2,9 @@
 
 ### Validation Information
 
-Document name: keycloak-25.0.4-spdx-2.3_spdx-exporter_new.json <br>
+Document name: keycloak-25.0.4-spdx-2.3_exporter_current.json <br>
 Spec version: 2.3 <br>
-Creation date: Wed Oct 16 16:11:45 CEST 2024 <br>
+Creation date: Tue Oct 22 10:48:36 CEST 2024 <br>
 
 ### Manual Adjustments
 

@@ -1,0 +1,332 @@
+{
+  "@context" : "https://spdx.org/rdf/3.0.1/spdx-context.jsonld",
+  "@graph" : [ {
+    "@id" : "_:creationInfo_0",
+    "type" : "CreationInfo",
+    "specVersion" : "3.0.1",
+    "createdUsing" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2tool" ],
+    "created" : "2024-10-22T10:51:27Z",
+    "comment" : "The tool with which this document was created is still in alpha. The information contained in this document might not be accurate."
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd2",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd3",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd5",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd4",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd6",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd4",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd8",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd7",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd9",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd7",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd11",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd10",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd12",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd10",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd14",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd13",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd15",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd13",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd17",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd16",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd18",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd16",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd20",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd19",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd21",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd19",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd23",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd22",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd24",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd22",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd25",
+    "type" : "Relationship",
+    "relationshipType" : "describes",
+    "to" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd0", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd16", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd19", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd4", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd7", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd22", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd10", "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd13" ],
+    "from" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbom",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2document",
+    "type" : "SpdxDocument",
+    "rootElement" : [ "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbom" ],
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2tool",
+    "type" : "Tool",
+    "name" : "metaeffekt spdx-exporter-v3.0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbomSPDXRef-gnrtd1",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "NOASSERTION",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2organization",
+    "type" : "Organization",
+    "name" : "{metaeffekt} GmbH",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd0",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.14.0",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "9791ac85aa3cdad633e512192766f84995eddf4db188cc42facec52a0dae15e8"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "4876a0d414b3c2a01c10b6e96d70b62d"
+    } ],
+    "name" : "log4j-api-2.14.0.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.0?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd4",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.14.0",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "f04ee9c0ac417471d9127b5880b96c3147249f20674a8dbb88e9949d855382a8"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "e257b0562453f73eabac1bc3181ba33e79d193ed"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "862c00b2e854f9c0f1e8d8409d23d899"
+    } ],
+    "name" : "log4j-core-2.14.0.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd7",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "953a41d016a5bc9d9e8ace3d90d499c9"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "1f6bb90bc78fa69506841c24c33f29790650e092dab96a35e56441f045ae216d"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "f049146a55991e89c0f04b9624f1f69e1763d80f"
+    } ],
+    "name" : "spring-aop-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-aop.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd10",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "b354f54923139b8d86bc594452a6f53329da7b1e0c2a6402f9d9ca24837091ad"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "24cc27af89edc1581a57bb15bc160d2353f40a0e"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "04f9dc60a62319c97f140b8ebc98f797"
+    } ],
+    "name" : "spring-beans-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-beans.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd13",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "ce6042492f042131f602bdc83fcb412b142bdac5"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "731eee1b78fa01375de10fd95b84455d"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "25efd823c10f3afbe1b65efe97370def475d202dd91477f66eb5685e746e2819"
+    } ],
+    "name" : "spring-context-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-context.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd16",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "00ffcfb2671e0c8cab33f75939c97e04127fcfd2e0670032c59b6f48d791b772"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "d87ad19f9d8b9a3f1a143db5a2be34c61751aaa2"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "b9d1f2454c4b7d94c058026d272dfc3c"
+    } ],
+    "name" : "spring-core-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-core.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd19",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "5cd4c568522b7084afac5d2ac6cb945b797b3f16"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "1d268dba90b89964d97254bae133a431"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "f196833d5bca28b12fbb4ae3265c0f0c4dc9fb4c726b3bfc4cabcc129cd21cf7"
+    } ],
+    "name" : "spring-expression-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-expression.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2SPDXRef-gnrtd22",
+    "type" : "software_Package",
+    "software_packageVersion" : "5.3.14",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "b522a60d1f37b8f8b3b6ab58617df850b55fee6d82011b879a62574e068946aa"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "ffcf745ed5ba32930771378316fd08e97986bec2"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "md5",
+      "hashValue" : "dd81ad7cd0aa5b6f0225d6a0341edd9a"
+    } ],
+    "name" : "spring-jcl-5.3.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:generic/spring-jcl.jar@5.3.14",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/87fdc384-8234-49dd-a633-db22379a96b2sbom",
+    "type" : "software_Sbom",
+    "software_sbomType" : [ "analyzed" ],
+    "profileConformance" : [ "core" ],
+    "creationInfo" : "_:creationInfo_0"
+  } ]
+}

@@ -1,0 +1,431 @@
+{
+  "@context" : "https://spdx.org/rdf/3.0.1/spdx-context.jsonld",
+  "@graph" : [ {
+    "@id" : "_:creationInfo_0",
+    "type" : "CreationInfo",
+    "specVersion" : "3.0.1",
+    "createdUsing" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224tool" ],
+    "created" : "2024-10-22T10:51:28Z",
+    "comment" : "The tool with which this document was created is still in alpha. The information contained in this document might not be accurate."
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd2",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd3",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd1" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd7",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd5" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd4",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd8",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd6" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd4",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd11",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd9",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd12",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd9",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd15",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd14" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd13",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd16",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd14" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd13",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd18",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd17",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd19",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd17",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd23",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd21" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd20",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd24",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd22" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd20",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd26",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd25",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd27",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd25",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd29",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd28",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd30",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd28",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd34",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd32" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd31",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd35",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd33" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd31",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd37",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd36",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd38",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd36",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd42",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd40" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd39",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd43",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd41" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd39",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd46",
+    "type" : "Relationship",
+    "relationshipType" : "hasConcludedLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd44",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd47",
+    "type" : "Relationship",
+    "relationshipType" : "hasDeclaredLicense",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd45" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd44",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd48",
+    "type" : "Relationship",
+    "relationshipType" : "contains",
+    "to" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd17", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd28", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd13", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd9", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd25", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd36", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd44", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd4", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd20", "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd31" ],
+    "from" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd39",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224document",
+    "type" : "SpdxDocument",
+    "rootElement" : [ "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbom" ],
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224tool",
+    "type" : "Tool",
+    "name" : "metaeffekt spdx-exporter-v3.0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd1",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(BSD-3-Clause AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd5",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(BSD-3-Clause AND Beerware AND LicenseRef-scancode-public-domain AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd6",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-BSD AND Beerware AND LicenseRef-scancode-public-domain AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd10",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "Apache-2.0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd14",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(MPL-2.0 AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd21",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(BSD-3-Clause AND BSD-2-Clause AND MIT AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd22",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-BSD AND BSD-2-Clause AND MIT AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd32",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-EDL-1.0 AND BSD-3-Clause AND OFL-1.1 AND LicenseRef-ae-W3C AND GPL-2.0-only WITH Classpath-exception-2.0 AND MIT AND LicenseRef-scancode-public-domain AND W3C AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd33",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-EDL-1.0 AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND BSD-3-Clause AND (EPL-2.0 OR Apache-2.0) AND OFL-1.1 AND LicenseRef-ae-W3C AND MIT AND LicenseRef-scancode-public-domain AND W3C AND GPL-2.0-only WITH Classpath-exception-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd40",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-EDL-1.0 AND BSD-3-Clause AND BSD-2-Clause AND MPL-2.0 AND LicenseRef-ae-W3C AND GPL-2.0-only WITH Classpath-exception-2.0 AND MIT AND LicenseRef-scancode-public-domain AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND Apache-2.0 AND OFL-1.1 AND W3C)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd41",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-EDL-1.0 AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND BSD-3-Clause AND (EPL-2.0 OR Apache-2.0) AND BSD-2-Clause AND MPL-2.0 AND LicenseRef-ae-W3C AND MIT AND LicenseRef-scancode-public-domain AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND Apache-2.0 AND GPL-2.0-only WITH Classpath-exception-2.0 AND LicenseRef-ae-BSD AND OFL-1.1 AND W3C)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbomSPDXRef-gnrtd45",
+    "type" : "simplelicensing_LicenseExpression",
+    "simplelicensing_licenseExpression" : "(LicenseRef-ae-Apache AND Apache-2.0)",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224organization",
+    "type" : "Organization",
+    "name" : "{metaeffekt} GmbH",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/61775d4e-9f96-476e-886b-983232914355#SPDXRef-gnrtd49",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "NOASSERTION",
+    "name" : "LicenseRef-ae-BSD",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/fa90628f-5318-4207-b786-0d119d677009#SPDXRef-gnrtd50",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "Eclipse Distribution License - v 1.0\n\nCopyright (c) 2007, Eclipse Foundation, Inc. and its licensors.\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the\nfollowing conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nNeither the name of the Eclipse Foundation, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+    "name" : "LicenseRef-ae-EDL-1.0",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/30b85255-295d-4093-b5da-33cde61a2290#SPDXRef-gnrtd51",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "NOASSERTION",
+    "name" : "LicenseRef-ae-W3C",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/6b83fec0-d175-427c-b841-cc7e19b0b294#SPDXRef-gnrtd52",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "NOASSERTION",
+    "name" : "LicenseRef-scancode-public-domain",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/e6a08bc1-1a40-4eb7-8b95-079165c81d57#SPDXRef-gnrtd53",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "NOASSERTION",
+    "name" : "LicenseRef-ae-Apache",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://generated-prefix/70ba3269-cb2b-4495-b556-ad5e0557968d#SPDXRef-gnrtd54",
+    "type" : "expandedlicensing_CustomLicense",
+    "simplelicensing_licenseText" : "Copyright <YEAR> <COPYRIGHT HOLDER>\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\nlist of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\nthis list of conditions and the following disclaimer in the documentation\nand/or other materials provided with the distribution.\n\n3. Neither <variable3rdClause> may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY <copyrightHolderNoWarranty> \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL <copyrightHolderNoLiability> BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "name" : "LicenseRef-ae-BSD-3-Clause-copyright-holder",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd0",
+    "type" : "software_Package",
+    "software_packageVersion" : "1.14.11",
+    "name" : "byte-buddy-1.14.11.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd4",
+    "type" : "software_Package",
+    "software_packageVersion" : "1.16.1",
+    "software_homePage" : "https://commons.apache.org/proper/commons-codec/",
+    "name" : "commons-codec-1.16.1.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/commons-codec/commons-codec@1.16.1?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd9",
+    "type" : "software_Package",
+    "software_packageVersion" : "1.0.0.Final",
+    "software_homePage" : "http://www.jboss.org",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd13",
+    "type" : "software_Package",
+    "software_packageVersion" : "4.5.14",
+    "software_homePage" : "http://hc.apache.org/httpcomponents-client-ga",
+    "name" : "httpclient-4.5.14.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd17",
+    "type" : "software_Package",
+    "software_packageVersion" : "4.4.16",
+    "software_homePage" : "http://hc.apache.org/httpcomponents-core-ga",
+    "name" : "httpcore-4.4.16.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd20",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.17.0",
+    "software_homePage" : "https://github.com/FasterXML/jackson-core",
+    "name" : "jackson-core-2.17.0.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd25",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.17.0",
+    "software_homePage" : "https://github.com/FasterXML/jackson",
+    "name" : "jackson-databind-2.17.0.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd28",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.17.0",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd31",
+    "type" : "software_Package",
+    "software_packageVersion" : "2.1.2",
+    "software_homePage" : "https://github.com/jakartaee/jaf-api",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd36",
+    "type" : "software_Package",
+    "software_packageVersion" : "3.5.3.Final",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd39",
+    "type" : "software_Package",
+    "software_packageVersion" : "25.0.2",
+    "verifiedUsing" : [ {
+      "type" : "Hash",
+      "algorithm" : "sha256",
+      "hashValue" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    }, {
+      "type" : "Hash",
+      "algorithm" : "sha1",
+      "hashValue" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    } ],
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224SPDXRef-gnrtd44",
+    "type" : "software_Package",
+    "software_packageVersion" : "3.1.1",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "software_sourceInfo" : "jar-module",
+    "comment" : "{\n  \"Type\" : \"module\"\n}",
+    "software_packageUrl" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1?type=jar",
+    "creationInfo" : "_:creationInfo_0"
+  }, {
+    "spdxId" : "https://metaeffekt.com/spdx/doc/419f72f1-8a51-4eb1-9409-4ecb6bf9d224sbom",
+    "type" : "software_Sbom",
+    "software_sbomType" : [ "analyzed" ],
+    "profileConformance" : [ "core" ],
+    "creationInfo" : "_:creationInfo_0"
+  } ]
+}

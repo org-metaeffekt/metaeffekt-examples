@@ -32,6 +32,6 @@ Commits require sign-off.
 
 ## Process
 
-The example structure follows a basline pipeline:
+The example structure follows a baseline pipeline:
 
 ![Basic Pipeline](docs/basic-pipeline.png)

@@ -72,12 +72,7 @@ trivy image --scanners vuln --format spdx-json --output keycloak-25.0.4-spdx-2.3
   - "LGPLv2+ AND LGPLv2+ WITH exceptions AND GPL-2.0-or-later AND GPL-2.0-or-later WITH exceptions AND BSD-3-Clause AND Inner-Net AND ISC AND Unlicense AND GFDL"
 - sometimes only provides MD5 or SHA1 checksums
 
-### keycloak-25.0.4-spdx-exporter-v3.0.json
-
-- ~~provide validation output~~
-
 ## Further Details to be added
-- export CycloneDX files using the different tools
 - also include scnacode extractcode results
 - optional: produce diffs of the given results
 

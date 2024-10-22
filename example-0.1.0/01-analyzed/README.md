@@ -1,22 +1,30 @@
-# Scanned
+# Analyzed
 
-This folder shows the results from passing inventories through our scanner. The scanner tries to expand each 
-artifact with its respective applicable licenses and copyrights. Licenses are analyzed to gather derived/effective 
-licenses for each artifact.
+This folder shows results from different tools capturing the identified software assets from a given POM file.
+It also includes the corresponding validation.md files which contain the results of verifying the integrity of
+the document through the use of the spdx-java-library.
 
 ## Observations and TODOs
 
 ### General
-- License aggregation has to be improved as there are still more artifacts with unidentified licenses as we would like.
-- Provide comment as to why assets don't have licenses attached, differentiate between assets and artifacts in SBOM for
-  better understanding.
-- License-Texts are still missing for many licenses externally referenced.
+
+- Archive, Structured and Executable properties should already be present in inventory and not added via 
+  preprocessing before exporting.
+- SHA512 is still not present in the inventory, might be because of scarce availability.
+
+### SPDX-Exporter Current
+- SPDX-IDs should maybe have a prefix instead of only SPDXRef-gnrtd(X)
+
+### SPDX-Exporter New
+- SPDX-IDs should maybe have a prefix instead of only SPDXRef-gnrtd(X)
+- Improve PURL handling for the new SPDX-Exporter branch
 
 ### SPDX-3.0.1-Exporter
-- Relationships section is very bloated since relationships can only be ONE --> MANY while license relationships 
-  also require MANY --> ONE relationships as many packages can have the same licenses attached.
-- License expressions are not checked for redundancy when not exactly equal. E.g. (A AND B),(B AND A) have the exact 
-  same meaning, so they don't both need to be listed.
+- Improve PURL handling for the new SPDX-Exporter branch
+- IDs are very long because of prefixes
+- Bring 3.0.1 up to speed, implement features missing in comparison to 2.3-New/Current
+
+
 
 ## Validation Process
 

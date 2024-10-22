@@ -2,9 +2,9 @@
 
 ### Validation Information
 
-Document name: keycloak-25.0.4-cyclone-dx-1.6_exporter.json <br>
+Document name: example-0.1.0-cyclone-dx-1.6_exporter.json <br>
 Spec version: 1.6 <br>
-Creation date: Tue Oct 22 15:11:52 CEST 2024 <br>
+Creation date: Tue Oct 22 15:11:50 CEST 2024 <br>
 
 ### Manual Adjustments
 

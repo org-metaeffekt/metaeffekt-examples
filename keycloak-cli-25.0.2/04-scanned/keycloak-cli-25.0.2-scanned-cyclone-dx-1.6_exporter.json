@@ -1,0 +1,292 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:07edb5d3-a3fd-401e-849e-617139e73c69",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2024-10-22T13:11:51Z",
+    "tools" : [ {
+      "name" : "{metaeffekt} Kontinuum CycloneDX Exporter"
+    } ],
+    "authors" : [ { } ],
+    "manufacturer" : {
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com/" ]
+    }
+  },
+  "components" : [ {
+    "type" : "library",
+    "group" : "net.bytebuddy",
+    "name" : "byte-buddy-1.14.11.jar",
+    "version" : "1.14.11",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (BSD-3-Clause) AND (LicenseRef-ae-BSD-3-Clause-copyright-holder))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    }, {
+      "name" : "Type",
+      "value" : "module"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "https://commons.apache.org/proper/commons-codec/",
+    "group" : "commons-codec",
+    "name" : "commons-codec-1.16.1.jar",
+    "version" : "1.16.1",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (Beerware) AND (BSD-3-Clause) AND (LicenseRef-scancode-public-domain))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/commons-codec/commons-codec@1.16.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "http://www.jboss.org",
+    "group" : "org.jboss.logging",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "version" : "1.0.0.Final",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "http://hc.apache.org/httpcomponents-client-ga",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpclient-4.5.14.jar",
+    "version" : "4.5.14",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (MPL-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "http://hc.apache.org/httpcomponents-core-ga",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpcore-4.4.16.jar",
+    "version" : "4.4.16",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "https://github.com/FasterXML/jackson-core",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-core-2.17.0.jar",
+    "version" : "2.17.0",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (BSD-2-Clause) AND (BSD-3-Clause) AND (MIT))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "https://github.com/FasterXML/jackson",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-databind-2.17.0.jar",
+    "version" : "2.17.0",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "group" : "com.fasterxml.jackson.datatype",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "version" : "2.17.0",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "publisher" : "https://github.com/jakartaee/jaf-api",
+    "group" : "jakarta.activation",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "version" : "2.1.2",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (BSD-3-Clause) AND (LicenseRef-ae-EDL-1.0) AND (GPL-2.0-only WITH Classpath-exception-2.0) AND (MIT) AND (LicenseRef-scancode-public-domain) AND (OFL-1.1) AND (LicenseRef-ae-W3C) AND (W3C))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "group" : "org.jboss.logging",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "version" : "3.5.3.Final",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "group" : "org.keycloak",
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "version" : "25.0.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    } ],
+    "licenses" : [ {
+      "expression" : "((Apache-2.0) AND (BSD-2-Clause) AND (BSD-3-Clause) AND (LicenseRef-ae-BSD-3-Clause-copyright-holder) AND (LicenseRef-ae-EDL-1.0) AND (GPL-2.0-only WITH Classpath-exception-2.0) AND (MIT) AND (MPL-2.0) AND (LicenseRef-scancode-public-domain) AND (OFL-1.1) AND (LicenseRef-ae-W3C) AND (W3C))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  }, {
+    "type" : "library",
+    "group" : "org.eclipse.microprofile.openapi",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "version" : "3.1.1",
+    "licenses" : [ {
+      "expression" : "((Apache-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml"
+    }, {
+      "name" : "Archive",
+      "value" : "archive"
+    }, {
+      "name" : "Structured",
+      "value" : "structured"
+    } ]
+  } ],
+  "externalReferences" : [ {
+    "type" : "license",
+    "url" : "LicenseRef-ae-EDL-1.0",
+    "comment" : "No license text found."
+  }, {
+    "type" : "license",
+    "url" : "LicenseRef-ae-W3C",
+    "comment" : "No license text found."
+  }, {
+    "type" : "license",
+    "url" : "LicenseRef-scancode-public-domain",
+    "comment" : "No license text found."
+  }, {
+    "type" : "license",
+    "url" : "LicenseRef-ae-BSD-3-Clause-copyright-holder",
+    "comment" : "No license text found."
+  } ]
+}

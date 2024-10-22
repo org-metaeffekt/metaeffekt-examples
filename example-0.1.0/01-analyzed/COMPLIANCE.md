@@ -41,9 +41,9 @@ For all applicable
 | SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Version              | o                | o            |            | -             | SOME exist    | resolved           |
-| Unique Identifiers   | o                | o            |            | o             | SOME exist    |                    |
+| Unique Identifiers   | x                | -            |            | o             | SOME exist    |                    |
 | Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Supplier             | o                | o            |            | o             | SOME exist    |                    |
+| Supplier             | o                | o            |            | -             | SOME exist    |                    |
 
 ### TR-03183 Part 2
 
@@ -54,25 +54,28 @@ For all applicable
 | SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Creator URL          | o                | o            |            | -             | SOME exist    | resolved           |
 | Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Version              | o                | o            | o          | -             | MUST exist    | resolved           |
+| Version              | x                | o            | o          | -             | MUST exist    | resolved           |
 | Filename             | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
 | Associated Licenses  | o                | o            |            |               | SOME exist    | scanned            |
 | Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned            |
 | Executable           | o                | o            |            |               | NONE exist    |                    |
-| Archive              | o                | o            |            | -             | SOME exist    |                    |
-| Structured           | o                | o            |            | -             | SOME exist    |                    |
+| Archive              | x                | x            |            | x             | SOME exist    |                    |
+| Structured           | x                | x            |            | x             | SOME exist    |                    |
 | Source Code URI      | o                | o            |            |               | NONE exist    | resolved           |
 | Deployable URI       | o                | o            |            |               | SOME exist    | resolved           |
-| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved           |
+| Unique Identifiers   | x                | -            | -          | -             | SOME exist    | resolved           |
 | SHA-512 Hash         |                  |              |            |               | NONE exist    |                    |
 
 ## Section Specific Statements
 
-
+As this inventory was extracted solely from a POM file it is only meant to showcase some key features
+and provide a neat representation of a baseline inventory in our processing pipeline. In other words we do not expect 
+the documents produced by using this inventory as input to match our expectations for guideline compliance, as 
+usually more than a POM file is provided.
 
 ### Trivy and Syft
 
 Regarding Trivy and Syft, we will not make any assumptions or predictions about their level of compliance, as we have 
-no insight into their operations, future development plans, or whether they intend to align with the BSI or NTIA 
+no insight into their operations, future development plans, or whether they intend to align with the BSI TR or NTIA 
 guidelines in the future.

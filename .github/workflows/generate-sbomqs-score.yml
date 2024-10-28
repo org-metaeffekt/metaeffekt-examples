@@ -1,0 +1,29 @@
+name: Generate Sbomqs Score
+run-name: Generate Sbomqs Score
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sbomqs-score:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout-repository
+        uses: actions/checkout@v2
+
+      - name: install-sbomqs
+        run: |
+          wget https://github.com/interlynk-io/sbomqs/releases/download/v0.2.0/sbomqs_0.2.0_amd64.deb -O sbomqs.deb
+          sudo dpkg -i sbomqs.deb
+
+      - name: run-sbomqs-score
+        run: |
+          find . -type f -name "*.json" | while read json_file; do
+            output_file="${json_file%.json}.txt"
+            sbomqs score "$json_file" > "$output_file"
+          done

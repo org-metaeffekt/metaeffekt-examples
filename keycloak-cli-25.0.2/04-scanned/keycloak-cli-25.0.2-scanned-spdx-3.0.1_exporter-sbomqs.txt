@@ -1,0 +1,1 @@
+failed to parse ./keycloak-cli-25.0.2/04-scanned/keycloak-cli-25.0.2-scanned-spdx-3.0.1_exporter.json : unsupported sbom format

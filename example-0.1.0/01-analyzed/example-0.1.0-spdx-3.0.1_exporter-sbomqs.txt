@@ -1,0 +1,1 @@
+failed to parse ./example-0.1.0/01-analyzed/example-0.1.0-spdx-3.0.1_exporter.json : unsupported sbom format

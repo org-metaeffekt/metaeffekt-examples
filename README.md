@@ -4,6 +4,11 @@ Repository providing examples on SCA results, SBOM exports and concluded reports
 
 The examples are meant to create a common understanding regarding SBOM content and SBOM-centric use cases.
 
+## Branches
+
+Some document and examples are currently on their own dedicated branches. This is mostly done for testing purposes 
+before adding documents to the main branch or if we are not yet satisfied with the quality of said documents.
+
 ## License
 
 The content provided in by {metæffekt} is licensed under [Creative Commons BY-4.0](LICENSE) if not specified otherwise.

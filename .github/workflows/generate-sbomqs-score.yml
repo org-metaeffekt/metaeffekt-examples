@@ -21,7 +21,6 @@ jobs:
       - name: checkout-new-branch
         run: |
           git checkout -b ae-runner-sbomqs
-          git pull origin ae-runner-sbomqs
           git pull origin main
 
       - name: install-sbomqs

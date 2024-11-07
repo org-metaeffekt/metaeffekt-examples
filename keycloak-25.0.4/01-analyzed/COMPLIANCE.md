@@ -34,41 +34,39 @@ For all applicable
 
 ### NTIA Minimum SBOM Elements
 
-|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_ |
-|----------------------|------------------|--------------|------------|---------------|---------------|-------------------------|
-| SBOM Author          | x                | x            | x          | x             | MUST exist    | analyzed                |
-| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Name                 | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Version              | o                | o            |            | -             | SOME exist    | resolved                |
-| Unique Identifiers   | o                | o            |            | o             | SOME exist    |                         |
-| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Supplier             | o                | o            |            | o             | SOME exist    |                         |
+|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_  |
+|----------------------|------------------|--------------|------------|---------------|---------------|----------|
+| SBOM Author          | x                | x            | x          | x             | MUST exist    | analyzed |
+| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed |
+| Name                 | x                | x            | x          | x             | MUST exist    | analyzed |
+| Version              | o                | o            |            | -             | SOME exist    | resolved |
+| Unique Identifiers   | o                | o            |            | o             | SOME exist    |          |
+| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed |
+| Supplier             | o                | o            |            | o             | SOME exist    |          |
 
 ### TR-03183 Part 2
 
-|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_ |
-|----------------------|------------------|--------------|------------|---------------|---------------|-------------------------|
-| SBOM Creator         | x                | x            | x          | x             | MUST exist    | analyzed                |
-| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed                |
-| SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Creator URL          | o                | o            |            | -             | SOME exist    | resolved                |
-| Name                 | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Version              | o                | o            | o          | -             | MUST exist    | resolved                |
-| Filename             | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed                |
-| Associated Licenses  | o                | o            |            |               | SOME exist    | scanned                 |
-| Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned                 |
-| Executable           | o                | o            |            |               | NONE exist    |                         |
-| Archive              | o                | o            |            | -             | SOME exist    |                         |
-| Structured           | o                | o            |            | -             | SOME exist    |                         |
-| Source Code URI      | o                | o            |            |               | NONE exist    | resolved                |
-| Deployable URI       | o                | o            |            |               | SOME exist    | resolved                |
-| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved                |
-| SHA-512 Hash         |                  |              |            |               | NONE exist    |                         |
+|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_  |
+|----------------------|------------------|--------------|------------|---------------|---------------|----------|
+| SBOM Creator         | x                | x            | x          | x             | MUST exist    | analyzed |
+| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed |
+| SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed |
+| Creator URL          | o                | o            |            | -             | SOME exist    | resolved |
+| Name                 | x                | x            | x          | x             | MUST exist    | analyzed |
+| Version              | o                | o            | o          | -             | MUST exist    | resolved |
+| Filename             | x                | x            | x          | x             | MUST exist    | analyzed |
+| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed |
+| Associated Licenses  | o                | o            |            |               | MUST exist    | scanned  |
+| Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned  |
+| Executable           | o                | o            |            |               | NONE exist    | resolved |
+| Archive              | o                | o            |            | -             | SOME exist    | resolved |
+| Structured           | o                | o            |            | -             | SOME exist    | resolved |
+| Source Code URI      | o                | o            |            |               | NONE exist    | resolved |
+| Deployable URI       | o                | o            |            |               | SOME exist    | resolved |
+| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved |
+| SHA-512 Hash         |                  |              |            |               | MUST exist    | resolved |
 
 ## Section Specific Statements
-
-
 
 ### Trivy and Syft
 

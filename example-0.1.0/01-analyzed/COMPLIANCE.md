@@ -56,15 +56,15 @@ For all applicable
 | Version              | x                | o            | o          | -             | MUST exist    | resolved |
 | Filename             | x                | x            | x          | x             | MUST exist    | analyzed |
 | Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed |
-| Associated Licenses  | o                | o            |            |               | SOME exist    | scanned  |
+| Associated Licenses  | o                | o            |            |               | MUST exist    | scanned  |
 | Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned  |
-| Executable           | o                | o            |            |               | NONE exist    |          |
-| Archive              | x                | x            |            | x             | SOME exist    |          |
-| Structured           | x                | x            |            | x             | SOME exist    |          |
+| Executable           | o                | o            |            |               | NONE exist    | resolved |
+| Archive              | x                | x            |            | x             | SOME exist    | resolved |
+| Structured           | x                | x            |            | x             | SOME exist    | resolved |
 | Source Code URI      | o                | o            |            |               | NONE exist    | resolved |
 | Deployable URI       | o                | o            |            |               | SOME exist    | resolved |
 | Unique Identifiers   | x                | -            | -          | -             | SOME exist    | resolved |
-| SHA-512 Hash         |                  |              |            |               | NONE exist    |          |
+| SHA-512 Hash         |                  |              |            |               | MUST exist    | resolved |
 
 ## Section Specific Statements
 

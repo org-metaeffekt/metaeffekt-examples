@@ -9,8 +9,8 @@ as well as our future plans to ensure compliance with both major guidelines.
 ## Overview
 
 Below is an overview of both guidelines and which aspects have been implemented by the different
-solutions provided. As this is the first step in our enrichment process, it is to be expected that fields
-required are still missing or that the information contained within may not be complete. 
+solutions provided. As *analyse* is the first step in our evaluation process, it is to be expected that various
+required fields are still missing or that the provided information may not be complete. 
 
 Fields are treated as compliant if they exist in the document for every applicable component,
 the information contained within has not been verified as this is either not possible
@@ -18,14 +18,13 @@ or beyond the scope of this section. The specific requirements for each field ar
 in their respective guidelines and will not be repeated here.
 Fields not lead by "SBOM" should be considered component-fields.
 
-The Expectation column gives insight into what fields we expect to be filled at what stage of the
-inventory pipeline. Fields who have not been enriched yet are filled with NOASSERTION values in
-accordance with the SPDX spec, note that this is not the same as NONE. Only fields which can not be populated
-by NOASSERTION will be ignored entirely.
+The *Expectation* column gives insight into which fields we expect to be filled at a given stage of the inventory 
+pipeline. Fields which have not been supplied yet are filled with NOASSERTION values in accordance with the SPDX spec, 
+note that this is not the same as NONE. Only fields which can not be populated by NOASSERTION will be ignored entirely.
 
-The "Mainly processed" column describes which stage / stages are mainly responsible for filling the given field
-with information. This does not mean that ALL components will have a value assigned to said field, rather we
-predict that MOST components will have a value assigned after stage completion.
+The *Stage* column describes at which stage / stages a given field is expected to be populated with information. This 
+does not mean that ALL components will have a value assigned to said field, rather we predict that MOST components 
+will have a value assigned after stage completion.
 
 For all applicable
 
@@ -35,37 +34,37 @@ For all applicable
 
 ### NTIA Minimum SBOM Elements
 
-|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Mainly processed_ |
-|----------------------|------------------|--------------|------------|---------------|---------------|--------------------|
-| SBOM Author          | x                | x            | x          | x             | MUST exist    | analyzed           |
-| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Version              | o                | o            |            | -             | SOME exist    | resolved           |
-| Unique Identifiers   | o                | o            |            | o             | SOME exist    |                    |
-| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Supplier             | o                | o            |            | o             | SOME exist    |                    |
+|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_ |
+|----------------------|------------------|--------------|------------|---------------|---------------|-------------------------|
+| SBOM Author          | x                | x            | x          | x             | MUST exist    | analyzed                |
+| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Name                 | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Version              | o                | o            |            | -             | SOME exist    | resolved                |
+| Unique Identifiers   | o                | o            |            | o             | SOME exist    |                         |
+| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Supplier             | o                | o            |            | o             | SOME exist    |                         |
 
 ### TR-03183 Part 2
 
-|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Mainly processed_ |
-|----------------------|------------------|--------------|------------|---------------|---------------|--------------------|
-| SBOM Creator         | x                | x            | x          | x             | MUST exist    | analyzed           |
-| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed           |
-| SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Creator URL          | o                | o            |            | -             | SOME exist    | resolved           |
-| Name                 | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Version              | o                | o            | o          | -             | MUST exist    | resolved           |
-| Filename             | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed           |
-| Associated Licenses  | o                | o            |            |               | SOME exist    | scanned            |
-| Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned            |
-| Executable           | o                | o            |            |               | NONE exist    |                    |
-| Archive              | o                | o            |            | -             | SOME exist    |                    |
-| Structured           | o                | o            |            | -             | SOME exist    |                    |
-| Source Code URI      | o                | o            |            |               | NONE exist    | resolved           |
-| Deployable URI       | o                | o            |            |               | SOME exist    | resolved           |
-| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved           |
-| SHA-512 Hash         |                  |              |            |               | NONE exist    |                    |
+|                      | SPDX-2.3-Current | SPDX-2.3-New | SPDX-3.0.1 | CycloneDX 1.6 | _Expectation_ | _Stage_ |
+|----------------------|------------------|--------------|------------|---------------|---------------|-------------------------|
+| SBOM Creator         | x                | x            | x          | x             | MUST exist    | analyzed                |
+| SBOM Timestamp       | x                | x            | x          | x             | MUST exist    | analyzed                |
+| SBOM URI             | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Creator URL          | o                | o            |            | -             | SOME exist    | resolved                |
+| Name                 | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Version              | o                | o            | o          | -             | MUST exist    | resolved                |
+| Filename             | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Dependency Hierarchy | x                | x            | x          | x             | MUST exist    | analyzed                |
+| Associated Licenses  | o                | o            |            |               | SOME exist    | scanned                 |
+| Concluded Licenses   | o                | o            |            |               | SOME exist    | scanned                 |
+| Executable           | o                | o            |            |               | NONE exist    |                         |
+| Archive              | o                | o            |            | -             | SOME exist    |                         |
+| Structured           | o                | o            |            | -             | SOME exist    |                         |
+| Source Code URI      | o                | o            |            |               | NONE exist    | resolved                |
+| Deployable URI       | o                | o            |            |               | SOME exist    | resolved                |
+| Unique Identifiers   | o                | o            | o          | -             | SOME exist    | resolved                |
+| SHA-512 Hash         |                  |              |            |               | NONE exist    |                         |
 
 ## Section Specific Statements
 

@@ -25,7 +25,7 @@ customizability to sort advisories by a variety of factors relevant to the end-u
 ## Observations and TODOs
 
 ### General
-- UI/UX has to be overhauled completely to improve User Experience (Currently in Progress)
+- UI/UX has to be overhauled completely to improve User Experience (currently in progress)
 - Functions are not clearly explained or visible at all to the user
 - Explanation texts which do exist are too long and convoluted.
 

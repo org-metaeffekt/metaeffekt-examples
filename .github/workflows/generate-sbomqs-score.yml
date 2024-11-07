@@ -20,8 +20,13 @@ jobs:
 
       - name: checkout-new-branch
         run: |
-          git checkout -b ae-runner-sbomqs
-          git pull origin main
+          if git ls-remote --exit-code --heads origin ae-runner-sbomqs; then
+            git checkout -b ae-runner-sbomqs origin/ae-runner-sbomqs
+            git pull origin ae-runner-sbomqs
+          else
+            git checkout -b ae-runner-sbomqs
+            git pull origin main
+          fi
 
       - name: install-sbomqs
         run: |
@@ -41,10 +46,7 @@ jobs:
           git config --local user.email "ae-actions-runner@metaeffekt.com"
           git add *.txt
           git commit -m "Actions runner added sbomqs scores."
-          git fetch origin
-          git merge origin/ae-runner-sbomqs
+          git pull --rebase origin ae-runner-sbomqs
           git push origin ae-runner-sbomqs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-

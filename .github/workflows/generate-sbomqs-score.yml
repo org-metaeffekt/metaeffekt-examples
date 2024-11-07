@@ -41,6 +41,8 @@ jobs:
           git config --local user.email "ae-actions-runner@metaeffekt.com"
           git add *.txt
           git commit -m "Actions runner added sbomqs scores."
+          git fetch origin
+          git merge origin/main
           git push --set-upstream origin ae-runner-sbomqs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

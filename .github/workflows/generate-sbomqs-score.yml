@@ -42,7 +42,7 @@ jobs:
           git add *.txt
           git commit -m "Actions runner added sbomqs scores."
           git fetch origin ae-runner-sbomqs
-          git merge origin ae-runner-sbomqs
+          git merge origin/ae-runner-sbomqs
           git push origin ae-runner-sbomqs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

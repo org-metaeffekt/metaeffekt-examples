@@ -1,0 +1,32 @@
+name: Convert CycloneDx To Dashboard
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run_pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout-and-configure-git
+        uses: ../tasks/checkout-and-configure-git.yml
+
+      - name: set-up-jdk
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+
+      - name: convert-cyclonedx-to-inventory
+        uses: ../tasks/convert_cyclonedx-to-inventory.yml
+        with:
+          input_param: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+          output_param: ../keycloak-25.0.4/03-advised/keycloak-25.0.4_input.xlsx
+
+      # TODO
+
+      - name: commit-output-files
+        run: |
+          git add -A
+          git commit -m "Auto-commit changes from GitHub Actions"
+          git push origin HEAD

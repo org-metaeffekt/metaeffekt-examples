@@ -1,0 +1,12 @@
+name: Checkout And Configure Git
+
+runs:
+  using: "composite"
+  steps:
+    - name: checkout-repository
+      uses: actions/checkout@v4
+
+    - name: configure-git
+      runs: |
+        git config --local user.name "ae-actions-runner"
+        git config --local user.email "ae-actions-runner@metaeffekt.com"

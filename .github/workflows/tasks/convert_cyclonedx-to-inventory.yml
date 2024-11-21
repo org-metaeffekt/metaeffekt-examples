@@ -1,0 +1,20 @@
+name: Convert CycloneDx To Inventory
+
+inputs:
+  input_param:
+    description: "CycloneDx input file."
+    required: true
+
+outputs:
+  output_param:
+    description: "Inventory output file."
+
+runs:
+  using: "composite"
+  steps:
+    - name: mvn-convert-cyclonedx-to-inventory
+      run: |
+        mvn -f convert_cyclonedx-to-inventory.xml process-resources \
+          -Dinput=${{ inputs.input_param }} \
+          -Doutput=${{ outputs.output_param }}
+      working-directory: processors

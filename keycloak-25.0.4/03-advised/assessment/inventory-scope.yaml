@@ -1,0 +1,8 @@
+scope: inventory
+
+cvssV4:
+  lower: MAV:A
+cvssV3:
+  lower: MAV:A
+cvssV2:
+  lower: AV:A

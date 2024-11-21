@@ -1,0 +1,15 @@
+sets:
+  - name: privilege escalation
+    category: general threat
+    score: 3.0
+    notes: An adversary may gain further privileges and gain unauthorized access to the system or services.
+    min:
+      - amount: 1
+        keywords:
+          - privilege escalation
+          - jailbreak
+          - container escape
+          - to access any other file
+          - arbitrary code execution
+          - allows unauthorized acccess
+          - allows unauthorised acccess

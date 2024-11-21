@@ -1,0 +1,27 @@
+sets:
+  - name: information disclosure
+    category: confidentiality threat
+    score: 2.0
+    notes: Confidential or restricted information may be exposed to an adversary. The adversary gains unauthorized access.
+    min:
+      - amount: 1
+        keywords:
+          - information disclosure
+          - making private services on the VM accessible to the network
+          - leaking credential
+          - leaked credential
+          - leaked credentials
+          - leaking secret
+          - leaked secret
+          - leaked secrets
+          - credential leak
+          - credentials leak
+          - exposed credential
+          - credential exposed
+          - credentials exposed
+          - readable by unauthorized
+          - readable by unauthorised
+          - information leak
+          - privacy leak
+          - data leak
+          - data leakage

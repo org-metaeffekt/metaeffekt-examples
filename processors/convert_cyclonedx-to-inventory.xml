@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>convert_cyclonedx-to-inventory</artifactId>
+
+    <properties>
+        <!-- file or directory with CycloneDX files -->
+        <input></input>
+
+        <!-- defines the target file -->
+        <output></output>
+
+        <includeMetadataComponent>true</includeMetadataComponent>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.metaeffekt.artifact.analysis</groupId>
+                <artifactId>ae-inventory-conversion-plugin</artifactId>
+                <version>${ae.artifact.analysis.version}</version>
+                <executions>
+                    <execution>
+                        <id>cyclonedx-to-inventory</id>
+                        <goals>
+                            <goal>convert-cyclonedx-to-inventory</goal>
+                        </goals>
+                        <configuration>
+                            <input>${input}</input>
+                            <output>${output}</output>
+                            <include-metadata-component>${includeMetadataComponent}</include-metadata-component>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,15 @@
+sets:
+  - name: resource exemption
+    category: external threat
+    notes: An adversary may attempt to exhaust resources of the system compromising performance objectives and availability.
+    score: 1.0
+    min:
+      - amount: 1
+        keywords:
+          - resource consumption
+          - resource exemption
+          - denial of service
+          - denial of service attacks
+          - connection pool exhaustion
+          - memory leak
+          - resource leak

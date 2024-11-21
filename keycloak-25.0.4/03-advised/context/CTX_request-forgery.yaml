@@ -1,0 +1,11 @@
+sets:
+  - name: request forgery
+    category: external threat
+    score: 2.0
+    notes: An adversary may attempt to gain access to information and spoof a user.
+    min:
+      - amount: 1
+        keywords:
+          - cross-site request forgery
+          - CSFR
+          - forge requests

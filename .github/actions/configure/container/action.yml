@@ -8,9 +8,9 @@ runs:
       shell: bash
       run: |
         curl -sL https://downloads.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip -o maven.zip
-        apt-get update
-        apt-get -y install unzip
+        sudo apt-get update
+        sudo apt-get -y install unzip
         unzip -d /usr/share maven.zip
-        rm maven.zip
+        sudo rm maven.zip
         ln -s /usr/share/apache-maven-3.9.8/bin/mvn /usr/bin/mvn
         echo "M2_HOME=/usr/share/apache-maven-3.9.8" | tee -a /etc/environment

@@ -6,11 +6,13 @@ runs:
   steps:
     - name: get-maven
       shell: bash
-      run: |
-        curl -sL https://downloads.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip -o maven.zip
-        apt-get update
-        apt-get -y install unzip
-        unzip -d /usr/share maven.zip
-        rm maven.zip
-        ln -s /usr/share/apache-maven-3.9.8/bin/mvn /usr/bin/mvn
-        echo "M2_HOME=/usr/share/apache-maven-3.9.8" | tee -a /etc/environment
+      run: | # Maven has to be installed manually when using act local runner, as it is not included in the normal image.
+        if ! command -v mvn &> /dev/null; then
+          curl -sL https://downloads.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip -o maven.zip
+          sudo apt-get update
+          sudo apt-get -y install unzip
+          unzip -d /usr/share maven.zip
+          sudo rm maven.zip
+          ln -s /usr/share/apache-maven-3.9.8/bin/mvn /usr/bin/mvn
+          echo "M2_HOME=/usr/share/apache-maven-3.9.8" | tee -a /etc/environment
+        fi

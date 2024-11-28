@@ -43,11 +43,11 @@
 
         <assessment.labels/>
 
-        <activate.msrc>true</activate.msrc>
+        <activate.msrc>false</activate.msrc> <!-- Disabled because of reduced index -->
         <activate.nvd>true</activate.nvd>
-        <activate.certfr>true</activate.certfr>
+        <activate.certfr>false</activate.certfr>
         <activate.certeu>true</activate.certeu>
-        <activate.certsei>true</activate.certsei>
+        <activate.certsei>false</activate.certsei>
         <activate.ghsa.correlation>true</activate.ghsa.correlation>
         <activate.ghsa>true</activate.ghsa>
         <activate.correlation>true</activate.correlation>
@@ -57,41 +57,10 @@
         <activate.dashboard>true</activate.dashboard>
         <activate.vulnerabilities.custom>true</activate.vulnerabilities.custom>
 
-        <ae.advisor.phase>process-resources</ae.advisor.phase>
-
         <dashboard.title>Vulnerability Assessment Dashboard</dashboard.title>
         <dashboard.subtitle>${project.artifactId}</dashboard.subtitle>
         <dashboard.footer>${project.artifactId}</dashboard.footer>
     </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.metaeffekt.core</groupId>
-                <artifactId>ae-inventory-maven-plugin</artifactId>
-                <version>${ae.core.version}</version>
-                <executions>
-                    <execution>
-                        <id>enrich-with-reference-inventory</id>
-                        <phase>process-sources</phase>
-                        <goals>
-                            <goal>create-inventory-report</goal>
-                        </goals>
-                        <configuration>
-                            <inventory>${input.inventory}</inventory>
-                            <sourceInventoryDir>../.github/actions/convert/cyclonedx-to-inventory/</sourceInventoryDir>
-                            <sourceInventoryIncludes>inventory/*.xls</sourceInventoryIncludes>
-                            <failOnError>false</failOnError>
-                            <failOnUnknown>false</failOnUnknown>
-
-                            <targetInventoryDir>${project.build.directory}/inventories/</targetInventoryDir>
-                            <targetInventoryPath>01_${project.artifactId}-inventory_ref.xls</targetInventoryPath>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
     <profiles>
         <profile>
@@ -100,53 +69,64 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
-                    <plugins>
-                        <plugin>
-                            <groupId>com.metaeffekt.artifact.analysis</groupId>
-                            <artifactId>ae-inventory-enrichment-plugin</artifactId>
-                            <version>${ae.artifact.analysis.version}</version>
+                <plugins>
+                    <plugin>
+                        <groupId>com.metaeffekt.artifact.analysis</groupId>
+                        <artifactId>ae-inventory-enrichment-plugin</artifactId>
+                        <version>${ae.artifact.analysis.version}</version>
 
-                            <executions>
-                                <execution>
-                                    <id>set-inventory-info</id>
-                                    <phase>generate-resources</phase>
-                                    <goals>
-                                        <goal>set-inventory-info</goal>
-                                    </goals>
-                                    <configuration>
-                                        <active>true</active>
+                        <executions>
+                            <execution>
+                                <id>set-inventory-info</id>
+                                <goals>
+                                    <goal>set-inventory-info</goal>
+                                </goals>
+                                <configuration>
+                                    <active>true</active>
 
-                                        <entryId>vad-customization</entryId>
-                                        <values>
-                                            <Title>${dashboard.title}</Title>
-                                            <Subtitle>${dashboard.subtitle}</Subtitle>
-                                            <Footer>${dashboard.footer}</Footer>
-                                        </values>
+                                    <entryId>vad-customization</entryId>
+                                    <values>
+                                        <Title>${dashboard.title}</Title>
+                                        <Subtitle>${dashboard.subtitle}</Subtitle>
+                                        <Footer>${dashboard.footer}</Footer>
+                                    </values>
 
-                                        <inventoryInputFile>${input.inventory}</inventoryInputFile>
-                                        <inventoryOutputFile>${input.inventory}</inventoryOutputFile>
-                                    </configuration>
-                                </execution>
+                                    <inventoryInputFile>${input.inventory}</inventoryInputFile>
+                                    <inventoryOutputFile>${input.inventory}</inventoryOutputFile>
+                                </configuration>
+                            </execution>
 
 
-                                <execution>
-                                    <id>inventory-enrichment-advise-correlate-execution</id>
-                                    <phase>generate-resources</phase>
-                                    <goals>
-                                        <goal>enrich-inventory</goal>
-                                    </goals>
-                                    <configuration>
-                                        <inventoryInputFile>${input.inventory}</inventoryInputFile>
-                                        <inventoryOutputFile>${output.inventory.correlation}</inventoryOutputFile>
-                                        <mirrorDirectory>${input.database}</mirrorDirectory>
+                            <execution>
+                                <id>inventory-enrichment-advise-correlate-execution</id>
+                                <goals>
+                                    <goal>enrich-inventory</goal>
+                                </goals>
+                                <configuration>
+                                    <inventoryInputFile>${input.inventory}</inventoryInputFile>
+                                    <inventoryOutputFile>${output.inventory.correlation}</inventoryOutputFile>
+                                    <mirrorDirectory>${input.database}</mirrorDirectory>
 
-                                        <writeIntermediateInventories>false</writeIntermediateInventories>
-                                        <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
+                                    <writeIntermediateInventories>false</writeIntermediateInventories>
+                                    <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
+                                    <securityPolicyFile>../.github/actions/advise/create-dashboard/security-policy-dashboard.json
+                                    </securityPolicyFile>
+
+                                    <correlationYamlEnrichment>
+                                        <active>${activate.correlation}</active>
+                                        <yamlFiles>
+                                            <file>${correlation.dir}</file>
+                                        </yamlFiles>
+                                    </correlationYamlEnrichment>
+                                    <cpeDerivationEnrichment>
+                                        <active>${activate.nvd}</active>
+                                        <maxCorrelatedCpePerArtifact>2147483647</maxCorrelatedCpePerArtifact>
+                                    </cpeDerivationEnrichment>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
         <profile>
@@ -155,58 +135,168 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
-                    <plugins>
-                        <plugin>
-                            <groupId>com.metaeffekt.artifact.analysis</groupId>
-                            <artifactId>ae-inventory-enrichment-plugin</artifactId>
-                            <version>${ae.artifact.analysis.version}</version>
+                <plugins>
+                    <plugin>
+                        <groupId>com.metaeffekt.artifact.analysis</groupId>
+                        <artifactId>ae-inventory-enrichment-plugin</artifactId>
+                        <version>${ae.artifact.analysis.version}</version>
 
-                            <executions>
-                                <execution>
-                                    <id>inventory-enrichment-advise-vulnerability-execution</id>
-                                    <goals>
-                                        <goal>enrich-inventory</goal>
-                                    </goals>
+                        <executions>
+                            <execution>
+                                <id>inventory-enrichment-advise-vulnerability-execution</id>
+                                <goals>
+                                    <goal>enrich-inventory</goal>
+                                </goals>
 
-                                    <configuration>
-                                        <inventoryInputFile>${output.inventory.correlation}</inventoryInputFile>
-                                        <inventoryOutputFile>${output.inventory}</inventoryOutputFile>
-                                        <mirrorDirectory>${input.database}</mirrorDirectory>
+                                <configuration>
+                                    <inventoryInputFile>${output.inventory.correlation}</inventoryInputFile>
+                                    <inventoryOutputFile>${output.inventory}</inventoryOutputFile>
+                                    <mirrorDirectory>${input.database}</mirrorDirectory>
 
-                                        <writeIntermediateInventories>false</writeIntermediateInventories>
-                                        <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
+                                    <writeIntermediateInventories>true</writeIntermediateInventories>
+                                    <intermediateInventoriesDirectory>/tmp/intermediates/</intermediateInventoriesDirectory>
+                                    <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
 
-                                        <vulnerabilityAssessmentDashboardEnrichment>
-                                            <active>${activate.dashboard}</active>
-                                            <outputDashboardFile>${output.dashboard}</outputDashboardFile>
-                                            <svgDirectory>${output.svg}</svgDirectory>
+                                    <securityPolicyFile>../.github/actions/advise/create-dashboard/security-policy-dashboard.json
+                                    </securityPolicyFile>
+                                    <!--<resumeAtEnrichment>resume-at</resumeAtEnrichment>-->
+                                    <!--<enrichmentOrder></enrichmentOrder>-->
 
-                                            <vulnerabilityIncludeFilter></vulnerabilityIncludeFilter>
-                                            <maximumVulnerabilitiesPerDashboardCount>2147483647
-                                            </maximumVulnerabilitiesPerDashboardCount>
+                                    <nvdMatchCveFromCpeEnrichment>
+                                        <active>${activate.nvd}</active>
+                                        <active>${activate.nvd}</active>
+                                        <maxCorrelatedVulnerabilitiesPerArtifact>2147483647
+                                        </maxCorrelatedVulnerabilitiesPerArtifact>
+                                    </nvdMatchCveFromCpeEnrichment>
 
-                                            <vulnerabilityTimelinesGlobalEnabled>${ae.dashboard.timeline}
-                                            </vulnerabilityTimelinesGlobalEnabled>
-                                            <maximumCpeForTimelinesPerVulnerability>2147483647
-                                            </maximumCpeForTimelinesPerVulnerability>
-                                            <maximumVulnerabilitiesPerTimeline>
-                                                ${ae.dashboard.timeline.vulnerabilities.limit}
-                                            </maximumVulnerabilitiesPerTimeline>
-                                            <vulnerabilityTimelineHideIrrelevantVersions>true
-                                            </vulnerabilityTimelineHideIrrelevantVersions>
-                                            <maximumVersionsPerTimeline>2147483647</maximumVersionsPerTimeline>
-                                            <maximumTimeSpentOnTimelines>2147483647</maximumTimeSpentOnTimelines>
+                                    <customVulnerabilitiesFromCpeEnrichment>
+                                        <active>${activate.vulnerabilities.custom}</active>
+                                        <vulnerabilityFiles>
+                                            <file>${vulnerabilities.custom.dir}</file>
+                                        </vulnerabilityFiles>
+                                    </customVulnerabilitiesFromCpeEnrichment>
 
-                                            <failOnVulnerabilityWithoutSpecifiedRisk>true
-                                            </failOnVulnerabilityWithoutSpecifiedRisk>
-                                            <failOnUnreviewedAdvisories>true</failOnUnreviewedAdvisories>
-                                            <failOnUnreviewedAdvisoriesTypes></failOnUnreviewedAdvisoriesTypes>
-                                        </vulnerabilityAssessmentDashboardEnrichment>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
+                                    <ghsaVulnerabilitiesEnrichment>
+                                        <active>${activate.ghsa.correlation}</active>
+                                        <maven>true</maven>
+                                        <packagist>false</packagist>
+                                        <rubygems>true</rubygems>
+                                        <githubactions>false</githubactions>
+                                        <pypi>true</pypi>
+                                        <purl_type_swift>false</purl_type_swift>
+                                        <go>false</go>
+                                        <hex>true</hex>
+                                        <npm>true</npm>
+                                        <crates_io>true</crates_io>
+                                        <pub>false</pub>
+                                        <nuget>true</nuget>
+                                        <githubReviewed>false</githubReviewed>
+                                    </ghsaVulnerabilitiesEnrichment>
+
+                                    <nvdCveFillDetailsEnrichment>
+                                        <active>${activate.nvd}</active>
+                                    </nvdCveFillDetailsEnrichment>
+
+                                    <customVulnerabilitiesFillDetailsEnrichment>
+                                        <active>${activate.vulnerabilities.custom}</active>
+                                        <vulnerabilityFiles>
+                                            <file>${vulnerabilities.custom.dir}</file>
+                                        </vulnerabilityFiles>
+                                    </customVulnerabilitiesFillDetailsEnrichment>
+
+
+                                    <ghsaAdvisorFillDetailsEnrichment>
+                                        <active>${activate.ghsa}</active>
+                                    </ghsaAdvisorFillDetailsEnrichment>
+
+                                    <vulnerabilityStatusEnrichment>
+                                        <active>${activate.status}</active>
+                                        <statusFiles>
+                                            <file>${assessment.dir}</file>
+                                        </statusFiles>
+                                        <activeLabels>${assessment.labels}</activeLabels>
+                                    </vulnerabilityStatusEnrichment>
+
+                                    <vulnerabilityKeywordsEnrichment>
+                                        <active>${activate.keywords}</active>
+                                        <yamlFiles>
+                                            <file>${keywords.dir}</file>
+                                        </yamlFiles>
+                                        <activeLabels>${keywords.labels}</activeLabels>
+                                    </vulnerabilityKeywordsEnrichment>
+
+                                    <certFrAdvisorEnrichment>
+                                        <active>${activate.certfr}</active>
+                                    </certFrAdvisorEnrichment>
+
+                                    <certEuAdvisorEnrichment>
+                                        <active>${activate.certeu}</active>
+                                    </certEuAdvisorEnrichment>
+
+                                    <certSeiAdvisorEnrichment>
+                                        <active>${activate.certsei}</active>
+                                    </certSeiAdvisorEnrichment>
+
+                                    <kevEnrichment>
+                                        <active>true</active>
+                                    </kevEnrichment>
+
+                                    <epssEnrichment>
+                                        <active>true</active>
+                                    </epssEnrichment>
+
+                                    <eolEnrichment>
+                                        <active>true</active>
+                                        <warningThresholdDaysSupport>180</warningThresholdDaysSupport>
+                                        <warningThresholdDaysExtendedSupport>180</warningThresholdDaysExtendedSupport>
+                                    </eolEnrichment>
+
+                                    <inventoryValidationEnrichment>
+                                        <active>${activate.validation}</active>
+                                        <failOnValidationErrors>false</failOnValidationErrors>
+                                        <addAsCorrelationWarnings>true</addAsCorrelationWarnings>
+                                        <additionalCpeIsNotEffectiveInventoryValidator/>
+                                        <multipleArtifactsAndVersionsOnVulnerabilityInventoryValidator>
+                                            <versionLevel>minor</versionLevel>
+                                        </multipleArtifactsAndVersionsOnVulnerabilityInventoryValidator>
+                                        <vulnerabilityInvalidNameValidator/>
+                                    </inventoryValidationEnrichment>
+
+                                    <vulnerabilityFilterEnrichment>
+                                        <active>false</active>
+                                    </vulnerabilityFilterEnrichment>
+
+                                    <vulnerabilityStatusPostProcessingEnrichment/>
+
+                                    <vulnerabilityAssessmentDashboardEnrichment>
+                                        <active>${activate.dashboard}</active>
+                                        <outputDashboardFile>${output.dashboard}</outputDashboardFile>
+                                        <svgDirectory>${output.svg}</svgDirectory>
+
+                                        <maximumVulnerabilitiesPerDashboardCount>2147483647
+                                        </maximumVulnerabilitiesPerDashboardCount>
+
+                                        <vulnerabilityTimelinesGlobalEnabled>${ae.dashboard.timeline}
+                                        </vulnerabilityTimelinesGlobalEnabled>
+                                        <maximumCpeForTimelinesPerVulnerability>2147483647
+                                        </maximumCpeForTimelinesPerVulnerability>
+                                        <maximumVulnerabilitiesPerTimeline>
+                                            ${ae.dashboard.timeline.vulnerabilities.limit}
+                                        </maximumVulnerabilitiesPerTimeline>
+                                        <vulnerabilityTimelineHideIrrelevantVersions>true
+                                        </vulnerabilityTimelineHideIrrelevantVersions>
+                                        <maximumVersionsPerTimeline>2147483647</maximumVersionsPerTimeline>
+                                        <maximumTimeSpentOnTimelines>2147483647</maximumTimeSpentOnTimelines>
+
+                                        <failOnVulnerabilityWithoutSpecifiedRisk>true
+                                        </failOnVulnerabilityWithoutSpecifiedRisk>
+                                        <failOnUnreviewedAdvisories>true</failOnUnreviewedAdvisories>
+                                    </vulnerabilityAssessmentDashboardEnrichment>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
     </profiles>

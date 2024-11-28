@@ -1,12 +1,6 @@
 name: Generate Sbomqs Score
 run-name: Generate Sbomqs Score
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 

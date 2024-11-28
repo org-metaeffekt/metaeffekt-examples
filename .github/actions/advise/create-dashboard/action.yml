@@ -23,6 +23,6 @@ runs:
         mvn -f advise_create-dashboard.xml process-resources \
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
-        -Doutput.dashboard=${{ inputs.output-dashboard }} \
+        -Doutput.dashboard=${{ inputs.output-dashboard }}
         rm -r target
       working-directory: processors

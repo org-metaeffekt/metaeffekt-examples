@@ -8,10 +8,6 @@ on:
         required: true
         default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
 
-      dashboard:
-        description: "The dashboard file location, relative to the processors directory."
-        required: true
-        default: ../.github/actions/advise/create-dashboard/keycloak-25.0.4-dashboard.html
 
 jobs:
   run_pipeline:
@@ -40,21 +36,17 @@ jobs:
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: ${{ inputs.cyclonedx }}
-          inventory-output: ../temp/converted.xls
-
-      - name: Debug echo
-        run: |
-          echo "Database: ${{ env.index-directory }}"
+          inventory-output: /tmp/converted.xls
 
       - name: advise_create-dashboard
         uses: ./.github/actions/advise/create-dashboard
         with:
           input-inventory: ${{ env.converted-inventory }}
           input-database: ${{ env.index-directory }}
-          output-dashboard: ${{ inputs.dashboard }}
+          output-dashboard: /tmp/dashboard.html
 
-      - name: upload-artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: cylonedx-to-dashboard.html
-          path: ${{ inputs.dashboard }}
+          path: /tmp/dashboard.html

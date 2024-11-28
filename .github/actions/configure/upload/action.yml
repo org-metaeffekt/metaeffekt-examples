@@ -13,7 +13,7 @@ runs:
       shell: bash
       run: |
         relative_path="${{ inputs.relative-output-file }}"
-        modified_path="${relative_path/#..\//~}"
+        modified_path="${relative_path/#..\//~/}"
         echo "modified_path=${modified_path}" >> $GITHUB_ENV
 
     - name: Upload artifact

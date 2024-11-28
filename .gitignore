@@ -15,3 +15,9 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+.idea
+
+# For testing
+.database
+.github/workflows/tasks/mirror_download-vulnerability-data/
+index/

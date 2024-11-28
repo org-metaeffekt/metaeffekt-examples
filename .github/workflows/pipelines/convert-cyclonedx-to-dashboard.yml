@@ -2,31 +2,59 @@ name: Convert CycloneDx To Dashboard
 
 on:
   workflow_dispatch:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        required: true
+        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+
+      dashboard:
+        description: "The dashboard file location, relative to the processors directory."
+        required: true
+        default: ../.github/actions/advise/create-dashboard/keycloak-25.0.4-dashboard.html
 
 jobs:
   run_pipeline:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout-and-configure-git
-        uses: ../tasks/checkout-and-configure-git.yml
+      - uses: actions/checkout@v4 # Can not be a custom action.
 
-      - name: set-up-jdk
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           java-version: '8'
           distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
 
-      - name: convert-cyclonedx-to-inventory
-        uses: ../tasks/convert_cyclonedx-to-inventory.yml
+      - name: configure-container
+        uses: ./.github/actions/configure/container
+
+      - name: configure-git
+        uses: ./.github/actions/configure/git
+
+      - name: download-vulnerability-index
+        uses: ./.github/actions/mirror/download-vulnerability-index
+
+      - name: convert_cyclonedx-to-inventory
+        uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
-          input_param: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
-          output_param: ../keycloak-25.0.4/03-advised/keycloak-25.0.4_input.xlsx
+          cyclonedx-input: ${{ inputs.cyclonedx }}
+          inventory-output: ../temp/converted.xls
 
-      # TODO
-
-      - name: commit-output-files
+      - name: Debug echo
         run: |
-          git add -A
-          git commit -m "Auto-commit changes from GitHub Actions"
-          git push origin HEAD
+          echo "Database: ${{ env.index-directory }}"
+
+      - name: advise_create-dashboard
+        uses: ./.github/actions/advise/create-dashboard
+        with:
+          input-inventory: ${{ env.converted-inventory }}
+          input-database: ${{ env.index-directory }}
+          output-dashboard: ${{ inputs.dashboard }}
+
+      - name: upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cylonedx-to-dashboard.html
+          path: ${{ inputs.dashboard }}

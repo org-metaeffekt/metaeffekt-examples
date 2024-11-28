@@ -1,0 +1,28 @@
+name: Create Dashboard
+description: "A composite action which creates a vulnerability dashboard."
+
+inputs:
+  input-inventory:
+    description: "The input inventory."
+    required: true
+
+  input-database:
+    description: "The input database used for vulnerability correlation."
+    required: true
+
+  output-dashboard:
+    description: "The dashboard output file."
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: create-dashboard
+      shell: bash
+      run: |
+        mvn -f advise_create-dashboard.xml process-resources \
+        -Dinput.inventory=${{ inputs.input-inventory }} \
+        -Dinput.database=${{ inputs.input-database }} \
+        -Doutput.dashboard=${{ inputs.output-dashboard }} \
+        rm -r target
+      working-directory: processors

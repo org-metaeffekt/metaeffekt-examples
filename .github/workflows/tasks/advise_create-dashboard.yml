@@ -1,6 +1,0 @@
-name: Create Dashboard
-
-runs:
-  using: "composite"
-  steps:
-    #TODO

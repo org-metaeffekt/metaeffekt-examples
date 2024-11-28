@@ -1,12 +1,11 @@
 name: Checkout And Configure Git
+description: A composite action to checkout the repository and configure Git settings.
 
 runs:
   using: "composite"
   steps:
-    - name: checkout-repository
-      uses: actions/checkout@v4
-
     - name: configure-git
-      runs: |
+      shell: bash
+      run: |
         git config --local user.name "ae-actions-runner"
         git config --local user.email "ae-actions-runner@metaeffekt.com"

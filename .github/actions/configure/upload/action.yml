@@ -1,0 +1,23 @@
+name: Upload artifact
+description: Upload the resulting artifact.
+
+inputs:
+  relative-output-file:
+    required: true
+    description: The relative path to the output file location.
+
+runs:
+  using: composite
+  steps:
+    - name: prepare-path
+      shell: bash
+      run: |
+        relative_path="${{ inputs.relative-output-file }}"
+        modified_path="${relative_path/../~/}"
+        echo "modified_path=${modified_path}" >> $GITHUB_ENV
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: cylonedx-to-dashboard.html
+        path: ${{ env.modified_path }}

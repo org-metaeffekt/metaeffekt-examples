@@ -42,10 +42,6 @@ jobs:
           cyclonedx-input: ${{ inputs.cyclonedx }}
           inventory-output: ../temp/converted.xls
 
-      - name: Debug echo
-        run: |
-          echo "Database: ${{ env.index-directory }}"
-
       - name: advise_create-dashboard
         uses: ./.github/actions/advise/create-dashboard
         with:
@@ -53,8 +49,7 @@ jobs:
           input-database: ${{ env.index-directory }}
           output-dashboard: ${{ inputs.dashboard }}
 
-      - name: upload-artifact
-        uses: actions/upload-artifact@v4
+      - name: configure-upload
+        uses: ./.github/actions/configure/upload
         with:
-          name: cylonedx-to-dashboard.html
-          path: ${{ inputs.dashboard }}
+          relative-output-file: ${{ inputs.dashboard }}

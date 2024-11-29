@@ -1,0 +1,29 @@
+name: Enrich inventories
+description: "A composite action which enriches inventories with vulnerability information."
+
+inputs:
+  input-inventory:
+    description: "The input inventory."
+    required: true
+
+  input-database:
+    description: "The input database used for vulnerability correlation."
+    required: true
+
+  output-inventory:
+    description: "The enriched inventory output."
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: create-dashboard
+      shell: bash
+      run: |
+        mvn -f advise_create-dashboard.xml process-resources \
+        -Dinput.inventory=${{ inputs.input-inventory }} \
+        -Dinput.database=${{ inputs.input-database }} \
+        -Doutput.inventory=${{ inputs.output-inventory }}
+        echo "enriched-inventory=${{ inputs.output-inventory }}" >> $GITHUB_ENV
+        rm -r target
+      working-directory: processors

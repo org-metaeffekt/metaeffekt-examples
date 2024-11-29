@@ -37,6 +37,7 @@ jobs:
         with:
           cyclonedx-input: ${{ inputs.cyclonedx }}
           inventory-output: /tmp/converted.xls
+          output-inventory: enriched-inventory
 
       - name: advise_create-dashboard
         uses: ./.github/actions/advise/create-dashboard

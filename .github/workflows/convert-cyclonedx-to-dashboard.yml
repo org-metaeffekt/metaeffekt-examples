@@ -10,42 +10,65 @@ on:
 
 
 jobs:
-  run_pipeline:
+  prepare_runner:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4 # Can not be a custom action.
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Can not be a custom action.
 
-      - uses: actions/setup-java@v4
+      - name: Setup java environment
+        uses: actions/setup-java@v4
         with:
           java-version: '8'
           distribution: 'zulu'
           cache: 'maven'
           cache-dependency-path: './processors/processor-parent.xml'
 
-      - name: configure-container
+      - name: Configure container
         uses: ./.github/actions/configure/container
 
-      - name: configure-git
+      - name: Configure git
         uses: ./.github/actions/configure/git
 
-      - name: download-vulnerability-index
+  download_vulnerability_index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download vulnerability index
         uses: ./.github/actions/mirror/download-vulnerability-index
 
-      - name: convert_cyclonedx-to-inventory
+  convert_cyclonedx_to_inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Convert cyclonedx to inventory
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: ${{ inputs.cyclonedx }}
           inventory-output: /tmp/converted.xls
-          output-inventory: enriched-inventory
 
-      - name: advise_create-dashboard
-        uses: ./.github/actions/advise/create-dashboard
+  enrich_inventories:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enrich inventories and create dashboard
+        uses: ./.github/actions/advise/enrich-inventories
         with:
           input-inventory: ${{ env.converted-inventory }}
           input-database: ${{ env.index-directory }}
+          output-inventory: /tmp/enriched.xls
+
+  create_dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create dashboard
+        uses: ./.github/actions/advise/create-dashboard
+        with:
+          input-inventory: ${{ env.enriched-inventory }}
+          input-database: ${{ env.index-directory }}
           output-dashboard: /tmp/dashboard.html
 
+  # If using act, this step is expected to fail.
+  post_run_actions:
+    runs-on: ubuntu-latest
+    steps:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

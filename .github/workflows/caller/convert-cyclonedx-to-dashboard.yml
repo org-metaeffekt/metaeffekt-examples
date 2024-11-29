@@ -1,0 +1,23 @@
+name: Convert CycloneDx To Dashboard
+
+on:
+  workflow_dispatch:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        required: true
+        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+
+jobs:
+  cyclonedx-to-inventory:
+    uses: ./.github/workflows/cyclonedx-to-inventory.yml
+    with:
+      cyclonedx: ${{ inputs.cyclonedx }}
+
+  enrich-inventory:
+    uses: ./.github/workflows/enrich-inventory.yml
+    needs: cyclonedx-to-inventory
+
+  inventory-to-dashboard:
+    uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
+    needs: enrich-inventory

@@ -1,0 +1,47 @@
+name: Convert CycloneDx to inventory
+
+on:
+  workflow_dispatch:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        required: true
+        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+
+  workflow_call:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        required: true
+        type: string
+
+jobs:
+  cyclonedx-to-inventory:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure container
+        uses: ./.github/actions/configure/container
+
+      - name: Convert cyclonedx to inventory
+        uses: ./.github/actions/convert/cyclonedx-to-inventory
+        with:
+          cyclonedx-input: ${{ inputs.cyclonedx }}
+          inventory-output: /tmp/converted.xls
+
+      - name: Upload converted inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: converted-inventory.xls
+          path: /tmp/converted.xls

@@ -1,0 +1,49 @@
+name: Enrich inventory
+
+on:
+  workflow_dispatch:
+    inputs:
+      inventory:
+        description: "The base inventory file location, relative to the processors directory."
+        required: true
+        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4.xlsx
+
+  workflow_call:
+    inputs:
+      inventory:
+        description: "The base inventory file location, relative to the processors directory."
+        required: true
+        type: string
+
+jobs:
+  enrich-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure container
+        uses: ./.github/actions/configure/container
+
+      - name: Get vulnerability index
+        uses: ./.github/actions/mirror/download-vulnerability-index
+
+      - name: Enrich inventory
+        uses: .github/actions/advise/enrich-inventories
+        with:
+         input-inventory: ${{ inputs.inventory }}
+         input-database: ${{ env.index-directory }}
+
+      - name: Upload converted inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: converted-inventory.xls
+          path: ${{ env.enriched-inventory }}

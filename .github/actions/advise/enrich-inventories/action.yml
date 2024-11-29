@@ -10,10 +10,6 @@ inputs:
     description: "The input database used for vulnerability correlation."
     required: true
 
-  output-inventory:
-    description: "The enriched inventory output."
-    required: true
-
 runs:
   using: "composite"
   steps:
@@ -23,7 +19,7 @@ runs:
         mvn -f advise_create-dashboard.xml process-resources \
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
-        -Doutput.inventory=${{ inputs.output-inventory }}
-        echo "enriched-inventory=${{ inputs.output-inventory }}" >> $GITHUB_ENV
+        -Doutput.inventory=/tmp/enriched-inventory.xls
+        echo "enriched-inventory=/tmp/enriched-inventory.xls" >> $GITHUB_ENV
         rm -r target
       working-directory: processors

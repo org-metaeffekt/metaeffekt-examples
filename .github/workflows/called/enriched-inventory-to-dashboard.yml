@@ -1,0 +1,43 @@
+name: Enriched inventory to dashboard
+
+on:
+  workflow_call:
+    inputs:
+      enriched-inventory:
+        description: "The enriched inventory file location, relative to the processors directory."
+        required: true
+        type: string
+
+jobs:
+  enriched-inventory-to-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup java environment
+      uses: actions/setup-java@v4
+      with:
+        java-version: '8'
+        distribution: 'zulu'
+        cache: 'maven'
+        cache-dependency-path: './processors/processor-parent.xml'
+
+    - name: Configure container
+      uses: ./.github/actions/configure/container
+
+    - name: Get vulnerability index
+      uses: ./.github/actions/mirror/download-vulnerability-index
+
+    - name: Create dashboard
+      uses: ./.github/actions/advise/create-dashboard
+      with:
+        input-inventory: ${{ inputs.enriched-inventory }}
+        input-database: ${{ env.index-directory }}
+        output-dashboard: /tmp/dashboard.html
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dashboard.html
+        path: /tmp/dashboard.html

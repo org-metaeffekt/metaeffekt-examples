@@ -10,7 +10,7 @@ on:
 
   workflow_call:
     inputs:
-      cyclonedx:
+      cyclonedx-artifact:
         description: "The CycloneDX-Bom artifact name."
         required: true
         type: string
@@ -39,14 +39,14 @@ jobs:
 
       # START: workflow_call specific section
       - name: Download previous artifact
-        if: ${{ github.event_name == 'workflow_call' }}
+        if: ${{ inputs.cyclonedx-artifacts != '' }}
         uses: actions/download-artifact@v4
         with:
-          name: ${{ inputs.cyclonedx }}
+          name: ${{ inputs.cyclonedx-artifact }}
           path: /tmp/cyclonedx.json
 
       - name: Convert cyclonedx artifact to inventory
-        if: ${{ github.event_name == 'workflow_call' }}
+        if: ${{ inputs.cyclonedx-artifacts != '' }}
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: /tmp/cyclonedx.json
@@ -54,13 +54,7 @@ jobs:
       # END: workflow_call specific section
 
       - name: Convert cyclonedx file to inventory
-        if: ${{ github.event_name != 'workflow_call' }}
-        uses: ./.github/actions/convert/cyclonedx-to-inventory
-        with:
-          cyclonedx-input: ${{ inputs.cyclonedx }}
-          inventory-output: /tmp/converted.xls
-
-      - name: Convert cyclonedx to inventory
+        if: ${{ inputs.cyclonedx-artifacts == '' }}
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: ${{ inputs.cyclonedx }}

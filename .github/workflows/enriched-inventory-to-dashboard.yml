@@ -9,7 +9,7 @@ on:
 
   workflow_call:
     inputs:
-      enriched-inventory:
+      enriched-inventory-artifact:
         description: "The enriched inventory artifact name."
         required: true
         type: string
@@ -41,14 +41,14 @@ jobs:
 
     # START: workflow_call specific section
     - name: Download previous artifact
-      if: ${{ github.event_name == 'workflow_call' }}
+      if: ${{ inputs.enriched-inventory-artifact != '' }}
       uses: actions/download-artifact@v4
       with:
-        name: ${{ inputs.enriched-inventory }}
+        name: ${{ inputs.enriched-inventory-artifact }}
         path: /tmp/enriched-inventory.xls
 
     - name: Create dashboard
-      if: ${{ github.event_name == 'workflow_call' }}
+      if: ${{ inputs.enriched-inventory-artifact != '' }}
       uses: ./.github/actions/advise/create-dashboard
       with:
         input-inventory: /tmp/enriched-inventory.xls
@@ -57,7 +57,7 @@ jobs:
     # END: workflow_call specific section
 
     - name: Create dashboard
-      if: ${{ github.event_name != 'workflow_call' }}
+      if: ${{ inputs.enriched-inventory-artifact == '' }}
       uses: ./.github/actions/advise/create-dashboard
       with:
         input-inventory: ${{ inputs.enriched-inventory }}

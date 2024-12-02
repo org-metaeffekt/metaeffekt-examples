@@ -10,7 +10,7 @@ on:
 
   workflow_call:
     inputs:
-      inventory:
+      inventory-artifact:
         description: "The base inventory artifact name."
         required: true
         type: string
@@ -39,21 +39,16 @@ jobs:
       - name: Get vulnerability index
         uses: ./.github/actions/mirror/download-vulnerability-index
 
-      - name: Debug event name
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Inventory: ${{ inputs.inventory }}
-
       # START: workflow_call specific section
       - name: Download previous artifact
-        if: ${{ github.event_name == 'workflow_call' }}
+        if: ${{ inputs.inventory-artifact != '' }}
         uses: actions/download-artifact@v4
         with:
-          name: ${{ inputs.inventory }}
+          name: ${{ inputs.inventory-artifact }}
           path: /tmp/base-inventory.xls
 
       - name: Enrich inventory
-        if: ${{ github.event_name == 'workflow_call' }}
+        if: ${{ inputs.inventory-artifact != '' }}
         uses: ./.github/actions/advise/enrich-inventories
         with:
           input-inventory: /tmp/base-inventory.xls
@@ -61,7 +56,7 @@ jobs:
       # END: workflow_call specific section
 
       - name: Enrich inventory
-        if: ${{ github.event_name != 'workflow_call' }}
+        if: ${{ inputs.inventory-artifact == '' }}
         uses: ./.github/actions/advise/enrich-inventories
         with:
          input-inventory: ${{ inputs.inventory }}

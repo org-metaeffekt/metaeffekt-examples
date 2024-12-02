@@ -46,7 +46,7 @@ jobs:
 
       - name: Enrich inventory
         if: ${{ github.event_name == 'workflow_call' }}
-        uses: .github/actions/advise/enrich-inventories
+        uses: ./.github/actions/advise/enrich-inventories
         with:
           input-inventory: /tmp/base-inventory.xls
           input-database: ${{ env.index-directory }}
@@ -54,7 +54,7 @@ jobs:
 
       - name: Enrich inventory
         if: ${{ github.event_name != 'workflow_call' }}
-        uses: .github/actions/advise/enrich-inventories
+        uses: ./.github/actions/advise/enrich-inventories
         with:
          input-inventory: ${{ inputs.inventory }}
          input-database: ${{ env.index-directory }}

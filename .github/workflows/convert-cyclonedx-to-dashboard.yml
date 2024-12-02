@@ -18,10 +18,10 @@ jobs:
     uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
-      cyclonedx-converted-inventory: ${{ needs.cyclonedx-to-inventory.steps.upload.outputs.artifact-id }}
+      inventory: ${{ needs.cyclonedx-to-inventory.steps.upload.outputs.artifact-id }}
 
   inventory-to-dashboard:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-      vulnerability-enriched-inventory: ${{ needs.enrich-inventory.steps.upload.outputs.artifact-id }}
+      enriched-inventory: ${{ needs.enrich-inventory.steps.upload.outputs.artifact-id }}

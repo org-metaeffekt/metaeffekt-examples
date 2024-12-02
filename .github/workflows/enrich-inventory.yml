@@ -40,7 +40,7 @@ jobs:
         uses: ./.github/actions/mirror/download-vulnerability-index
 
       - name: Debug event name
-        runs: |
+        run: |
           echo "Event name: ${{ github.event_name }}"
           echo "Inventory: ${{ inputs.inventory }}
 

@@ -11,13 +11,12 @@ on:
   workflow_call:
     inputs:
       cyclonedx:
-        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        description: "The CycloneDX-Bom artifact name."
         required: true
         type: string
 
 jobs:
   cyclonedx-to-inventory:
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -34,14 +33,38 @@ jobs:
       - name: Configure container
         uses: ./.github/actions/configure/container
 
+      # START: workflow_call specific section
+      - name: Download previous artifact
+        if: ${{ github.event_name == 'workflow_call' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.cyclonedx }}
+          path: /tmp/cyclonedx.json
+
+      - name: Convert cyclonedx artifact to inventory
+        if: ${{ github.event_name == 'workflow_call' }}
+        uses: ./.github/actions/convert/cyclonedx-to-inventory
+        with:
+          cyclonedx-input: /tmp/cyclonedx.json
+          inventory-output: /tmp/converted.xls
+      # END: workflow_call specific section
+
+      - name: Convert cyclonedx file to inventory
+        if: ${{ github.event_name != 'workflow_call' }}
+        uses: ./.github/actions/convert/cyclonedx-to-inventory
+        with:
+          cyclonedx-input: ${{ inputs.cyclonedx }}
+          inventory-output: /tmp/converted.xls
+
       - name: Convert cyclonedx to inventory
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: ${{ inputs.cyclonedx }}
           inventory-output: /tmp/converted.xls
 
-      - name: Upload converted inventory
+      - name: Upload artifact
+        id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: converted-inventory.xls
+          name: cyclonedx-converted-inventory.xls # Must be the same as output
           path: /tmp/converted.xls

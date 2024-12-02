@@ -21,5 +21,5 @@ repository. If not run from the root directory **act** might not recognize the r
 
 ~~~
 cd [...]/metaeffekt-examples/
-act -W '.github/workflows/pipelines/<WORKFLOW-FILE.yml>'
+act -W '.github/workflows/caller/<WORKFLOW-FILE.yml>'
 ~~~

@@ -11,7 +11,7 @@ on:
   workflow_call:
     inputs:
       inventory:
-        description: "The base inventory file location, relative to the processors directory."
+        description: "The base inventory artifact name."
         required: true
         type: string
 
@@ -36,14 +36,32 @@ jobs:
       - name: Get vulnerability index
         uses: ./.github/actions/mirror/download-vulnerability-index
 
+      # START: workflow_call specific section
+      - name: Download previous artifact
+        if: ${{ github.event_name == 'workflow_call' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.inventory }}
+          path: /tmp/base-inventory.xls
+
       - name: Enrich inventory
+        if: ${{ github.event_name == 'workflow_call' }}
+        uses: .github/actions/advise/enrich-inventories
+        with:
+          input-inventory: /tmp/base-inventory.xls
+          input-database: ${{ env.index-directory }}
+      # END: workflow_call specific section
+
+      - name: Enrich inventory
+        if: ${{ github.event_name != 'workflow_call' }}
         uses: .github/actions/advise/enrich-inventories
         with:
          input-inventory: ${{ inputs.inventory }}
          input-database: ${{ env.index-directory }}
 
-      - name: Upload converted inventory
+      - name: Upload artifact
+        id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: converted-inventory.xls
+          name: vulnerability-enriched-inventory.xls # Must be the same as output
           path: ${{ env.enriched-inventory }}

@@ -1,10 +1,16 @@
 name: Enriched inventory to dashboard
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       enriched-inventory:
         description: "The enriched inventory file location, relative to the processors directory."
+        required: true
+
+  workflow_call:
+    inputs:
+      enriched-inventory:
+        description: "The enriched inventory artifact name."
         required: true
         type: string
 
@@ -29,7 +35,25 @@ jobs:
     - name: Get vulnerability index
       uses: ./.github/actions/mirror/download-vulnerability-index
 
+    # START: workflow_call specific section
+    - name: Download previous artifact
+      if: ${{ github.event_name == 'workflow_call' }}
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.enriched-inventory }}
+        path: /tmp/enriched-inventory.xls
+
     - name: Create dashboard
+      if: ${{ github.event_name == 'workflow_call' }}
+      uses: ./.github/actions/advise/create-dashboard
+      with:
+        input-inventory: /tmp/enriched-inventory.xls
+        input-database: ${{ env.index-directory }}
+        output-dashboard: /tmp/dashboard.html
+    # END: workflow_call specific section
+
+    - name: Create dashboard
+      if: ${{ github.event_name != 'workflow_call' }}
       uses: ./.github/actions/advise/create-dashboard
       with:
         input-inventory: ${{ inputs.enriched-inventory }}
@@ -37,6 +61,7 @@ jobs:
         output-dashboard: /tmp/dashboard.html
 
     - name: Upload artifact
+      id: upload
       uses: actions/upload-artifact@v4
       with:
         name: dashboard.html

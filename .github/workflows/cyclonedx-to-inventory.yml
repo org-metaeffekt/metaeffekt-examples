@@ -17,7 +17,7 @@ on:
 
     outputs:
       inventory:
-        value: cyclonedx-converted-inventory.xls
+        value: cyclonedx-converted-inventory
 
 jobs:
   cyclonedx-to-inventory:
@@ -64,5 +64,6 @@ jobs:
         id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: cyclonedx-converted-inventory.xls # Must be the same as output
+          name: cyclonedx-converted-inventory # Must be the same as output
           path: /tmp/converted.xls
+          compression-level: 0

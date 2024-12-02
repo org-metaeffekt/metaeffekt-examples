@@ -17,7 +17,7 @@ on:
 
     outputs:
       enriched-inventory:
-        value: vulnerability-enriched-inventory.xls
+        value: vulnerability-enriched-inventory
 jobs:
   enrich-inventory:
     runs-on: ubuntu-latest
@@ -66,5 +66,6 @@ jobs:
         id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: vulnerability-enriched-inventory.xls # Must be the same as output
+          name: vulnerability-enriched-inventory # Must be the same as output
           path: ${{ env.enriched-inventory }}
+          compression-level: 0

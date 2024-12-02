@@ -16,7 +16,7 @@ on:
 
     outputs:
       dashboard:
-        value: dashboard.html
+        value: dashboard
 
 jobs:
   enriched-inventory-to-dashboard:
@@ -68,5 +68,6 @@ jobs:
       id: upload
       uses: actions/upload-artifact@v4
       with:
-        name: dashboard.html
+        name: dashboard
         path: /tmp/dashboard.html
+        compression-level: 0

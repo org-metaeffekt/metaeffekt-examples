@@ -10,18 +10,18 @@ on:
 
 jobs:
   cyclonedx-to-inventory:
-    uses: ./.github/workflows/called/cyclonedx-to-inventory.yml
+    uses: ./.github/workflows/cyclonedx-to-inventory.yml
     with:
       cyclonedx: ${{ inputs.cyclonedx }}
 
   enrich-inventory:
-    uses: ./.github/workflows/called/enrich-inventory.yml
+    uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
       cyclonedx-converted-inventory: ${{ needs.cyclonedx-to-inventory.steps.upload.outputs.artifact-id }}
 
   inventory-to-dashboard:
-    uses: ./.github/workflows/called/enriched-inventory-to-dashboard.yml
+    uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
       vulnerability-enriched-inventory: ${{ needs.enrich-inventory.steps.upload.outputs.artifact-id }}

@@ -17,7 +17,7 @@ on:
 
     outputs:
       enriched-inventory:
-        value: ${{ jobs.enrich-inventory.steps.upload.outputs.artifact-id }}
+        value: vulnerability-enriched-inventory.xls
 jobs:
   enrich-inventory:
     runs-on: ubuntu-latest

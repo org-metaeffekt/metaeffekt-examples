@@ -17,7 +17,7 @@ on:
 
     outputs:
       inventory:
-        value: ${{ jobs.cyclonedx-to-inventory.steps.upload.outputs.artifact-id }}
+        value: cyclonedx-converted-inventory.xls
 
 jobs:
   cyclonedx-to-inventory:

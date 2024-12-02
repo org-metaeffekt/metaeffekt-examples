@@ -16,7 +16,7 @@ on:
 
     outputs:
       dashboard:
-        value: ${{ jobs.enriched-inventory-to-dashboard.steps.upload.outputs.artifact-id }}
+        value: dashboard.html
 
 jobs:
   enriched-inventory-to-dashboard:

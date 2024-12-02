@@ -15,6 +15,10 @@ on:
         required: true
         type: string
 
+    outputs:
+      inventory:
+        value: ${{ jobs.cyclonedx-to-inventory.steps.upload.outputs.artifact-id }}
+
 jobs:
   cyclonedx-to-inventory:
     runs-on: ubuntu-latest

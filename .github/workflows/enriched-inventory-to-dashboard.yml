@@ -14,6 +14,10 @@ on:
         required: true
         type: string
 
+    outputs:
+      dashboard:
+        value: ${{ jobs.enriched-inventory-to-dashboard.steps.upload.outputs.artifact-id }}
+
 jobs:
   enriched-inventory-to-dashboard:
     runs-on: ubuntu-latest

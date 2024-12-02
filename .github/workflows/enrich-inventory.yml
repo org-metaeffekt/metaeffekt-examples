@@ -15,6 +15,9 @@ on:
         required: true
         type: string
 
+    outputs:
+      enriched-inventory:
+        value: ${{ jobs.enrich-inventory.steps.upload.outputs.artifact-id }}
 jobs:
   enrich-inventory:
     runs-on: ubuntu-latest

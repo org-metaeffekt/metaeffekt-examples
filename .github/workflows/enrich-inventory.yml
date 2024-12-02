@@ -39,6 +39,11 @@ jobs:
       - name: Get vulnerability index
         uses: ./.github/actions/mirror/download-vulnerability-index
 
+      - name: Debug event name
+        runs: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Inventory: ${{ inputs.inventory }}
+
       # START: workflow_call specific section
       - name: Download previous artifact
         if: ${{ github.event_name == 'workflow_call' }}

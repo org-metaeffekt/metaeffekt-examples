@@ -4,20 +4,21 @@ on:
   workflow_dispatch:
     inputs:
       inventory:
-        description: "The base inventory file location, relative to the processors directory."
+        description: "The base inventory path."
         required: true
-        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4.xlsx
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4.xlsx
 
   workflow_call:
     inputs:
-      inventory-artifact:
-        description: "The base inventory artifact name."
+      inventory:
+        description: "The base inventory path."
         required: true
         type: string
 
     outputs:
-      enriched-inventory:
-        value: vulnerability-enriched-inventory
+      inventory:
+        value: ${{ jobs.enrich-inventory.steps.enrich.outputs.enriched-inventory }}
+
 jobs:
   enrich-inventory:
     runs-on: ubuntu-latest
@@ -36,36 +37,23 @@ jobs:
       - name: Configure container
         uses: ./.github/actions/configure/container
 
+      - name: Process Input
+        id: process-input
+        uses: ./.github/actions/configure/file
+        with:
+          file-path: ${{ inputs.inventory }}
+
       - name: Get vulnerability index
+        id: get-index
         uses: ./.github/actions/mirror/download-vulnerability-index
 
-      # START: workflow_call specific section
-      - name: Download previous artifact
-        if: ${{ inputs.inventory-artifact != '' }}
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ inputs.inventory-artifact }}
-          path: /tmp/base-inventory.xls
-
       - name: Enrich inventory
-        if: ${{ inputs.inventory-artifact != '' }}
+        id: enrich
         uses: ./.github/actions/advise/enrich-inventories
         with:
-          input-inventory: /tmp/base-inventory.xls
-          input-database: ${{ env.index-directory }}
-      # END: workflow_call specific section
+          input-inventory: ../${{ inputs.inventory }}
+          input-database: ${{steps.get-index.outputs.index-directory }}
+          output-inventory: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-advised.xls
 
-      - name: Enrich inventory
-        if: ${{ inputs.inventory-artifact == '' }}
-        uses: ./.github/actions/advise/enrich-inventories
-        with:
-         input-inventory: ${{ inputs.inventory }}
-         input-database: ${{ env.index-directory }}
+      - uses: ./.github/actions/configure/git # Configures git and pushes changes.
 
-      - name: Upload artifact
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: vulnerability-enriched-inventory # Must be the same as output
-          path: ${{ env.enriched-inventory }}
-          compression-level: 0

@@ -4,20 +4,20 @@ on:
   workflow_dispatch:
     inputs:
       cyclonedx:
-        description: "The CycloneDX-Bom file location, relative to the processors directory."
+        description: "The CycloneDX-Bom file path."
         required: true
-        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
 
   workflow_call:
     inputs:
-      cyclonedx-artifact:
-        description: "The CycloneDX-Bom artifact name."
+      cyclonedx:
+        description: "The CycloneDX-Bom file path."
         required: true
         type: string
 
     outputs:
       inventory:
-        value: cyclonedx-converted-inventory
+        value: ${{ jobs.cyclonedx-to-inventory.steps.convert.outputs.inventory-path }}
 
 jobs:
   cyclonedx-to-inventory:
@@ -37,33 +37,17 @@ jobs:
       - name: Configure container
         uses: ./.github/actions/configure/container
 
-      # START: workflow_call specific section
-      - name: Download previous artifact
-        if: ${{ inputs.cyclonedx-artifacts != '' }}
-        uses: actions/download-artifact@v4
+      - name: Process Input
+        id: process-input
+        uses: ./.github/actions/configure/file
         with:
-          name: ${{ inputs.cyclonedx-artifact }}
-          path: /tmp/cyclonedx.json
+          file-path: ${{ inputs.cyclonedx }}
 
-      - name: Convert cyclonedx artifact to inventory
-        if: ${{ inputs.cyclonedx-artifacts != '' }}
+      - name: Convert cyclonedx to inventory
+        id: convert
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
-          cyclonedx-input: /tmp/cyclonedx.json
-          inventory-output: /tmp/converted.xls
-      # END: workflow_call specific section
+          cyclonedx-input: ../${{ inputs.cyclonedx }}
+          inventory-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-imported.xls
 
-      - name: Convert cyclonedx file to inventory
-        if: ${{ inputs.cyclonedx-artifacts == '' }}
-        uses: ./.github/actions/convert/cyclonedx-to-inventory
-        with:
-          cyclonedx-input: ${{ inputs.cyclonedx }}
-          inventory-output: /tmp/converted.xls
-
-      - name: Upload artifact
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: cyclonedx-converted-inventory # Must be the same as output
-          path: /tmp/converted.xls
-          compression-level: 0
+      - uses: ./.github/actions/configure/git # Configures git and pushes changes.

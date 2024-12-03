@@ -6,7 +6,7 @@ on:
       cyclonedx:
         description: "The CycloneDX-Bom file location, relative to the processors directory."
         required: true
-        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
 
 jobs:
   cyclonedx-to-inventory:
@@ -24,4 +24,4 @@ jobs:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-      enriched-inventory-artifact: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
+      enriched-inventory-artifact: ${{ needs.enrich-inventory.outputs.inventory }}

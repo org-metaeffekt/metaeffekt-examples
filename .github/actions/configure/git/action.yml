@@ -4,8 +4,11 @@ description: A composite action to checkout the repository and configure Git set
 runs:
   using: "composite"
   steps:
-    - name: configure-git
-      shell: bash
+    - uses: actions/checkout@v4
+    - shell: bash
       run: |
         git config --local user.name "ae-actions-runner"
         git config --local user.email "ae-actions-runner@metaeffekt.com"
+        git add .
+        git commit -m "Automated commit from actions runner"
+        git push

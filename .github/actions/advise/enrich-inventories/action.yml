@@ -10,6 +10,15 @@ inputs:
     description: "The input database used for vulnerability correlation."
     required: true
 
+  output-inventory:
+    description: "The output inventory path."
+    required: true
+
+outputs:
+  enriched-inventory:
+    description: "The output inventory path."
+    value: ${{  steps.set-output.outputs.enriched-inventory }}
+
 runs:
   using: "composite"
   steps:
@@ -19,7 +28,14 @@ runs:
         mvn -f advise_create-dashboard.xml process-resources \
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
-        -Doutput.inventory=/tmp/enriched-inventory.xls
-        echo "enriched-inventory=/tmp/enriched-inventory.xls" >> $GITHUB_ENV
+        -Doutput.inventory=${{ inputs.output-inventory }}
         rm -r target
       working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.output-inventory }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "enriched-inventory=${inventory_output_clean}" >> $GITHUB_ENV

@@ -3,20 +3,21 @@ name: Enriched inventory to dashboard
 on:
   workflow_dispatch:
     inputs:
-      enriched-inventory:
-        description: "The enriched inventory file location, relative to the processors directory."
+     inventory:
+        description: "The enriched input inventory path."
         required: true
+        default: keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls
 
   workflow_call:
     inputs:
-      enriched-inventory-artifact:
-        description: "The enriched inventory artifact name."
+      inventory:
+        description: "The enriched input inventory path."
         required: true
         type: string
 
     outputs:
       dashboard:
-        value: dashboard
+        value: ${{ jobs.enriched-inventory-to-dashboard.steps.create-dashboard.outputs.dashboard}}
 
 jobs:
   enriched-inventory-to-dashboard:
@@ -37,37 +38,21 @@ jobs:
       uses: ./.github/actions/configure/container
 
     - name: Get vulnerability index
+      id: get-index
       uses: ./.github/actions/mirror/download-vulnerability-index
 
-    # START: workflow_call specific section
-    - name: Download previous artifact
-      if: ${{ inputs.enriched-inventory-artifact != '' }}
-      uses: actions/download-artifact@v4
+    - name: Process Input
+      id: process-input
+      uses: ./.github/actions/configure/file
       with:
-        name: ${{ inputs.enriched-inventory-artifact }}
-        path: /tmp/enriched-inventory.xls
+        file-path: ${{ inputs.inventory }}
 
     - name: Create dashboard
-      if: ${{ inputs.enriched-inventory-artifact != '' }}
-      uses: ./.github/actions/advise/create-dashboard
-      with:
-        input-inventory: /tmp/enriched-inventory.xls
-        input-database: ${{ env.index-directory }}
-        output-dashboard: /tmp/dashboard.html
-    # END: workflow_call specific section
-
-    - name: Create dashboard
-      if: ${{ inputs.enriched-inventory-artifact == '' }}
+      id: create-dashboard
       uses: ./.github/actions/advise/create-dashboard
       with:
         input-inventory: ${{ inputs.enriched-inventory }}
-        input-database: ${{ env.index-directory }}
-        output-dashboard: /tmp/dashboard.html
+        input-database: ${{ steps.get-index.outputs.index-directory }}
+        output-dashboard: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-dashboard.html
 
-    - name: Upload artifact
-      id: upload
-      uses: actions/upload-artifact@v4
-      with:
-        name: dashboard
-        path: /tmp/dashboard.html
-        compression-level: 0
+    - uses: ./.github/actions/configure/git # Configures git and pushes changes.

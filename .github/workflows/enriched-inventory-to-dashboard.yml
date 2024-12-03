@@ -39,15 +39,15 @@ jobs:
     - name: Configure container
       uses: ./.github/actions/configure/container
 
-    - name: Get vulnerability index
-      id: get-index
-      uses: ./.github/actions/mirror/download-vulnerability-index
-
     - name: Process Input
       id: process-input
       uses: ./.github/actions/configure/file
       with:
         file-path: ${{ inputs.enriched-inventory }}
+
+    - name: Get vulnerability index
+      id: get-index
+      uses: ./.github/actions/mirror/download-vulnerability-index
 
     - name: Create dashboard
       id: create-dashboard

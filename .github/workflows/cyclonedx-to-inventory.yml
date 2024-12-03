@@ -16,12 +16,14 @@ on:
         type: string
 
     outputs:
-      inventory:
-        value: ${{ jobs.cyclonedx-to-inventory.steps.convert.outputs.converted-inventory }}
+      converted-inventory:
+        value: ${{ jobs.cyclonedx-to-inventory.outputs.converted-inventory }}
 
 jobs:
   cyclonedx-to-inventory:
     runs-on: ubuntu-latest
+    outputs:
+      converted-inventory: ${{ steps.convert.outputs.converted-inventory }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

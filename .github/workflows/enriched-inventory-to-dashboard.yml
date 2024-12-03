@@ -53,7 +53,7 @@ jobs:
       id: create-dashboard
       uses: ./.github/actions/advise/create-dashboard
       with:
-        input-inventory: ${{ inputs.enriched-inventory }}
+        input-inventory: ../${{ inputs.enriched-inventory }}
         input-database: ${{ steps.get-index.outputs.index-directory }}
         output-dashboard: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-dashboard.html
 

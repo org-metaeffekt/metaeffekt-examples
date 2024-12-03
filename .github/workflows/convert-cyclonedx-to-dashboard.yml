@@ -12,16 +12,16 @@ jobs:
   cyclonedx-to-inventory:
     uses: ./.github/workflows/cyclonedx-to-inventory.yml
     with:
-      cyclonedx-artifact: ${{ inputs.cyclonedx }}
+      cyclonedx: ${{ inputs.cyclonedx }}
 
   enrich-inventory:
     uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
-      inventory-artifact: ${{ needs.cyclonedx-to-inventory.outputs.inventory}}
+      inventory: ${{ needs.cyclonedx-to-inventory.outputs.inventory}}
 
   inventory-to-dashboard:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-      enriched-inventory-artifact: ${{ needs.enrich-inventory.outputs.inventory }}
+       inventory: ${{ needs.enrich-inventory.outputs.inventory }}

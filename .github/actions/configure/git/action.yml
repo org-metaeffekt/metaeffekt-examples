@@ -5,9 +5,9 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
-    - shell: bash
       with:
         clean: false
+    - shell: bash
       run: |
         git config --local user.name "ae-actions-runner"
         git config --local user.email "ae-actions-runner@metaeffekt.com"

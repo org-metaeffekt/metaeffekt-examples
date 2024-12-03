@@ -18,10 +18,10 @@ jobs:
     uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
-      inventory: ${{ needs.cyclonedx-to-inventory.outputs.converted-inventory}}
+      converted-inventory: ${{ needs.cyclonedx-to-inventory.outputs.converted-inventory}}
 
   inventory-to-dashboard:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-       inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
+       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

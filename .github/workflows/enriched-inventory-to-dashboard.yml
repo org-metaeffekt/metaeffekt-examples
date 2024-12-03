@@ -3,14 +3,14 @@ name: Enriched inventory to dashboard
 on:
   workflow_dispatch:
     inputs:
-     inventory:
+     enriched-inventory:
         description: "The enriched input inventory path."
         required: true
         default: keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls
 
   workflow_call:
     inputs:
-      inventory:
+      enriched-inventory:
         description: "The enriched input inventory path."
         required: true
         type: string
@@ -47,7 +47,7 @@ jobs:
       id: process-input
       uses: ./.github/actions/configure/file
       with:
-        file-path: ${{ inputs.inventory }}
+        file-path: ${{ inputs.enriched-inventory }}
 
     - name: Create dashboard
       id: create-dashboard

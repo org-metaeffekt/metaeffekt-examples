@@ -16,12 +16,14 @@ on:
         type: string
 
     outputs:
-      inventory:
+      enriched-inventory:
         value: ${{ jobs.enrich-inventory.steps.enrich.outputs.enriched-inventory }}
 
 jobs:
   enrich-inventory:
     runs-on: ubuntu-latest
+    outputs:
+      enriched-inventory: ${{ steps.enrich.outputs.enriched-inventory }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

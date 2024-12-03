@@ -24,4 +24,4 @@ jobs:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-       inventory: ${{ needs.enrich-inventory.outputs.inventory }}
+       inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

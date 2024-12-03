@@ -15,7 +15,7 @@ inputs:
     required: true
 
 outputs:
-  inventory-path:
+  enriched-inventory:
     description: The repository path of the enriched inventory.
     value: ${{ steps.set-output.outputs.enriched-inventory }}
 

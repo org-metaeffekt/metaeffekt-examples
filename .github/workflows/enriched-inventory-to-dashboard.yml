@@ -17,11 +17,13 @@ on:
 
     outputs:
       dashboard:
-        value: ${{ jobs.enriched-inventory-to-dashboard.steps.create-dashboard.dashboard }}
+        value: ${{ jobs.enriched-inventory-to-dashboard.outputs.dashboard }}
 
 jobs:
   enriched-inventory-to-dashboard:
     runs-on: ubuntu-latest
+    outputs:
+      dashboard: ${{ steps.create-dashboard.outputs.dashboard }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4

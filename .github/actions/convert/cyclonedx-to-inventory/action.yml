@@ -24,4 +24,4 @@ runs:
       run: |
         inventory_output_clean="${{ inputs.inventory-output }}"
         inventory_output_clean="${inventory_output_clean#../}"
-        echo "converted-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT
+        echo "converted-inventory=${inventory_output_clean}" >> "$GITHUB_OUTPUT"

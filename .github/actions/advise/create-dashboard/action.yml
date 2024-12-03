@@ -34,4 +34,4 @@ runs:
       run: |
         inventory_output_clean="${{ inputs.output-dashboard }}"
         inventory_output_clean="${inventory_output_clean#../}"
-        echo "dashboard=${inventory_output_clean}" >> $GITHUB_OUTPUT
+        echo "dashboard=${inventory_output_clean}" >> "$GITHUB_OUTPUT"

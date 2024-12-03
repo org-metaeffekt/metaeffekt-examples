@@ -9,6 +9,11 @@ inputs:
     description: "Inventory output directory and file."
     required: true
 
+outputs:
+  converted-inventory:
+    description: The repository path of the converted inventory.
+    value: ${{ steps.set-output.outputs.converted-inventory }}
+
 runs:
   using: "composite"
   steps:
@@ -16,5 +21,12 @@ runs:
       shell: bash
       run: |
         mvn -f convert_cyclonedx-to-inventory.xml process-resources -Dinput=${{ inputs.cyclonedx-input }} -Doutput=${{ inputs.inventory-output }}
-        echo "converted-inventory=${{ inputs.inventory-output }}" >> $GITHUB_ENV
       working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.inventory-output }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "converted-inventory=${inventory_output_clean}" >> "$GITHUB_OUTPUT"

@@ -14,6 +14,11 @@ inputs:
     description: "The dashboard output file."
     required: true
 
+outputs:
+  dashboard:
+    description: The repository path to the dashboard.
+    value: ${{ steps.set-output.outputs.dashboard }}
+
 runs:
   using: "composite"
   steps:
@@ -26,3 +31,11 @@ runs:
         -Doutput.dashboard=${{ inputs.output-dashboard }}
         rm -r target
       working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.output-dashboard }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "dashboard=${inventory_output_clean}" >> $GITHUB_OUTPUT

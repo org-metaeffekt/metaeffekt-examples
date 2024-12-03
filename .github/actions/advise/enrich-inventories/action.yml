@@ -11,8 +11,13 @@ inputs:
     required: true
 
   output-inventory:
-    description: "The enriched inventory output."
+    description: "The output inventory path."
     required: true
+
+outputs:
+  enriched-inventory:
+    description: The repository path of the enriched inventory.
+    value: ${{ steps.set-output.outputs.enriched-inventory }}
 
 runs:
   using: "composite"
@@ -24,6 +29,13 @@ runs:
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
         -Doutput.inventory=${{ inputs.output-inventory }}
-        echo "enriched-inventory=${{ inputs.output-inventory }}" >> $GITHUB_ENV
         rm -r target
       working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.output-inventory }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "enriched-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT

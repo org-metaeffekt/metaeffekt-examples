@@ -6,52 +6,22 @@ on:
       cyclonedx:
         description: "The CycloneDX-Bom file location, relative to the processors directory."
         required: true
-        default: ../keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
-
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
 
 jobs:
-  convert-cyclonedx-to-dashboard:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4 # Can not be a custom action.
+  cyclonedx-to-inventory:
+    uses: ./.github/workflows/cyclonedx-to-inventory.yml
+    with:
+      cyclonedx: ${{ inputs.cyclonedx }}
 
-      - name: Setup java environment
-        uses: actions/setup-java@v4
-        with:
-          java-version: '8'
-          distribution: 'zulu'
-          cache: 'maven'
-          cache-dependency-path: './processors/processor-parent.xml'
+  enrich-inventory:
+    uses: ./.github/workflows/enrich-inventory.yml
+    needs: cyclonedx-to-inventory
+    with:
+      converted-inventory: ${{ needs.cyclonedx-to-inventory.outputs.converted-inventory}}
 
-      - name: Configure container
-        uses: ./.github/actions/configure/container
-
-      - name: Download vulnerability index
-        uses: ./.github/actions/mirror/download-vulnerability-index
-
-      - name: Convert cyclonedx to inventory
-        uses: ./.github/actions/convert/cyclonedx-to-inventory
-        with:
-          cyclonedx-input: ${{ inputs.cyclonedx }}
-          inventory-output: /tmp/converted.xls
-
-      - name: Enrich inventories
-        uses: ./.github/actions/advise/enrich-inventories
-        with:
-          input-inventory: ${{ env.converted-inventory }}
-          input-database: ${{ env.index-directory }}
-          output-inventory: /tmp/enriched.xls
-
-      - name: Create dashboard
-        uses: ./.github/actions/advise/create-dashboard
-        with:
-          input-inventory: ${{ env.enriched-inventory }}
-          input-database: ${{ env.index-directory }}
-          output-dashboard: /tmp/dashboard.html
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cylonedx-to-dashboard.html
-          path: /tmp/dashboard.html
+  inventory-to-dashboard:
+    uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
+    needs: enrich-inventory
+    with:
+       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

@@ -1,0 +1,61 @@
+name: Enrich inventory
+
+on:
+  workflow_dispatch:
+    inputs:
+      converted-inventory:
+        description: "The base inventory path."
+        required: true
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4.xlsx
+
+  workflow_call:
+    inputs:
+      converted-inventory:
+        description: "The base inventory path."
+        required: true
+        type: string
+
+    outputs:
+      enriched-inventory:
+        value: ${{ jobs.enrich-inventory.outputs.enriched-inventory }}
+
+jobs:
+  enrich-inventory:
+    runs-on: ubuntu-latest
+    outputs:
+      enriched-inventory: ${{ steps.enrich.outputs.enriched-inventory }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure container
+        uses: ./.github/actions/configure/container
+
+      - name: Process Input
+        id: process-input
+        uses: ./.github/actions/configure/file
+        with:
+          file-path: ${{ inputs.converted-inventory }}
+
+      - name: Get vulnerability index
+        id: get-index
+        uses: ./.github/actions/mirror/download-vulnerability-index
+
+      - name: Enrich inventory
+        id: enrich
+        uses: ./.github/actions/advise/enrich-inventories
+        with:
+          input-inventory: ../${{ inputs.converted-inventory }}
+          input-database: ${{ steps.get-index.outputs.index-directory }}
+          output-inventory: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-advised.xls
+
+      - uses: ./.github/actions/configure/git # Configures git and pushes changes.
+

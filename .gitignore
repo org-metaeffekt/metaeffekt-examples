@@ -19,5 +19,4 @@ buildNumber.properties
 
 # For testing
 .database
-.github/workflows/tasks/mirror_download-vulnerability-data/
 index/

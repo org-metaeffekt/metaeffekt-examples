@@ -1,0 +1,55 @@
+name: Convert CycloneDx to inventory
+
+on:
+  workflow_dispatch:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file path."
+        required: true
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+
+  workflow_call:
+    inputs:
+      cyclonedx:
+        description: "The CycloneDX-Bom file path."
+        required: true
+        type: string
+
+    outputs:
+      converted-inventory:
+        value: ${{ jobs.cyclonedx-to-inventory.outputs.converted-inventory }}
+
+jobs:
+  cyclonedx-to-inventory:
+    runs-on: ubuntu-latest
+    outputs:
+      converted-inventory: ${{ steps.convert.outputs.converted-inventory }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure container
+        uses: ./.github/actions/configure/container
+
+      - name: Process Input
+        id: process-input
+        uses: ./.github/actions/configure/file
+        with:
+          file-path: ${{ inputs.cyclonedx }}
+
+      - name: Convert cyclonedx to inventory
+        id: convert
+        uses: ./.github/actions/convert/cyclonedx-to-inventory
+        with:
+          cyclonedx-input: ../${{ inputs.cyclonedx }}
+          inventory-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-imported.xls
+
+      - uses: ./.github/actions/configure/git # Configures git and pushes changes.

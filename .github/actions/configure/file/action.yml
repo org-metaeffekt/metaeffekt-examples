@@ -1,0 +1,23 @@
+name: Process File
+description: Processes a file path into the target file path, without the file ending.
+
+inputs:
+  file-path:
+    description: The input file path.
+    required: true
+
+outputs:
+  asset-name:
+    description: The extracted asset name.
+    value: ${{ steps.get-asset.outputs.asset-name }}
+
+runs:
+  using: composite
+  steps:
+    - name: Get asset name
+      id: get-asset
+      shell: bash
+      run: |
+        INPUT_PATH="${{ inputs.file-path }}"
+        ASSET_NAME=$(echo "$INPUT_PATH" | cut -d'/' -f1)
+        echo "asset-name=$ASSET_NAME" >> $GITHUB_OUTPUT

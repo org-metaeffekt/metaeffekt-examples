@@ -9,12 +9,13 @@ inputs:
 outputs:
   asset-name:
     description: The asset name contained in the path.
-    value: ${{ env.asset-name }}
+    value: ${{ steps.get-asset.outputs.asset-name }}
 
 runs:
   using: composite
   steps:
-    - name: Set up environment variables
+    - name: Get asset name
+      id: get-asset
       shell: bash
       run: |
         INPUT_PATH="${{ inputs.file-path }}"

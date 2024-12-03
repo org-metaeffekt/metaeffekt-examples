@@ -52,7 +52,7 @@ jobs:
         uses: ./.github/actions/advise/enrich-inventories
         with:
           input-inventory: ../${{ inputs.inventory }}
-          input-database: ${{steps.get-index.outputs.index-directory }}
+          input-database: ${{ steps.get-index.outputs.index-directory }}
           output-inventory: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-advised.xls
 
       - uses: ./.github/actions/configure/git # Configures git and pushes changes.

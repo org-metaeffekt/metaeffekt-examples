@@ -9,6 +9,11 @@ inputs:
     description: "Inventory output directory and file."
     required: true
 
+outputs:
+  converted-inventory:
+    description: The repository path of the converted inventory.
+    value: ${{ steps.set-output.outputs.converted-inventory }}
+
 runs:
   using: "composite"
   steps:

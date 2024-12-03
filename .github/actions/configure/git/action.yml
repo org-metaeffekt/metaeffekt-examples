@@ -15,4 +15,4 @@ runs:
           git add .
           git commit -m "Automated commit from actions runner"
           git push
-        else
+        fi

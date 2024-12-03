@@ -17,7 +17,7 @@ on:
 
     outputs:
       inventory:
-        value: ${{ env.converted-inventory }}
+        value: ${{ jobs.cyclonedx-to-inventory.steps.convert.outputs.converted-inventory }}
 
 jobs:
   cyclonedx-to-inventory:
@@ -48,6 +48,6 @@ jobs:
         uses: ./.github/actions/convert/cyclonedx-to-inventory
         with:
           cyclonedx-input: ../${{ inputs.cyclonedx }}
-          inventory-output: ../${{ env.asset-name }}/01-analyzed/${{ env.asset-name }}-imported.xls
+          inventory-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-imported.xls
 
       - uses: ./.github/actions/configure/git # Configures git and pushes changes.

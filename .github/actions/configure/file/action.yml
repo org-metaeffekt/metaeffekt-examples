@@ -15,4 +15,4 @@ runs:
       run: |
         INPUT_PATH="${{ inputs.file-path }}"
         ASSET_NAME=$(echo "$INPUT_PATH" | cut -d'/' -f1)
-        echo "asset-name=$ASSET_NAME" >> $GITHUB_ENV
+        echo "asset-name=$ASSET_NAME" >> $GITHUB_OUTPUT

@@ -14,10 +14,6 @@ inputs:
     description: "The dashboard output file."
     required: true
 
-outputs:
-  dashboard:
-    description: "The output dashboard path."
-    value: ${{ steps.set-output.outputs.dashboard }}
 
 runs:
   using: "composite"

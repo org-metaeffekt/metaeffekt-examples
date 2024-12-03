@@ -6,11 +6,6 @@ inputs:
     description: The input file path.
     required: true
 
-outputs:
-  asset-name:
-    description: The asset name contained in the path.
-    value: ${{ steps.get-asset.outputs.asset-name }}
-
 runs:
   using: composite
   steps:

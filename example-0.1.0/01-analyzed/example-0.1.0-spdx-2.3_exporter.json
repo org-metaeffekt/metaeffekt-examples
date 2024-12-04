@@ -3,34 +3,31 @@
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
     "comment" : "Organization URL: https://metaeffekt.com/",
-    "created" : "2024-10-22T10:48:24Z",
-    "creators" : [ "Organization: {metaeffekt} GmbH", "Person: null", "Tool: {metaeffekt} Kontinuum SPDX Exporter" ],
+    "created" : "2024-12-04T11:17:14Z",
     "licenseListVersion" : "3.25"
   },
-  "name" : "SPDX v2.3 Document",
   "dataLicense" : "CC0-1.0",
-  "documentNamespace" : "https://metaeffekt.com/spdx/doc/e6f93f08-16bf-4727-9794-c365651eeade",
+  "documentNamespace" : "https://metaeffekt.com/spdx/doc/02eb7306-8b69-4990-88e5-280237228580",
   "packages" : [ {
     "SPDXID" : "SPDXRef-gnrtd0",
     "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8"
+    }, {
       "algorithm" : "SHA256",
       "checksumValue" : "9791ac85aa3cdad633e512192766f84995eddf4db188cc42facec52a0dae15e8"
     }, {
       "algorithm" : "MD5",
       "checksumValue" : "4876a0d414b3c2a01c10b6e96d70b62d"
-    }, {
-      "algorithm" : "SHA1",
-      "checksumValue" : "23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.0",
+      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.0?type=jar",
       "referenceType" : "purl"
     } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -42,24 +39,23 @@
   }, {
     "SPDXID" : "SPDXRef-gnrtd1",
     "checksums" : [ {
-      "algorithm" : "SHA1",
-      "checksumValue" : "e257b0562453f73eabac1bc3181ba33e79d193ed"
-    }, {
       "algorithm" : "SHA256",
       "checksumValue" : "f04ee9c0ac417471d9127b5880b96c3147249f20674a8dbb88e9949d855382a8"
     }, {
       "algorithm" : "MD5",
       "checksumValue" : "862c00b2e854f9c0f1e8d8409d23d899"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "e257b0562453f73eabac1bc3181ba33e79d193ed"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0",
+      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0?type=jar",
       "referenceType" : "purl"
     } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -71,24 +67,18 @@
   }, {
     "SPDXID" : "SPDXRef-gnrtd2",
     "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "f049146a55991e89c0f04b9624f1f69e1763d80f"
+    }, {
       "algorithm" : "SHA256",
       "checksumValue" : "1f6bb90bc78fa69506841c24c33f29790650e092dab96a35e56441f045ae216d"
     }, {
       "algorithm" : "MD5",
       "checksumValue" : "953a41d016a5bc9d9e8ace3d90d499c9"
-    }, {
-      "algorithm" : "SHA1",
-      "checksumValue" : "f049146a55991e89c0f04b9624f1f69e1763d80f"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-aop@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -109,15 +99,9 @@
       "algorithm" : "SHA1",
       "checksumValue" : "24cc27af89edc1581a57bb15bc160d2353f40a0e"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-beans@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -129,24 +113,18 @@
   }, {
     "SPDXID" : "SPDXRef-gnrtd4",
     "checksums" : [ {
-      "algorithm" : "MD5",
-      "checksumValue" : "731eee1b78fa01375de10fd95b84455d"
-    }, {
       "algorithm" : "SHA1",
       "checksumValue" : "ce6042492f042131f602bdc83fcb412b142bdac5"
     }, {
       "algorithm" : "SHA256",
       "checksumValue" : "25efd823c10f3afbe1b65efe97370def475d202dd91477f66eb5685e746e2819"
+    }, {
+      "algorithm" : "MD5",
+      "checksumValue" : "731eee1b78fa01375de10fd95b84455d"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-context@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -167,15 +145,9 @@
       "algorithm" : "SHA1",
       "checksumValue" : "d87ad19f9d8b9a3f1a143db5a2be34c61751aaa2"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-core@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -187,24 +159,18 @@
   }, {
     "SPDXID" : "SPDXRef-gnrtd6",
     "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "5cd4c568522b7084afac5d2ac6cb945b797b3f16"
+    }, {
       "algorithm" : "SHA256",
       "checksumValue" : "f196833d5bca28b12fbb4ae3265c0f0c4dc9fb4c726b3bfc4cabcc129cd21cf7"
     }, {
       "algorithm" : "MD5",
       "checksumValue" : "1d268dba90b89964d97254bae133a431"
-    }, {
-      "algorithm" : "SHA1",
-      "checksumValue" : "5cd4c568522b7084afac5d2ac6cb945b797b3f16"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-expression@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -225,15 +191,9 @@
       "algorithm" : "SHA256",
       "checksumValue" : "b522a60d1f37b8f8b3b6ab58617df850b55fee6d82011b879a62574e068946aa"
     } ],
-    "comment" : "Archive: archive\nStructured: structured\nExecutable: NOASSERTION\n",
     "copyrightText" : "NOASSERTION",
     "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:maven/org.springframework/spring-jcl@5.3.14",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
+    "filesAnalyzed" : true,
     "homepage" : "NOASSERTION",
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
@@ -246,11 +206,11 @@
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-gnrtd6"
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-gnrtd5"
+    "relatedSpdxElement" : "SPDXRef-gnrtd0"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
@@ -258,7 +218,7 @@
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+    "relatedSpdxElement" : "SPDXRef-gnrtd7"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
@@ -270,10 +230,10 @@
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-gnrtd0"
+    "relatedSpdxElement" : "SPDXRef-gnrtd6"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-gnrtd7"
+    "relatedSpdxElement" : "SPDXRef-gnrtd5"
   } ]
 }

@@ -1,4 +1,4 @@
-name: Convert CycloneDx To Dashboard
+name: Convert Bom To Dashboard
 
 on:
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
 
   spdx-to-inventory:
     if: ${{ inputs.bom-type == 'spdx' }}
-    uses: ./.github/workflow/spdx-to-inventory.yml
+    uses: ./.github/workflows/spdx-to-inventory.yml
     with:
       spdx: ${{ inputs.bom }}
 

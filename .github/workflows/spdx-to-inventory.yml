@@ -1,26 +1,26 @@
-name: Convert CycloneDx to inventory
+name: Convert SPDX to inventory
 
 on:
   workflow_dispatch:
     inputs:
-      cyclonedx:
-        description: "The CycloneDX-Bom file path."
+      spdx:
+        description: "The SPDX-Bom file path."
         required: true
-        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-spdx-2.3_exporter_new.json
 
   workflow_call:
     inputs:
-      cyclonedx:
-        description: "The CycloneDX-Bom file path."
+      spdx:
+        description: "The SPDX-Bom file path."
         required: true
         type: string
 
     outputs:
       converted-inventory:
-        value: ${{ jobs.cyclonedx-to-inventory.outputs.converted-inventory }}
+        value: ${{ jobs.spdx-to-inventory.outputs.converted-inventory }}
 
 jobs:
-  cyclonedx-to-inventory:
+  spdx-to-inventory:
     runs-on: ubuntu-latest
     outputs:
       converted-inventory: ${{ steps.convert.outputs.converted-inventory }}
@@ -29,7 +29,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-
 
       - name: Setup java environment
         uses: actions/setup-java@v4
@@ -46,13 +45,13 @@ jobs:
         id: process-input
         uses: ./.github/actions/configure/file
         with:
-          file-path: ${{ inputs.cyclonedx }}
+          file-path: ${{ inputs.spdx }}
 
-      - name: Convert cyclonedx to inventory
+      - name: Convert SPDX to inventory
         id: convert
-        uses: ./.github/actions/convert/cyclonedx-to-inventory
+        uses: ./.github/actions/convert/spdx-to-inventory
         with:
-          cyclonedx-input: ../${{ inputs.cyclonedx }}
+          spdx-input: ../${{ inputs.spdx }}
           inventory-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-imported.xls
 
       - uses: ./.github/actions/configure/git # Configures git and pushes changes.

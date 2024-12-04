@@ -1,0 +1,32 @@
+name: Convert SPDX To Inventory
+description: Composite action which converts a SPDX document into an inventory.
+
+inputs:
+  spdx-input:
+    description: "SPDX input file."
+    required: true
+  inventory-output:
+    description: "Inventory output directory and file."
+    required: true
+
+outputs:
+  converted-inventory:
+    description: The repository path of the converted inventory.
+    value: ${{ steps.set-output.outputs.converted-inventory }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: convert-spdx-to-inventory
+      shell: bash
+      run: |
+        mvn -f convert_spdx-to-inventory.xml process-resources -Dinput=${{ inputs.spdx-input }} -Doutput=${{ inputs.inventory-output }}
+      working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.inventory-output }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "converted-inventory=${inventory_output_clean}" >> "$GITHUB_OUTPUT"

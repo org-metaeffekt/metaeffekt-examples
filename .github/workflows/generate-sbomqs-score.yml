@@ -15,7 +15,7 @@ jobs:
         run: |
           mkdir -p /opt/sbomqs
           curl -L -o /opt/sbomqs/sbomqs.deb https://github.com/interlynk-io/sbomqs/releases/download/v0.2.0/sbomqs_0.2.0_amd64.deb
-          sudo dpkg -i /tmp/sbomqs/ sbomqs.deb
+          sudo dpkg -i /opt/sbomqs/ sbomqs.deb
 
       # This takes all .json files in the repository and runs them through sbomqs, as for now we only have boms as .json.
       - name: Run sbomqs score

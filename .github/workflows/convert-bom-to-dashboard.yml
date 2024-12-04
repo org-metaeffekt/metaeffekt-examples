@@ -33,7 +33,7 @@ jobs:
     uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
-      converted-inventory: ${{ inputs. bom-type == 'cyclonedx' && needs.cyclonedx-to-inventory.outputs.converted-inventory || needs.spdx-to-inventory.outputs.converted-inventory }}
+      converted-inventory: ${{ inputs.bom-type == 'cyclonedx' && needs.cyclonedx-to-inventory.outputs.converted-inventory || needs.spdx-to-inventory.outputs.converted-inventory }}
 
   inventory-to-dashboard:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml

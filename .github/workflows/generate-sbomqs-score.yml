@@ -3,40 +3,28 @@ run-name: Generate Sbomqs Score
 on:
   workflow_dispatch:
 
-
 jobs:
   sbomqs-score:
     runs-on: ubuntu-latest
-
     steps:
-      - name: checkout-repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
-      - name: checkout-new-branch
+      - name: Install sbomqs
         run: |
-          git checkout -b ae-runner-sbomqs
-          git pull origin main
+          mkdir -p /opt/sbomqs
+          curl -L -o /opt/sbomqs/sbomqs.deb https://github.com/interlynk-io/sbomqs/releases/download/v0.2.0/sbomqs_0.2.0_amd64.deb
+          sudo dpkg -i /opt/sbomqs/sbomqs.deb
 
-      - name: install-sbomqs
-        run: |
-          wget https://github.com/interlynk-io/sbomqs/releases/download/v0.2.0/sbomqs_0.2.0_amd64.deb -O sbomqs.deb
-          sudo dpkg -i sbomqs.deb
-
-      - name: run-sbomqs-score
+      # This takes all .json files in the repository and runs them through sbomqs, as for now we only have boms as .json.
+      - name: Run sbomqs score
         run: |
           find . -type f -name "*.json" | while read json_file; do
             output_file="${json_file%.json}.sbomqs.txt"
             sbomqs score "$json_file" > "$output_file"
           done
 
-      - name: commit-sbomqs-files
-        run: |
-          git config --local user.name "ae-actions-runner"
-          git config --local user.email "ae-actions-runner@metaeffekt.com"
-          git add *.txt
-          git commit -m "Actions runner added sbomqs scores."
-          git fetch origin ae-runner-sbomqs
-          git merge origin/ae-runner-sbomqs
-          git push origin ae-runner-sbomqs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ./.github/actions/configure/git # Configures git and pushes changes.
+
+

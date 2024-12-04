@@ -3,25 +3,40 @@ name: Convert CycloneDx To Dashboard
 on:
   workflow_dispatch:
     inputs:
-      cyclonedx:
-        description: "The CycloneDX-Bom file location, relative to the processors directory."
+      bom:
+        description: "The bom file location, relative to the processors directory."
         required: true
         default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
 
+      bom-type:
+        description: "Whether the input bom is a SPDX or CycloneDx file."
+        default: cyclonedx
+        type: choice
+        options:
+          - spdx
+          - cyclonedx
+
 jobs:
   cyclonedx-to-inventory:
+    if: ${{ inputs.bom-type == 'cyclonedx'}}
     uses: ./.github/workflows/cyclonedx-to-inventory.yml
     with:
-      cyclonedx: ${{ inputs.cyclonedx }}
+      cyclonedx: ${{ inputs.bom }}
+
+  spdx-to-inventory:
+    if: ${{ inputs.bom-type == 'spdx' }}
+    uses: ./.github/workflow/spdx-to-inventory.yml
+    with:
+      spdx: ${{ inputs.bom }}
 
   enrich-inventory:
     uses: ./.github/workflows/enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
-      converted-inventory: ${{ needs.cyclonedx-to-inventory.outputs.converted-inventory}}
+      converted-inventory: ${{ inputs. bom-type == 'cyclonedx' && needs.cyclonedx-to-inventory.outputs.converted-inventory || needs.spdx-to-inventory.outputs.converted-inventory }}
 
   inventory-to-dashboard:
     uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
-       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
+      enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

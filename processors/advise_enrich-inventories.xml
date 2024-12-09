@@ -146,7 +146,7 @@
                                     <intermediateInventoriesDirectory>/tmp/intermediates/</intermediateInventoriesDirectory>
                                     <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
 
-                                    <securityPolicyFile>../.github/actions/advise/create-dashboard/security-policy-dashboard.json
+                                    <securityPolicyFile>resources/security-policy-dashboard.json
                                     </securityPolicyFile>
                                     <!--<resumeAtEnrichment>resume-at</resumeAtEnrichment>-->
                                     <!--<enrichmentOrder></enrichmentOrder>-->

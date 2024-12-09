@@ -25,6 +25,9 @@
         <ae.extractor.resources.dir>${project.build.directory}/extractor/resources</ae.extractor.resources.dir>
         <ae.extractor.scan.dir>${project.build.directory}/extractor/scan</ae.extractor.scan.dir>
 
+        <targetInventoryDir></targetInventoryDir>
+        <targetInventoryPath></targetInventoryPath>
+
     </properties>
     <build>
         <plugins>
@@ -95,10 +98,10 @@
 
                                 <exclude>**/run/utmp</exclude>
 
-                                <exlcude>**/var/lib/alternatives/*</exlcude>
+                                <exclude>**/var/lib/alternatives/*</exclude>
 
-                                <exlcude>**/etc/**/*.bak</exlcude>
-                                <exlcude>**/etc/**/*.repo</exlcude>
+                                <exclude>**/etc/**/*.bak</exclude>
+                                <exclude>**/etc/**/*.repo</exclude>
 
                                 <exclude>**/usr/share/terminfo/**/*</exclude>
                                 <exclude>**/var/lib/dnf/history.sqlite-shm/**/*</exclude>
@@ -111,8 +114,8 @@
                             <sourceInventoryDir>resources/</sourceInventoryDir>
                             <sourceInventoryIncludes>artifact-reference-inventory.xls</sourceInventoryIncludes>
 
-                            <targetInventoryDir>../processors</targetInventoryDir>
-                            <targetInventoryPath>container-extracted-inventory.xls</targetInventoryPath>
+                            <targetInventoryDir>${targetInventoryDir}</targetInventoryDir>
+                            <targetInventoryPath>${targetInventoryPath}</targetInventoryPath>
 
                             <!-- configure validation during extraction -->
                             <failOnError>true</failOnError>

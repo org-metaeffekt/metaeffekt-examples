@@ -62,5 +62,5 @@ jobs:
           output-inventory: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-advised.xls
           inventory-directory: ../${{ steps.process-input.outputs.asset-name }}/03-advised
 
-      - uses: ./.github/actions/util/push-to-directory # Configures git and pushes changes.
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.
 

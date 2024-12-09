@@ -26,5 +26,5 @@ jobs:
     uses: ./.github/workflows/advised_enriched-inventory-to-dashboard.yml
     needs: advised_enrich-inventory
     with:
-      suffix: '-from-${{ inputs.container }}-container'
+      suffix: '-from-container'
       enriched-inventory: ${{ needs.advised_enrich-inventory.outputs.enriched-inventory }}

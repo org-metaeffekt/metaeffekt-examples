@@ -142,7 +142,7 @@
                                     <inventoryOutputFile>${output.inventory}</inventoryOutputFile>
                                     <mirrorDirectory>${input.database}</mirrorDirectory>
 
-                                    <writeIntermediateInventories>true</writeIntermediateInventories>
+                                    <writeIntermediateInventories>false</writeIntermediateInventories>
                                     <intermediateInventoriesDirectory>/tmp/intermediates/</intermediateInventoriesDirectory>
                                     <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
 

@@ -1,4 +1,4 @@
-name: [Caller] Bom To Dashboard
+name: Bom To dashboard [Caller]
 
 on:
   workflow_dispatch:

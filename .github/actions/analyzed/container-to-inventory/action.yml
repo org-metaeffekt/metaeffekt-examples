@@ -19,7 +19,7 @@ inputs:
     required: true
 
   target-name:
-    description: The target directory
+    description: The target name
     required: true
 
 outputs:

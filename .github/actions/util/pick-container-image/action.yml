@@ -26,7 +26,7 @@ runs:
       id: pick-container
       shell: bash
       run: |
-        if [ "${{ github.event.inputs.image }}" == "keycloak-25.0.4" ]; then
+        if [ "${{ inputs.image }}" == "keycloak-25.0.4" ]; then
           echo "image-registry=keycloak" >> $GITHUB_OUTPUT
           echo "image-repo=keycloak" >> $GITHUB_OUTPUT
           echo "image-tag=25.0.4" >> $GITHUB_OUTPUT

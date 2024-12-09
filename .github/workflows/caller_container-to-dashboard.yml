@@ -14,7 +14,7 @@ jobs:
   analyzed_container-to-inventory:
     uses: ./.github/workflows/analyzed_container-to-inventory.yml
     with:
-      container: ${{ inputs.container }}
+      image: ${{ inputs.container }}
 
   advised_enrich-inventory:
     uses: ./.github/workflows/advised_enrich-inventory.yml

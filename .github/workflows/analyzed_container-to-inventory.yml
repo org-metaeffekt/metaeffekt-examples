@@ -58,7 +58,7 @@ jobs:
           image-registry: ${{ steps.pick-image.outputs.image-registry }}
           image-repo: ${{ steps.pick-image.outputs.image-repo }}
           image-tag: ${{ steps.pick-image.outputs.image-tag }}
-          target-dir: ../${{ iputs.image }}/01-analyzed
+          target-dir: ../${{ inputs.image }}/01-analyzed
           target-name: ${{ inputs.image }}-extracted-inventory.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

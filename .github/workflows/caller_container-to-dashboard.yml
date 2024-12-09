@@ -3,11 +3,6 @@ name: Container to dashboard [Caller]
 on:
   workflow_dispatch:
     inputs:
-      bom:
-        description: "The bom file location, relative to the processors directory."
-        required: true
-        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
-
       container:
         description: "Which container image to use as a source."
         default: keycloak-25.0.4

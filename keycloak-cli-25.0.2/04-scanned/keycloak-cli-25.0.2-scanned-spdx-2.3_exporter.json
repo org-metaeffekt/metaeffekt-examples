@@ -1,0 +1,357 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Organization URL: https://metaeffekt.com/",
+    "created" : "2024-12-04T11:17:15Z",
+    "creators" : [ "Organization: {metaeffekt} GmbH", "Tool: {metaeffekt} Kontinuum SPDX Exporter" ],
+    "licenseListVersion" : "3.25"
+  },
+  "name" : "SPDX v2.3 Document",
+  "dataLicense" : "CC0-1.0",
+  "hasExtractedLicensingInfos" : [ {
+    "licenseId" : "LicenseRef-ae-Apache",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-ae-BSD",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-ae-BSD-3-Clause-copyright-holder",
+    "extractedText" : "Copyright <YEAR> <COPYRIGHT HOLDER>\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\nlist of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\nthis list of conditions and the following disclaimer in the documentation\nand/or other materials provided with the distribution.\n\n3. Neither <variable3rdClause> may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY <copyrightHolderNoWarranty> \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL <copyrightHolderNoLiability> BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+  }, {
+    "licenseId" : "LicenseRef-ae-EDL-1.0",
+    "extractedText" : "Eclipse Distribution License - v 1.0\n\nCopyright (c) 2007, Eclipse Foundation, Inc. and its licensors.\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the\nfollowing conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nNeither the name of the Eclipse Foundation, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+  }, {
+    "licenseId" : "LicenseRef-ae-W3C",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  }, {
+    "licenseId" : "LicenseRef-scancode-public-domain",
+    "comment" : "This license identifier is marked \"unspecific\" and does not uniquely match a license of a specific version or variant.\nA license text can therefore not be asserted. Further analysis is required to determine the exact license.",
+    "extractedText" : "NOASSERTION"
+  } ],
+  "documentNamespace" : "https://metaeffekt.com/spdx/doc/be5fbaa6-7eb9-4112-a120-1f7b297756f5",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-gnrtd0",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "62ae28187ed2b062813da6a9d567bfee733c341582699b62dd980230729a0313"
+    } ],
+    "copyrightText" : "Copyright (c) 2000-2011 INRIA, France Telecom // All rights reserved.\nCopyright (c) 2000-2011 INRIA, France Telecom All rights reserved.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "(BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-BSD-3-Clause-copyright-holder)",
+    "licenseDeclared" : "(BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-BSD-3-Clause-copyright-holder)",
+    "name" : "byte-buddy-1.14.11.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.14.11"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd1",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ec87bfb55f22cbd1b21e2190eeda28b2b312ed2a431ee49fbdcc01812d04a5e4"
+    } ],
+    "copyrightText" : "Copyright 2002-2024 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/commons-codec/commons-codec@1.16.1?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://commons.apache.org/proper/commons-codec/",
+    "licenseConcluded" : "(Beerware AND BSD-3-Clause AND Apache-2.0 AND LicenseRef-scancode-public-domain)",
+    "licenseDeclared" : "(Beerware AND LicenseRef-ae-BSD AND Apache-2.0 AND LicenseRef-scancode-public-domain)",
+    "name" : "commons-codec-1.16.1.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.16.1"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd2",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "f12176263ea25f4e78bb4fa4b36d335a29738dde6a8123e1b6da89a655d150ff"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://www.jboss.org",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.0.0.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd3",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+    } ],
+    "copyrightText" : "Copyright 1999-2022 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://hc.apache.org/httpcomponents-client-ga",
+    "licenseConcluded" : "(MPL-2.0 AND Apache-2.0)",
+    "licenseDeclared" : "(MPL-2.0 AND Apache-2.0)",
+    "name" : "httpclient-4.5.14.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "4.5.14"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd4",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+    } ],
+    "copyrightText" : "Copyright 2005-2022 The Apache Software Foundation",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://hc.apache.org/httpcomponents-core-ga",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "httpcore-4.4.16.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "4.4.16"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd5",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "55be130f6a68038088a261856c4e383ce79957a0fc1a29ecb213a9efd6ef4389"
+    } ],
+    "copyrightText" : "Copyright (c) 2021 The\nCopyright (c) 2022 Daniel Lemire. BSL\nCopyright (c) 2023 Werner Randelshofer, Switzerland\nCopyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)\nCopyright 2018-2020 Raffaello Giulietti\nCopyright 2020 Tim Buktu\nCopyright 2022 Tim Buktu",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/FasterXML/jackson-core",
+    "licenseConcluded" : "(BSD-2-Clause AND BSD-3-Clause AND Apache-2.0 AND MIT)",
+    "licenseDeclared" : "(LicenseRef-ae-BSD AND BSD-2-Clause AND Apache-2.0 AND MIT)",
+    "name" : "jackson-core-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd6",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "d0ed5b54cb1b0bbb0828e24ce752a43a006dc188b34e3a4ae3238acc7b637418"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/FasterXML/jackson",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jackson-databind-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd7",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "b090239968a0ae5a172472f4014dbd97133af9426d91bf4805a6ba5fd90d80f1"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd8",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "f53f578dd0eb4170c195a4e215c59a38abfb4123dcb95dd902fef92876499fbb"
+    } ],
+    "copyrightText" : "Copyright (c) 1997, 2021 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 1997, 2022 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 2018 Oracle and/or its affiliates. All rights reserved.\nCopyright (c) 2019, current.year Eclipse Foundation. All rights reserved.\nCopyright (c) 2021 Oracle and/or its affiliates. All rights reserved.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/jakartaee/jaf-api",
+    "licenseConcluded" : "(W3C AND BSD-3-Clause AND Apache-2.0 AND LicenseRef-ae-EDL-1.0 AND GPL-2.0-only WITH Classpath-exception-2.0 AND MIT AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND OFL-1.1)",
+    "licenseDeclared" : "((Apache-2.0 OR EPL-2.0) AND W3C AND BSD-3-Clause AND GPL-2.0-only WITH Classpath-exception-2.0 AND LicenseRef-ae-EDL-1.0 AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND MIT AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND OFL-1.1)",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.1.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd9",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "7b119460de174195aca412dfed52ca0bbef0ece26c2d74301b6172cfadf4ff59"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "3.5.3.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd10",
+    "attributionTexts" : [ "2014-12-18 Amazon Registry Services, Inc.", "<domeinnaam@minaz.nl>", "<frc1533@ecgrobotics.org>", "<security@linode.com>", "Aaron Edwards <sysadmins@incsub.com>", "Aaron Marais <its_me@aaronleem.co.za>", "Aavash Shrestha <aavash@deta.sh>", "Abuse KU Leuven <abuse@kuleuven.be>", "Adam Grand <webmaster@mail.ox.rs>", "Adam Humpherys <adam@mws.dev>", "Adam Jimenez <adam@shiftcreate.com>", "Adam Newbold <adam@omg.lol>", "Adrian Imboden <adi@thingdust.com>", "Adrien Gillon <adrien+public-suffix-list@stackhero.io>", "Alan Shreve <alan@ngrok.com>", "Aleksander Hristov <noc@cloudns.net>", "Ales Krajnik <ales.krajnik@craynic.com>", "Alex Bowers <alex@shopblocks.com>", "Alex Hanselka <alex@gitlab.com>", "Alex Oancea <aoancea@cloudscale365.com>", "Alex Richter <alex.richter@shopify.com>", "Alexander Hochbaum <admin@appudo.com>", "Alexander Lodin <security+psl@yandex-team.ru>", "Alexander Selivanov <alex@apphud.com>", "Aljaz Starc <me@aljaxus.eu>", "Aman Gupta <aman@getchannels.com>", "Anani Voule <digital@digital.co.dk>", "Andre Eriksson <andre@encore.dev>", "Andreas Schnederle-Wagner <schnederle@futureweb.at>", "Andreas Weise <a.weise@avm.de>", "Andrei Canta <andrei@easypanel.io>", "Andrew Banchich <abanchich@sceven.com>", "Andrew Cady <public-suffix-list@cryptonomic.net>", "Andrew Farmer <andrew.farmer@dreamhost.com>", "Andrew Farries <andrew.farries@red-gate.com>", "Andrew Sampson <andrew@ulterius.io>", "Andy Ortlieb <aortlieb@atlassian.com>", "Angelo Gladding <angelo@lahacker.net>", "Anthony Voutas <anthony@backplane.io>", "Antoine Beaupre anarcat@torproject.org", "Anton Akhtyamov <program-managers@plesk.com>", "Anton Avramov <avramov@alboto.ca>", "Anton Avramov <register@lukanet.com>", "Anton Barkan <antonb@elementor.com>", "Antonio Lain <antlai@cafjs.com>", "Antonis Kalipetis <akalipetis@sourcelair.com>", "Anurag Goel <dev@render.com>", "Apostolos Tsakpinis <apostolos.tsakpinis@gmail.com>", "Aral Balkan <aral@small-tech.org>", "Arnold Hendriks <info@webhare.com>", "Arseniy Sokolov <security@hakaran.cz>", "Artem Kondratev <accounts@seidat.com>", "Arturo Borrero Gonzalez <aborrero@wikimedia.org>", "Asei SEKIGUCHI <mail@aseinet.com>", "Asheesh Laroia <asheesh@sandstorm.io>", "Assaf Stern <domains@comstar.co.il>", "Atanunu Igbunuroghene <publicsuffixlist@hostbip.com>", "Atanunu Igbunuroghene <publicsuffixlist@udr.org.yt>", "Atsadawat Netcharadsang <atsadawat@dotarai.co.th>", "Atul Bhouraskar <atul@yescourse.com>", "Axel Fontaine <axel@boxfuse.com>", "B. Blechschmidt <hostmaster@certmgr.org>", "Ben Francis <ben@krellian.com>", "Ben Francis <bfrancis@mozilla.com>", "Bjoern Henke <dev-server@taifun-software.de>", "Brandon DuRette <brandon.durette@wpengine.com>", "Braxton Huggins <psl-maintainers@digitalocean.com>", "Brian Bennett <brian.bennett@joyent.com>", "Cameron Elliott <cameron@cameronelliott.com>", "Carlo Cannas <tech_staff@altervista.it>", "Cassandra Beelen <cassandra@beelen.one>", "Cedric Dubois <cedric.dubois@team.blue>", "Charly Coste <changaco@changaco.oy.lc>", "Chris Kastorff <info@rethinkdb.com>", "Chris Partridge <chris@partridge.tech>", "Chris Raynor <chris@firebase.com>", "Chris Whittle <chris.whittle@woodsvalldata.co.uk>", "Christian Franke <it@ticket.io>", "Christian Poulter <milchstrasse@goip.de>", "Christian Seitz <chris@in-berlin.de>", "Cole Estep <cole@omnibond.com>", "Colin Brown <hello@adimo.co>", "Colin Sidoti <systems@clerk.dev>", "Connor Davis <security@vercel.com>", "Craig Jellick <domains@acorn.io>", "Craig McMahon <craig@shopitcommerce.com>", "Craig Welch, abeliidev@gmail.com", "Damien Tournoud <dtournoud@magento.cloud>", "Dan Miller <dm@sub6.com>", "Dani Biro <dani@pymet.com>", "Daniel A. Maierhofer <vorstand@funkfeuer.at>", "Daniel Farina <ingenieria@jotelulu.com>", "Daniel Massaguer <psl-maintainers@amazon.com>", "Daniel Mostertman <unixbeheer+publicsuffix@xs4all.net>", "Daniel Netzer <dan@paywhirl.com>", "Daniel Stone <daniel@fooishbar.org>", "Daniil Burdakov <icqkill@gmail.com>", "Danilo De Franco <info@hoplix.shop>", "Danko Aleksejevs <danko@very.lv>", "Dave Sanders <dave@myservicemagnet.com>", "Dave Tharp <browsersafetymark.io@quicinc.com>", "David Anderson <danderson@tailscale.com>", "David Coles <david.coles@sony.com>", "David Fischer <team@readthedocs.org>", "David Grellscheid <admin@hepforge.org>", "Dean Sheather <dean@deansheather.com>", "Derek Myers <derek@pagefog.com>", "Deven Reza <publicsuffixlist@noip.com>", "Domain Admin <domainadmin@amaze.co>", "Dominic Luechinger <dol@cyon.ch>", "Dominik George <dominik.george@teckids.org>", "Dominik Menke <dom@digineo.de>", "Donavan Miller <donavanm@amazon.com>", "Drew DeVault <sir@cmpwn.com>", "Duarte Santos <domain-admin@outsystemscloud.com>", "Dusan Radovanovic <dusan.radovanovic@brendly.rs>", "Dustin Ward <dward@townnews.com>", "Eddie Jones <eddie@onefoldmedia.com>", "Eduardo Vela <evn@google.com>", "Edwin Balani <sysadmins@srcf.net>", "Eero Hakkinen <Eero+psl@Hakkinen.fi>", "Emil Stahl <esp@zitcom.dk>", "Emmanuel Raviart <emmanuel@raviart.com>", "Eric Chan <support@flashdrive.io>", "Eric Jiang <eric@fabrica.dev>", "Erik Anders <erik.anders@securepoint.de>", "Etienne Stalmans <security@aiven.io>", "Evgeniy Kozhuhovskiy <ugenk@mediatech.by>", "Evgeniy Subbotin <e.subbotin@eurobyte.ru>", "Evgeniy Subbotin <e.subbotin@mchost.ru>", "Fabien Potencier <fabien@symfony.com>", "Faith Olapade <faith.olapade@snowflake.com>", "Fastly Security <security@fastly.com>", "Felipe Keller Braz <felipebraz@kinghost.com.br>", "Felix Monckemeyer <f.moenckemeyer@senseering.de>", "Frederic VANNIERE <f.vanniere@planet-work.com>", "Frederik Braun <fb@frederik-braun.com>", "Furkan Akkoc <info@hendelzon.de>", "Gabriel Ferreira <registrobr@interlegis.leg.br>", "Gary Dylina <gary@pantheon.io>", "Gavin Brown <gavin.brown@centralnic.com>", "George Georgievsky <gug@cctld.ru>", "Giles Thomas <giles@pythonanywhere.com>", "Govert Versluis <govert@co-co.nl>", "Greg Dallavalle <domains@leadpages.net>", "Greg Holland <greg.holland@lmpm.com>", "Gregory Drake <support@dyn.com>", "Hanno Bock <hanno@schokokeks.org>", "Hannu Aronsson <haa@iki.fi>", "Hector Martin <marcan@euskalencounter.org>", "Heikki Hannikainen <hessu@hes.iki.fi>", "Henrique Vicente <security@wedeploy.com>", "Hosting Div <admin@pepabo.com>", "Ian Streeter <ian@snowplowanalytics.com>", "Ihor Kolodyuk <ik@jelastic.com>", "Ilya Zaretskiy <zaretskiy@corp.mail.ru>", "Inian Parameshwaran <security@supabase.io>", "Ireneusz Maliszewski <ireneusz.maliszewski@lubman.pl>", "Ivan Oliva <ivan.oliva@koobin.com>", "Jack Price <jack@revitalised.co.uk>", "Jacob Bunk Nielsen <jbn@one.com>", "Jacob Lee <jacob@stdlib.com>", "Jacob Slater <whois@igloo.to>", "JaeYoong Lee <cec@kakaocorp.com>", "James Kennedy <domains@advisorwebsites.com>", "Jamie McClelland <info@mayfirst.org>", "Jan Jaeschke <jan.jaeschke@netatwork.de>", "Jan Krpes <jan.krpes@cdn77.com>", "Jan Moennich <jan.moennich@ownprovider.com>", "Janos Matyas <info@banzaicloud.com>", "Jason Kridner <jkridner@beagleboard.org>", "Jason Kriss <jason@pagefronthq.com>", "Jason Zhu <jason@owtware.com>", "Jasper Hugo <jasper@avstack.io>", "Jeff Wheelhouse <support@nearlyfreespeech.net>", "Jeffrey Phillips Freeman <jeffrey.freeman@qoto.org>", "Jennifer Herting <jchits@rit.edu>", "Jens Kuper <cloud@shopware.com>", "Joel Kennedy <joel@bip.sh>", "Jon Spriggs <admin@lug.org.uk>", "Jonas Schwartz <jonas@qutheory.io>", "Jonathan Rudenberg <jonathan@cupcake.io>", "Jonathan Rudenberg <jonathan@flynn.io>", "Jons Slemmer <jons@redstarconsultants.com>", "Joshua Weiss <admin.engineering@bluebite.com>", "Joshua Zhang <public-suffix@rgames.jp>", "Julia Evans <julia@wizardzines.com>", "Jung Jin <jungseok.jin@wdc.com>", "Keith Fairley <domains@fearworksmedia.co.uk>", "Kenneth Van Alstyne <kvanalstyne@perspecta.com>", "Kenny Niehage <hello@yahe.sh>", "Kevin Bridges <kevin@drud.com>", "Khannanov Roman <r.khannanov@msk-ix.ru>", "Khash Sajadi <khash@cloud66.com>", "Kidd Hustle <kiddhustle@wiardweb.com>", "Kirill Pertsev <kika@rackmaze.com>", "Kirill Ulyanov <k.ulyanov@airy.host>", "Koen Rouwhorst <koenrh@framer.com>", "Koen Van Isterdael <k.vanisterdael@fermax.be>", "Kohei YOSHIDA <tech@gehirn.co.jp>", "Konrad Kotarba <konrad.kotarba@dreamcommerce.com>", "Konstantin Nosov <Nosov@nodeart.io>", "Kor Nielsen <kor@pubtls.org>", "Krzysztof Wolski <krzysztof.wolski@home.eu>", "Kurt Mackey <kurt@fly.io>", "Lann Martin <security@localcert.dev>", "Lars Laehn <info@lcube.de>", "Laurent Pellegrino <security@noticeable.io>", "Lelux Admin <publisuffix@lelux.site>", "Lenny Bakkalian <lenny.bakkalian@gmail.com>", "Lev Nekrasov <lnekrasov@beget.com>", "Li Hui <lihui@neupeer.com>", "Likhachev Vasiliy <lihachev@fastvps.ru>", "Lincoln Bergeson <lincoln@replit.com>", "Louis Chemineau <louis@chmn.me>", "Luca Casonato <hostmaster@deno.com>", "Lukas Reschke <lukas@authentick.net>", "Luke Bratch <luke@bratch.co.uk>", "Luke Wells <psl-maintainers@amazon.com>", "Mads Hartmann <mads@glitch.com>", "Majid Qureshi <mqureshi@amrayn.com>", "Maksym Rivtin <support@cityhost.net.ua>", "Marc Bradshaw <marc@fastmailteam.com>", "Marcel Daus <cloudops@encoway.de>", "Marco Suter <marco@northflank.com>", "Marcus Popp <admin@callidomus.com>", "Mario Hoberg <info@iserv.de>", "Mario Siegenthaler <mario.siegenthaler@linkyard.ch>", "Marios Makassikis <mmakassikis@freebox.fr>", "Mark J. Titorenko <mark.titorenko@alces-software.com>", "Mark Staarink <mark@tlon.io>", "Marko Ivanovic <kormang@hotmail.rs>", "Martin Breest <security@spreadshop.com>", "Martin Dannehl <postmaster@keymachine.de>", "Martin Ellis <martin.ellis@gov.scot>", "Martin Meier <admin@protonet.io>", "Martin Semrad <semrad@i-registry.cz>", "Marvin Wiesner <Marvin@curv-labs.de>", "Matt Hanley <security@ghost.org>", "Matthew Hardeman <mhardeman@ipifony.com>", "Matthias Merkel <matthias.merkel@staclar.com>", "Maxence Bitterli <maxence@definima.com>", "Maxim Alzoba <tech.contact@faitid.org>", "Maximilian Schieder <maxi@zeug.co>", "Mia Rehlinger <dns@voxel.sh>", "Micah Anderson <micah@riseup.net>", "Michael Biven <mbiven@salesforce.com>", "Michael Olson <molson@medicomhealth.com>", "Michael Smith <michael.smith@wpengine.com>", "Michal Kralik <support@evennode.com>", "Mike Bostock <dns@observablehq.com>", "Mike Damm <md@md.vc>", "Miroslav Bozic <security@bplaced.net>", "Mitch Schwenk <mitch@yombo.net>", "Moritz Marquardt <git@momar.de>", "Moritz Werner <mwerner@jonaspasche.com>", "Nathan O'Sullivan <nathan@mammoth.com.au>", "Nathan van Bakel <info@voorloper.com>", "Nathaniel Schweinberg <noop@rearc.io>", "Nicholas Ford <nick@nimbushosting.co.uk>", "Nick Chang <nickchang@qnap.com>", "Niels Martignene <hello@goupile.fr>", "Niels Maumenee <storage@vultr.com>", "Nikola Kotur <nikola@platform.sh>", "Noa Heyl <hi@noa.dev>", "Noah Taheij <noah@lokalized.nl>", "Norbert Auler <mail@dnshome.de>", "Norman Meilick <nm@sbe.de>", "Ofer Kalaora <postmaster@activetrail.com>", "Oliver Graebner <security@mo-siemens.io>", "Olivier Benz <olivier.benz@b-data.ch>", "Oren Agiv <oren@tabit.cloud>", "Oren Eini <oren@ravendb.net>", "Patrick Flor <patrick@platter.dev>", "Patrick Nielsen <patrick@clovyr.io>", "Patrick Toomey <security@github.com>", "Patrick Uiterwijk <puiterwijk@fedoraproject.org>", "Paul Biggar <ops@darklang.com>", "Paul Cammish <kelduum@mythic-beasts.com>", "Paul Cammish <paul.cammish@bytemark.co.uk>", "Paul Crowder <paul.crowder@blackbaud.com>", "Paul Fang <mis@draytek.com>", "Paulus Schoutsen <infra@nabucasa.com>", "Pawel Panek <noc@cloudaccess.net>", "Peter Ruibal <public-suffix@fb.com>", "Peter Thomassen <peter@desec.io>", "Petros Angelatos <petrosagg@balena.io>", "Philip Hutchins <hostmaster@storj.io>", "Philipp Heckel <ph@datto.com>", "Philipp Schmid <ops@openresearch.com>", "Phillipp Roll <phillipp.roell@trafficplex.de>", "Pierre Beyssac <hostmaster@eu.org>", "Pierre Carrier <pc@rrier.ca>", "Pierre Carrier <pierre@meteor.com>", "Piotr Zduniak <piotr@nucleos.com>", "Przemyslaw Plewa <it-admin@domena.pl>", "Putri Karunia <putri@typedream.com>", "Quentin Adam <noc@clever-cloud.com>", "Radim Janca <janca@cesnet.cz>", "Rahul Dhawan <security@postman.com>", "Remi Mach <remi.mach@loginline.com>", "Remy Leone <rleone@scaleway.com>", "Rene Marticke <rmarticke@cosimo.de>", "Reza Akhavan <spacekit.io@gmail.com>", "Ricardo Padilha <rpadilha@drobo.com>", "Richard Baker <richard.baker@digital.cabinet-office.gov.uk>", "Richard Harper <richard@duckdns.org>", "Richard Li <secalert@datawire.io>", "Richard Zowalla <mi-admin@hs-heilbronn.de>", "Rishabh Nambiar & Michael Brown <team@discourse.org>", "Robert Niedziela <webmaster@ddnss.de>", "Robin H. Johnson <psl-maintainers@digitalocean.com>", "Robin Naundorf <r.naundorf@fh-muenster.de>", "Roderick Parr <roderick.parr@forgerock.com>", "Romain Fliedel <rfliedel@freebox.fr>", "Roman Azarenko <roman.azarenko@iopsys.eu>", "Roni Horowitz <roni@responder.co.il>", "Rony Weng <ronyweng@synology.com>", "Rory Breuk <rbreuk@transip.nl>", "Roy Keene <rkeene@knightpoint.com>", "Ruben Schmidmeister <psl-maintainers@messerli.ch>", "Rudraksh MK <rudi@porter.run>", "Sahn Lam <slam@discordapp.com>", "Sam Smyth <devloop@atlassian.com>", "Sander Steffann <sander@nogalliance.org>", "Sarah Newman <owner@prgmr.com>", "Scott Claeys <s.claeys@radwebhosting.com>", "Sergey Ulyashin <ulyashin@jino.ru>", "Sergey Zotov <admin@rusnames.ru>", "Sergi Ferriz <sergi.ferriz@typeform.com>", "Serhii Bulakh <support@drs.ua>", "Serhii Rostilo <sergey@rostilo.kiev.ua>", "Seth Vincent <sethvincent@gmail.com>", "Shahar Talmi <shahar@wix.com>", "Shahidh K Muhammed <shahidh@hasura.io>", "Shante Adam <shante@skyhat.io>", "Silke Hofstra <syscom@snt.utwente.nl>", "Simon Kissel <hostmaster@viprinet.com>", "Simon Morvan <simon@icilalune.com>", "Skylar Challand <support@siteleaf.com>", "Skylar MacDonald <skylar@dangerscience.com>", "Stefan Keim <admin@js.org>", "Stefan Neufeind <info@speedpartner.de>", "Stefan Schwarz <sysadm@united-gameserver.de>", "Stefano Rivera <stefano@yola.com>", "Stepan Fedotov <stepan@wisp.gg>", "Stephen Ford <hostmaster@digital.cabinet-office.gov.uk>", "Steve Leung <steveleung@peplink.com>", "Steve Russell <steve@now-dns.com>", "Sue Ye <sue@dynu.com>", "Tatu Saloranta (tatu.saloranta@iki.fi)", "Thomas Cottier <thomas.cottier@enalean.com>", "Thomas Orozco <thomas@aptible.com>", "Thomas Waldmann <info@nsupdate.info>", "Thomas Wouters <thomas.wouters@combellgroup.com>", "Tibor Halter <thalter@boomla.com>", "Tim Dusterhus <security@woltlab.cloud>", "Tim Kramer <tkramer@rhcloud.com>", "Tim Perry <tim@resin.io>", "Tobias Wilken <tw@cloudcontrol.com>", "Tom Klein <tom@gentlent.com>", "Tom Maher <tmaher@heroku.com>", "Tom Whitwell <domains@memset.com>", "Tom Whitwell <gov-uk-paas-support@digital.cabinet-office.gov.uk>", "Tony Schirmer <tony@storebase.io>", "Trung Tran <Trung.Tran@neustar.biz>", "Tyler Todd <noc@nova53.net>", "Umut Gumeli <infrastructure-publicsuffixlist@clickrising.com>", "Valentin Grimaud <security@yunohost.org>", "Vasiliy Sheredeko <piphon@gmail.com>", "Vicary Archangel <vicary@omniwe.com>", "Victor Pupynin <hallo@frusky.de>", "Victor Velchev <admin@liquidnetlimited.com>", "Vincent Casse <vincent.casse@ovhcloud.com>", "Vincent Fiduccia <domains@rancher.com>", "Vincent Tseng <vincenttseng@asustor.com>", "Vladimir Dudr <info@e4you.cz>", "Werner Kaltofen <wk@all-inkl.com>", "Wolfgang Schwarz <admin@intermetrics.de>", "Wouter Bakker <hostmaster@kaashosting.nl>", "Xavier De Cock <xdecock@gmail.com>", "XnBay Developer <developer.xncloud@gmail.com>", "Yaacov Akiba Slama <admin@chirurgiens-dentistes-en-france.fr>", "Yann Guichard <yann@pagexl.com>", "Yngve Pettersen <yngve@opera.com>", "Yue Kang <eero-dynamic-dns@amazon.com>", "Yuji Minagawa <domains-admin@iodata.jp>", "Yuya NAGASAWA <public-suffix-list@binc.jp>", "Zdenek Sustr <zdenek.sustr@cesnet.cz>", "Zhixiang Zhao <csuite@impertrix.com>", "Zoltan Egresi <egresi@globehosting.com>", "a community of developers", "auto 2014-11-13 XYZ.COM LLC", "the Jakarta Activation project. Project home https://projects.eclipse.org/projects/ee4j.jaf", "uognoc@triton.uog.edu" ],
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    }, {
+      "algorithm" : "MD5",
+      "checksumValue" : "7dbcacae59579b92f94cc1e333b445fd"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    } ],
+    "copyrightText" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates\nCopyright (c) 2000-2011 INRIA, France Telecom\nCopyright (c) 2018 Oracle and/or its affiliates\nCopyright (c) 2019, current.year Eclipse Foundation\nCopyright (c) 2021 Oracle and/or its affiliates\nCopyright (c) 2021 The\nCopyright (c) 2022 Daniel Lemire. BSL\nCopyright (c) 2023 Werner Randelshofer, Switzerland\nCopyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)\nCopyright 2020 Tim Buktu\nCopyright 2022 Tim Buktu",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "(W3C AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-ae-EDL-1.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND MPL-2.0 AND Apache-2.0 AND MIT AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND GPL-2.0-only WITH Classpath-exception-2.0 AND OFL-1.1)",
+    "licenseDeclared" : "(W3C AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-ae-EDL-1.0 AND LicenseRef-ae-W3C AND LicenseRef-scancode-public-domain AND LicenseRef-ae-BSD AND MPL-2.0 AND Apache-2.0 AND GPL-2.0-or-later WITH Classpath-exception-2.0 AND (Apache-2.0 OR EPL-2.0) AND MIT AND GPL-2.0-only WITH Classpath-exception-2.0 AND LicenseRef-ae-BSD-3-Clause-copyright-holder AND OFL-1.1)",
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "packageFileName" : "keycloak-admin-cli-25.0.2.jar",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "25.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd11",
+    "checksums" : [ {
+      "algorithm" : "SHA256",
+      "checksumValue" : "b482278365efc155fe8de06aac2e715911df4abc01562391a958cae2ce941814"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "(Apache-2.0 AND LicenseRef-ae-Apache)",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "3.1.1"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd10"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd9"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd0"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd11"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd6"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd5"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd8"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd7"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd2"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd4"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd3"
+  } ]
+}

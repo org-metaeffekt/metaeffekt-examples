@@ -1,21 +1,19 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:7af912a5-2c06-4d93-b5ac-c665e176ab10",
+  "serialNumber" : "urn:uuid:5dd15833-db10-4e66-b35a-e570373f7709",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2024-10-22T13:11:50Z",
-    "tools" : [ {
-      "name" : "{metaeffekt} Kontinuum CycloneDX Exporter"
-    } ],
+    "timestamp" : "2024-12-04T09:49:48Z",
+    "tools" : [ { } ],
     "authors" : [ { } ],
     "manufacturer" : {
-      "name" : "{metaeffekt} GmbH",
       "url" : [ "https://metaeffekt.com/" ]
     }
   },
   "components" : [ {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-1",
     "group" : "org.apache.logging.log4j",
     "name" : "log4j-api-2.14.0.jar",
     "version" : "2.14.0",
@@ -34,17 +32,27 @@
       "name" : "Path",
       "value" : "log4j-api-2.14.0.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "log4j-api-2.14.0.jar"
     }, {
-      "name" : "Type",
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
       "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Apache Log4j"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-2",
     "group" : "org.apache.logging.log4j",
     "name" : "log4j-core-2.14.0.jar",
     "version" : "2.14.0",
@@ -63,14 +71,27 @@
       "name" : "Path",
       "value" : "log4j-core-2.14.0.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "log4j-core-2.14.0.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Apache Log4j"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-3",
     "group" : "org.springframework",
     "name" : "spring-aop-5.3.14.jar",
     "version" : "5.3.14",
@@ -88,14 +109,27 @@
       "name" : "Path",
       "value" : "spring-aop-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-aop-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-4",
     "group" : "org.springframework",
     "name" : "spring-beans-5.3.14.jar",
     "version" : "5.3.14",
@@ -113,14 +147,27 @@
       "name" : "Path",
       "value" : "spring-beans-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-beans-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-5",
     "group" : "org.springframework",
     "name" : "spring-context-5.3.14.jar",
     "version" : "5.3.14",
@@ -138,14 +185,27 @@
       "name" : "Path",
       "value" : "spring-context-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-context-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-6",
     "group" : "org.springframework",
     "name" : "spring-core-5.3.14.jar",
     "version" : "5.3.14",
@@ -163,14 +223,27 @@
       "name" : "Path",
       "value" : "spring-core-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-core-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-7",
     "group" : "org.springframework",
     "name" : "spring-expression-5.3.14.jar",
     "version" : "5.3.14",
@@ -188,14 +261,27 @@
       "name" : "Path",
       "value" : "spring-expression-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-expression-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-8",
     "group" : "org.springframework",
     "name" : "spring-jcl-5.3.14.jar",
     "version" : "5.3.14",
@@ -213,11 +299,23 @@
       "name" : "Path",
       "value" : "spring-jcl-5.3.14.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "com.metaeffekt.bom.inventoryClass",
+      "value" : "artifact"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Path in Asset",
+      "value" : "spring-jcl-5.3.14.jar"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "com.metaeffekt.bom.specificType",
+      "value" : "module"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Component",
+      "value" : "Spring Framework"
     } ]
   } ]
 }

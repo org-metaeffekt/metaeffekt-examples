@@ -4,7 +4,7 @@
 
 Document name: keycloak-25.0.4-cyclone-dx-1.6_exporter.json <br>
 Spec version: 1.6 <br>
-Creation date: Tue Oct 22 15:11:52 CEST 2024 <br>
+Creation date: Wed Dec 04 10:49:51 CET 2024 <br>
 
 ### Manual Adjustments
 
@@ -19,5 +19,5 @@ The following results were generated as described in the **Validation Process** 
 of the **README.md** and filtered to remove duplicate warnings or errors.
 
 ```
-Document validation returned no errors or warnings.
+$.components: must have only unique items in the array
 ```

@@ -1,51 +1,49 @@
-SBOM Quality by Interlynk Score:6.3	components:471	./keycloak-25.0.4/04-scanned/keycloak-25.0.4-scanned-cyclone-dx-1.6_exporter.json
+SBOM Quality by Interlynk Score:4.8	components:8	./keycloak-25.0.4/04-scanned/keycloak-25.0.4-scanned-cyclone-dx-1.6_exporter.json
 +-----------------------+--------------------------------+-----------+--------------------------------+
 |       CATEGORY        |            FEATURE             |   SCORE   |              DESC              |
 +-----------------------+--------------------------------+-----------+--------------------------------+
-| NTIA-minimum-elements | comp_with_name                 | 10.0/10.0 | 471/471 have names             |
+| NTIA-minimum-elements | comp_with_name                 | 10.0/10.0 | 8/8 have names                 |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_supplier             | 0.0/10.0  | 0/471 have supplier names      |
+|                       | comp_with_supplier             | 0.0/10.0  | 0/8 have supplier names        |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_uniq_ids             | 0.0/10.0  | 0/471 have unique ID's         |
+|                       | comp_with_uniq_ids             | 10.0/10.0 | 8/8 have unique ID's           |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_version              | 8.9/10.0  | 420/471 have versions          |
+|                       | comp_with_version              | 2.5/10.0  | 2/8 have versions              |
 +                       +--------------------------------+-----------+--------------------------------+
 |                       | sbom_authors                   | 10.0/10.0 | doc has 2 authors              |
 +                       +--------------------------------+-----------+--------------------------------+
 |                       | sbom_creation_timestamp        | 10.0/10.0 | doc has creation timestamp     |
-|                       |                                |           | 2024-10-22T13:11:55Z           |
+|                       |                                |           | 2024-12-04T09:49:56Z           |
 +                       +--------------------------------+-----------+--------------------------------+
 |                       | sbom_dependencies              | 0.0/10.0  | doc has 0 dependencies         |
 +-----------------------+--------------------------------+-----------+--------------------------------+
-| Quality               | comp_valid_licenses            | 5.2/10.0  | 278/471 components with valid  |
+| Quality               | comp_valid_licenses            | 0.0/10.0  | 0/8 components with valid      |
 |                       |                                |           | license                        |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_any_vuln_lookup_id   | 8.0/10.0  | 375/471 components have any    |
+|                       | comp_with_any_vuln_lookup_id   | 0.0/10.0  | 0/8 components have any lookup |
+|                       |                                |           | id                             |
++                       +--------------------------------+-----------+--------------------------------+
+|                       | comp_with_deprecated_licenses  | 0.0/10.0  | no licenses found              |
++                       +--------------------------------+-----------+--------------------------------+
+|                       | comp_with_multi_vuln_lookup_id | 0.0/10.0  | 0/8 components have multiple   |
 |                       |                                |           | lookup id                      |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_deprecated_licenses  | 10.0/10.0 | 0/471 components have          |
-|                       |                                |           | deprecated licenses            |
+|                       | comp_with_primary_purpose      | 10.0/10.0 | 8/8 components have primary    |
+|                       |                                |           | purpose specified              |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_multi_vuln_lookup_id | 0.0/10.0  | 0/471 components have multiple |
-|                       |                                |           | lookup id                      |
-+                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_primary_purpose      | 8.9/10.0  | 420/471 components have        |
-|                       |                                |           | primary purpose specified      |
-+                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_restrictive_licenses | 10.0/10.0 | 1/471 components have          |
-|                       |                                |           | restricted licenses            |
+|                       | comp_with_restrictive_licenses | 0.0/10.0  | no licenses found              |
 +                       +--------------------------------+-----------+--------------------------------+
 |                       | sbom_with_creator_and_version  | 0.0/10.0  | 0/1 tools have creator and     |
 |                       |                                |           | version                        |
 +                       +--------------------------------+-----------+--------------------------------+
 |                       | sbom_with_primary_component    | 0.0/10.0  | no primary component found     |
 +-----------------------+--------------------------------+-----------+--------------------------------+
-| Semantic              | comp_with_checksums            | 9.0/10.0  | 424/471 have checksums         |
+| Semantic              | comp_with_checksums            | 8.8/10.0  | 7/8 have checksums             |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | comp_with_licenses             | 6.0/10.0  | 284/471 have licenses          |
+|                       | comp_with_licenses             | 0.0/10.0  | 0/8 have licenses              |
 +                       +--------------------------------+-----------+--------------------------------+
-|                       | sbom_required_fields           | 9.5/10.0  | Doc Fields:true Pkg            |
-|                       |                                |           | Fields:false                   |
+|                       | sbom_required_fields           | 10.0/10.0 | Doc Fields:true Pkg            |
+|                       |                                |           | Fields:true                    |
 +-----------------------+--------------------------------+-----------+--------------------------------+
 | Sharing               | sbom_sharable                  | 0.0/10.0  | doc has a sharable license     |
 |                       |                                |           | free 0 :: of 0                 |

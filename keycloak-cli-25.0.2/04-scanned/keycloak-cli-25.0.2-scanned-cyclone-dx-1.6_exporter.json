@@ -1,10 +1,10 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:07edb5d3-a3fd-401e-849e-617139e73c69",
+  "serialNumber" : "urn:uuid:0d5688f3-1951-48e8-9f1e-97a1d94bdc15",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2024-10-22T13:11:51Z",
+    "timestamp" : "2024-12-04T09:49:50Z",
     "tools" : [ {
       "name" : "{metaeffekt} Kontinuum CycloneDX Exporter"
     } ],
@@ -16,6 +16,7 @@
   },
   "components" : [ {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-1",
     "group" : "net.bytebuddy",
     "name" : "byte-buddy-1.14.11.jar",
     "version" : "1.14.11",
@@ -28,17 +29,87 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - BSD 3-Clause License (copyright holder variant) variables: copyrightHolderNoLiability: '\"THE COPYRIGHT OWNER OR CONTRIBUTORS\"' variable3rdClause: '\"the name of the copyright holders nor the names of its contributors\"' copyrightHolderNoWarranty: '\"THE COPYRIGHT HOLDERS AND CONTRIBUTORS\"' copyrights: - Copyright (c) 2000-2011 INRIA, France Telecom // All rights reserved. - Copyright (c) 2000-2011 INRIA, France Telecom All rights reserved. - associatedLicenses: - BSD 3-Clause License"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "ASM INRIA Marker (France Telekom), Do Not Promote Marker, General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "358449d6c73538584508dd8ae6cfde56baf4a34b767b71d9cc4644f0f1f4211a"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11.pom-a5dc9dc7bb5714a56aa5989f57e6e686]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "17a6bd3e51149baf144cc380d64445f95f0f6cff3bdeee644ca1a19c6a36f990"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "ASM INRIA Marker (France Telekom), Do Not Promote Marker, General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[b]/[by]/[byte-buddy]/[net.bytebuddy.byte-buddy.1.14.11]/byte-buddy-1.14.11.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "62ae28187ed2b062813da6a9d567bfee733c341582699b62dd980230729a0313"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[b]/[by]/[byte-buddy]/[net.bytebuddy.byte-buddy.1.14.11]/byte-buddy-1.14.11-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, BSD 3-Clause License, BSD 3-Clause License (copyright holder variant)"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11.pom-a5dc9dc7bb5714a56aa5989f57e6e686]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2000-2011 INRIA, France Telecom All rights reserved.| Copyright 2014 - Present Rafael Winterhalter"
+    }, {
+      "name" : "Description",
+      "value" : "Byte Buddy is a Java library for creating Java classes at run time. This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space."
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Byte Buddy| Chris Nokleberg| Eric Bruneton| Eric Bruneton https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html| Eugene Kuleshov| Jason Zaugg| Remi Forax| Thomas Hallgren"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, BSD 3-Clause License (copyright holder variant)"
+    }, {
+      "name" : "Component",
+      "value" : "byte-buddy"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11.jar-c28e36075a114b176953fc10a5370be7]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11-sources.jar-5432fa1030174708941c149443da8c71]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11.jar-c28e36075a114b176953fc10a5370be7]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[b]/[by]/[byte-buddy]/[byte-buddy-1.14.11-sources.jar-5432fa1030174708941c149443da8c71]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[b]/[by]/[byte-buddy]/[net.bytebuddy.byte-buddy.1.14.11]/byte-buddy-1.14.11.pom"
     }, {
       "name" : "Type",
       "value" : "module"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2000-2011 INRIA, France Telecom // All rights reserved.| Copyright (c) 2000-2011 INRIA, France Telecom All rights reserved.| Copyright 2014 - Present Rafael Winterhalter"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-2",
     "publisher" : "https://commons.apache.org/proper/commons-codec/",
     "group" : "commons-codec",
     "name" : "commons-codec-1.16.1.jar",
@@ -52,14 +123,90 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - Public Domain - Apache License 2.0 - associatedLicenses: - Beerware License - Public Domain - Apache License 2.0 - associatedLicenses: - Apache License 2.0 - BSD (undefined) unassignedInformation: copyrights: - Copyright 2002-2024 The Apache Software Foundation"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "b826ddd92f9d7cc64371a02fa0830c154d67c98370ea54a2d196e72eb590ad28"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-codec]/[commons-codec-1.16.1.pom-6849e8f860f9472f23561ccda092b650]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "1b9d7336bef950cd45dbefd5351222ee88e4efde09a9454e851a458c34f813be"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, General Terms Matches Marker, Import/Export Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-codec]/[commons-codec.commons-codec.1.16.1]/commons-codec-1.16.1.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "ec87bfb55f22cbd1b21e2190eeda28b2b312ed2a431ee49fbdcc01812d04a5e4"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-codec]/[commons-codec.commons-codec.1.16.1]/commons-codec-1.16.1-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-codec]/[commons-codec-1.16.1.pom-6849e8f860f9472f23561ccda092b650]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2002-2024 The Apache Software Foundation"
+    }, {
+      "name" : "Description",
+      "value" : "The Apache Commons Codec component contains encoder and decoders for various formats such as Base16, Base32, Base64, digest, and Hexadecimal. In addition to these widely used encoders and decoders, the codec package also maintains a collection of phonetic encoding utilities."
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Christian Hammers <ch@lathspell.de>| Margaret Odell and Robert Russell| Ulrich Drepper <drepper@redhat.com>| Western Airlines| the Caversham Project at the University of Otago"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, Beerware License, BSD (undefined), Public Domain"
+    }, {
+      "name" : "Component",
+      "value" : "commons-codec"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-codec]/[commons-codec-1.16.1.jar-6c5be822d8d3fa61c3b54c4c8978dfdc]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-codec]/[commons-codec-1.16.1-sources.jar-77e3a3d9dbc8c1120194feee5369fa6b]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-codec]/[commons-codec-1.16.1.jar-6c5be822d8d3fa61c3b54c4c8978dfdc]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-codec]/[commons-codec-1.16.1-sources.jar-77e3a3d9dbc8c1120194feee5369fa6b]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-codec]/[commons-codec.commons-codec.1.16.1]/commons-codec-1.16.1.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2004-2006 Intel Corporation| Copyright 2002-2024 The Apache Software Foundation"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-3",
     "publisher" : "http://www.jboss.org",
     "group" : "org.jboss.logging",
     "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
@@ -73,14 +220,93 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "58db19b7a722f4af9ae421d0874c5a0a4a42b7fd15a8ed26d859a733576ee5cc"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final.pom-e3f68e62d802fefba0cc68dbc60e1bfd]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "1e855b71b5c03590dc180ad8e01e76307648cc760a57c57dd86725dee4396b53"
+    }, {
+      "name" : "Descriptor - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2018 Red Hat, Inc., and individual contributors"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-logging-jboss-logging]/[org.jboss.logging.commons-logging-jboss-logging.1.0.0.Final]/commons-logging-jboss-logging-1.0.0.Final.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "f12176263ea25f4e78bb4fa4b36d335a29738dde6a8123e1b6da89a655d150ff"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-logging-jboss-logging]/[org.jboss.logging.commons-logging-jboss-logging.1.0.0.Final]/commons-logging-jboss-logging-1.0.0.Final-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final.pom-e3f68e62d802fefba0cc68dbc60e1bfd]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2018 Red Hat, Inc., and individual contributors"
+    }, {
+      "name" : "Description",
+      "value" : "Apache Commons Logging to JBoss Logging implementation"
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "jperkins@redhat.com James R. Perkins"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "commons-logging-jboss-logging"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final.jar-46328c16f47be35563b73425d456445a]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final-sources.jar-e093051912ad5a2bf213c29097853f29]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final.jar-46328c16f47be35563b73425d456445a]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[c]/[co]/[commons-logging-jboss-logging]/[commons-logging-jboss-logging-1.0.0.Final-sources.jar-e093051912ad5a2bf213c29097853f29]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[c]/[co]/[commons-logging-jboss-logging]/[org.jboss.logging.commons-logging-jboss-logging.1.0.0.Final]/commons-logging-jboss-logging-1.0.0.Final.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2018 Red Hat, Inc., and individual contributors"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-4",
     "publisher" : "http://hc.apache.org/httpcomponents-client-ga",
     "group" : "org.apache.httpcomponents",
     "name" : "httpclient-4.5.14.jar",
@@ -94,14 +320,93 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - Mozilla Public License 2.0 unassignedInformation: copyrights: - Copyright 1999-2022 The Apache Software Foundation"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "f18355af4cf80a8a4ef04ebd742a47e90a7eaf080c725b2095dbc4fc5dbdefb7"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpclient]/[httpclient-4.5.14.pom-a108494f9529c81632b4484d074fcb16]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "55b01f9f4cbec9ac646866a4b64b176570d79e293a556796b5b0263d047ef8e6"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, General Terms Matches Marker, Import/Export Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpclient]/[org.apache.httpcomponents.httpclient.4.5.14]/httpclient-4.5.14.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpclient]/[org.apache.httpcomponents.httpclient.4.5.14]/httpclient-4.5.14-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, Mozilla Public License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpclient]/[httpclient-4.5.14.pom-a108494f9529c81632b4484d074fcb16]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 1999-2022 The Apache Software Foundation"
+    }, {
+      "name" : "Description",
+      "value" : "Apache HttpComponents Client"
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Karl Wright (kwright@metacarta.com)."
+    }, {
+      "name" : "Binary Artifact - Extracted Authors (ScanCode)",
+      "value" : "2014-12-18 Amazon Registry Services, Inc.| <domeinnaam@minaz.nl>| <frc1533@ecgrobotics.org>| <security@linode.com>| Aaron Edwards <sysadmins@incsub.com>| Aaron Marais <its_me@aaronleem.co.za>| Aavash Shrestha <aavash@deta.sh>| Abuse KU Leuven <abuse@kuleuven.be>| Adam Grand <webmaster@mail.ox.rs>| Adam Humpherys <adam@mws.dev>| Adam Jimenez <adam@shiftcreate.com>| Adam Newbold <adam@omg.lol>| Adrian Imboden <adi@thingdust.com>| Adrien Gillon <adrien+public-suffix-list@stackhero.io>| Alan Shreve <alan@ngrok.com>| Aleksander Hristov <noc@cloudns.net>| Ales Krajnik <ales.krajnik@craynic.com>| Alex Bowers <alex@shopblocks.com>| Alex Hanselka <alex@gitlab.com>| Alex Oancea <aoancea@cloudscale365.com>| Alex Richter <alex.richter@shopify.com>| Alexander Hochbaum <admin@appudo.com>| Alexander Lodin <security+psl@yandex-team.ru>| Alexander Selivanov <alex@apphud.com>| Aljaz Starc <me@aljaxus.eu>| Aman Gupta <aman@getchannels.com>| Anani Voule <digital@digital.co.dk>| Andre Eriksson <andre@encore.dev>| Andreas Schnederle-Wagner <schnederle@futureweb.at>| Andreas Weise <a.weise@avm.de>| Andrei Canta <andrei@easypanel.io>| Andrew Banchich <abanchich@sceven.com>| Andrew Cady <public-suffix-list@cryptonomic.net>| Andrew Farmer <andrew.farmer@dreamhost.com>| Andrew Farries <andrew.farries@red-gate.com>| Andrew Sampson <andrew@ulterius.io>| Andy Ortlieb <aortlieb@atlassian.com>| Angelo Gladding <angelo@lahacker.net>| Anthony Voutas <anthony@backplane.io>| Antoine Beaupre anarcat@torproject.org| Anton Akhtyamov <program-managers@plesk.com>| Anton Avramov <avramov@alboto.ca>| Anton Avramov <register@lukanet.com>| Anton Barkan <antonb@elementor.com>| Antonio Lain <antlai@cafjs.com>| Antonis Kalipetis <akalipetis@sourcelair.com>| Anurag Goel <dev@render.com>| Apostolos Tsakpinis <apostolos.tsakpinis@gmail.com>| Aral Balkan <aral@small-tech.org>| Arnold Hendriks <info@webhare.com>| Arseniy Sokolov <security@hakaran.cz>| Artem Kondratev <accounts@seidat.com>| Arturo Borrero Gonzalez <aborrero@wikimedia.org>| Asei SEKIGUCHI <mail@aseinet.com>| Asheesh Laroia <asheesh@sandstorm.io>| Assaf Stern <domains@comstar.co.il>| Atanunu Igbunuroghene <publicsuffixlist@hostbip.com>| Atanunu Igbunuroghene <publicsuffixlist@udr.org.yt>| Atsadawat Netcharadsang <atsadawat@dotarai.co.th>| Atul Bhouraskar <atul@yescourse.com>| Axel Fontaine <axel@boxfuse.com>| B. Blechschmidt <hostmaster@certmgr.org>| Ben Francis <ben@krellian.com>| Ben Francis <bfrancis@mozilla.com>| Bjoern Henke <dev-server@taifun-software.de>| Brandon DuRette <brandon.durette@wpengine.com>| Braxton Huggins <psl-maintainers@digitalocean.com>| Brian Bennett <brian.bennett@joyent.com>| Cameron Elliott <cameron@cameronelliott.com>| Carlo Cannas <tech_staff@altervista.it>| Cassandra Beelen <cassandra@beelen.one>| Cedric Dubois <cedric.dubois@team.blue>| Charly Coste <changaco@changaco.oy.lc>| Chris Kastorff <info@rethinkdb.com>| Chris Partridge <chris@partridge.tech>| Chris Raynor <chris@firebase.com>| Chris Whittle <chris.whittle@woodsvalldata.co.uk>| Christian Franke <it@ticket.io>| Christian Poulter <milchstrasse@goip.de>| Christian Seitz <chris@in-berlin.de>| Cole Estep <cole@omnibond.com>| Colin Brown <hello@adimo.co>| Colin Sidoti <systems@clerk.dev>| Connor Davis <security@vercel.com>| Craig Jellick <domains@acorn.io>| Craig McMahon <craig@shopitcommerce.com>| Craig Welch, abeliidev@gmail.com| Damien Tournoud <dtournoud@magento.cloud>| Dan Miller <dm@sub6.com>| Dani Biro <dani@pymet.com>| Daniel A. Maierhofer <vorstand@funkfeuer.at>| Daniel Farina <ingenieria@jotelulu.com>| Daniel Massaguer <psl-maintainers@amazon.com>| Daniel Mostertman <unixbeheer+publicsuffix@xs4all.net>| Daniel Netzer <dan@paywhirl.com>| Daniel Stone <daniel@fooishbar.org>| Daniil Burdakov <icqkill@gmail.com>| Danilo De Franco <info@hoplix.shop>| Danko Aleksejevs <danko@very.lv>| Dave Sanders <dave@myservicemagnet.com>| Dave Tharp <browsersafetymark.io@quicinc.com>| David Anderson <danderson@tailscale.com>| David Coles <david.coles@sony.com>| David Fischer <team@readthedocs.org>| David Grellscheid <admin@hepforge.org>| Dean Sheather <dean@deansheather.com>| Derek Myers <derek@pagefog.com>| Deven Reza <publicsuffixlist@noip.com>| Domain Admin <domainadmin@amaze.co>| Dominic Luechinger <dol@cyon.ch>| Dominik George <dominik.george@teckids.org>| Dominik Menke <dom@digineo.de>| Donavan Miller <donavanm@amazon.com>| Drew DeVault <sir@cmpwn.com>| Duarte Santos <domain-admin@outsystemscloud.com>| Dusan Radovanovic <dusan.radovanovic@brendly.rs>| Dustin Ward <dward@townnews.com>| Eddie Jones <eddie@onefoldmedia.com>| Eduardo Vela <evn@google.com>| Edwin Balani <sysadmins@srcf.net>| Eero Hakkinen <Eero+psl@Hakkinen.fi>| Emil Stahl <esp@zitcom.dk>| Emmanuel Raviart <emmanuel@raviart.com>| Eric Chan <support@flashdrive.io>| Eric Jiang <eric@fabrica.dev>| Erik Anders <erik.anders@securepoint.de>| Etienne Stalmans <security@aiven.io>| Evgeniy Kozhuhovskiy <ugenk@mediatech.by>| Evgeniy Subbotin <e.subbotin@eurobyte.ru>| Evgeniy Subbotin <e.subbotin@mchost.ru>| Fabien Potencier <fabien@symfony.com>| Faith Olapade <faith.olapade@snowflake.com>| Fastly Security <security@fastly.com>| Felipe Keller Braz <felipebraz@kinghost.com.br>| Felix Monckemeyer <f.moenckemeyer@senseering.de>| Frederic VANNIERE <f.vanniere@planet-work.com>| Frederik Braun <fb@frederik-braun.com>| Furkan Akkoc <info@hendelzon.de>| Gabriel Ferreira <registrobr@interlegis.leg.br>| Gary Dylina <gary@pantheon.io>| Gavin Brown <gavin.brown@centralnic.com>| George Georgievsky <gug@cctld.ru>| Giles Thomas <giles@pythonanywhere.com>| Govert Versluis <govert@co-co.nl>| Greg Dallavalle <domains@leadpages.net>| Greg Holland <greg.holland@lmpm.com>| Gregory Drake <support@dyn.com>| Hanno Bock <hanno@schokokeks.org>| Hannu Aronsson <haa@iki.fi>| Hector Martin <marcan@euskalencounter.org>| Heikki Hannikainen <hessu@hes.iki.fi>| Henrique Vicente <security@wedeploy.com>| Hosting Div <admin@pepabo.com>| Ian Streeter <ian@snowplowanalytics.com>| Ihor Kolodyuk <ik@jelastic.com>| Ilya Zaretskiy <zaretskiy@corp.mail.ru>| Inian Parameshwaran <security@supabase.io>| Ireneusz Maliszewski <ireneusz.maliszewski@lubman.pl>| Ivan Oliva <ivan.oliva@koobin.com>| Jack Price <jack@revitalised.co.uk>| Jacob Bunk Nielsen <jbn@one.com>| Jacob Lee <jacob@stdlib.com>| Jacob Slater <whois@igloo.to>| JaeYoong Lee <cec@kakaocorp.com>| James Kennedy <domains@advisorwebsites.com>| Jamie McClelland <info@mayfirst.org>| Jan Jaeschke <jan.jaeschke@netatwork.de>| Jan Krpes <jan.krpes@cdn77.com>| Jan Moennich <jan.moennich@ownprovider.com>| Janos Matyas <info@banzaicloud.com>| Jason Kridner <jkridner@beagleboard.org>| Jason Kriss <jason@pagefronthq.com>| Jason Zhu <jason@owtware.com>| Jasper Hugo <jasper@avstack.io>| Jeff Wheelhouse <support@nearlyfreespeech.net>| Jeffrey Phillips Freeman <jeffrey.freeman@qoto.org>| Jennifer Herting <jchits@rit.edu>| Jens Kuper <cloud@shopware.com>| Joel Kennedy <joel@bip.sh>| Jon Spriggs <admin@lug.org.uk>| Jonas Schwartz <jonas@qutheory.io>| Jonathan Rudenberg <jonathan@cupcake.io>| Jonathan Rudenberg <jonathan@flynn.io>| Jons Slemmer <jons@redstarconsultants.com>| Joshua Weiss <admin.engineering@bluebite.com>| Joshua Zhang <public-suffix@rgames.jp>| Julia Evans <julia@wizardzines.com>| Jung Jin <jungseok.jin@wdc.com>| Keith Fairley <domains@fearworksmedia.co.uk>| Kenneth Van Alstyne <kvanalstyne@perspecta.com>| Kenny Niehage <hello@yahe.sh>| Kevin Bridges <kevin@drud.com>| Khannanov Roman <r.khannanov@msk-ix.ru>| Khash Sajadi <khash@cloud66.com>| Kidd Hustle <kiddhustle@wiardweb.com>| Kirill Pertsev <kika@rackmaze.com>| Kirill Ulyanov <k.ulyanov@airy.host>| Koen Rouwhorst <koenrh@framer.com>| Koen Van Isterdael <k.vanisterdael@fermax.be>| Kohei YOSHIDA <tech@gehirn.co.jp>| Konrad Kotarba <konrad.kotarba@dreamcommerce.com>| Konstantin Nosov <Nosov@nodeart.io>| Kor Nielsen <kor@pubtls.org>| Krzysztof Wolski <krzysztof.wolski@home.eu>| Kurt Mackey <kurt@fly.io>| Lann Martin <security@localcert.dev>| Lars Laehn <info@lcube.de>| Laurent Pellegrino <security@noticeable.io>| Lelux Admin <publisuffix@lelux.site>| Lenny Bakkalian <lenny.bakkalian@gmail.com>| Lev Nekrasov <lnekrasov@beget.com>| Li Hui <lihui@neupeer.com>| Likhachev Vasiliy <lihachev@fastvps.ru>| Lincoln Bergeson <lincoln@replit.com>| Louis Chemineau <louis@chmn.me>| Luca Casonato <hostmaster@deno.com>| Lukas Reschke <lukas@authentick.net>| Luke Bratch <luke@bratch.co.uk>| Luke Wells <psl-maintainers@amazon.com>| Mads Hartmann <mads@glitch.com>| Majid Qureshi <mqureshi@amrayn.com>| Maksym Rivtin <support@cityhost.net.ua>| Marc Bradshaw <marc@fastmailteam.com>| Marcel Daus <cloudops@encoway.de>| Marco Suter <marco@northflank.com>| Marcus Popp <admin@callidomus.com>| Mario Hoberg <info@iserv.de>| Mario Siegenthaler <mario.siegenthaler@linkyard.ch>| Marios Makassikis <mmakassikis@freebox.fr>| Mark J. Titorenko <mark.titorenko@alces-software.com>| Mark Staarink <mark@tlon.io>| Marko Ivanovic <kormang@hotmail.rs>| Martin Breest <security@spreadshop.com>| Martin Dannehl <postmaster@keymachine.de>| Martin Ellis <martin.ellis@gov.scot>| Martin Meier <admin@protonet.io>| Martin Semrad <semrad@i-registry.cz>| Marvin Wiesner <Marvin@curv-labs.de>| Matt Hanley <security@ghost.org>| Matthew Hardeman <mhardeman@ipifony.com>| Matthias Merkel <matthias.merkel@staclar.com>| Maxence Bitterli <maxence@definima.com>| Maxim Alzoba <tech.contact@faitid.org>| Maximilian Schieder <maxi@zeug.co>| Mia Rehlinger <dns@voxel.sh>| Micah Anderson <micah@riseup.net>| Michael Biven <mbiven@salesforce.com>| Michael Olson <molson@medicomhealth.com>| Michael Smith <michael.smith@wpengine.com>| Michal Kralik <support@evennode.com>| Mike Bostock <dns@observablehq.com>| Mike Damm <md@md.vc>| Miroslav Bozic <security@bplaced.net>| Mitch Schwenk <mitch@yombo.net>| Moritz Marquardt <git@momar.de>| Moritz Werner <mwerner@jonaspasche.com>| Nathan O'Sullivan <nathan@mammoth.com.au>| Nathan van Bakel <info@voorloper.com>| Nathaniel Schweinberg <noop@rearc.io>| Nicholas Ford <nick@nimbushosting.co.uk>| Nick Chang <nickchang@qnap.com>| Niels Martignene <hello@goupile.fr>| Niels Maumenee <storage@vultr.com>| Nikola Kotur <nikola@platform.sh>| Noa Heyl <hi@noa.dev>| Noah Taheij <noah@lokalized.nl>| Norbert Auler <mail@dnshome.de>| Norman Meilick <nm@sbe.de>| Ofer Kalaora <postmaster@activetrail.com>| Oliver Graebner <security@mo-siemens.io>| Olivier Benz <olivier.benz@b-data.ch>| Oren Agiv <oren@tabit.cloud>| Oren Eini <oren@ravendb.net>| Patrick Flor <patrick@platter.dev>| Patrick Nielsen <patrick@clovyr.io>| Patrick Toomey <security@github.com>| Patrick Uiterwijk <puiterwijk@fedoraproject.org>| Paul Biggar <ops@darklang.com>| Paul Cammish <kelduum@mythic-beasts.com>| Paul Cammish <paul.cammish@bytemark.co.uk>| Paul Crowder <paul.crowder@blackbaud.com>| Paul Fang <mis@draytek.com>| Paulus Schoutsen <infra@nabucasa.com>| Pawel Panek <noc@cloudaccess.net>| Peter Ruibal <public-suffix@fb.com>| Peter Thomassen <peter@desec.io>| Petros Angelatos <petrosagg@balena.io>| Philip Hutchins <hostmaster@storj.io>| Philipp Heckel <ph@datto.com>| Philipp Schmid <ops@openresearch.com>| Phillipp Roll <phillipp.roell@trafficplex.de>| Pierre Beyssac <hostmaster@eu.org>| Pierre Carrier <pc@rrier.ca>| Pierre Carrier <pierre@meteor.com>| Piotr Zduniak <piotr@nucleos.com>| Przemyslaw Plewa <it-admin@domena.pl>| Putri Karunia <putri@typedream.com>| Quentin Adam <noc@clever-cloud.com>| Radim Janca <janca@cesnet.cz>| Rahul Dhawan <security@postman.com>| Remi Mach <remi.mach@loginline.com>| Remy Leone <rleone@scaleway.com>| Rene Marticke <rmarticke@cosimo.de>| Reza Akhavan <spacekit.io@gmail.com>| Ricardo Padilha <rpadilha@drobo.com>| Richard Baker <richard.baker@digital.cabinet-office.gov.uk>| Richard Harper <richard@duckdns.org>| Richard Li <secalert@datawire.io>| Richard Zowalla <mi-admin@hs-heilbronn.de>| Rishabh Nambiar & Michael Brown <team@discourse.org>| Robert Niedziela <webmaster@ddnss.de>| Robin H. Johnson <psl-maintainers@digitalocean.com>| Robin Naundorf <r.naundorf@fh-muenster.de>| Roderick Parr <roderick.parr@forgerock.com>| Romain Fliedel <rfliedel@freebox.fr>| Roman Azarenko <roman.azarenko@iopsys.eu>| Roni Horowitz <roni@responder.co.il>| Rony Weng <ronyweng@synology.com>| Rory Breuk <rbreuk@transip.nl>| Roy Keene <rkeene@knightpoint.com>| Ruben Schmidmeister <psl-maintainers@messerli.ch>| Rudraksh MK <rudi@porter.run>| Sahn Lam <slam@discordapp.com>| Sam Smyth <devloop@atlassian.com>| Sander Steffann <sander@nogalliance.org>| Sarah Newman <owner@prgmr.com>| Scott Claeys <s.claeys@radwebhosting.com>| Sergey Ulyashin <ulyashin@jino.ru>| Sergey Zotov <admin@rusnames.ru>| Sergi Ferriz <sergi.ferriz@typeform.com>| Serhii Bulakh <support@drs.ua>| Serhii Rostilo <sergey@rostilo.kiev.ua>| Seth Vincent <sethvincent@gmail.com>| Shahar Talmi <shahar@wix.com>| Shahidh K Muhammed <shahidh@hasura.io>| Shante Adam <shante@skyhat.io>| Silke Hofstra <syscom@snt.utwente.nl>| Simon Kissel <hostmaster@viprinet.com>| Simon Morvan <simon@icilalune.com>| Skylar Challand <support@siteleaf.com>| Skylar MacDonald <skylar@dangerscience.com>| Stefan Keim <admin@js.org>| Stefan Neufeind <info@speedpartner.de>| Stefan Schwarz <sysadm@united-gameserver.de>| Stefano Rivera <stefano@yola.com>| Stepan Fedotov <stepan@wisp.gg>| Stephen Ford <hostmaster@digital.cabinet-office.gov.uk>| Steve Leung <steveleung@peplink.com>| Steve Russell <steve@now-dns.com>| Sue Ye <sue@dynu.com>| Thomas Cottier <thomas.cottier@enalean.com>| Thomas Orozco <thomas@aptible.com>| Thomas Waldmann <info@nsupdate.info>| Thomas Wouters <thomas.wouters@combellgroup.com>| Tibor Halter <thalter@boomla.com>| Tim Dusterhus <security@woltlab.cloud>| Tim Kramer <tkramer@rhcloud.com>| Tim Perry <tim@resin.io>| Tobias Wilken <tw@cloudcontrol.com>| Tom Klein <tom@gentlent.com>| Tom Maher <tmaher@heroku.com>| Tom Whitwell <domains@memset.com>| Tom Whitwell <gov-uk-paas-support@digital.cabinet-office.gov.uk>| Tony Schirmer <tony@storebase.io>| Trung Tran <Trung.Tran@neustar.biz>| Tyler Todd <noc@nova53.net>| Umut Gumeli <infrastructure-publicsuffixlist@clickrising.com>| Valentin Grimaud <security@yunohost.org>| Vasiliy Sheredeko <piphon@gmail.com>| Vicary Archangel <vicary@omniwe.com>| Victor Pupynin <hallo@frusky.de>| Victor Velchev <admin@liquidnetlimited.com>| Vincent Casse <vincent.casse@ovhcloud.com>| Vincent Fiduccia <domains@rancher.com>| Vincent Tseng <vincenttseng@asustor.com>| Vladimir Dudr <info@e4you.cz>| Werner Kaltofen <wk@all-inkl.com>| Wolfgang Schwarz <admin@intermetrics.de>| Wouter Bakker <hostmaster@kaashosting.nl>| Xavier De Cock <xdecock@gmail.com>| XnBay Developer <developer.xncloud@gmail.com>| Yaacov Akiba Slama <admin@chirurgiens-dentistes-en-france.fr>| Yann Guichard <yann@pagexl.com>| Yngve Pettersen <yngve@opera.com>| Yue Kang <eero-dynamic-dns@amazon.com>| Yuji Minagawa <domains-admin@iodata.jp>| Yuya NAGASAWA <public-suffix-list@binc.jp>| Zdenek Sustr <zdenek.sustr@cesnet.cz>| Zhixiang Zhao <csuite@impertrix.com>| Zoltan Egresi <egresi@globehosting.com>| auto 2014-11-13 XYZ.COM LLC| uognoc@triton.uog.edu"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "httpclient"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpclient]/[httpclient-4.5.14.jar-2cb357c4b763f47e58af6cad47df6ba3]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpclient]/[httpclient-4.5.14-sources.jar-74df4f0672071a631bcb8fa1f5a799e8]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpclient]/[httpclient-4.5.14.jar-2cb357c4b763f47e58af6cad47df6ba3]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpclient]/[httpclient-4.5.14-sources.jar-74df4f0672071a631bcb8fa1f5a799e8]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpclient]/[org.apache.httpcomponents.httpclient.4.5.14]/httpclient-4.5.14.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 1999-2022 The Apache Software Foundation"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-5",
     "publisher" : "http://hc.apache.org/httpcomponents-core-ga",
     "group" : "org.apache.httpcomponents",
     "name" : "httpcore-4.4.16.jar",
@@ -115,14 +420,87 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 unassignedInformation: copyrights: - Copyright 2005-2022 The Apache Software Foundation"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "3cbad849b35dacfe6cec31adada2c623c026c3261141b0d26eec7e399c6cd7fa"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpcore]/[httpcore-4.4.16.pom-a894e99d67ec36c6a690b3307efff0b5]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "705f8cf3671093b6c1db16bbf6971a7ef400e3819784f1af53e5bc3e67b5a9a0"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, General Terms Matches Marker, Import/Export Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpcore]/[org.apache.httpcomponents.httpcore.4.4.16]/httpcore-4.4.16.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpcore]/[org.apache.httpcomponents.httpcore.4.4.16]/httpcore-4.4.16-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpcore]/[httpcore-4.4.16.pom-a894e99d67ec36c6a690b3307efff0b5]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2005-2022 The Apache Software Foundation"
+    }, {
+      "name" : "Description",
+      "value" : "Apache HttpComponents Core (blocking I/O)"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "httpcore"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpcore]/[httpcore-4.4.16.jar-28d2cd9bf8789fd2ec774fb88436ebd1]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[h]/[ht]/[httpcore]/[httpcore-4.4.16-sources.jar-4f54b7fb497b0529628717d49aadbf68]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpcore]/[httpcore-4.4.16.jar-28d2cd9bf8789fd2ec774fb88436ebd1]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[h]/[ht]/[httpcore]/[httpcore-4.4.16-sources.jar-4f54b7fb497b0529628717d49aadbf68]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[h]/[ht]/[httpcore]/[org.apache.httpcomponents.httpcore.4.4.16]/httpcore-4.4.16.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2005-2022 The Apache Software Foundation"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-6",
     "publisher" : "https://github.com/FasterXML/jackson-core",
     "group" : "com.fasterxml.jackson.core",
     "name" : "jackson-core-2.17.0.jar",
@@ -136,14 +514,90 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - MIT License - BSD (undefined) componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 2021 The - Copyright (c) 2022 Daniel Lemire. BSL - Copyright (c) 2023 Werner Randelshofer, Switzerland - Copyright 2020 Tim Buktu - associatedLicenses: - Apache License 2.0 - MIT License componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 2023 Werner Randelshofer, Switzerland - Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi) - associatedLicenses: - MIT License copyrights: - Copyright (c) 2021 The - Copyright 2018-2020 Raffaello Giulietti - associatedLicenses: - BSD 2-Clause License copyrights: - Copyright 2020 Tim Buktu - Copyright 2022 Tim Buktu"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "951db357f9c49a5c8877c08960c4a8ae86bd8c9aa887062664bd04f7affeea95"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0.pom-2081dd6c5950115751fd4d8ae913ec21]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "97f4f4a85bf4da59174dde187130bddb927ac31320b385ed8ef1439c00df00f2"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Ownership Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-core]/[com.fasterxml.jackson.core.jackson-core.2.17.0]/jackson-core-2.17.0.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "55be130f6a68038088a261856c4e383ce79957a0fc1a29ecb213a9efd6ef4389"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-core]/[com.fasterxml.jackson.core.jackson-core.2.17.0]/jackson-core-2.17.0-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, BSD (undefined), BSD 2-Clause License, MIT License"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0.pom-2081dd6c5950115751fd4d8ae913ec21]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2021 The| Copyright (c) 2022 Daniel Lemire. BSL| Copyright (c) 2023 Werner Randelshofer, Switzerland| Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)| Copyright 2020 Tim Buktu| Copyright 2022 Tim Buktu"
+    }, {
+      "name" : "Description",
+      "value" : "Core Jackson processing abstractions (aka Streaming API), implementation for JSON"
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Raffaello Giulietti| Tatu Saloranta| Tatu Saloranta (tatu.saloranta@iki.fi)| a community of developers"
+    }, {
+      "name" : "Binary Artifact - Extracted Authors (ScanCode)",
+      "value" : "Tatu Saloranta (tatu.saloranta@iki.fi)| a community of developers"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, MIT License"
+    }, {
+      "name" : "Component",
+      "value" : "jackson-core"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0.jar-3e4b82b6e29693927dd289a344c35e46]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0-sources.jar-472f9a1fcc943bac95bd1825b5749c20]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0.jar-3e4b82b6e29693927dd289a344c35e46]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-core]/[jackson-core-2.17.0-sources.jar-472f9a1fcc943bac95bd1825b5749c20]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-core]/[com.fasterxml.jackson.core.jackson-core.2.17.0]/jackson-core-2.17.0.pom"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2007- Tatu Saloranta, tatu.saloranta@iki.fi| Copyright (c) 2023 Werner Randelshofer, Switzerland| Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)| Copyright 2018-2020 Raffaello Giulietti"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-7",
     "publisher" : "https://github.com/FasterXML/jackson",
     "group" : "com.fasterxml.jackson.core",
     "name" : "jackson-databind-2.17.0.jar",
@@ -157,14 +611,78 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "8ad64ced1090cade4ef74b1561b9963a451e33f49cf3fa02a78cbb2da0afcf17"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0.pom-ca320af94a2bae81bed1821c618bc093]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "2abe3703841fc6de7545279030bdff45c90ea21a5ea3e2238caccb35244919b7"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Ownership Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-databind]/[com.fasterxml.jackson.core.jackson-databind.2.17.0]/jackson-databind-2.17.0.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "d0ed5b54cb1b0bbb0828e24ce752a43a006dc188b34e3a4ae3238acc7b637418"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-databind]/[com.fasterxml.jackson.core.jackson-databind.2.17.0]/jackson-databind-2.17.0-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0.pom-ca320af94a2bae81bed1821c618bc093]-analysis"
+    }, {
+      "name" : "Description",
+      "value" : "General data-binding functionality for Jackson: works on core streaming API"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "jackson-databind"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0.jar-09dd83868b44c6a3dc48911f4b3bbbc1]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0-sources.jar-f65b99ffc8a750f3edad904d7733d644]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0.jar-09dd83868b44c6a3dc48911f4b3bbbc1]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-databind]/[jackson-databind-2.17.0-sources.jar-f65b99ffc8a750f3edad904d7733d644]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-databind]/[com.fasterxml.jackson.core.jackson-databind.2.17.0]/jackson-databind-2.17.0.pom"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-8",
     "group" : "com.fasterxml.jackson.datatype",
     "name" : "jackson-datatype-jdk8-2.17.0.jar",
     "version" : "2.17.0",
@@ -177,14 +695,75 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "3fe015dcbb8a707acd351624f3b9e9cfdf27c73d4e5f498ec207201380596d34"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0.pom-7101cf93374bdcf2b78fdc7c429e76cb]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "b055bde5316c692f187521c7e3567a3cc830a6259acd383a67c3882f3a95347b"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-datatype-jdk8]/[com.fasterxml.jackson.datatype.jackson-datatype-jdk8.2.17.0]/jackson-datatype-jdk8-2.17.0.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "b090239968a0ae5a172472f4014dbd97133af9426d91bf4805a6ba5fd90d80f1"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-datatype-jdk8]/[com.fasterxml.jackson.datatype.jackson-datatype-jdk8.2.17.0]/jackson-datatype-jdk8-2.17.0-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "bundle"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0.pom-7101cf93374bdcf2b78fdc7c429e76cb]-analysis"
+    }, {
+      "name" : "Description",
+      "value" : "Add-on module for Jackson (https://github.com/FasterXML/jackson) to support JDK 8 data types."
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Tatu Saloranta (tatu.saloranta@iki.fi)| a community of developers"
+    }, {
+      "name" : "Binary Artifact - Extracted Authors (ScanCode)",
+      "value" : "Tatu Saloranta (tatu.saloranta@iki.fi)| a community of developers"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "jackson-datatype-jdk8"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0.jar-65e3b1936136e16cefbe9059c01c4505]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0-sources.jar-316097f5afc5c348dc888698e55c6920]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0.jar-65e3b1936136e16cefbe9059c01c4505]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jackson-datatype-jdk8]/[jackson-datatype-jdk8-2.17.0-sources.jar-316097f5afc5c348dc888698e55c6920]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jackson-datatype-jdk8]/[com.fasterxml.jackson.datatype.jackson-datatype-jdk8.2.17.0]/jackson-datatype-jdk8-2.17.0.pom"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-9",
     "publisher" : "https://github.com/jakartaee/jaf-api",
     "group" : "jakarta.activation",
     "name" : "jakarta.activation-api-2.1.2.jar",
@@ -198,14 +777,93 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - BSD 3-Clause License (Eclipse Distribution) copyrights: - Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved. - Copyright (c) 2019, current.year Eclipse Foundation. All rights reserved. subcomponents: - associatedLicenses: - BSD 3-Clause License (Eclipse Distribution) - BSD 3-Clause License componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 1997, 2021 Oracle and/or its affiliates. All rights reserved. - Copyright (c) 1997, 2022 Oracle and/or its affiliates. All rights reserved. - Copyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved. - Copyright (c) 2021 Oracle and/or its affiliates. All rights reserved. - associatedLicenses: - MIT License - associatedLicenses: - BSD 3-Clause License - associatedLicenses: - SIL Open Font License 1.1 - associatedLicenses: - Public Domain - W3C Software Notice and License (2002-12-31) - W3C License (undefined) - Eclipse Public License 2.0 + Apache License 2.0 - GNU General Public License 2.0 (with classpath exception) - GNU General Public License 2.0 (or any later version; with classpath exception) componentStatus: Segmentation Issue in this component. Split into subcomponents required."
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, Do Not Promote Marker, General Terms Matches Marker, Import/Export Marker, Ownership Marker, Secondary License Marker, Trademark Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "2ca1b00e8ad9315dcbee8309f33a6c39bc3d9703e5e43341d420f857f2c80ede"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2.pom-6d6088e9d73d0628f8146ca9781921fb]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "cffd53ecb6895ed462084572cdff1127b12df719900b04c32c587c0e2fde0717"
+    }, {
+      "name" : "Descriptor - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 2019, current.year Eclipse Foundation. All rights reserved."
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Cryptographic Content Marker, Do Not Promote Marker, General Terms Matches Marker, Import/Export Marker, Ownership Marker, Secondary License Marker, Trademark Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation.jakarta.activation-api.2.1.2]/jakarta.activation-api-2.1.2.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "f53f578dd0eb4170c195a4e215c59a38abfb4123dcb95dd902fef92876499fbb"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation.jakarta.activation-api.2.1.2]/jakarta.activation-api-2.1.2-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "BSD 3-Clause License, BSD 3-Clause License (Eclipse Distribution), Eclipse Public License 2.0 + Apache License 2.0, GNU General Public License 2.0 (or any later version; with classpath exception), GNU General Public License 2.0 (with classpath exception), MIT License, Public Domain, SIL Open Font License 1.1, W3C License (undefined), W3C Software Notice and License (2002-12-31)"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "BSD 3-Clause License, BSD 3-Clause License (Eclipse Distribution)"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2.pom-6d6088e9d73d0628f8146ca9781921fb]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 2019, current.year Eclipse Foundation. All rights reserved.| Copyright (c) 2021 Oracle and/or its affiliates. All rights reserved."
+    }, {
+      "name" : "Description",
+      "value" : "${project.name} ${spec.version} Specification"
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "Bart Calder| Bill Shannon| Miroslav.Kos@oracle.com| the Jakarta Activation project. Project home https://projects.eclipse.org/projects/ee4j.jaf"
+    }, {
+      "name" : "Binary Artifact - Extracted Authors (ScanCode)",
+      "value" : "the Jakarta Activation project. Project home https://projects.eclipse.org/projects/ee4j.jaf"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "BSD 3-Clause License, BSD 3-Clause License (Eclipse Distribution), Eclipse Public License 2.0 + Apache License 2.0, GNU General Public License 2.0 (or any later version; with classpath exception), GNU General Public License 2.0 (with classpath exception), MIT License, Public Domain, SIL Open Font License 1.1, W3C License (undefined), W3C Software Notice and License (2002-12-31)"
+    }, {
+      "name" : "Component",
+      "value" : "jakarta.activation-api"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2.jar-1af11450fafc7ee26c633d940286bc16]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2-sources.jar-205da5f8b718e98e457dce5b51f0edce]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2.jar-1af11450fafc7ee26c633d940286bc16]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation-api-2.1.2-sources.jar-205da5f8b718e98e457dce5b51f0edce]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[ja]/[jakarta.activation-api]/[jakarta.activation.jakarta.activation-api.2.1.2]/jakarta.activation-api-2.1.2.pom"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 1997, 2021 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 1997, 2022 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 1997, 2023 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.| Copyright (c) 2019, current.year Eclipse Foundation. All rights reserved.| Copyright (c) 2021 Oracle and/or its affiliates. All rights reserved."
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-10",
     "group" : "org.jboss.logging",
     "name" : "jboss-logging-3.5.3.Final.jar",
     "version" : "3.5.3.Final",
@@ -218,14 +876,90 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "18614c8495e95f12fed6cf25479b324308539d14948e602818b847d4195dd4ea"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final.pom-097bdc40e9206433ae38eaae97293576]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "e1da0d1911a81412324e87151e6e3cf60db2b052e83c7d61657ec9ed60719f16"
+    }, {
+      "name" : "Descriptor - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2023 Red Hat, Inc."
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[jb]/[jboss-logging]/[org.jboss.logging.jboss-logging.3.5.3.Final]/jboss-logging-3.5.3.Final.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "7b119460de174195aca412dfed52ca0bbef0ece26c2d74301b6172cfadf4ff59"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[jb]/[jboss-logging]/[org.jboss.logging.jboss-logging.3.5.3.Final]/jboss-logging-3.5.3.Final-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final.pom-097bdc40e9206433ae38eaae97293576]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2023 Red Hat, Inc."
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "david.lloyd@redhat.com David M. Lloyd| jperkins@redhat.com James R. Perkins"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "jboss-logging"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final.jar-ee7e24e94235c13f53392ecaa53f938c]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final-sources.jar-2b9e31085be4b1776450636cccda62b6]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final.jar-ee7e24e94235c13f53392ecaa53f938c]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[j]/[jb]/[jboss-logging]/[jboss-logging-3.5.3.Final-sources.jar-2b9e31085be4b1776450636cccda62b6]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[j]/[jb]/[jboss-logging]/[org.jboss.logging.jboss-logging.3.5.3.Final]/jboss-logging-3.5.3.Final.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2023 Red Hat, Inc."
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-11",
     "group" : "org.keycloak",
     "name" : "keycloak-admin-cli-25.0.2.jar",
     "version" : "25.0.2",
@@ -245,14 +979,117 @@
       "name" : "Path",
       "value" : "keycloak-admin-cli-25.0.2.jar"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - MIT License - BSD (undefined) componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 2021 The - Copyright (c) 2022 Daniel Lemire. BSL - Copyright (c) 2023 Werner Randelshofer, Switzerland - Copyright 2020 Tim Buktu - associatedLicenses: - BSD 3-Clause License (Eclipse Distribution) copyrights: - Copyright (c) 2018 Oracle and/or its affiliates - Copyright (c) 2019, current.year Eclipse Foundation - associatedLicenses: - Apache License 2.0 - MIT License componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 2023 Werner Randelshofer, Switzerland - Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi) - associatedLicenses: - BSD 3-Clause License (copyright holder variant) variables: copyrightHolderNoLiability: '\"THE COPYRIGHT OWNER OR CONTRIBUTORS\"' variable3rdClause: '\"the name of the copyright holders nor the names of its contributors\"' copyrightHolderNoWarranty: '\"THE COPYRIGHT HOLDERS AND CONTRIBUTORS\"' copyrights: - Copyright (c) 2000-2011 INRIA, France Telecom - associatedLicenses: - BSD 3-Clause License (Eclipse Distribution) - BSD 3-Clause License componentStatus: Segmentation Issue in this component. Split into subcomponents required. copyrights: - Copyright (c) 1997, 2023 Oracle and/or its affiliates - Copyright (c) 2021 Oracle and/or its affiliates - associatedLicenses: - MIT License copyrights: - Copyright (c) 2021 The - associatedLicenses: - BSD 2-Clause License copyrights: - Copyright 2020 Tim Buktu - Copyright 2022 Tim Buktu - associatedLicenses: - Mozilla Public License 2.0 - associatedLicenses: - BSD 3-Clause License - associatedLicenses: - SIL Open Font License 1.1 - associatedLicenses: - Public Domain - W3C Software Notice and License (2002-12-31) - W3C License (undefined) - Eclipse Public License 2.0 + Apache License 2.0 - GNU General Public License 2.0 (with classpath exception) - GNU General Public License 2.0 (or any later version; with classpath exception) componentStatus: Segmentation Issue in this component. Split into subcomponents required."
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "ASM INRIA Marker (France Telekom), Cryptographic Content Marker, Do Not Promote Marker, General Terms Matches Marker, Import/Export Marker, Linked License Marker, No Warranty Marker, Ownership Marker, Patent Information Marker, Secondary License Marker, Trademark Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "ce064ae5d6b534f77c31c4ff13aa5ace39284e14aea14d3e453be483f9174aa1"
+    }, {
+      "name" : "Derived Licenses",
+      "value" : "Apache License 2.0, BSD (undefined), BSD 2-Clause License, BSD 3-Clause License, BSD 3-Clause License (copyright holder variant), BSD 3-Clause License (Eclipse Distribution), Eclipse Public License 2.0 + Apache License 2.0, GNU General Public License 2.0 (or any later version; with classpath exception), GNU General Public License 2.0 (with classpath exception), MIT License, Mozilla Public License 2.0, Public Domain, SIL Open Font License 1.1, W3C License (undefined), W3C Software Notice and License (2002-12-31)"
+    }, {
+      "name" : "Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.jar-7dbcacae59579b92f94cc1e333b445fd]-analysis"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.pom-cd9b5c6fcbdd410b9fa6a5134c8eeb5a]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "c97f70d4e431dd47fca00c0a7bd3d8c9b0b14f215be42bb38ca202160b5c983a"
+    }, {
+      "name" : "Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates| Copyright (c) 2000-2011 INRIA, France Telecom| Copyright (c) 2018 Oracle and/or its affiliates| Copyright (c) 2019, current.year Eclipse Foundation| Copyright (c) 2021 Oracle and/or its affiliates| Copyright (c) 2021 The| Copyright (c) 2022 Daniel Lemire. BSL| Copyright (c) 2023 Werner Randelshofer, Switzerland| Copyright 2002-2024 The Apache Software Foundation| Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)| Copyright 2016 Red Hat, Inc. and/or its affiliates and other contributors| Copyright 2018 Red Hat, Inc., and individual contributors| Copyright 2020 Tim Buktu| Copyright 2022 Tim Buktu| Copyright 2023 Red Hat, Inc."
+    }, {
+      "name" : "Extracted Authors (ScanCode)",
+      "value" : "2014-12-18 Amazon Registry Services, Inc.| <domeinnaam@minaz.nl>| <frc1533@ecgrobotics.org>| <security@linode.com>| Aaron Edwards <sysadmins@incsub.com>| Aaron Marais <its_me@aaronleem.co.za>| Aavash Shrestha <aavash@deta.sh>| Abuse KU Leuven <abuse@kuleuven.be>| Adam Grand <webmaster@mail.ox.rs>| Adam Humpherys <adam@mws.dev>| Adam Jimenez <adam@shiftcreate.com>| Adam Newbold <adam@omg.lol>| Adrian Imboden <adi@thingdust.com>| Adrien Gillon <adrien+public-suffix-list@stackhero.io>| Alan Shreve <alan@ngrok.com>| Aleksander Hristov <noc@cloudns.net>| Ales Krajnik <ales.krajnik@craynic.com>| Alex Bowers <alex@shopblocks.com>| Alex Hanselka <alex@gitlab.com>| Alex Oancea <aoancea@cloudscale365.com>| Alex Richter <alex.richter@shopify.com>| Alexander Hochbaum <admin@appudo.com>| Alexander Lodin <security+psl@yandex-team.ru>| Alexander Selivanov <alex@apphud.com>| Aljaz Starc <me@aljaxus.eu>| Aman Gupta <aman@getchannels.com>| Anani Voule <digital@digital.co.dk>| Andre Eriksson <andre@encore.dev>| Andreas Schnederle-Wagner <schnederle@futureweb.at>| Andreas Weise <a.weise@avm.de>| Andrei Canta <andrei@easypanel.io>| Andrew Banchich <abanchich@sceven.com>| Andrew Cady <public-suffix-list@cryptonomic.net>| Andrew Farmer <andrew.farmer@dreamhost.com>| Andrew Farries <andrew.farries@red-gate.com>| Andrew Sampson <andrew@ulterius.io>| Andy Ortlieb <aortlieb@atlassian.com>| Angelo Gladding <angelo@lahacker.net>| Anthony Voutas <anthony@backplane.io>| Antoine Beaupre anarcat@torproject.org| Anton Akhtyamov <program-managers@plesk.com>| Anton Avramov <avramov@alboto.ca>| Anton Avramov <register@lukanet.com>| Anton Barkan <antonb@elementor.com>| Antonio Lain <antlai@cafjs.com>| Antonis Kalipetis <akalipetis@sourcelair.com>| Anurag Goel <dev@render.com>| Apostolos Tsakpinis <apostolos.tsakpinis@gmail.com>| Aral Balkan <aral@small-tech.org>| Arnold Hendriks <info@webhare.com>| Arseniy Sokolov <security@hakaran.cz>| Artem Kondratev <accounts@seidat.com>| Arturo Borrero Gonzalez <aborrero@wikimedia.org>| Asei SEKIGUCHI <mail@aseinet.com>| Asheesh Laroia <asheesh@sandstorm.io>| Assaf Stern <domains@comstar.co.il>| Atanunu Igbunuroghene <publicsuffixlist@hostbip.com>| Atanunu Igbunuroghene <publicsuffixlist@udr.org.yt>| Atsadawat Netcharadsang <atsadawat@dotarai.co.th>| Atul Bhouraskar <atul@yescourse.com>| Axel Fontaine <axel@boxfuse.com>| B. Blechschmidt <hostmaster@certmgr.org>| Ben Francis <ben@krellian.com>| Ben Francis <bfrancis@mozilla.com>| Bjoern Henke <dev-server@taifun-software.de>| Brandon DuRette <brandon.durette@wpengine.com>| Braxton Huggins <psl-maintainers@digitalocean.com>| Brian Bennett <brian.bennett@joyent.com>| Cameron Elliott <cameron@cameronelliott.com>| Carlo Cannas <tech_staff@altervista.it>| Cassandra Beelen <cassandra@beelen.one>| Cedric Dubois <cedric.dubois@team.blue>| Charly Coste <changaco@changaco.oy.lc>| Chris Kastorff <info@rethinkdb.com>| Chris Partridge <chris@partridge.tech>| Chris Raynor <chris@firebase.com>| Chris Whittle <chris.whittle@woodsvalldata.co.uk>| Christian Franke <it@ticket.io>| Christian Poulter <milchstrasse@goip.de>| Christian Seitz <chris@in-berlin.de>| Cole Estep <cole@omnibond.com>| Colin Brown <hello@adimo.co>| Colin Sidoti <systems@clerk.dev>| Connor Davis <security@vercel.com>| Craig Jellick <domains@acorn.io>| Craig McMahon <craig@shopitcommerce.com>| Craig Welch, abeliidev@gmail.com| Damien Tournoud <dtournoud@magento.cloud>| Dan Miller <dm@sub6.com>| Dani Biro <dani@pymet.com>| Daniel A. Maierhofer <vorstand@funkfeuer.at>| Daniel Farina <ingenieria@jotelulu.com>| Daniel Massaguer <psl-maintainers@amazon.com>| Daniel Mostertman <unixbeheer+publicsuffix@xs4all.net>| Daniel Netzer <dan@paywhirl.com>| Daniel Stone <daniel@fooishbar.org>| Daniil Burdakov <icqkill@gmail.com>| Danilo De Franco <info@hoplix.shop>| Danko Aleksejevs <danko@very.lv>| Dave Sanders <dave@myservicemagnet.com>| Dave Tharp <browsersafetymark.io@quicinc.com>| David Anderson <danderson@tailscale.com>| David Coles <david.coles@sony.com>| David Fischer <team@readthedocs.org>| David Grellscheid <admin@hepforge.org>| Dean Sheather <dean@deansheather.com>| Derek Myers <derek@pagefog.com>| Deven Reza <publicsuffixlist@noip.com>| Domain Admin <domainadmin@amaze.co>| Dominic Luechinger <dol@cyon.ch>| Dominik George <dominik.george@teckids.org>| Dominik Menke <dom@digineo.de>| Donavan Miller <donavanm@amazon.com>| Drew DeVault <sir@cmpwn.com>| Duarte Santos <domain-admin@outsystemscloud.com>| Dusan Radovanovic <dusan.radovanovic@brendly.rs>| Dustin Ward <dward@townnews.com>| Eddie Jones <eddie@onefoldmedia.com>| Eduardo Vela <evn@google.com>| Edwin Balani <sysadmins@srcf.net>| Eero Hakkinen <Eero+psl@Hakkinen.fi>| Emil Stahl <esp@zitcom.dk>| Emmanuel Raviart <emmanuel@raviart.com>| Eric Chan <support@flashdrive.io>| Eric Jiang <eric@fabrica.dev>| Erik Anders <erik.anders@securepoint.de>| Etienne Stalmans <security@aiven.io>| Evgeniy Kozhuhovskiy <ugenk@mediatech.by>| Evgeniy Subbotin <e.subbotin@eurobyte.ru>| Evgeniy Subbotin <e.subbotin@mchost.ru>| Fabien Potencier <fabien@symfony.com>| Faith Olapade <faith.olapade@snowflake.com>| Fastly Security <security@fastly.com>| Felipe Keller Braz <felipebraz@kinghost.com.br>| Felix Monckemeyer <f.moenckemeyer@senseering.de>| Frederic VANNIERE <f.vanniere@planet-work.com>| Frederik Braun <fb@frederik-braun.com>| Furkan Akkoc <info@hendelzon.de>| Gabriel Ferreira <registrobr@interlegis.leg.br>| Gary Dylina <gary@pantheon.io>| Gavin Brown <gavin.brown@centralnic.com>| George Georgievsky <gug@cctld.ru>| Giles Thomas <giles@pythonanywhere.com>| Govert Versluis <govert@co-co.nl>| Greg Dallavalle <domains@leadpages.net>| Greg Holland <greg.holland@lmpm.com>| Gregory Drake <support@dyn.com>| Hanno Bock <hanno@schokokeks.org>| Hannu Aronsson <haa@iki.fi>| Hector Martin <marcan@euskalencounter.org>| Heikki Hannikainen <hessu@hes.iki.fi>| Henrique Vicente <security@wedeploy.com>| Hosting Div <admin@pepabo.com>| Ian Streeter <ian@snowplowanalytics.com>| Ihor Kolodyuk <ik@jelastic.com>| Ilya Zaretskiy <zaretskiy@corp.mail.ru>| Inian Parameshwaran <security@supabase.io>| Ireneusz Maliszewski <ireneusz.maliszewski@lubman.pl>| Ivan Oliva <ivan.oliva@koobin.com>| Jack Price <jack@revitalised.co.uk>| Jacob Bunk Nielsen <jbn@one.com>| Jacob Lee <jacob@stdlib.com>| Jacob Slater <whois@igloo.to>| JaeYoong Lee <cec@kakaocorp.com>| James Kennedy <domains@advisorwebsites.com>| Jamie McClelland <info@mayfirst.org>| Jan Jaeschke <jan.jaeschke@netatwork.de>| Jan Krpes <jan.krpes@cdn77.com>| Jan Moennich <jan.moennich@ownprovider.com>| Janos Matyas <info@banzaicloud.com>| Jason Kridner <jkridner@beagleboard.org>| Jason Kriss <jason@pagefronthq.com>| Jason Zhu <jason@owtware.com>| Jasper Hugo <jasper@avstack.io>| Jeff Wheelhouse <support@nearlyfreespeech.net>| Jeffrey Phillips Freeman <jeffrey.freeman@qoto.org>| Jennifer Herting <jchits@rit.edu>| Jens Kuper <cloud@shopware.com>| Joel Kennedy <joel@bip.sh>| Jon Spriggs <admin@lug.org.uk>| Jonas Schwartz <jonas@qutheory.io>| Jonathan Rudenberg <jonathan@cupcake.io>| Jonathan Rudenberg <jonathan@flynn.io>| Jons Slemmer <jons@redstarconsultants.com>| Joshua Weiss <admin.engineering@bluebite.com>| Joshua Zhang <public-suffix@rgames.jp>| Julia Evans <julia@wizardzines.com>| Jung Jin <jungseok.jin@wdc.com>| Keith Fairley <domains@fearworksmedia.co.uk>| Kenneth Van Alstyne <kvanalstyne@perspecta.com>| Kenny Niehage <hello@yahe.sh>| Kevin Bridges <kevin@drud.com>| Khannanov Roman <r.khannanov@msk-ix.ru>| Khash Sajadi <khash@cloud66.com>| Kidd Hustle <kiddhustle@wiardweb.com>| Kirill Pertsev <kika@rackmaze.com>| Kirill Ulyanov <k.ulyanov@airy.host>| Koen Rouwhorst <koenrh@framer.com>| Koen Van Isterdael <k.vanisterdael@fermax.be>| Kohei YOSHIDA <tech@gehirn.co.jp>| Konrad Kotarba <konrad.kotarba@dreamcommerce.com>| Konstantin Nosov <Nosov@nodeart.io>| Kor Nielsen <kor@pubtls.org>| Krzysztof Wolski <krzysztof.wolski@home.eu>| Kurt Mackey <kurt@fly.io>| Lann Martin <security@localcert.dev>| Lars Laehn <info@lcube.de>| Laurent Pellegrino <security@noticeable.io>| Lelux Admin <publisuffix@lelux.site>| Lenny Bakkalian <lenny.bakkalian@gmail.com>| Lev Nekrasov <lnekrasov@beget.com>| Li Hui <lihui@neupeer.com>| Likhachev Vasiliy <lihachev@fastvps.ru>| Lincoln Bergeson <lincoln@replit.com>| Louis Chemineau <louis@chmn.me>| Luca Casonato <hostmaster@deno.com>| Lukas Reschke <lukas@authentick.net>| Luke Bratch <luke@bratch.co.uk>| Luke Wells <psl-maintainers@amazon.com>| Mads Hartmann <mads@glitch.com>| Majid Qureshi <mqureshi@amrayn.com>| Maksym Rivtin <support@cityhost.net.ua>| Marc Bradshaw <marc@fastmailteam.com>| Marcel Daus <cloudops@encoway.de>| Marco Suter <marco@northflank.com>| Marcus Popp <admin@callidomus.com>| Mario Hoberg <info@iserv.de>| Mario Siegenthaler <mario.siegenthaler@linkyard.ch>| Marios Makassikis <mmakassikis@freebox.fr>| Mark J. Titorenko <mark.titorenko@alces-software.com>| Mark Staarink <mark@tlon.io>| Marko Ivanovic <kormang@hotmail.rs>| Martin Breest <security@spreadshop.com>| Martin Dannehl <postmaster@keymachine.de>| Martin Ellis <martin.ellis@gov.scot>| Martin Meier <admin@protonet.io>| Martin Semrad <semrad@i-registry.cz>| Marvin Wiesner <Marvin@curv-labs.de>| Matt Hanley <security@ghost.org>| Matthew Hardeman <mhardeman@ipifony.com>| Matthias Merkel <matthias.merkel@staclar.com>| Maxence Bitterli <maxence@definima.com>| Maxim Alzoba <tech.contact@faitid.org>| Maximilian Schieder <maxi@zeug.co>| Mia Rehlinger <dns@voxel.sh>| Micah Anderson <micah@riseup.net>| Michael Biven <mbiven@salesforce.com>| Michael Olson <molson@medicomhealth.com>| Michael Smith <michael.smith@wpengine.com>| Michal Kralik <support@evennode.com>| Mike Bostock <dns@observablehq.com>| Mike Damm <md@md.vc>| Miroslav Bozic <security@bplaced.net>| Mitch Schwenk <mitch@yombo.net>| Moritz Marquardt <git@momar.de>| Moritz Werner <mwerner@jonaspasche.com>| Nathan O'Sullivan <nathan@mammoth.com.au>| Nathan van Bakel <info@voorloper.com>| Nathaniel Schweinberg <noop@rearc.io>| Nicholas Ford <nick@nimbushosting.co.uk>| Nick Chang <nickchang@qnap.com>| Niels Martignene <hello@goupile.fr>| Niels Maumenee <storage@vultr.com>| Nikola Kotur <nikola@platform.sh>| Noa Heyl <hi@noa.dev>| Noah Taheij <noah@lokalized.nl>| Norbert Auler <mail@dnshome.de>| Norman Meilick <nm@sbe.de>| Ofer Kalaora <postmaster@activetrail.com>| Oliver Graebner <security@mo-siemens.io>| Olivier Benz <olivier.benz@b-data.ch>| Oren Agiv <oren@tabit.cloud>| Oren Eini <oren@ravendb.net>| Patrick Flor <patrick@platter.dev>| Patrick Nielsen <patrick@clovyr.io>| Patrick Toomey <security@github.com>| Patrick Uiterwijk <puiterwijk@fedoraproject.org>| Paul Biggar <ops@darklang.com>| Paul Cammish <kelduum@mythic-beasts.com>| Paul Cammish <paul.cammish@bytemark.co.uk>| Paul Crowder <paul.crowder@blackbaud.com>| Paul Fang <mis@draytek.com>| Paulus Schoutsen <infra@nabucasa.com>| Pawel Panek <noc@cloudaccess.net>| Peter Ruibal <public-suffix@fb.com>| Peter Thomassen <peter@desec.io>| Petros Angelatos <petrosagg@balena.io>| Philip Hutchins <hostmaster@storj.io>| Philipp Heckel <ph@datto.com>| Philipp Schmid <ops@openresearch.com>| Phillipp Roll <phillipp.roell@trafficplex.de>| Pierre Beyssac <hostmaster@eu.org>| Pierre Carrier <pc@rrier.ca>| Pierre Carrier <pierre@meteor.com>| Piotr Zduniak <piotr@nucleos.com>| Przemyslaw Plewa <it-admin@domena.pl>| Putri Karunia <putri@typedream.com>| Quentin Adam <noc@clever-cloud.com>| Radim Janca <janca@cesnet.cz>| Rahul Dhawan <security@postman.com>| Remi Mach <remi.mach@loginline.com>| Remy Leone <rleone@scaleway.com>| Rene Marticke <rmarticke@cosimo.de>| Reza Akhavan <spacekit.io@gmail.com>| Ricardo Padilha <rpadilha@drobo.com>| Richard Baker <richard.baker@digital.cabinet-office.gov.uk>| Richard Harper <richard@duckdns.org>| Richard Li <secalert@datawire.io>| Richard Zowalla <mi-admin@hs-heilbronn.de>| Rishabh Nambiar & Michael Brown <team@discourse.org>| Robert Niedziela <webmaster@ddnss.de>| Robin H. Johnson <psl-maintainers@digitalocean.com>| Robin Naundorf <r.naundorf@fh-muenster.de>| Roderick Parr <roderick.parr@forgerock.com>| Romain Fliedel <rfliedel@freebox.fr>| Roman Azarenko <roman.azarenko@iopsys.eu>| Roni Horowitz <roni@responder.co.il>| Rony Weng <ronyweng@synology.com>| Rory Breuk <rbreuk@transip.nl>| Roy Keene <rkeene@knightpoint.com>| Ruben Schmidmeister <psl-maintainers@messerli.ch>| Rudraksh MK <rudi@porter.run>| Sahn Lam <slam@discordapp.com>| Sam Smyth <devloop@atlassian.com>| Sander Steffann <sander@nogalliance.org>| Sarah Newman <owner@prgmr.com>| Scott Claeys <s.claeys@radwebhosting.com>| Sergey Ulyashin <ulyashin@jino.ru>| Sergey Zotov <admin@rusnames.ru>| Sergi Ferriz <sergi.ferriz@typeform.com>| Serhii Bulakh <support@drs.ua>| Serhii Rostilo <sergey@rostilo.kiev.ua>| Seth Vincent <sethvincent@gmail.com>| Shahar Talmi <shahar@wix.com>| Shahidh K Muhammed <shahidh@hasura.io>| Shante Adam <shante@skyhat.io>| Silke Hofstra <syscom@snt.utwente.nl>| Simon Kissel <hostmaster@viprinet.com>| Simon Morvan <simon@icilalune.com>| Skylar Challand <support@siteleaf.com>| Skylar MacDonald <skylar@dangerscience.com>| Stefan Keim <admin@js.org>| Stefan Neufeind <info@speedpartner.de>| Stefan Schwarz <sysadm@united-gameserver.de>| Stefano Rivera <stefano@yola.com>| Stepan Fedotov <stepan@wisp.gg>| Stephen Ford <hostmaster@digital.cabinet-office.gov.uk>| Steve Leung <steveleung@peplink.com>| Steve Russell <steve@now-dns.com>| Sue Ye <sue@dynu.com>| Tatu Saloranta (tatu.saloranta@iki.fi)| Thomas Cottier <thomas.cottier@enalean.com>| Thomas Orozco <thomas@aptible.com>| Thomas Waldmann <info@nsupdate.info>| Thomas Wouters <thomas.wouters@combellgroup.com>| Tibor Halter <thalter@boomla.com>| Tim Dusterhus <security@woltlab.cloud>| Tim Kramer <tkramer@rhcloud.com>| Tim Perry <tim@resin.io>| Tobias Wilken <tw@cloudcontrol.com>| Tom Klein <tom@gentlent.com>| Tom Maher <tmaher@heroku.com>| Tom Whitwell <domains@memset.com>| Tom Whitwell <gov-uk-paas-support@digital.cabinet-office.gov.uk>| Tony Schirmer <tony@storebase.io>| Trung Tran <Trung.Tran@neustar.biz>| Tyler Todd <noc@nova53.net>| Umut Gumeli <infrastructure-publicsuffixlist@clickrising.com>| Valentin Grimaud <security@yunohost.org>| Vasiliy Sheredeko <piphon@gmail.com>| Vicary Archangel <vicary@omniwe.com>| Victor Pupynin <hallo@frusky.de>| Victor Velchev <admin@liquidnetlimited.com>| Vincent Casse <vincent.casse@ovhcloud.com>| Vincent Fiduccia <domains@rancher.com>| Vincent Tseng <vincenttseng@asustor.com>| Vladimir Dudr <info@e4you.cz>| Werner Kaltofen <wk@all-inkl.com>| Wolfgang Schwarz <admin@intermetrics.de>| Wouter Bakker <hostmaster@kaashosting.nl>| Xavier De Cock <xdecock@gmail.com>| XnBay Developer <developer.xncloud@gmail.com>| Yaacov Akiba Slama <admin@chirurgiens-dentistes-en-france.fr>| Yann Guichard <yann@pagexl.com>| Yngve Pettersen <yngve@opera.com>| Yue Kang <eero-dynamic-dns@amazon.com>| Yuji Minagawa <domains-admin@iodata.jp>| Yuya NAGASAWA <public-suffix-list@binc.jp>| Zdenek Sustr <zdenek.sustr@cesnet.cz>| Zhixiang Zhao <csuite@impertrix.com>| Zoltan Egresi <egresi@globehosting.com>| a community of developers| auto 2014-11-13 XYZ.COM LLC| the Jakarta Activation project. Project home https://projects.eclipse.org/projects/ee4j.jaf| uognoc@triton.uog.edu"
+    }, {
+      "name" : "Virtual Root Path",
+      "value" : "."
+    }, {
+      "name" : "Derived Licenses (ScanCode)",
+      "value" : "[(epl-2.0 OR apache-2.0), apache-1.1, apache-2.0, bsd-new, bsd-simplified, classpath-exception-2.0, epl-2.0, free-unknown, generic-export-compliance, gpl-2.0, gpl-2.0 WITH classpath-exception-2.0, mit, mpl-2.0, ofl-1.1, public-domain, w3c]"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[k]/[ke]/[keycloak-admin-cli]/[org.keycloak.keycloak-admin-cli.25.0.2]/keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    }, {
+      "name" : "Identified Terms",
+      "value" : "Apache License 2.0, BSD (undefined), BSD 2-Clause License, BSD 3-Clause License, BSD 3-Clause License (copyright holder variant), BSD 3-Clause License (Eclipse Distribution), Eclipse Public License 2.0 + Apache License 2.0, GNU General Public License 2.0 (or any later version; with classpath exception), GNU General Public License 2.0 (with classpath exception), MIT License, Mozilla Public License 2.0, Public Domain, SIL Open Font License 1.1, W3C License (undefined), W3C Software Notice and License (2002-12-31)"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[k]/[ke]/[keycloak-admin-cli]/[org.keycloak.keycloak-admin-cli.25.0.2]/keycloak-admin-cli-25.0.2-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License 2.0, BSD (undefined), BSD 2-Clause License, BSD 3-Clause License, BSD 3-Clause License (copyright holder variant), BSD 3-Clause License (Eclipse Distribution), Eclipse Public License 2.0 + Apache License 2.0, GNU General Public License 2.0 (or any later version; with classpath exception), GNU General Public License 2.0 (with classpath exception), MIT License, Mozilla Public License 2.0, Public Domain, SIL Open Font License 1.1, W3C License (undefined), W3C Software Notice and License (2002-12-31)"
+    }, {
+      "name" : "Derived Markers",
+      "value" : "ASM INRIA Marker (France Telekom), Cryptographic Content Marker, Do Not Promote Marker, General Terms Matches Marker, Import/Export Marker, Linked License Marker, No Warranty Marker, Ownership Marker, Patent Information Marker, Secondary License Marker, Trademark Marker"
+    }, {
+      "name" : "Checksum (MD5)",
+      "value" : "7dbcacae59579b92f94cc1e333b445fd"
+    }, {
+      "name" : "Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.jar-7dbcacae59579b92f94cc1e333b445fd]"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.pom-cd9b5c6fcbdd410b9fa6a5134c8eeb5a]-analysis"
+    }, {
+      "name" : "Binary Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 1997, 2023 Oracle and/or its affiliates| Copyright (c) 2000-2011 INRIA, France Telecom| Copyright (c) 2018 Oracle and/or its affiliates| Copyright (c) 2019, current.year Eclipse Foundation| Copyright (c) 2021 Oracle and/or its affiliates| Copyright (c) 2021 The| Copyright (c) 2022 Daniel Lemire. BSL| Copyright (c) 2023 Werner Randelshofer, Switzerland| Copyright 2002-2024 The Apache Software Foundation| Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)| Copyright 2016 Red Hat, Inc. and/or its affiliates and other contributors| Copyright 2018 Red Hat, Inc., and individual contributors| Copyright 2020 Tim Buktu| Copyright 2022 Tim Buktu| Copyright 2023 Red Hat, Inc."
+    }, {
+      "name" : "Source Artifact - Extracted Authors (ScanCode)",
+      "value" : "marko.strukelj@gmail.com Marko Strukelj| mposolda@redhat.com Marek Posolda| mstrukel@redhat.com Marko Strukelj"
+    }, {
+      "name" : "Binary Artifact - Extracted Authors (ScanCode)",
+      "value" : "2014-12-18 Amazon Registry Services, Inc.| <domeinnaam@minaz.nl>| <frc1533@ecgrobotics.org>| <security@linode.com>| Aaron Edwards <sysadmins@incsub.com>| Aaron Marais <its_me@aaronleem.co.za>| Aavash Shrestha <aavash@deta.sh>| Abuse KU Leuven <abuse@kuleuven.be>| Adam Grand <webmaster@mail.ox.rs>| Adam Humpherys <adam@mws.dev>| Adam Jimenez <adam@shiftcreate.com>| Adam Newbold <adam@omg.lol>| Adrian Imboden <adi@thingdust.com>| Adrien Gillon <adrien+public-suffix-list@stackhero.io>| Alan Shreve <alan@ngrok.com>| Aleksander Hristov <noc@cloudns.net>| Ales Krajnik <ales.krajnik@craynic.com>| Alex Bowers <alex@shopblocks.com>| Alex Hanselka <alex@gitlab.com>| Alex Oancea <aoancea@cloudscale365.com>| Alex Richter <alex.richter@shopify.com>| Alexander Hochbaum <admin@appudo.com>| Alexander Lodin <security+psl@yandex-team.ru>| Alexander Selivanov <alex@apphud.com>| Aljaz Starc <me@aljaxus.eu>| Aman Gupta <aman@getchannels.com>| Anani Voule <digital@digital.co.dk>| Andre Eriksson <andre@encore.dev>| Andreas Schnederle-Wagner <schnederle@futureweb.at>| Andreas Weise <a.weise@avm.de>| Andrei Canta <andrei@easypanel.io>| Andrew Banchich <abanchich@sceven.com>| Andrew Cady <public-suffix-list@cryptonomic.net>| Andrew Farmer <andrew.farmer@dreamhost.com>| Andrew Farries <andrew.farries@red-gate.com>| Andrew Sampson <andrew@ulterius.io>| Andy Ortlieb <aortlieb@atlassian.com>| Angelo Gladding <angelo@lahacker.net>| Anthony Voutas <anthony@backplane.io>| Antoine Beaupre anarcat@torproject.org| Anton Akhtyamov <program-managers@plesk.com>| Anton Avramov <avramov@alboto.ca>| Anton Avramov <register@lukanet.com>| Anton Barkan <antonb@elementor.com>| Antonio Lain <antlai@cafjs.com>| Antonis Kalipetis <akalipetis@sourcelair.com>| Anurag Goel <dev@render.com>| Apostolos Tsakpinis <apostolos.tsakpinis@gmail.com>| Aral Balkan <aral@small-tech.org>| Arnold Hendriks <info@webhare.com>| Arseniy Sokolov <security@hakaran.cz>| Artem Kondratev <accounts@seidat.com>| Arturo Borrero Gonzalez <aborrero@wikimedia.org>| Asei SEKIGUCHI <mail@aseinet.com>| Asheesh Laroia <asheesh@sandstorm.io>| Assaf Stern <domains@comstar.co.il>| Atanunu Igbunuroghene <publicsuffixlist@hostbip.com>| Atanunu Igbunuroghene <publicsuffixlist@udr.org.yt>| Atsadawat Netcharadsang <atsadawat@dotarai.co.th>| Atul Bhouraskar <atul@yescourse.com>| Axel Fontaine <axel@boxfuse.com>| B. Blechschmidt <hostmaster@certmgr.org>| Ben Francis <ben@krellian.com>| Ben Francis <bfrancis@mozilla.com>| Bjoern Henke <dev-server@taifun-software.de>| Brandon DuRette <brandon.durette@wpengine.com>| Braxton Huggins <psl-maintainers@digitalocean.com>| Brian Bennett <brian.bennett@joyent.com>| Cameron Elliott <cameron@cameronelliott.com>| Carlo Cannas <tech_staff@altervista.it>| Cassandra Beelen <cassandra@beelen.one>| Cedric Dubois <cedric.dubois@team.blue>| Charly Coste <changaco@changaco.oy.lc>| Chris Kastorff <info@rethinkdb.com>| Chris Partridge <chris@partridge.tech>| Chris Raynor <chris@firebase.com>| Chris Whittle <chris.whittle@woodsvalldata.co.uk>| Christian Franke <it@ticket.io>| Christian Poulter <milchstrasse@goip.de>| Christian Seitz <chris@in-berlin.de>| Cole Estep <cole@omnibond.com>| Colin Brown <hello@adimo.co>| Colin Sidoti <systems@clerk.dev>| Connor Davis <security@vercel.com>| Craig Jellick <domains@acorn.io>| Craig McMahon <craig@shopitcommerce.com>| Craig Welch, abeliidev@gmail.com| Damien Tournoud <dtournoud@magento.cloud>| Dan Miller <dm@sub6.com>| Dani Biro <dani@pymet.com>| Daniel A. Maierhofer <vorstand@funkfeuer.at>| Daniel Farina <ingenieria@jotelulu.com>| Daniel Massaguer <psl-maintainers@amazon.com>| Daniel Mostertman <unixbeheer+publicsuffix@xs4all.net>| Daniel Netzer <dan@paywhirl.com>| Daniel Stone <daniel@fooishbar.org>| Daniil Burdakov <icqkill@gmail.com>| Danilo De Franco <info@hoplix.shop>| Danko Aleksejevs <danko@very.lv>| Dave Sanders <dave@myservicemagnet.com>| Dave Tharp <browsersafetymark.io@quicinc.com>| David Anderson <danderson@tailscale.com>| David Coles <david.coles@sony.com>| David Fischer <team@readthedocs.org>| David Grellscheid <admin@hepforge.org>| Dean Sheather <dean@deansheather.com>| Derek Myers <derek@pagefog.com>| Deven Reza <publicsuffixlist@noip.com>| Domain Admin <domainadmin@amaze.co>| Dominic Luechinger <dol@cyon.ch>| Dominik George <dominik.george@teckids.org>| Dominik Menke <dom@digineo.de>| Donavan Miller <donavanm@amazon.com>| Drew DeVault <sir@cmpwn.com>| Duarte Santos <domain-admin@outsystemscloud.com>| Dusan Radovanovic <dusan.radovanovic@brendly.rs>| Dustin Ward <dward@townnews.com>| Eddie Jones <eddie@onefoldmedia.com>| Eduardo Vela <evn@google.com>| Edwin Balani <sysadmins@srcf.net>| Eero Hakkinen <Eero+psl@Hakkinen.fi>| Emil Stahl <esp@zitcom.dk>| Emmanuel Raviart <emmanuel@raviart.com>| Eric Chan <support@flashdrive.io>| Eric Jiang <eric@fabrica.dev>| Erik Anders <erik.anders@securepoint.de>| Etienne Stalmans <security@aiven.io>| Evgeniy Kozhuhovskiy <ugenk@mediatech.by>| Evgeniy Subbotin <e.subbotin@eurobyte.ru>| Evgeniy Subbotin <e.subbotin@mchost.ru>| Fabien Potencier <fabien@symfony.com>| Faith Olapade <faith.olapade@snowflake.com>| Fastly Security <security@fastly.com>| Felipe Keller Braz <felipebraz@kinghost.com.br>| Felix Monckemeyer <f.moenckemeyer@senseering.de>| Frederic VANNIERE <f.vanniere@planet-work.com>| Frederik Braun <fb@frederik-braun.com>| Furkan Akkoc <info@hendelzon.de>| Gabriel Ferreira <registrobr@interlegis.leg.br>| Gary Dylina <gary@pantheon.io>| Gavin Brown <gavin.brown@centralnic.com>| George Georgievsky <gug@cctld.ru>| Giles Thomas <giles@pythonanywhere.com>| Govert Versluis <govert@co-co.nl>| Greg Dallavalle <domains@leadpages.net>| Greg Holland <greg.holland@lmpm.com>| Gregory Drake <support@dyn.com>| Hanno Bock <hanno@schokokeks.org>| Hannu Aronsson <haa@iki.fi>| Hector Martin <marcan@euskalencounter.org>| Heikki Hannikainen <hessu@hes.iki.fi>| Henrique Vicente <security@wedeploy.com>| Hosting Div <admin@pepabo.com>| Ian Streeter <ian@snowplowanalytics.com>| Ihor Kolodyuk <ik@jelastic.com>| Ilya Zaretskiy <zaretskiy@corp.mail.ru>| Inian Parameshwaran <security@supabase.io>| Ireneusz Maliszewski <ireneusz.maliszewski@lubman.pl>| Ivan Oliva <ivan.oliva@koobin.com>| Jack Price <jack@revitalised.co.uk>| Jacob Bunk Nielsen <jbn@one.com>| Jacob Lee <jacob@stdlib.com>| Jacob Slater <whois@igloo.to>| JaeYoong Lee <cec@kakaocorp.com>| James Kennedy <domains@advisorwebsites.com>| Jamie McClelland <info@mayfirst.org>| Jan Jaeschke <jan.jaeschke@netatwork.de>| Jan Krpes <jan.krpes@cdn77.com>| Jan Moennich <jan.moennich@ownprovider.com>| Janos Matyas <info@banzaicloud.com>| Jason Kridner <jkridner@beagleboard.org>| Jason Kriss <jason@pagefronthq.com>| Jason Zhu <jason@owtware.com>| Jasper Hugo <jasper@avstack.io>| Jeff Wheelhouse <support@nearlyfreespeech.net>| Jeffrey Phillips Freeman <jeffrey.freeman@qoto.org>| Jennifer Herting <jchits@rit.edu>| Jens Kuper <cloud@shopware.com>| Joel Kennedy <joel@bip.sh>| Jon Spriggs <admin@lug.org.uk>| Jonas Schwartz <jonas@qutheory.io>| Jonathan Rudenberg <jonathan@cupcake.io>| Jonathan Rudenberg <jonathan@flynn.io>| Jons Slemmer <jons@redstarconsultants.com>| Joshua Weiss <admin.engineering@bluebite.com>| Joshua Zhang <public-suffix@rgames.jp>| Julia Evans <julia@wizardzines.com>| Jung Jin <jungseok.jin@wdc.com>| Keith Fairley <domains@fearworksmedia.co.uk>| Kenneth Van Alstyne <kvanalstyne@perspecta.com>| Kenny Niehage <hello@yahe.sh>| Kevin Bridges <kevin@drud.com>| Khannanov Roman <r.khannanov@msk-ix.ru>| Khash Sajadi <khash@cloud66.com>| Kidd Hustle <kiddhustle@wiardweb.com>| Kirill Pertsev <kika@rackmaze.com>| Kirill Ulyanov <k.ulyanov@airy.host>| Koen Rouwhorst <koenrh@framer.com>| Koen Van Isterdael <k.vanisterdael@fermax.be>| Kohei YOSHIDA <tech@gehirn.co.jp>| Konrad Kotarba <konrad.kotarba@dreamcommerce.com>| Konstantin Nosov <Nosov@nodeart.io>| Kor Nielsen <kor@pubtls.org>| Krzysztof Wolski <krzysztof.wolski@home.eu>| Kurt Mackey <kurt@fly.io>| Lann Martin <security@localcert.dev>| Lars Laehn <info@lcube.de>| Laurent Pellegrino <security@noticeable.io>| Lelux Admin <publisuffix@lelux.site>| Lenny Bakkalian <lenny.bakkalian@gmail.com>| Lev Nekrasov <lnekrasov@beget.com>| Li Hui <lihui@neupeer.com>| Likhachev Vasiliy <lihachev@fastvps.ru>| Lincoln Bergeson <lincoln@replit.com>| Louis Chemineau <louis@chmn.me>| Luca Casonato <hostmaster@deno.com>| Lukas Reschke <lukas@authentick.net>| Luke Bratch <luke@bratch.co.uk>| Luke Wells <psl-maintainers@amazon.com>| Mads Hartmann <mads@glitch.com>| Majid Qureshi <mqureshi@amrayn.com>| Maksym Rivtin <support@cityhost.net.ua>| Marc Bradshaw <marc@fastmailteam.com>| Marcel Daus <cloudops@encoway.de>| Marco Suter <marco@northflank.com>| Marcus Popp <admin@callidomus.com>| Mario Hoberg <info@iserv.de>| Mario Siegenthaler <mario.siegenthaler@linkyard.ch>| Marios Makassikis <mmakassikis@freebox.fr>| Mark J. Titorenko <mark.titorenko@alces-software.com>| Mark Staarink <mark@tlon.io>| Marko Ivanovic <kormang@hotmail.rs>| Martin Breest <security@spreadshop.com>| Martin Dannehl <postmaster@keymachine.de>| Martin Ellis <martin.ellis@gov.scot>| Martin Meier <admin@protonet.io>| Martin Semrad <semrad@i-registry.cz>| Marvin Wiesner <Marvin@curv-labs.de>| Matt Hanley <security@ghost.org>| Matthew Hardeman <mhardeman@ipifony.com>| Matthias Merkel <matthias.merkel@staclar.com>| Maxence Bitterli <maxence@definima.com>| Maxim Alzoba <tech.contact@faitid.org>| Maximilian Schieder <maxi@zeug.co>| Mia Rehlinger <dns@voxel.sh>| Micah Anderson <micah@riseup.net>| Michael Biven <mbiven@salesforce.com>| Michael Olson <molson@medicomhealth.com>| Michael Smith <michael.smith@wpengine.com>| Michal Kralik <support@evennode.com>| Mike Bostock <dns@observablehq.com>| Mike Damm <md@md.vc>| Miroslav Bozic <security@bplaced.net>| Mitch Schwenk <mitch@yombo.net>| Moritz Marquardt <git@momar.de>| Moritz Werner <mwerner@jonaspasche.com>| Nathan O'Sullivan <nathan@mammoth.com.au>| Nathan van Bakel <info@voorloper.com>| Nathaniel Schweinberg <noop@rearc.io>| Nicholas Ford <nick@nimbushosting.co.uk>| Nick Chang <nickchang@qnap.com>| Niels Martignene <hello@goupile.fr>| Niels Maumenee <storage@vultr.com>| Nikola Kotur <nikola@platform.sh>| Noa Heyl <hi@noa.dev>| Noah Taheij <noah@lokalized.nl>| Norbert Auler <mail@dnshome.de>| Norman Meilick <nm@sbe.de>| Ofer Kalaora <postmaster@activetrail.com>| Oliver Graebner <security@mo-siemens.io>| Olivier Benz <olivier.benz@b-data.ch>| Oren Agiv <oren@tabit.cloud>| Oren Eini <oren@ravendb.net>| Patrick Flor <patrick@platter.dev>| Patrick Nielsen <patrick@clovyr.io>| Patrick Toomey <security@github.com>| Patrick Uiterwijk <puiterwijk@fedoraproject.org>| Paul Biggar <ops@darklang.com>| Paul Cammish <kelduum@mythic-beasts.com>| Paul Cammish <paul.cammish@bytemark.co.uk>| Paul Crowder <paul.crowder@blackbaud.com>| Paul Fang <mis@draytek.com>| Paulus Schoutsen <infra@nabucasa.com>| Pawel Panek <noc@cloudaccess.net>| Peter Ruibal <public-suffix@fb.com>| Peter Thomassen <peter@desec.io>| Petros Angelatos <petrosagg@balena.io>| Philip Hutchins <hostmaster@storj.io>| Philipp Heckel <ph@datto.com>| Philipp Schmid <ops@openresearch.com>| Phillipp Roll <phillipp.roell@trafficplex.de>| Pierre Beyssac <hostmaster@eu.org>| Pierre Carrier <pc@rrier.ca>| Pierre Carrier <pierre@meteor.com>| Piotr Zduniak <piotr@nucleos.com>| Przemyslaw Plewa <it-admin@domena.pl>| Putri Karunia <putri@typedream.com>| Quentin Adam <noc@clever-cloud.com>| Radim Janca <janca@cesnet.cz>| Rahul Dhawan <security@postman.com>| Remi Mach <remi.mach@loginline.com>| Remy Leone <rleone@scaleway.com>| Rene Marticke <rmarticke@cosimo.de>| Reza Akhavan <spacekit.io@gmail.com>| Ricardo Padilha <rpadilha@drobo.com>| Richard Baker <richard.baker@digital.cabinet-office.gov.uk>| Richard Harper <richard@duckdns.org>| Richard Li <secalert@datawire.io>| Richard Zowalla <mi-admin@hs-heilbronn.de>| Rishabh Nambiar & Michael Brown <team@discourse.org>| Robert Niedziela <webmaster@ddnss.de>| Robin H. Johnson <psl-maintainers@digitalocean.com>| Robin Naundorf <r.naundorf@fh-muenster.de>| Roderick Parr <roderick.parr@forgerock.com>| Romain Fliedel <rfliedel@freebox.fr>| Roman Azarenko <roman.azarenko@iopsys.eu>| Roni Horowitz <roni@responder.co.il>| Rony Weng <ronyweng@synology.com>| Rory Breuk <rbreuk@transip.nl>| Roy Keene <rkeene@knightpoint.com>| Ruben Schmidmeister <psl-maintainers@messerli.ch>| Rudraksh MK <rudi@porter.run>| Sahn Lam <slam@discordapp.com>| Sam Smyth <devloop@atlassian.com>| Sander Steffann <sander@nogalliance.org>| Sarah Newman <owner@prgmr.com>| Scott Claeys <s.claeys@radwebhosting.com>| Sergey Ulyashin <ulyashin@jino.ru>| Sergey Zotov <admin@rusnames.ru>| Sergi Ferriz <sergi.ferriz@typeform.com>| Serhii Bulakh <support@drs.ua>| Serhii Rostilo <sergey@rostilo.kiev.ua>| Seth Vincent <sethvincent@gmail.com>| Shahar Talmi <shahar@wix.com>| Shahidh K Muhammed <shahidh@hasura.io>| Shante Adam <shante@skyhat.io>| Silke Hofstra <syscom@snt.utwente.nl>| Simon Kissel <hostmaster@viprinet.com>| Simon Morvan <simon@icilalune.com>| Skylar Challand <support@siteleaf.com>| Skylar MacDonald <skylar@dangerscience.com>| Stefan Keim <admin@js.org>| Stefan Neufeind <info@speedpartner.de>| Stefan Schwarz <sysadm@united-gameserver.de>| Stefano Rivera <stefano@yola.com>| Stepan Fedotov <stepan@wisp.gg>| Stephen Ford <hostmaster@digital.cabinet-office.gov.uk>| Steve Leung <steveleung@peplink.com>| Steve Russell <steve@now-dns.com>| Sue Ye <sue@dynu.com>| Tatu Saloranta (tatu.saloranta@iki.fi)| Thomas Cottier <thomas.cottier@enalean.com>| Thomas Orozco <thomas@aptible.com>| Thomas Waldmann <info@nsupdate.info>| Thomas Wouters <thomas.wouters@combellgroup.com>| Tibor Halter <thalter@boomla.com>| Tim Dusterhus <security@woltlab.cloud>| Tim Kramer <tkramer@rhcloud.com>| Tim Perry <tim@resin.io>| Tobias Wilken <tw@cloudcontrol.com>| Tom Klein <tom@gentlent.com>| Tom Maher <tmaher@heroku.com>| Tom Whitwell <domains@memset.com>| Tom Whitwell <gov-uk-paas-support@digital.cabinet-office.gov.uk>| Tony Schirmer <tony@storebase.io>| Trung Tran <Trung.Tran@neustar.biz>| Tyler Todd <noc@nova53.net>| Umut Gumeli <infrastructure-publicsuffixlist@clickrising.com>| Valentin Grimaud <security@yunohost.org>| Vasiliy Sheredeko <piphon@gmail.com>| Vicary Archangel <vicary@omniwe.com>| Victor Pupynin <hallo@frusky.de>| Victor Velchev <admin@liquidnetlimited.com>| Vincent Casse <vincent.casse@ovhcloud.com>| Vincent Fiduccia <domains@rancher.com>| Vincent Tseng <vincenttseng@asustor.com>| Vladimir Dudr <info@e4you.cz>| Werner Kaltofen <wk@all-inkl.com>| Wolfgang Schwarz <admin@intermetrics.de>| Wouter Bakker <hostmaster@kaashosting.nl>| Xavier De Cock <xdecock@gmail.com>| XnBay Developer <developer.xncloud@gmail.com>| Yaacov Akiba Slama <admin@chirurgiens-dentistes-en-france.fr>| Yann Guichard <yann@pagexl.com>| Yngve Pettersen <yngve@opera.com>| Yue Kang <eero-dynamic-dns@amazon.com>| Yuji Minagawa <domains-admin@iodata.jp>| Yuya NAGASAWA <public-suffix-list@binc.jp>| Zdenek Sustr <zdenek.sustr@cesnet.cz>| Zhixiang Zhao <csuite@impertrix.com>| Zoltan Egresi <egresi@globehosting.com>| a community of developers| auto 2014-11-13 XYZ.COM LLC| the Jakarta Activation project. Project home https://projects.eclipse.org/projects/ee4j.jaf| uognoc@triton.uog.edu"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "keycloak-admin-cli"
+    }, {
+      "name" : "Archive Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/tmp/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/bfoss24-001-keycloak-cli/keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.jar-7dbcacae59579b92f94cc1e333b445fd]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2-sources.jar-697241954c88dde8f617883ccfa2c310]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2.jar-7dbcacae59579b92f94cc1e333b445fd]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[k]/[ke]/[keycloak-admin-cli]/[keycloak-admin-cli-25.0.2-sources.jar-697241954c88dde8f617883ccfa2c310]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[k]/[ke]/[keycloak-admin-cli]/[org.keycloak.keycloak-admin-cli.25.0.2]/keycloak-admin-cli-25.0.2.pom"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright 2016 Red Hat, Inc. and/or its affiliates and other contributors| Copyright 2022 Red Hat, Inc. and/or its affiliates and other contributors| Copyright 2024 Red Hat, Inc. and/or its affiliates and other contributors"
     } ]
   }, {
     "type" : "library",
+    "bom-ref" : "https://metaeffekt.com/Component-12",
     "group" : "org.eclipse.microprofile.openapi",
     "name" : "microprofile-openapi-api-3.1.1.jar",
     "version" : "3.1.1",
@@ -265,11 +1102,80 @@
       "name" : "Path",
       "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml"
     }, {
-      "name" : "Archive",
-      "value" : "archive"
+      "name" : "Derived Notice Parameter",
+      "value" : "component: associatedLicenses: - Apache License 2.0 subcomponents: - associatedLicenses: - Apache License (undefined)"
     }, {
-      "name" : "Structured",
-      "value" : "structured"
+      "name" : "Binary Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Patent Information Marker"
+    }, {
+      "name" : "Descriptor - Hash (SHA-256)",
+      "value" : "0ddbe1e87668524db93835bf318a4a811b34b8c368e5e5f2c6e6a2d93a6c79c7"
+    }, {
+      "name" : "Descriptor - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1.pom-f0e3c159fec39180d9715633b5605c31]"
+    }, {
+      "name" : "Source Artifact - Hash (SHA-256)",
+      "value" : "0ec509884abec3764e574b9a8324806c298784ef0eb8ea384b929d49ff4c2f52"
+    }, {
+      "name" : "Source Artifact - Derived Markers",
+      "value" : "General Terms Matches Marker, Linked License Marker, No Warranty Marker, Ownership Marker, Patent Information Marker"
+    }, {
+      "name" : "Binary Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[m]/[mi]/[microprofile-openapi-api]/[org.eclipse.microprofile.openapi.microprofile-openapi-api.3.1.1]/microprofile-openapi-api-3.1.1.jar"
+    }, {
+      "name" : "Binary Artifact - Hash (SHA-256)",
+      "value" : "b482278365efc155fe8de06aac2e715911df4abc01562391a958cae2ce941814"
+    }, {
+      "name" : "Source Artifact - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[m]/[mi]/[microprofile-openapi-api]/[org.eclipse.microprofile.openapi.microprofile-openapi-api.3.1.1]/microprofile-openapi-api-3.1.1-sources.jar"
+    }, {
+      "name" : "Binary Artifact - Derived Licenses",
+      "value" : "Apache License (undefined), Apache License 2.0"
+    }, {
+      "name" : "Descriptor - Derived Licenses",
+      "value" : "Apache License 2.0"
+    }, {
+      "name" : "Packaging",
+      "value" : "jar"
+    }, {
+      "name" : "Descriptor - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1.pom-f0e3c159fec39180d9715633b5605c31]-analysis"
+    }, {
+      "name" : "Description",
+      "value" : "MicroProfile OpenAPI API :: API"
+    }, {
+      "name" : "Source Artifact - Derived Licenses",
+      "value" : "Apache License (undefined), Apache License 2.0"
+    }, {
+      "name" : "Component",
+      "value" : "microprofile-openapi-api"
+    }, {
+      "name" : "Path in Asset",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml"
+    }, {
+      "name" : "Binary Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1.jar-d49b4088a9b12341dd37b881fbf14d1d]-analysis"
+    }, {
+      "name" : "Source Artifact - Result Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/output/bfoss24-001-keycloak-cli-2024-09-11@12h01m32s/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1-sources.jar-cb61229130814a7e8981cb72a97f7d2d]-analysis"
+    }, {
+      "name" : "Binary Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1.jar-d49b4088a9b12341dd37b881fbf14d1d]"
+    }, {
+      "name" : "Source Artifact - Analysis Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/scanner/analysis/[m]/[mi]/[microprofile-openapi-api]/[microprofile-openapi-api-3.1.1-sources.jar-cb61229130814a7e8981cb72a97f7d2d]"
+    }, {
+      "name" : "Component Source Type",
+      "value" : "jar-module"
+    }, {
+      "name" : "Descriptor - Path",
+      "value" : "/Users/kklein/workspace/metaeffekt-artifact-analysis/modules/ae-artifact-flow/.workbench/download/maven/[m]/[mi]/[microprofile-openapi-api]/[org.eclipse.microprofile.openapi.microprofile-openapi-api.3.1.1]/microprofile-openapi-api-3.1.1.pom"
+    }, {
+      "name" : "Descriptor - Derived Markers",
+      "value" : "Linked License Marker"
+    }, {
+      "name" : "Source Artifact - Extracted Copyrights (ScanCode)",
+      "value" : "Copyright (c) 2017 Contributors to the Eclipse Foundation| Copyright (c) 2019 Contributors to the Eclipse Foundation| Copyright (c) 2020 Contributors to the Eclipse Foundation| Copyright (c) 2022 Contributors to the Eclipse Foundation| Copyright 2017 SmartBear Software"
     } ]
   } ],
   "externalReferences" : [ {

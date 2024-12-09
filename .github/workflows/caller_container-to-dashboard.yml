@@ -1,4 +1,4 @@
-name: Container to dashboard [Caller Workflow]
+name: [Caller] Container to dashboard
 
 on:
   workflow_dispatch:

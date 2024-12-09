@@ -99,8 +99,7 @@
 
                                     <writeIntermediateInventories>false</writeIntermediateInventories>
                                     <storeIntermediateStepsInInventoryInfo>false</storeIntermediateStepsInInventoryInfo>
-                                    <securityPolicyFile>../.github/actions/advise/create-dashboard/security-policy-dashboard.json
-                                    </securityPolicyFile>
+                                    <securityPolicyFile>resources/security-policy-dashboard.json</securityPolicyFile>
 
                                     <correlationYamlEnrichment>
                                         <active>${activate.correlation}</active>

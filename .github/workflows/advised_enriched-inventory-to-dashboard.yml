@@ -15,6 +15,11 @@ on:
         required: true
         type: string
 
+      suffix:
+        description: "File suffix to differentiate this outputs from the standard name."
+        required: false
+        type: string
+
     outputs:
       dashboard:
         value: ${{ jobs.enriched-inventory-to-dashboard.outputs.dashboard }}
@@ -60,6 +65,6 @@ jobs:
       with:
         input-inventory: ../${{ inputs.enriched-inventory }}
         input-database: ${{ steps.get-index.outputs.index-directory }}
-        output-dashboard: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-dashboard.html
+        output-dashboard: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-dashboard${{ inputs.suffix }}.html
 
     - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

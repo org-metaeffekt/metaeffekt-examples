@@ -39,4 +39,5 @@ jobs:
     uses: ./.github/workflows/advised_enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
+      suffix: '-from-${{ inputs.bom-type }}-bom'
       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

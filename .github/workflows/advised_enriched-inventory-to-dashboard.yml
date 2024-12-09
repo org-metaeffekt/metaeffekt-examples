@@ -39,25 +39,27 @@ jobs:
         cache: 'maven'
         cache-dependency-path: './processors/processor-parent.xml'
 
-    - name: Configure container
-      uses: ./.github/actions/configure/container
+    - name: Configure runner
+      uses: ./.github/actions/util/configure-runner
+      with:
+        maven: true
 
-    - name: Process Input
+    - name: Extract file name
       id: process-input
-      uses: ./.github/actions/configure/file
+      uses: ./.github/actions/util/extract-file-name
       with:
         file-path: ${{ inputs.enriched-inventory }}
 
     - name: Get vulnerability index
       id: get-index
-      uses: ./.github/actions/mirror/download-vulnerability-index
+      uses: ./.github/actions/util/download-vulnerability-index
 
     - name: Create dashboard
       id: create-dashboard
-      uses: ./.github/actions/advise/create-dashboard
+      uses: ./.github/actions/advised/create-dashboard
       with:
         input-inventory: ../${{ inputs.enriched-inventory }}
         input-database: ${{ steps.get-index.outputs.index-directory }}
         output-dashboard: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-dashboard.html
 
-    - uses: ./.github/actions/configure/git # Configures git and pushes changes.
+    - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

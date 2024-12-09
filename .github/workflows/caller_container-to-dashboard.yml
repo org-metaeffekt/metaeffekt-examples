@@ -1,0 +1,34 @@
+name: Container to dashboard [Caller Workflow]
+
+on:
+  workflow_dispatch:
+    inputs:
+      bom:
+        description: "The bom file location, relative to the processors directory."
+        required: true
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-cyclone-dx-1.6_exporter.json
+
+      container:
+        description: "Which container image to use as a source."
+        default: keycloak-25.0.4
+        type: choice
+        options:
+          - keycloak-25.0.4
+
+jobs:
+  analyzed_container-to-inventory:
+    uses: ./.github/workflows/analyzed_container-to-inventory.yml
+    with:
+      container: ${{ inputs.container }}
+
+  advised_enrich-inventory:
+    uses: ./.github/workflows/advised_enrich-inventory.yml
+    needs: analyzed_container-to-inventory
+    with:
+      converted-inventory: ${{ needs.analyzed_container-to-inventory.outputs.extracted-inventory }}
+
+  advised_inventory-to-dashboard:
+    uses: ./.github/workflows/advised_enriched-inventory-to-dashboard.yml
+    needs: advised_enrich-inventory
+    with:
+      enriched-inventory: ${{ needs.advised_enrich-inventory.outputs.enriched-inventory }}

@@ -1,0 +1,51 @@
+name: Extract inventory from container
+description: Extracts the inventory from a container.
+
+inputs:
+  image-registry:
+    description: The image registry
+    required: true
+
+  image-repo:
+    description: The image repository
+    required: true
+
+  image-tag:
+    description: The image tag
+    required: true
+
+  target-dir:
+    description: The target directory
+    required: true
+
+  target-name:
+    description: The target directory
+    required: true
+
+outputs:
+  extracted-inventory:
+    description: The path of the extracted inventory.
+    value: ${{ steps.set-output.outputs.extracted-inventory }}
+
+runs:
+  using: composite
+  steps:
+    - name: Extract inventory
+      shell: bash
+      run: |
+        mvn -f analyze_extract-from-container.xml process-resources \
+        -Dimage.registry=${{ inputs.image-registry }} \
+        -Dimage.repo=${{ inputs.image-repo }} \
+        -Dimage.tag=${{ inputs.image-tag }} \
+        -DtargetInventoryDir=${{ inputs.target-dir }} \
+        -DtargetInventoryPath=${{ inputs.target-name }}
+        rm -r target
+      working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.target-dir }}/${{ inputs.target-name }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "extracted-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT

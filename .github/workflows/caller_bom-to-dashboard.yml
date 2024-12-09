@@ -19,7 +19,7 @@ on:
 jobs:
   cyclonedx-to-inventory:
     if: ${{ inputs.bom-type == 'cyclonedx'}}
-    uses: ./.github/workflows/cyclonedx-to-inventory.yml
+    uses: ./.github/workflows/analyzed_cyclonedx-to-inventory.yml
     with:
       cyclonedx: ${{ inputs.bom }}
 
@@ -30,13 +30,13 @@ jobs:
       spdx: ${{ inputs.bom }}
 
   enrich-inventory:
-    uses: ./.github/workflows/enrich-inventory.yml
+    uses: ./.github/workflows/advised_enrich-inventory.yml
     needs: cyclonedx-to-inventory
     with:
       converted-inventory: ${{ inputs.bom-type == 'cyclonedx' && needs.cyclonedx-to-inventory.outputs.converted-inventory || needs.spdx-to-inventory.outputs.converted-inventory }}
 
   inventory-to-dashboard:
-    uses: ./.github/workflows/enriched-inventory-to-dashboard.yml
+    uses: ./.github/workflows/advised_enriched-inventory-to-dashboard.yml
     needs: enrich-inventory
     with:
       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

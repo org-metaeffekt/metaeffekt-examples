@@ -38,20 +38,22 @@ jobs:
           cache: 'maven'
           cache-dependency-path: './processors/processor-parent.xml'
 
-      - name: Configure container
-        uses: ./.github/actions/configure/container
+      - name: Configure runner
+        uses: ./.github/actions/util/configure-runner
+        with:
+          maven: true
 
-      - name: Process Input
+      - name: Extract file name
         id: process-input
-        uses: ./.github/actions/configure/file
+        uses: ./.github/actions/util/extract-file-name
         with:
           file-path: ${{ inputs.spdx }}
 
       - name: Convert SPDX to inventory
         id: convert
-        uses: ./.github/actions/convert/spdx-to-inventory
+        uses: ./.github/actions/analyzed/spdx-to-inventory
         with:
           spdx-input: ../${{ inputs.spdx }}
           inventory-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-imported.xls
 
-      - uses: ./.github/actions/configure/git # Configures git and pushes changes.
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

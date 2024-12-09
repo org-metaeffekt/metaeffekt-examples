@@ -25,18 +25,14 @@
         <output.inventory.correlation>${output.inventory.dir}/correlation-${output.inventory.name}
         </output.inventory.correlation>
 
+        <inventory.directory>${project.basedir}</inventory.directory>
 
         <inventory.id>ae-inventory</inventory.id>
 
-        <correlation.dir>../correlation</correlation.dir>
-
-        <keywords.dir>../context</keywords.dir>
-        <keywords.labels/>
-
-        <assessment.dir>${project.basedir}/assessment</assessment.dir>
-        <vulnerabilities.custom.dir>${project.basedir}/custom-vulnerabilities</vulnerabilities.custom.dir>
-
-        <assessment.labels/>
+        <correlation.dir>${inventory.directory}/correlation</correlation.dir>
+        <keywords.dir>${inventory.directory}/context</keywords.dir>
+        <assessment.dir>${inventory.directory}/assessment</assessment.dir>
+        <vulnerabilities.custom.dir>${inventory.directory}/custom-vulnerabilities</vulnerabilities.custom.dir>
 
         <activate.msrc>false</activate.msrc> <!-- Disabled because of reduced index -->
         <activate.certsei>false</activate.certsei> <!-- Disabled because of reduced index -->

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>analyze_extract-from-container</artifactId>
+
+    <properties>
+        <!-- use there properties to explicitly define image repo and tag to use -->
+        <image.registry>keycloak</image.registry>
+        <image.repo>keycloak</image.repo>
+        <image.tag>25.0.4</image.tag>
+
+        <image.qualifier>${image.repo}-${image.tag}</image.qualifier>
+        <image.id>${image.registry}/${image.repo}:${image.tag}</image.id>
+
+        <ae.extractor.resources.dir>${project.build.directory}/extractor/resources</ae.extractor.resources.dir>
+        <ae.extractor.scan.dir>${project.build.directory}/extractor/scan</ae.extractor.scan.dir>
+
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>run-image-inspect</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>inspect</argument>
+                                <argument>${image.id}</argument>
+                            </arguments>
+                            <outputFile>${ae.extractor.resources.dir}/${image.qualifier}.json</outputFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>run-image-save</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>save</argument>
+                                <argument>${image.id}</argument>
+                                <argument>-o</argument>
+                                <argument>${ae.extractor.resources.dir}/${image.qualifier}.tar</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.metaeffekt.core</groupId>
+                <artifactId>ae-inventory-maven-plugin</artifactId>
+                <version>${ae.core.version}</version>
+                <executions>
+                    <execution>
+                        <id>image-scan</id>
+                        <goals>
+                            <goal>create-directory-report</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <inputDirectory>${ae.extractor.resources.dir}</inputDirectory>
+                            <scanDirectory>${ae.extractor.scan.dir}/extracted-scan</scanDirectory>
+
+                            <scanIncludes>**/*</scanIncludes>
+
+                            <!-- general exclude for containers; review constantly; minimize -->
+                            <scanExcludes>
+                                <exclude>**/var/log/**/*</exclude>
+
+                                <exclude>**/sys/**/*</exclude>
+                                <exclude>**/proc/**/*</exclude>
+
+                                <exclude>**/dev/*</exclude>
+
+                                <exclude>**/run/utmp</exclude>
+
+                                <exlcude>**/var/lib/alternatives/*</exlcude>
+
+                                <exlcude>**/etc/**/*.bak</exlcude>
+                                <exlcude>**/etc/**/*.repo</exlcude>
+
+                                <exclude>**/usr/share/terminfo/**/*</exclude>
+                                <exclude>**/var/lib/dnf/history.sqlite-shm/**/*</exclude>
+                            </scanExcludes>
+
+                            <includeEmbedded>true</includeEmbedded>
+                            <enableDetectComponentPatterns>true</enableDetectComponentPatterns>
+                            <enableImplicitUnpack>true</enableImplicitUnpack>
+
+                            <sourceInventoryDir>resources/</sourceInventoryDir>
+                            <sourceInventoryIncludes>artifact-reference-inventory.xls</sourceInventoryIncludes>
+
+                            <targetInventoryDir>../processors</targetInventoryDir>
+                            <targetInventoryPath>container-extracted-inventory.xls</targetInventoryPath>
+
+                            <!-- configure validation during extraction -->
+                            <failOnError>true</failOnError>
+                            <failOnBanned>false</failOnBanned>
+                            <failOnInternal>false</failOnInternal>
+                            <failOnUnknownVersion>false</failOnUnknownVersion>
+                            <failOnUnknown>false</failOnUnknown>
+                            <failOnUpgrade>false</failOnUpgrade>
+                            <failOnDowngrade>false</failOnDowngrade>
+                            <failOnDevelopment>false</failOnDevelopment>
+                            <failOnMissingLicense>false</failOnMissingLicense>
+                            <failOnMissingLicenseFile>false</failOnMissingLicenseFile>
+                            <failOnMissingNotice>false</failOnMissingNotice>
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

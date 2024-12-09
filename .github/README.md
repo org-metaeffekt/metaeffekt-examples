@@ -5,9 +5,10 @@
 ## Actions
 
 The actions directory contains simple modular tasks, also known as custom composite actions. These are used to build bigger
-workflows which require many steps and implement complex behaviour.
+workflows which require more steps and implement complex behaviour.
 
 Resources required by the action or its underlying pom, are put into the folder containing the action for easy comprehension.
+The directory structure follows the same structure as each described asset in this repository. 
 
 ## Workflows
 

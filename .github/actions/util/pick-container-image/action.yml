@@ -1,0 +1,36 @@
+name: Pick container image
+description: Download the right container image and provides information about the image as outputs.
+
+inputs:
+  image:
+    required: true
+    description: The name of the image, corresponding to the top level directories in this repo.
+
+outputs:
+  image-registry:
+    description: The image registry
+    value: ${{ steps.pick-container.outputs.image-registry }}
+      
+  image-repo:
+    description: The image repository
+    value: ${{ steps.pick-container.outputs.image-repo }}
+      
+  image-tag:
+    description: The image tag
+    value: ${{ steps.pick-container.outputs.image-tag }}
+
+runs:
+  using: composite
+  steps:
+    - name: Pick container
+      id: pick-container
+      shell: bash
+      run: |
+        if [ "${{ github.event.inputs.image }}" == "keycloak-25.0.4" ]; then
+          echo "image-registry=keycloak" >> $GITHUB_OUTPUT
+          echo "image-repo=keycloak" >> $GITHUB_OUTPUT
+          echo "image-tag=25.0.4" >> $GITHUB_OUTPUT
+          docker pull keycloak/keycloak:25.0.4
+        fi
+
+        

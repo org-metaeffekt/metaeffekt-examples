@@ -1,0 +1,64 @@
+name: Container to inventory
+
+# Take a look at the caller workflow to see possible input choices.
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: "The container image descriptor. (The folder name)"
+        required: true
+        default: keycloak-25.0.4
+
+  workflow_call:
+    inputs:
+      image:
+        description: "The container image descriptor. (The folder name)"
+        required: true
+        type: string
+
+    outputs:
+      extracted-inventory:
+        value: ${{ jobs.extract-inventory-from-container.outputs.extracted-inventory }}
+
+jobs:
+  extract-inventory-from-container:
+    runs-on: ubuntu-latest
+    outputs:
+      extracted-inventory: ${{ steps.extract.outputs.extracted-inventory }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure runner
+        uses: ./.github/actions/util/configure-runner
+        with:
+          maven: true
+          docker: true
+
+      - name: Pick container image
+        id: pick-image
+        uses: ./.github/actions/util/pick-container-image
+        with:
+          image: ${{ inputs.image }}
+
+      - name: Extract inventory from container
+        id: extract
+        uses: ./.github/actions/analyzed/container-to-inventory
+        with:
+          image-registry: ${{ steps.pick-image.outputs.image-registry }}
+          image-repo: ${{ steps.pick-image.outputs.image-repo }}
+          image-tag: ${{ steps.pick-image.outputs.image-tag }}
+          target-dir: ../${{ iputs.image }}/01-analyzed
+          target-name: ${{ inputs.image }}-extracted-inventory.xls
+
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

@@ -18,5 +18,6 @@ buildNumber.properties
 .idea
 
 # For testing
+processors/resources
 .database
 index/

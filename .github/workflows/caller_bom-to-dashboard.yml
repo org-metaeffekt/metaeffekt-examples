@@ -25,7 +25,7 @@ jobs:
 
   spdx-to-inventory:
     if: ${{ inputs.bom-type == 'spdx' }}
-    uses: ./.github/workflows/spdx-to-inventory.yml
+    uses: ./.github/workflows/analyzed_spdx-to-inventory.yml
     with:
       spdx: ${{ inputs.bom }}
 

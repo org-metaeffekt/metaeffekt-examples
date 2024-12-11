@@ -21,7 +21,10 @@ runs:
       id: trivy
       shell: bash
       run: |
-        curl -o /tmp/trivy.deb https://github.com/aquasecurity/trivy/releases/download/v0.58.0-1-g775f954c3/trivy_0.58.0-1-g775f954c3_Linux-64bit.deb
-        sudo dpkg -i /tmp/trivy.deb
+        sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update -y
+        sudo apt-get install trivy -y
         trivy image ${{ inputs.image }} --scanners vuln --format ${{ inputs.spec }}-json --output ${{ inputs.spec }}-json=${{ inputs.output-file }}
         echo "bom=${{ inputs.output-file }} >> $GITHUB_OUTPUT

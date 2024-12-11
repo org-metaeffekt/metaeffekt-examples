@@ -27,4 +27,4 @@ runs:
         sudo apt-get update -y
         sudo apt-get install trivy -y
         trivy image --scanners vuln --format ${{ inputs.spec }}-json --output ${{ inputs.output-file }} ${{ inputs.image }}
-        echo "bom=${{ inputs.output-file }} >> $GITHUB_OUTPUT
+        echo "bom=${{ inputs.output-file }}" >> $GITHUB_OUTPUT

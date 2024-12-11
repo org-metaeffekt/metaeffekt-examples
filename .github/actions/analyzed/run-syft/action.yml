@@ -25,3 +25,4 @@ runs:
         sh /tmp/syft-install.sh
         ./bin/syft ${{ inputs.image }} --output ${{ inputs.spec }}-json=${{ inputs.output-file }}
         echo "bom=${{ inputs.output-file }}" >> $GITHUB_OUTPUT
+        rm -r bin

@@ -26,5 +26,5 @@ runs:
         echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
         sudo apt-get update -y
         sudo apt-get install trivy -y
-        trivy image ${{ inputs.image }} --scanners vuln --format ${{ inputs.spec }}-json --output ${{ inputs.spec }}-json=${{ inputs.output-file }}
+        trivy image --scanners vuln --format ${{ inputs.spec }}-json --output ${{ inputs.output-file }} ${{ inputs.image }}
         echo "bom=${{ inputs.output-file }} >> $GITHUB_OUTPUT

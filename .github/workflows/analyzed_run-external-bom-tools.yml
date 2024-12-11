@@ -1,0 +1,68 @@
+name: Run external bom tools
+
+# Take a look at the caller workflow to see possible input choices.
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: "The container image descriptor. (The folder name)"
+        required: true
+        default: keycloak-25.0.4
+      spec:
+        description: "Either spdx or cyclonedx format."
+        required: true
+        default: spdx
+
+  workflow_call:
+    inputs:
+      image:
+        description: "The container image descriptor. (The folder name)"
+        required: true
+        type: string
+      spec:
+        description: "Either spdx or cyclonedx format."
+        required: true
+        type: string
+
+    outputs:
+      trivy-bom:
+        value: ${{ jobs.run-external-bom-tools.outputs.trivy-bom }}
+
+      syft-bom:
+        value: ${{ jobs.run-external-bom-tools.outputs.syft-bom }}
+
+jobs:
+  run-external-bom-tools:
+    runs-on: ubuntu-latest
+    outputs:
+      trivy-bom: ${{ steps.trivy.outputs.bom }}
+      syft-bom: ${{ steps.syft.outputs.bom }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Pick container image
+        id: pick-image
+        uses: ./.github/actions/util/pick-container-image
+        with:
+          image: ${{ inputs.image }}
+
+      - name: Run syft
+        id: syft
+        uses: ./.github/actions/analyzed/run-syft
+        with:
+          image: ${{ steps.pick-image.outputs.image-registry }}/${{ steps.pick-image.outputs.image-repo }}:${{ steps.pick-image.outputs.image-tag }}
+          spec: ${{ inputs.spec }} # Can be [spdx] or [cyclonedx]
+          output-file: ${{ inputs.image }}/01-analyzed/${{ inputs.image }}-${{ inputs.spec }}-2.3_syft.json
+
+      - name: Run trivy
+        id: trivy
+        uses: ./.github/actions/analyzed/run-trivy
+        with:
+          image: ${{ steps.pick-image.outputs.image-registry }}/${{ steps.pick-image.outputs.image-repo }}:${{ steps.pick-image.outputs.image-tag }}
+          spec: ${{ inputs.spec }} # Can be [spdx] or [cyclonedx]
+          output-file: ${{ inputs.image }}/01-analyzed/${{ inputs.image }}-${{ inputs.spec }}-2.3_trivy.json
+
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

@@ -1,0 +1,65 @@
+name: Enriched inventory to report
+
+on:
+  workflow_dispatch:
+    inputs:
+      enriched-inventory:
+        description: "The enriched input inventory path."
+        required: true
+        default: keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls
+
+  workflow_call:
+    inputs:
+      enriched-inventory:
+        description: "The enriched input inventory path."
+        required: true
+        type: string
+
+      suffix:
+        description: "File suffix to differentiate this outputs from the standard name."
+        required: false
+        type: string
+
+    outputs:
+      report:
+        value: ${{ jobs.enriched-inventory-to-report.outputs.report }}
+
+jobs:
+  enriched-inventory-to-report:
+    runs-on: ubuntu-latest
+    outputs:
+      report: ${{ steps.create-report.outputs.report }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure runner
+        uses: ./.github/actions/util/configure-runner
+        with:
+          maven: true
+
+      - name: Extract file name
+        id: process-input
+        uses: ./.github/actions/util/extract-file-name
+        with:
+          file-path: ${{ inputs.enriched-inventory }}
+
+      - name: Create report
+        id: create-report
+        uses: ./.github/actions/reported/create-report
+        with:
+          input-document-descriptor: resources/document-descriptor/${{ steps.process-input.outputs.asset-name }}.yml
+          output-report: ../${{ steps.process-input.outputs.asset-name }}/05-reported/${{ steps.process-input.outputs.asset-name }}-report${{ inputs.suffix }}.pdf
+
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

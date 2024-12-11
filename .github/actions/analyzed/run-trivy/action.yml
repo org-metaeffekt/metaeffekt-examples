@@ -1,0 +1,27 @@
+name: Run trivy
+description: A composite action which creates a bom from a container image via syft.
+
+inputs:
+  image:
+    description: The container image which to scan and extract
+  spec:
+    description: The spec which to use when creating the bom (spdx or cyclonedx)
+  output-file:
+    description: The path of the output file.
+
+outputs:
+  bom:
+    description: The repository path of the bom.
+    value: ${{ steps.syft.outputs.bom }}
+
+runs:
+  using: composite
+  steps:
+    - name: Run trivy
+      id: trivy
+      shell: bash
+      run: |
+        curl -o /tmp/trivy.deb https://github.com/aquasecurity/trivy/releases/download/v0.58.0-1-g775f954c3/trivy_0.58.0-1-g775f954c3_Linux-64bit.deb
+        sudo dpkg -i /tmp/trivy.deb
+        trivy image ${{ inputs.image }} --scanners vuln --format ${{ inputs.spec }}-json --output ${{ inputs.spec }}-json=${{ inputs.output-file }}
+        echo "bom=${{ inputs.output-file }} >> $GITHUB_OUTPUT

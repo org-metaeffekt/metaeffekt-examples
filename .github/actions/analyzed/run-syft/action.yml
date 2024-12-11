@@ -1,0 +1,27 @@
+name: Run syft
+description: A composite action which creates a bom from a container image via syft.
+
+inputs:
+  image:
+    description: The container image which to scan and extract
+  spec:
+    description: The spec which to use when creating the bom (spdx or cyclonedx)
+  output-file:
+    description: The path of the output file.
+
+outputs:
+  bom:
+    description: The repository path of the bom.
+    value: ${{ steps.syft.outputs.bom }}
+
+runs:
+  using: composite
+  steps:
+    - name: Run syft
+      id: syft
+      shell: bash
+      run: |
+        curl -o /tmp/syft-install.sh https://raw.githubusercontent.com/anchore/syft/main/install.sh
+        sh /tmp/syft-install.sh
+        ./bin/syft ${{ inputs.image }} --output ${{ inputs.spec }}-json=${{ inputs.output-file }}
+        echo "bom=${{ inputs.output-file }}" >> $GITHUB_OUTPUT

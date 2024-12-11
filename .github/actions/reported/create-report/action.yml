@@ -1,0 +1,35 @@
+name: Create report
+description: A composite action which creates a report containing licensing, vulnerability etc. information.
+
+inputs:
+  input-document-descriptor:
+    description: Document descriptor yaml, controlling the entire report creation process.
+    required: true
+  output-report-dir:
+    description: The output directory of the report files.
+    required: true
+
+outputs:
+  report:
+    description: The repository path of the report.
+    value: ${{ steps.set-output.outputs.enriched-inventory }}
+
+runs:
+  using: composite
+  steps:
+    - name: Create report
+      shell: bash
+      run: |
+        mvn -f reported_create-report process-resources \
+        -DassetDescriptorFile=${{ inputs.input-document-descriptor }} \
+        -DtargetReportDir=${{ inputs.output-report-dir }}
+        rm -r target
+      working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.output-inventory }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "enriched-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT

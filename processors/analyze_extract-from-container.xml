@@ -15,15 +15,16 @@
 
     <properties>
         <!-- use there properties to explicitly define image repo and tag to use -->
-        <image.registry>keycloak</image.registry>
-        <image.repo>keycloak</image.repo>
-        <image.tag>25.0.4</image.tag>
+        <image.registry></image.registry>
+        <image.repo></image.repo>
+        <image.tag></image.tag>
 
         <image.qualifier>${image.repo}-${image.tag}</image.qualifier>
         <image.id>${image.registry}/${image.repo}:${image.tag}</image.id>
 
         <ae.extractor.resources.dir>${project.build.directory}/extractor/resources</ae.extractor.resources.dir>
         <ae.extractor.scan.dir>${project.build.directory}/extractor/scan</ae.extractor.scan.dir>
+        <ae.7zip.bundle.version>0.4.0</ae.7zip.bundle.version>
 
         <targetInventoryDir></targetInventoryDir>
         <targetInventoryPath></targetInventoryPath>
@@ -31,6 +32,20 @@
     </properties>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.metaeffekt.bundle.sevenzip</groupId>
+                <artifactId>ae-7zip-installation-maven-plugin</artifactId>
+                <version>${project.version}</version>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>extract-7zip</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -97,7 +112,6 @@
                                 <exclude>**/dev/*</exclude>
 
                                 <exclude>**/run/utmp</exclude>
-
                                 <exclude>**/var/lib/alternatives/*</exclude>
 
                                 <exclude>**/etc/**/*.bak</exclude>

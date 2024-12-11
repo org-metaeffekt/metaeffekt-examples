@@ -1,0 +1,22 @@
+inventories:
+  - "reference":
+      file: "resources/artifact-reference-inventory.xls"
+  - "keycloak-25.0.4":
+      file: "../keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls"
+
+
+documents:
+  - inventories:
+      - inventoryRef: "keycloak-25.0.4"
+        assetName: "keycloak"
+        assetVersion: "25.0.4"
+        reportContextTitle: "keycloak-25.0.4"
+        reportContext: "keycloak-25.0.4"
+        referenceInventory: "reference"
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "securityPolicyFile": "security-policy-report.json"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

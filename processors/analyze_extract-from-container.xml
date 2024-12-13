@@ -24,7 +24,6 @@
 
         <ae.extractor.resources.dir>${project.build.directory}/extractor/resources</ae.extractor.resources.dir>
         <ae.extractor.scan.dir>${project.build.directory}/extractor/scan</ae.extractor.scan.dir>
-        <ae.7zip.bundle.version>0.4.0</ae.7zip.bundle.version>
 
         <targetInventoryDir></targetInventoryDir>
         <targetInventoryPath></targetInventoryPath>
@@ -32,20 +31,6 @@
     </properties>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.metaeffekt.bundle.sevenzip</groupId>
-                <artifactId>ae-7zip-installation-maven-plugin</artifactId>
-                <version>${project.version}</version>
-                <executions>
-                    <execution>
-                        <id>default</id>
-                        <goals>
-                            <goal>extract-7zip</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>

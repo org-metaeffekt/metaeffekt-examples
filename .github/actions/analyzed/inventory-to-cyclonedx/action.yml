@@ -1,0 +1,33 @@
+name: Convert an inventory to CycloneDx
+description: Composite action which converts an inventory to a cyclonedx document.
+
+inputs:
+  inventory-input:
+    description: "Inventory input directory or file."
+    required: true
+  cyclonedx-output:
+    description: "CycloneDx output directory or file."
+    required: true
+
+outputs:
+  bom:
+    description: The repository path of the bom.
+    value: ${{ steps.set-output.outputs.converted-inventory }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: convert-inventory-to-cyclonedx
+      shell: bash
+      run: |
+        mvn -f analyzed_inventory-to-cyclonedx.xml process-resources \
+        -Dinput=${{ inputs.inventory-input }} -Doutput=${{ inputs.cyclonedx-output }}
+      working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        output_clean="${{ inputs.cyclonedx-output }}"
+        output_clean="${output_clean#../}"
+        echo "bom=${output_clean}" >> "$GITHUB_OUTPUT"

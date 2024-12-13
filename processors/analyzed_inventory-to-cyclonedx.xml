@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>analyzed_inventory-to-cyclonedx</artifactId>
+
+    <properties>
+        <input></input>
+        <output></output>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.metaeffekt.artifact.analysis</groupId>
+                <artifactId>ae-inventory-conversion-plugin</artifactId>
+                <version>${project.version}</version>
+                <executions>
+                    <execution>
+                        <id>inventory-to-cyclonedx</id>
+                        <goals>
+                            <goal>convert-inventory-to-cyclonedx</goal>
+                        </goals>
+                        <configuration>
+                            <input>${input}</input>
+                            <output>${output}</output>
+                            <documentName>A SPDX document</documentName>
+                            <description>An automatically generated CycloneDx document, created through the metaeffekt-examples actions pipeline.</description>
+                            <documentIdPrefix>https://metaeffekt.com/spdx/doc/</documentIdPrefix>
+                            <organization>{metaeffekt} GmbH</organization>
+                            <organizationUrl>https://metaeffekt.com</organizationUrl>
+                            <tool>{metaeffekt} Kontinuum CycloneDx Converter</tool>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

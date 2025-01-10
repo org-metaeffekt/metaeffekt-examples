@@ -38,7 +38,7 @@
                         <configuration>
                             <input>${input}</input>
                             <output>${output}</output>
-                            <include-metadata-component>${includeMetadataComponent}</include-metadata-component>
+                            <includeMetadataComponent>${includeMetadataComponent}</includeMetadataComponent>
                         </configuration>
                     </execution>
                 </executions>

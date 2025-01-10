@@ -1,0 +1,75 @@
+mavenConfig:
+  repositoryBaseUrls:
+    - "https://search.maven.org/remotecontent?filepath="
+    - "https://repo1.maven.org/maven2/"
+    - "https://oss.sonatype.org/content/repositories/releases/"
+    - "https://repo.spring.io/plugins-release/"
+    - "https://repo.hortonworks.com/content/repositories/releases/"
+    - "https://repository.jboss.org/nexus/content/repositories/releases/"
+    - "https://repository.jboss.org/nexus/content/groups/public-jboss/"
+    - "https://repository.jboss.org/nexus/content/repositories/ea/"
+    - "https://maven.repository.redhat.com/ga/"
+    - "http://maven.restlet.org/"
+    - "https://maven.geo-solutions.it/"
+    - "https://repo.osgeo.org/repository/release/"
+    - "https://download.osgeo.org/webdav/geotools/"
+    - "https://repo.camsys-apps.com/releases/"
+    - "https://repository.mulesoft.org/nexus/content/repositories/public/"
+  mavenCentralIndexConfig:
+    ndjsonDumpGzipUrl: "https://metaeffekt.com/mirror/maven-central-index-dump/nexus-maven-repository-index-dump.ndjson.gz"
+
+indexConfig:
+  purlMapping:
+    "ch.qos.reload4j_1.2.18.4.jar": "pkg:maven/ch.qos.reload4j/reload4j@1.2.18.4"
+    "jai-codec-1.1.3.jar": "pkg:maven/com.sun.media/jai-codec@1.1.3"
+
+rpmIndexConfig:
+  rawIndexPath: "src/test/resources/index/raw-rpm-index.txt"
+
+environmentManagerConfig:
+  enableEnvironmentManager: false
+
+alpinePackageResolverConfig:
+  explicitSourceDownloads:
+    # note that the ncurses example doesn't actually work, since they only retain patches, not proper source archives.
+    "ncurses":
+      - outputFilenamePieces:
+          - literal: "ncurses-"
+          - fromValue: "pkgver"
+            actions:
+              - actionType: "PLAIN_REPLACEALL"
+                from: "_p"
+                to: "-"
+          - literal: ".tgz"
+        urlPieces:
+          - literal: "https://invisible-mirror.net/archives/ncurses/"
+          - fromValue: "pkgver"
+            finallyMatch: "^\\d+.\\d+"
+          - literal: "/ncurses-"
+          - fromValue: "pkgver"
+            actions:
+              - actionType: "PLAIN_REPLACEALL"
+                from: "_p"
+                to: "-"
+          - literal: ".tgz"
+
+debArtifactResolverConfig:
+  ubuntuIndexConfig:
+    packagesDownloadUrls:
+      - http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-security/main/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-security/multiverse/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-security/restricted/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-security/universe/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-updates/main/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-updates/multiverse/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-updates/restricted/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-updates/universe/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-backports/main/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-backports/multiverse/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-backports/restricted/binary-amd64/Packages.xz
+      - http://archive.ubuntu.com/ubuntu/dists/focal-backports/universe/binary-amd64/Packages.xz
+
+  ubuntuPoolAdapterConfig:
+    poolDirs:
+      - http://archive.ubuntu.com/ubuntu/pool/

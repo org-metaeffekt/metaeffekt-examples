@@ -1,0 +1,31 @@
+name: Manage Maven index
+description: Manages the maven index cache.
+
+outputs:
+  index-directory:
+    description: The system path for the index.
+    value: /tmp/resolved
+
+runs:
+  using: composite
+  steps:
+    - name: Restore cache
+      id: restore-cache
+      uses: actions/cache/restore@v4
+      with:
+        path: /tmp/resolved/download
+        key: vulnerability-index-${{ env.date }}
+
+    - name: Unpack index
+      if: steps.restore-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        mkdir -p /tmp/resolved/download
+        curl -L -o /tmp/maven-index.zip https://metaeffekt.com/security/mirror/index_redux.zip
+        unzip /tmp/index.zip -d /tmp/.database
+
+    - name: Save cache
+      uses: actions/cache/save@v4
+      with:
+        path: /tmp/resolved/download
+        key: vulnerability-index-${{ env.date }}

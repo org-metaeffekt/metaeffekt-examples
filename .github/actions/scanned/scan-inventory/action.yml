@@ -1,0 +1,39 @@
+name: Scan inventory
+description: A composite action which scans artifacts for licenses and copyrights.
+
+inputs:
+  input-directory:
+    description: The input directory of the input inventory.
+    required: true
+  input-file-name:
+    description: The name with extension of the input inventory.
+    required: true
+  output-directory:
+    description: The name of the output directory.
+    required: true
+
+outputs:
+  scanned-inventory:
+    description: The repository path of the scanned inventory.
+    value: ${{ steps.set-output.outputs.scanned-inventory }}
+
+runs:
+  using: composite
+  steps:
+    - name: Scan
+      shell: bash
+      run: |
+        mvn -f scanned_inventory-scan process-resources \
+        -Dinput-dir=${{ inputs.input-directory }}
+        -Dinput-file-name=${{ inputs.input-file-name }} \
+        -Doutput-dir=${{ inputs.output-directory }}
+        rm -f /tmp
+      working-directory: processors
+
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.output-inventory }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "scanned-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>scanned_scan-inventory</artifactId>
+
+    <properties>
+        <inputFile></inputFile>
+        <outputFile></outputFile>
+    </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.metaeffekt.artifact.analysis</groupId>
+                <artifactId>ae-artifact-analysis-plugin</artifactId>
+                <version>${ae.artifact.analysis.version}</version>
+                <executions>
+                    <execution>
+                        <id>resolve-artifacts</id>
+                        <goals>
+                            <goal>resolve-artifacts</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <inputInventoryFile>${input-file}</inputInventoryFile>
+                            <outputInventoryFile>${output-file}</outputInventoryFile>
+                            <downloadBaseDir>/tmp/resolved/download</downloadBaseDir>
+                            <artifactResolverConfig>resources/resolved/artifact-resolver-config.yaml</artifactResolverConfig>
+                            <proxyConfig>resources/resolved/artifact-resolver-proxy.yaml</proxyConfig>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

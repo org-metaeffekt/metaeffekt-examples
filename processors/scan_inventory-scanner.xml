@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>scanned_scan-inventory</artifactId>
+
+    <properties>
+        <input-dir></input-dir>
+        <input-file-name></input-file-name>
+        <output-dir></output-dir>
+    </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.metaeffekt.artifact.analysis</groupId>
+                <artifactId>ae-artifact-analysis-plugin</artifactId>
+                <version>${ae.artifact.analysis.version}</version>
+                <executions>
+                    <execution>
+                        <id>scan-inventory</id>
+                        <goals>
+                            <goal>scan-artifacts</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <targetInventoryDir>${input-dir}</targetInventoryDir>
+                            <targetInventoryPath>${input-file-name}</targetInventoryPath>
+                            <archiveBaseDir>/tmp/scan/.archive</archiveBaseDir>
+                            <analysisBaseDir>/tmp/scan/.analysis</analysisBaseDir>
+                            <scanControlPropertiesFile>resources/scanned/scan-control.properties</scanControlPropertiesFile>
+                            <resultTargetDir>${output-dir}</resultTargetDir>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

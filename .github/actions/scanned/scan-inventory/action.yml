@@ -26,8 +26,22 @@ runs:
         mvn -f scanned_inventory-scanner.xml process-resources \
         -Dinput-dir=${{ inputs.input-directory }} \
         -Dinput-file-name=${{ inputs.input-file-name }} \
-        -Doutput-dir=${{ inputs.output-directory }}
+        -Doutput-dir=/tmp/scanned/inventories
       working-directory: processors
+
+    - name: Transfer and rename inventory
+      shell: bash
+      run: |
+        source_dir="/tmp/scanned/inventories"
+        destination="${{ inputs.output-directory }}"
+        file=$(find "$source_dir" -type f -name "*.xlsx" | head -n 1)
+        if [ -n "$file" ]; then
+          mkdir -p "$(dirname "$destination")"
+          mv "$file" "$destination"
+        else
+          echo "No .xlsx file found in $source_dir"
+          exit 1
+        fi
 
     - name: Set output
       id: set-output

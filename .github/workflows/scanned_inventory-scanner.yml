@@ -63,20 +63,6 @@ jobs:
         with:
           input-directory: ../${{ inputs.inventory-path }}
           input-file-name: ${{ inputs.inventory-file-name }}
-          output-directory: /tmp/scanned/inventories
-
-      - name: Transfer and rename inventory
-        shell: bash
-        run: |
-          source_dir="/tmp/scanned/inventories"
-          destination="../${{ steps.process-input.outputs.asset-name }}/04-scanned/${{ steps.process-input.outputs.asset-name }}-scanned.xls"
-          file=$(find "$source_dir" -type f -name "*.xlsx" | head -n 1)
-          if [ -n "$file" ]; then
-            mkdir -p "$(dirname "$destination")"
-            mv "$file" "$destination"
-          else
-            echo "No .xlsx file found in $source_dir"
-            exit 1
-          fi
+          output-directory: ../${{ steps.process-input.outputs.asset-name }}/04-scanned/${{ steps.process-input.outputs.asset-name }}-scanned.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

@@ -32,6 +32,7 @@ runs:
     - name: Transfer and rename inventory
       shell: bash
       run: |
+        cd /home/runner/work/metaeffekt-examples/metaeffekt-examples/processors
         source_dir="/tmp/scanned/inventories"
         destination="${{ inputs.output-directory }}"
         file=$(find "$source_dir" -type f -name "*.xlsx" | head -n 1)

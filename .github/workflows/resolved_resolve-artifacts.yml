@@ -10,10 +10,11 @@ on:
 
 
   workflow_call:
-    input-inventory:
-      description: "The inventory from which to extract the artifacts to resolve."
-      required: true
-      type: string
+    inputs:
+      input-inventory:
+        description: "The inventory from which to extract the artifacts to resolve."
+        required: true
+        type: string
 
     outputs:
       resolved-inventory:

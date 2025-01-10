@@ -23,7 +23,7 @@ runs:
     - name: Scan
       shell: bash
       run: |
-        mvn -f scan_inventory-scanner.xml process-resources \
+        mvn -f scanned_inventory-scanner.xml process-resources \
         -Dinput-dir=${{ inputs.input-directory }}
         -Dinput-file-name=${{ inputs.input-file-name }} \
         -Doutput-dir=${{ inputs.output-directory }}

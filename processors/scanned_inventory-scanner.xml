@@ -10,7 +10,7 @@
         <relativePath>processor-parent.xml</relativePath>
     </parent>
 
-    <artifactId>scanned_scan-inventory</artifactId>
+    <artifactId>scanned_inventory-scanner</artifactId>
 
     <properties>
         <input-dir></input-dir>

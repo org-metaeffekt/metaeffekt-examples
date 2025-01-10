@@ -63,7 +63,7 @@ jobs:
         with:
           input-directory: ../${{ inputs.inventory-path }}
           input-file-name: ${{ inputs.inventory-file-name }}
-          output-directory: ../${{ steps.process-input.outputs.asset-name }}/04-scanned
+          output-directory: /tmp/scanned/inventories
 
       - name: Transfer and rename inventory
         shell: bash

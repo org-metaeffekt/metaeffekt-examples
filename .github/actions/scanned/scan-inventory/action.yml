@@ -38,6 +38,7 @@ runs:
         if [ -n "$file" ]; then
           mkdir -p "$(dirname "$destination")"
           mv "$file" "$destination"
+          echo "File renamed to $destination"
         else
           echo "No .xlsx file found in $source_dir"
           exit 1

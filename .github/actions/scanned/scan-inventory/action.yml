@@ -27,7 +27,6 @@ runs:
         -Dinput-dir=${{ inputs.input-directory }} \
         -Dinput-file-name=${{ inputs.input-file-name }} \
         -Doutput-dir=${{ inputs.output-directory }}
-        rm -f /tmp
       working-directory: processors
 
     - name: Set output

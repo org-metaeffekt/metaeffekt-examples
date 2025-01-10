@@ -6,21 +6,22 @@ on:
       inventory-path:
         description: "The inventory path."
         required: true
-        default: keycloak-25.0.4/03-resolved
+        default: keycloak-25.0.4/03-advised
       inventory-file-name:
         description: "The file name of the inventory with extension."
         required: true
-        default: keycloak-25.0.4-resolved.xlsx
+        default: keycloak-25.0.4-advised.xls
 
   workflow_call:
-    inventory-path:
-      description: "The inventory path."
-      required: true
-      type: string
-    inventory-file-name:
-      description: "The file name of the inventory with extension."
-      required: true
-      type: string
+    inputs:
+      inventory-path:
+        description: "The inventory path."
+        required: true
+        type: string
+      inventory-file-name:
+        description: "The file name of the inventory with extension."
+        required: true
+        type: string
 
     outputs:
       scanned-inventory:

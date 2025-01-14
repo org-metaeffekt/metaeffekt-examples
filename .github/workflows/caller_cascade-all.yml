@@ -1,14 +1,10 @@
-name: Repository cascade [Caller]
-# This caller workflow cascades through all assets and all their subsections, essentially
-# performing all possible sub-steps. This workflow is dependent on existing [asset-analyzed.xls] inventories in their
-# respective [01-analyzed] subdirectories.
+name: Repository Cascade [Caller]
 
 on:
   workflow_dispatch:
 
-
 jobs:
-  process-boms:
+  generate-boms:
     strategy:
       matrix:
         bom: [
@@ -18,14 +14,14 @@ jobs:
           openssl-1.1.1i/01-analyzed/openssl-1.1.1o-analyzed.xls,
           openssl-3.0.6/01-analyzed/openssl-3.0.6-analyzed.xls]
     runs-on: ubuntu-latest
+
     steps:
-      - name: Generate CycloneDx Bom
-        uses: .github/workflows/analyzed_inventory-to-cyclonedx.yml
+      - name: Generate CycloneDx BOMs
+        uses: ./.github/workflows/analyzed_inventory-to-cyclonedx.yml
         with:
           inventory: ${{ matrix.bom }}
 
-      - name: Generate Spdx Bom
-        uses: .github/workflows/analyzed_inventory-to-spdx.yml
+      - name: Generate SPDX BOMs
+        uses: ./.github/workflows/analyzed_inventory-to-spdx.yml
         with:
           inventory: ${{ matrix.bom }}
-

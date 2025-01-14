@@ -13,11 +13,9 @@
     <artifactId>scanned_inventory-scanner</artifactId>
 
     <properties>
-        <input-dir></input-dir>
-        <input-file-name></input-file-name>
-        <output-dir></output-dir>
+        <inputInventory></inputInventory>
+        <targetFile></targetFile>
     </properties>
-
 
     <build>
         <plugins>
@@ -27,18 +25,16 @@
                 <version>${ae.artifact.analysis.version}</version>
                 <executions>
                     <execution>
-                        <id>scan-inventory</id>
+                        <id>scan-artifacts</id>
                         <goals>
                             <goal>scan-artifacts</goal>
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <targetInventoryDir>${input-dir}</targetInventoryDir>
-                            <targetInventoryPath>${input-file-name}</targetInventoryPath>
-                            <archiveBaseDir>/tmp/scan/.archive</archiveBaseDir>
-                            <analysisBaseDir>/tmp/scan/.analysis</analysisBaseDir>
-                            <scanControlPropertiesFile>resources/scanned/scan-control.properties</scanControlPropertiesFile>
-                            <resultTargetDir>${output-dir}</resultTargetDir>
+                            <inputInventory>${inputInventory}</inputInventory>
+                            <targetFile>${targetFile}</targetFile>
+                            <analysisBaseDir>/tmp/scanned/analysis</analysisBaseDir>
+                            <propertiesFile>resources/scanned/scan-control.properties</propertiesFile>
                         </configuration>
                     </execution>
                 </executions>

@@ -1,0 +1,60 @@
+name: Convert Inventory to CycloneDx
+
+on:
+  workflow_dispatch:
+    inputs:
+      inventory:
+        description: "The Inventory file path."
+        required: true
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xls
+
+  workflow_call:
+    inputs:
+      inventory:
+        description: "The Inventory file path."
+        required: true
+        type: string
+
+    outputs:
+      converted-inventory:
+        value: ${{ jobs.inventory-to-cyclonedx.outputs.bom }}
+
+jobs:
+  inventory-to-cyclonedx:
+    runs-on: ubuntu-latest
+    outputs:
+      bom: ${{ steps.convert.outputs.bom }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure runner
+        uses: ./.github/actions/util/configure-runner
+        with:
+          maven: true
+
+      - name: Extract file name
+        id: process-input
+        uses: ./.github/actions/util/extract-file-name
+        with:
+          file-path: ${{ inputs.inventory }}
+
+      - name: Convert Inventory to CycloneDx
+        id: convert
+        uses: ./.github/actions/analyzed/inventory-to-cyclonedx
+        with:
+          inventory-input: ../${{ inputs.inventory }}
+          cyclonedx-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-cyclonedx-1.6.json
+
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

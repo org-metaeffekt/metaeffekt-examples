@@ -32,8 +32,8 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <inputInventoryFile>${input-file}</inputInventoryFile>
-                            <outputInventoryFile>${output-file}</outputInventoryFile>
+                            <inputInventoryFile>${inputFile}</inputInventoryFile>
+                            <outputInventoryFile>${outputFile}</outputInventoryFile>
                             <downloadBaseDir>/tmp/resolved/download</downloadBaseDir>
                             <artifactResolverConfig>resources/resolved/artifact-resolver-config.yaml</artifactResolverConfig>
                             <proxyConfig>resources/resolved/artifact-resolver-proxy.yaml</proxyConfig>

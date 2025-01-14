@@ -3,7 +3,7 @@ name: Resolve artifacts
 on:
   workflow_dispatch:
     inputs:
-      input-inventory:
+      inventory:
         description: "The inventory from which to extract the artifacts to resolve."
         required: true
         default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xlsx
@@ -11,7 +11,7 @@ on:
 
   workflow_call:
     inputs:
-      input-inventory:
+      inventory:
         description: "The inventory from which to extract the artifacts to resolve."
         required: true
         type: string
@@ -48,13 +48,13 @@ jobs:
         id: process-input
         uses: ./.github/actions/util/extract-file-name
         with:
-          file-path: ${{ inputs.input-inventory }}
+          file-path: ${{ inputs.inventory }}
 
       - name: Resolve artifacts
         id: resolve
         uses: ./.github/actions/resolved/resolve-artifacts
         with:
-          input-inventory: ../${{ inputs.input-inventory }}
+          input-inventory: ../${{ inputs.inventory }}
           output-directory: ../${{ steps.process-input.outputs.asset-name }}/02-resolved/${{ steps.process-input.outputs.asset-name }}-resolved.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

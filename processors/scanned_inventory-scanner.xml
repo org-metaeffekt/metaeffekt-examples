@@ -25,9 +25,9 @@
                 <version>${ae.artifact.analysis.version}</version>
                 <executions>
                     <execution>
-                        <id>scan-artifacts</id>
+                        <id>scan-inventory</id>
                         <goals>
-                            <goal>scan-artifacts</goal>
+                            <goal>scan-inventory</goal>
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>

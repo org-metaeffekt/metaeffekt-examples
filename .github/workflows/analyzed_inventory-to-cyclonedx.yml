@@ -16,7 +16,7 @@ on:
         type: string
 
     outputs:
-      converted-inventory:
+      bom:
         value: ${{ jobs.inventory-to-cyclonedx.outputs.bom }}
 
 jobs:

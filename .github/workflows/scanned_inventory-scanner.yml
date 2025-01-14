@@ -3,25 +3,18 @@ name: Scan inventory
 on:
   workflow_dispatch:
     inputs:
-      inventory-path:
-        description: "The inventory path."
+      inventory:
+        description: "The inventory file path path."
         required: true
-        default: keycloak-25.0.4/03-advised
-      inventory-file-name:
-        description: "The file name of the inventory with extension."
-        required: true
-        default: keycloak-25.0.4-advised.xls
+        default: keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls
 
   workflow_call:
     inputs:
-      inventory-path:
-        description: "The inventory path."
+      inventory:
+        description: "The inventory file path."
         required: true
         type: string
-      inventory-file-name:
-        description: "The file name of the inventory with extension."
-        required: true
-        type: string
+
 
     outputs:
       scanned-inventory:
@@ -55,14 +48,13 @@ jobs:
         id: process-input
         uses: ./.github/actions/util/extract-file-name
         with:
-          file-path: ${{ inputs.inventory-path }}
+          file-path: ${{ inputs.inventory }}
 
       - name: Scan inventory
         id: scan
         uses: ./.github/actions/scanned/scan-inventory
         with:
-          input-directory: ../${{ inputs.inventory-path }}
-          input-file-name: ${{ inputs.inventory-file-name }}
-          output-directory: ../${{ steps.process-input.outputs.asset-name }}/04-scanned/${{ steps.process-input.outputs.asset-name }}-scanned.xls
+          inputInventory: ../${{ inputs.inventory }}
+          targetFile: ../${{ steps.process-input.outputs.asset-name }}/04-scanned/${{ steps.process-input.outputs.asset-name }}-scanned.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

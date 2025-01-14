@@ -8,6 +8,13 @@ on:
         required: true
         default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xls
 
+  workflow_call:
+    inputs:
+      inventory:
+        description: "The inventory file location, relative to the processors directory."
+        required: true
+        type: string
+
 jobs:
   inventory-to-spdx:
     uses: ./.github/workflows/analyzed_inventory-to-spdx.yml

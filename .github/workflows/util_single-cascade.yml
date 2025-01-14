@@ -1,4 +1,4 @@
-name: Bom To dashboard [Caller]
+name: Single Full Cascade [Caller]
 
 on:
   workflow_dispatch:

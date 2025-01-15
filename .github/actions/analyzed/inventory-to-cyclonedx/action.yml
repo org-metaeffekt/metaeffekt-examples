@@ -20,7 +20,7 @@ runs:
     - name: convert-inventory-to-cyclonedx
       shell: bash
       run: |
-        mvn -f analyzed_inventory-to-cyclonedx.xml process-resources \
+        mvn -f convert_inventory-to-cyclonedx.xml process-resources \
         -Dinput=${{ inputs.inventory-input }} -Doutput=${{ inputs.cyclonedx-output }}
       working-directory: processors
 

@@ -33,7 +33,7 @@ runs:
     - name: Extract inventory
       shell: bash
       run: |
-        mvn -f analyze_extract-from-container.xml process-resources \
+        mvn -f analyzed_extract-from-container.xml process-resources \
         -Dimage.registry=${{ inputs.image-registry }} \
         -Dimage.repo=${{ inputs.image-repo }} \
         -Dimage.tag=${{ inputs.image-tag }} \

@@ -12,7 +12,7 @@
         <relativePath>processor-parent.xml</relativePath>
     </parent>
 
-    <artifactId>analyzed_inventory-to-cyclonedx</artifactId>
+    <artifactId>convert_inventory-to-spdx</artifactId>
 
     <properties>
         <input></input>
@@ -27,15 +27,15 @@
                 <version>${project.version}</version>
                 <executions>
                     <execution>
-                        <id>inventory-to-cyclonedx</id>
+                        <id>convert-inventory-to-spdx</id>
                         <goals>
-                            <goal>convert-inventory-to-cyclonedx</goal>
+                            <goal>convert-inventory-to-spdx</goal>
                         </goals>
                         <configuration>
                             <input>${input}</input>
                             <output>${output}</output>
-                            <documentName>A CycloneDx document</documentName>
-                            <description>An automatically generated CycloneDx document, created through the metaeffekt-examples actions pipeline.</description>
+                            <documentName>A SPDX document</documentName>
+                            <description>An automatically generated SPDX document, created through the metaeffekt-examples actions pipeline.</description>
                             <documentIdPrefix>https://metaeffekt.com/spdx/doc/</documentIdPrefix>
                             <organization>{metaeffekt} GmbH</organization>
                             <organizationUrl>https://metaeffekt.com</organizationUrl>

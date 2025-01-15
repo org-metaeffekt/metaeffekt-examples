@@ -10,7 +10,7 @@ jobs:
         inventory: [
           example-0.1.0/01-analyzed/example-0.1.0-analyzed.xls,
           keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xls,
-          keycloak-cli-25.0.2/01-analyzed/keycloak-cli-25.0.2-analyzed.xls,
+          keycloak-cli-25.0.2/01-analyzed/keycloak-cli-25.0.2-analyzed.xlsx,
           openssl-1.1.1i/01-analyzed/openssl-1.1.1o-analyzed.xls,
           openssl-3.0.6/01-analyzed/openssl-3.0.6-analyzed.xls]
     uses: ./.github/workflows/util_single-cascade.yml

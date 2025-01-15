@@ -25,7 +25,7 @@ runs:
     - name: create-dashboard
       shell: bash
       run: |
-        mvn -f advise_create-dashboard.xml process-resources \
+        mvn -f advised_create-dashboard.xml process-resources \
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
         -Doutput.dashboard=${{ inputs.output-dashboard }}

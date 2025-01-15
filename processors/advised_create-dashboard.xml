@@ -10,14 +10,13 @@
         <relativePath>processor-parent.xml</relativePath>
     </parent>
 
-    <artifactId>advise_create-dashboard</artifactId>
+    <artifactId>advised_create-dashboard</artifactId>
     <packaging>pom</packaging>
 
     <properties>
         <input.inventory>${project.build.directory}/classes/inventory/</input.inventory>
         <output.dashboard>${project.build.directory}/classes/dashboard/${project.artifactId}-dashboard.html
         </output.dashboard>
-        <output.svg>${project.build.directory}/classes/resources/svg</output.svg>
 
         <activate.dashboard>true</activate.dashboard>
         <ae.dashboard.timeline>true</ae.dashboard.timeline>
@@ -50,7 +49,6 @@
                                     <vulnerabilityAssessmentDashboardEnrichment>
                                         <active>${activate.dashboard}</active>
                                         <outputDashboardFile>${output.dashboard}</outputDashboardFile>
-                                        <svgDirectory>${output.svg}</svgDirectory>
 
                                         <maximumVulnerabilitiesPerDashboardCount>2147483647
                                         </maximumVulnerabilitiesPerDashboardCount>

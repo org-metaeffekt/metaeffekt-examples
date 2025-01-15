@@ -20,7 +20,7 @@ runs:
     - name: convert-inventory-to-spdx
       shell: bash
       run: |
-        mvn -f analyzed_inventory-to-spdx.xml process-resources \
+        mvn -f convert_inventory-to-spdx.xml process-resources \
         -Dinput=${{ inputs.inventory-input }} -Doutput=${{ inputs.spdx-output }}
       working-directory: processors
 

@@ -18,8 +18,6 @@
         <input.database>${project.basedir}/../../.database/ae-vulnerability-mirror</input.database>
 
         <output.inventory.dir>${project.build.directory}/classes/inventory/</output.inventory.dir>
-        <output.inventory.intermediate.dir>${project.build.directory}/classes/inventory-intermediate/
-        </output.inventory.intermediate.dir>
         <output.inventory.name>${project.artifactId}-inventory.xls</output.inventory.name>
         <output.inventory>${output.inventory.dir}/${output.inventory.name}</output.inventory>
         <output.inventory.correlation>${output.inventory.dir}/correlation-${output.inventory.name}
@@ -27,12 +25,9 @@
 
         <inventory.directory>${project.basedir}</inventory.directory>
 
-        <inventory.id>ae-inventory</inventory.id>
-
         <correlation.dir>${inventory.directory}/correlation</correlation.dir>
         <keywords.dir>${inventory.directory}/context</keywords.dir>
         <assessment.dir>${inventory.directory}/assessment</assessment.dir>
-        <vulnerabilities.custom.dir>${inventory.directory}/custom-vulnerabilities</vulnerabilities.custom.dir>
 
         <activate.msrc>false</activate.msrc> <!-- Disabled because of reduced index -->
         <activate.certsei>false</activate.certsei> <!-- Disabled because of reduced index -->
@@ -45,7 +40,6 @@
         <activate.status>true</activate.status>
         <activate.keywords>true</activate.keywords>
         <activate.validation>true</activate.validation>
-        <activate.vulnerabilities.custom>true</activate.vulnerabilities.custom>
 
         <dashboard.title>Vulnerability Assessment Dashboard</dashboard.title>
         <dashboard.subtitle>${project.artifactId}</dashboard.subtitle>
@@ -158,12 +152,6 @@
                                         </maxCorrelatedVulnerabilitiesPerArtifact>
                                     </nvdMatchCveFromCpeEnrichment>
 
-                                    <customVulnerabilitiesFromCpeEnrichment>
-                                        <active>${activate.vulnerabilities.custom}</active>
-                                        <vulnerabilityFiles>
-                                            <file>${vulnerabilities.custom.dir}</file>
-                                        </vulnerabilityFiles>
-                                    </customVulnerabilitiesFromCpeEnrichment>
 
                                     <ghsaVulnerabilitiesEnrichment>
                                         <active>${activate.ghsa.correlation}</active>

@@ -67,7 +67,15 @@ artifacts.
 
 Takes a resolved inventory and enriches it with vulnerability information.
 
-
+| Property                         | Required | Explanation                                                                              |
+|----------------------------------|----------|------------------------------------------------------------------------------------------|
+| input.database                   | yes      | The directory of the vulnerability mirror / index.                                       |
+| output.inventory.dir             | yes      | The output directory of the resulting inventory.                                         |
+| inventory.directory              | yes      | The directory in which to save additional information generated during enrichment.       |
+| activate.*                       | no       | Switches which influence which vulnerability data sources and/or criteria are activated. |
+| writeIntermediateInventories     | no       | Switch to decide whether to output intermediary inventories, after each enrichment step. |
+| intermediateInventoriesDirectory | no       | Directory in which to store the intermediary inventories.                                |
+| securityPolicyFile               | no       | Json file with additional configuration of security policies.                            |
 
 ### (Advised) Create Dashboard
 

@@ -31,6 +31,11 @@ runs:
           echo "image-repo=keycloak" >> $GITHUB_OUTPUT
           echo "image-tag=25.0.4" >> $GITHUB_OUTPUT
           docker pull keycloak/keycloak:25.0.4
+        elif [ "${{ inputs.image }}" == "apache-httpd-2.4.62" ]; then
+          echo "image-registry=docker.io" >> $GITHUB_OUTPUT
+          echo "image-repo=httpd" >> $GITHUB_OUTPUT
+          echo "image-tag=2.4.62" >> $GITHUB_OUTPUT
+          docker pull docker.io/httpd:2.4.62
         fi
 
         

@@ -55,6 +55,6 @@ jobs:
         uses: ./.github/actions/resolved/resolve-artifacts
         with:
           input-inventory: ../${{ inputs.inventory }}
-          output-directory: ../${{ steps.process-input.outputs.asset-name }}/02-resolved/${{ steps.process-input.outputs.asset-name }}-resolved.xls
+          output-inventory: ../${{ steps.process-input.outputs.asset-name }}/02-resolved/${{ steps.process-input.outputs.asset-name }}-resolved.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

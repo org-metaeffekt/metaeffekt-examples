@@ -47,6 +47,6 @@ jobs:
       inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
 
   create-report:
-    uses: ./.github/workflows/reported_enriched-inventory-to-report.yml
+    uses: ./.github/workflows/reported_inventory-to-report.yml
     with:
       inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}

@@ -6,8 +6,12 @@ on:
     inputs:
       image:
         description: "The container image descriptor. (The folder name)"
-        required: true
         default: keycloak-25.0.4
+        type: choice
+        options:
+          - keycloak-25.0.4
+          - apache-httpd-2.4.62
+          - nginx-1.27.3
 
   workflow_call:
     inputs:

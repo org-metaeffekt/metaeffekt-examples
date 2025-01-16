@@ -41,10 +41,10 @@ jobs:
     with:
       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
 
-  scan-inventory:
-    uses: ./.github/workflows/scanned_inventory-scanner.yml
-    with:
-      inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
+#  scan-inventory:
+#    uses: ./.github/workflows/scanned_inventory-scanner.yml
+#    with:
+#      inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
 
   create-report:
     uses: ./.github/workflows/reported_inventory-to-report.yml

@@ -24,7 +24,7 @@
             <plugin>
                 <groupId>com.metaeffekt.artifact.analysis</groupId>
                 <artifactId>ae-inventory-conversion-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${ae.artifact.analysis.version}</version>
                 <executions>
                     <execution>
                         <id>inventory-to-cyclonedx</id>
@@ -35,11 +35,18 @@
                             <input>${input}</input>
                             <output>${output}</output>
                             <documentName>A CycloneDx document</documentName>
-                            <description>An automatically generated CycloneDx document, created through the metaeffekt-examples actions pipeline.</description>
-                            <documentIdPrefix>https://metaeffekt.com/spdx/doc/</documentIdPrefix>
+                            <description>Automatically generated CycloneDx document</description>
                             <organization>{metaeffekt} GmbH</organization>
                             <organizationUrl>https://metaeffekt.com</organizationUrl>
-                            <tool>{metaeffekt} Kontinuum CycloneDx Converter</tool>
+                            <person></person>
+                            <comment></comment>
+                            <outputFormat>JSON</outputFormat>
+                            <documentVersion>1</documentVersion>
+                            <mapRelationships>true</mapRelationships>
+                            <useLicenseExpressions>true</useLicenseExpressions>
+                            <includeLicenseTexts>true</includeLicenseTexts>
+                            <includeAssets>true</includeAssets>
+                            <includeTechnicalProperties>false</includeTechnicalProperties>
                         </configuration>
                     </execution>
                 </executions>

@@ -24,7 +24,7 @@
             <plugin>
                 <groupId>com.metaeffekt.artifact.analysis</groupId>
                 <artifactId>ae-inventory-conversion-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${ae.artifact.analysis.version}</version>
                 <executions>
                     <execution>
                         <id>convert-inventory-to-spdx</id>
@@ -39,7 +39,6 @@
                             <documentIdPrefix>https://metaeffekt.com/spdx/doc/</documentIdPrefix>
                             <organization>{metaeffekt} GmbH</organization>
                             <organizationUrl>https://metaeffekt.com</organizationUrl>
-                            <tool>{metaeffekt} Kontinuum CycloneDx Converter</tool>
                         </configuration>
                     </execution>
                 </executions>

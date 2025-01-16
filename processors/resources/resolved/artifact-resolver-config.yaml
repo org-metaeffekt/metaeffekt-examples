@@ -24,7 +24,7 @@ indexConfig:
     "jai-codec-1.1.3.jar": "pkg:maven/com.sun.media/jai-codec@1.1.3"
 
 rpmIndexConfig:
-  rawIndexPath: "src/test/resources/index/raw-rpm-index.txt"
+  rawIndexPath: "resources/resolved/raw-rpm-index.txt"
 
 environmentManagerConfig:
   enableEnvironmentManager: false

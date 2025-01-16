@@ -29,8 +29,8 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <globalInventoryPath>/META-INF/artifact-inventory-thirdparty-Q1-2013.xls</globalInventoryPath>
                             <targetInventoryPath>${outputInventory}</targetInventoryPath>
+                            <sourceInventoryDir>resources/</sourceInventoryDir>
 
                             <failOnError>true</failOnError>
                             <failOnUnknown>false</failOnUnknown>

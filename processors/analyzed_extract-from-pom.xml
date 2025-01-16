@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>analyzed_extract-from-pom</artifactId>
+
+    <properties>
+        <outputInventory></outputInventory>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.metaeffekt.core</groupId>
+                <artifactId>ae-inventory-maven-plugin</artifactId>
+                <version>${ae.core.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>create-pom-report</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <globalInventoryPath>/META-INF/artifact-inventory-thirdparty-Q1-2013.xls</globalInventoryPath>
+                            <targetInventoryPath>${outputInventory}</targetInventoryPath>
+
+                            <failOnError>true</failOnError>
+                            <failOnUnknown>false</failOnUnknown>
+                            <failOnDevelopment>false</failOnDevelopment>
+                            <failOnInternal>true</failOnInternal>
+                            <failOnUpgrade>false</failOnUpgrade>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.metaeffekt.core</groupId>
+                        <artifactId>ae-core-inventory</artifactId>
+                        <version>${ae.core.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>

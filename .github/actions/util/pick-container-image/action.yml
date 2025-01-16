@@ -36,6 +36,11 @@ runs:
           echo "image-repo=httpd" >> $GITHUB_OUTPUT
           echo "image-tag=2.4.62" >> $GITHUB_OUTPUT
           docker pull docker.io/httpd:2.4.62
+        elif [ "${{ inputs.image }}" == "nginx-1.27.3" ]; then
+          echo "image-registry=docker.io" >> $GITHUB_OUTPUT
+          echo "image-repo=nginx" >> $GITHUB_OUTPUT
+          echo "image-tag=1.27.3" >> $GITHUB_OUTPUT
+          docker pull docker.io/nginx:1.27.3
         fi
 
         

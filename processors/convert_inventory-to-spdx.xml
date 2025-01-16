@@ -24,7 +24,7 @@
             <plugin>
                 <groupId>com.metaeffekt.artifact.analysis</groupId>
                 <artifactId>ae-inventory-conversion-plugin</artifactId>
-                <version>${ae.artifact.analysis.version}</version>
+                <version>0.133.0</version>
                 <executions>
                     <execution>
                         <id>convert-inventory-to-spdx</id>

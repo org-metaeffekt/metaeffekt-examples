@@ -21,14 +21,8 @@ runs:
       id: restore-cache
       uses: actions/cache/restore@v4
       with:
-        path: /tmp/resolved
-        key: maven-index-${{ env.date }}
-
-    - name: Unpack index
-      if: steps.restore-cache.outputs.cache-hit == true
-      shell: bash
-      run: |
-        unzip /tmp/resolved/maven-index.zip
+        path: /tmp/resolved/download
+        key: maven-repo-index
 
     - name: Scan
       shell: bash
@@ -46,12 +40,8 @@ runs:
         inventory_output_clean="${inventory_output_clean#../}"
         echo "resolved-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT
 
-    - name: Pack index
-      shell: bash
-      run: |
-        zip -r /tmp/resolved/maven-index.zip /tmp/resolved/download
-
     - name: Save cache
       uses: actions/cache/save@v4
       with:
-        path: /tmp/resolved
+        path: /tmp/resolved/download
+        key: maven-repo-index

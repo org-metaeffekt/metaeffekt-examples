@@ -10,7 +10,7 @@ inputs:
     required: true
 
 outputs:
-  output-inventory:
+  resolved-inventory:
     description: The repository path of the resolved inventory.
     value: ${{ steps.set-output.outputs.resolved-inventory }}
 

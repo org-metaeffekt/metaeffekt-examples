@@ -55,6 +55,6 @@ jobs:
         uses: ./.github/actions/analyzed/inventory-to-spdx
         with:
           inventory-input: ../${{ inputs.inventory }}
-          cyclonedx-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-spdx-2.3.json
+          spdx-output: ../${{ steps.process-input.outputs.asset-name }}/01-analyzed/${{ steps.process-input.outputs.asset-name }}-spdx-2.3.json
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

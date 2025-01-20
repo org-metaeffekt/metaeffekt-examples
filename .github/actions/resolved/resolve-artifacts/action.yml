@@ -24,7 +24,7 @@ runs:
         path: /tmp/resolved/download
         key: maven-repo-index
 
-    - name: Scan
+    - name: Resolve
       shell: bash
       run: |
         mvn -f resolved_inventory-resolver.xml process-resources \

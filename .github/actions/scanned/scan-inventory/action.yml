@@ -2,15 +2,13 @@ name: Scan inventory
 description: A composite action which scans artifacts for licenses and copyrights.
 
 inputs:
-  input-directory:
-    description: The input directory of the input inventory.
+  input-inventory:
+    description: The input directory file path.
     required: true
-  input-file-name:
-    description: The name with extension of the input inventory.
+  output-inventory:
+    description: The output directory file path.
     required: true
-  output-directory:
-    description: The name of the output directory.
-    required: true
+
 
 outputs:
   scanned-inventory:
@@ -24,9 +22,8 @@ runs:
       shell: bash
       run: |
         mvn -f scanned_inventory-scanner.xml process-resources \
-        -Dinput-dir=${{ inputs.input-directory }} \
-        -Dinput-file-name=${{ inputs.input-file-name }} \
-        -Doutput-dir=/tmp/scanned/inventories
+        -DinputInventory=${{ inputs.input-inventory }} \
+        -DtargetFile=${{ inputs.output-inventory }}
       working-directory: processors
 
     - name: Transfer and rename inventory
@@ -34,7 +31,7 @@ runs:
       run: |
         cd /home/runner/work/metaeffekt-examples/metaeffekt-examples/processors
         source_dir="/tmp/scanned/inventories"
-        destination="${{ inputs.output-directory }}"
+        destination="${{ inputs.output-inventory }}"
         file=$(find "$source_dir" -type f -name "*.xlsx" | head -n 1)
         if [ -n "$file" ]; then
           mkdir -p "$(dirname "$destination")"

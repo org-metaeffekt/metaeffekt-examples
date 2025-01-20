@@ -41,6 +41,7 @@ jobs:
     with:
       enriched-inventory: ${{ needs.enrich-inventory.outputs.enriched-inventory }}
 
+# Disabled due to long runtime and resource requirements.
 #  scan-inventory:
 #    uses: ./.github/workflows/scanned_inventory-scanner.yml
 #    with:

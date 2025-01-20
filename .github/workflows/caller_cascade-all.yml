@@ -12,6 +12,7 @@ jobs:
           keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xlsx,
           keycloak-cli-25.0.2/01-analyzed/keycloak-cli-25.0.2-analyzed.xlsx,
           nginx-1.27.3/01-analyzed/nginx-1.27.3-analyzed.xls,
+          apache-httpd-2.4.62/01-analyzed/apache-httpd-2.4.62-analyzed.xls,
           openssl-1.1.1i/01-analyzed/openssl-1.1.1o-analyzed.xlsx,
           openssl-3.0.6/01-analyzed/openssl-3.0.6-analyzed.xlsx]
     uses: ./.github/workflows/util_single-cascade.yml

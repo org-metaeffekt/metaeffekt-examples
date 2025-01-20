@@ -30,7 +30,7 @@ jobs:
     uses: ./.github/workflows/resolved_resolve-artifacts.yml
     needs: inventory-to-cyclonedx
     with:
-      inventory: ${{ needs.inventory-to-cyclonedx.outputs.bom }}
+      inventory: ${{ inputs.inventory }}
 
   enrich-inventory:
     needs: resolve-inventory

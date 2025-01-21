@@ -1,0 +1,30 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:000b207a-5b51-4662-bdf8-61a902dc5eaa",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-01-21T12:10:25Z",
+    "tools" : [ {
+      "name" : "{metaeffekt} Kontinuum CycloneDx Exporter"
+    } ],
+    "authors" : [ { } ],
+    "manufacturer" : {
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com" ]
+    }
+  },
+  "components" : [ {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-1",
+    "name" : "openssl-3.0.6",
+    "version" : "3.0.6",
+    "properties" : [ {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "openssl-3.0.6"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.6"
+    } ]
+  } ]
+}

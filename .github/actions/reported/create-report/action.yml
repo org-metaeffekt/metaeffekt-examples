@@ -2,11 +2,8 @@ name: Create report
 description: A composite action which creates a report containing licensing, vulnerability etc. information.
 
 inputs:
-  input-document-descriptor:
-    description: Document descriptor yaml, controlling the entire report creation process.
-    required: true
-  output-report-dir:
-    description: The output directory of the report files.
+  asset-descriptor:
+    description: The asset descriptor file
     required: true
 
 outputs:
@@ -20,10 +17,8 @@ runs:
     - name: Create report
       shell: bash
       run: |
-        mvn -f reported_create-report.xml process-resources \
-        -DassetDescriptorFile=${{ inputs.input-document-descriptor }} \
-        -DtargetReportDir=${{ inputs.output-report-dir }}
-        rm -r target
+        mvn -f reported_create-vuln-report.xml process-resources \
+        -DassetDescriptorFile=${{ inputs.asset-descriptor }}
       working-directory: processors
 
     - name: Set output

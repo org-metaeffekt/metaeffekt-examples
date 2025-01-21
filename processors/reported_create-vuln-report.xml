@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>reported_create-vuln-report</artifactId>
+
+    <properties>
+        <assetDescriptorFile></assetDescriptorFile>
+    </properties>
+
+    <!-- FIXME: Currently not running due to asset-descriptor changes -->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.metaeffekt.artifact.analysis</groupId>
+                <artifactId>ae-asset-descriptor-maven-plugin</artifactId>
+                <version>${ae.artifact.analysis.version}</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <id>generate-documents</id>
+                        <goals>
+                            <goal>generate-documents</goal>
+                        </goals>
+                        <configuration>
+                            <assetDescriptorFile>${assetDescriptorFile}</assetDescriptorFile>
+                            <targetReportDir>/tmp/reported</targetReportDir>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

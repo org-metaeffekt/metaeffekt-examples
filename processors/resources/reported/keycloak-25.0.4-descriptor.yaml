@@ -1,0 +1,20 @@
+inventories:
+  - "reference-keycloak":
+      file: "../keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls"
+  - "keycloak":
+      file: "../keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls"
+
+documents:
+  - inventories:
+      - inventoryRef: "keycloak"
+        assetName: "Keycloak"
+        assetVersion: "25.0.4"
+        reportContextTitle: "Keycloak"
+        reportContext: "Keycloak"
+        referenceInventory: "reference-keycloak"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+    language: "en"

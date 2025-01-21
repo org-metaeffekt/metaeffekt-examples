@@ -175,7 +175,7 @@
                                     </nvdCveFillDetailsEnrichment>
 
                                     <customVulnerabilitiesFillDetailsEnrichment>
-                                        <active>${activate.vulnerabilities.custom}</active>
+                                        <active>false</active>
                                         <vulnerabilityFiles>
                                             <file>${vulnerabilities.custom.dir}</file>
                                         </vulnerabilityFiles>

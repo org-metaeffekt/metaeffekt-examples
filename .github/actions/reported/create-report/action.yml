@@ -20,7 +20,7 @@ runs:
     - name: Create report
       shell: bash
       run: |
-        mvn -f reported_create-report process-resources \
+        mvn -f reported_create-report.xml process-resources \
         -DassetDescriptorFile=${{ inputs.input-document-descriptor }} \
         -DtargetReportDir=${{ inputs.output-report-dir }}
         rm -r target

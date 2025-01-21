@@ -29,7 +29,6 @@ runs:
         -Dinput.inventory=${{ inputs.input-inventory }} \
         -Dinput.database=${{ inputs.input-database }} \
         -Doutput.dashboard=${{ inputs.output-dashboard }}
-        rm -r target
       working-directory: processors
 
     - name: Set output

@@ -11,8 +11,10 @@ runs:
       run: |
         git config --local user.name "ae-actions-runner"
         git config --local user.email "ae-actions-runner@metaeffekt.com"
+        git fetch origin main
+        git pull origin main --rebase || true
         git add .
         if [[ -n $(git status --porcelain) ]]; then
           git commit -m "Automated commit from actions runner"
-          git push
+          git push origin main || (git pull --rebase origin main && git push origin main)
         fi

@@ -3,14 +3,14 @@ name: Enrich inventory
 on:
   workflow_dispatch:
     inputs:
-      converted-inventory:
+      inventory:
         description: "The base inventory path."
         required: true
         default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4.xlsx
 
   workflow_call:
     inputs:
-      converted-inventory:
+      inventory:
         description: "The base inventory path."
         required: true
         type: string
@@ -47,7 +47,7 @@ jobs:
         id: process-input
         uses: ./.github/actions/util/extract-file-name
         with:
-          file-path: ${{ inputs.converted-inventory }}
+          file-path: ${{ inputs.inventory }}
 
       - name: Get vulnerability index
         id: get-index
@@ -57,7 +57,7 @@ jobs:
         id: enrich
         uses: ./.github/actions/advised/enrich-inventories
         with:
-          input-inventory: ../${{ inputs.converted-inventory }}
+          input-inventory: ../${{ inputs.inventory }}
           input-database: ${{ steps.get-index.outputs.index-directory }}
           output-inventory: ../${{ steps.process-input.outputs.asset-name }}/03-advised/${{ steps.process-input.outputs.asset-name }}-advised.xls
           inventory-directory: ../${{ steps.process-input.outputs.asset-name }}/03-advised

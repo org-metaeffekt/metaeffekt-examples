@@ -24,7 +24,7 @@ jobs:
   resolve-artifacts:
     runs-on: ubuntu-latest
     outputs:
-      scanned-inventory: ${{ steps.resolve.outputs.resolved-inventory }}
+      resolved-inventory: ${{ steps.resolve.outputs.resolved-inventory }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

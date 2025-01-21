@@ -6,7 +6,7 @@ on:
       inventory:
         description: "The inventory file location, relative to the processors directory."
         required: true
-        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xls
+        default: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xlsx
 
   workflow_call:
     inputs:
@@ -28,7 +28,6 @@ jobs:
 
   resolve-inventory:
     uses: ./.github/workflows/resolved_resolve-artifacts.yml
-    needs: inventory-to-cyclonedx
     with:
       inventory: ${{ inputs.inventory }}
 
@@ -36,7 +35,7 @@ jobs:
     needs: resolve-inventory
     uses: ./.github/workflows/advised_enrich-inventory.yml
     with:
-      converted-inventory: ${{ needs.resolve-inventory.outputs.resolved-inventory }}
+      inventory: ${{ needs.resolve-inventory.outputs.resolved-inventory }}
 
   create-dashboard:
     needs: enrich-inventory

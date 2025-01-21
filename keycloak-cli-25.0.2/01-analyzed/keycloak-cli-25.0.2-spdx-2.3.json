@@ -1,0 +1,289 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Organization URL: https://metaeffekt.com\nBom iteration: 1",
+    "created" : "2025-01-21T12:01:58Z",
+    "creators" : [ "Organization: {metaeffekt} GmbH", "Tool: {metaeffekt} Kontinuum CycloneDx Exporter" ],
+    "licenseListVersion" : "3.25"
+  },
+  "name" : "A SPDX document",
+  "dataLicense" : "CC0-1.0",
+  "documentNamespace" : "https://metaeffekt.com/spdx/doc/8113d904-79dc-4aed-be08-4e7a7cdd2581",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-gnrtd0",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "byte-buddy-1.14.11.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.14.11"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd1",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/commons-codec/commons-codec@1.16.1?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://commons.apache.org/proper/commons-codec/",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "commons-codec-1.16.1.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.16.1"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd2",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://www.jboss.org",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "1.0.0.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd3",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://hc.apache.org/httpcomponents-client-ga",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "httpclient-4.5.14.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "4.5.14"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd4",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "http://hc.apache.org/httpcomponents-core-ga",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "httpcore-4.4.16.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "4.4.16"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd5",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/FasterXML/jackson-core",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "jackson-core-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd6",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/FasterXML/jackson",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "jackson-databind-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd7",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.17.0"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd8",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "https://github.com/jakartaee/jaf-api",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.1.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd9",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "3.5.3.Final"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd10",
+    "checksums" : [ {
+      "algorithm" : "MD5",
+      "checksumValue" : "7dbcacae59579b92f94cc1e333b445fd"
+    }, {
+      "algorithm" : "SHA256",
+      "checksumValue" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    }, {
+      "algorithm" : "SHA1",
+      "checksumValue" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "packageFileName" : "keycloak-admin-cli-25.0.2.jar",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "25.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-gnrtd11",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "packageFileName" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "3.1.1"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd1"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd0"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd11"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd3"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd2"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd8"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd7"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd10"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd9"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd4"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd6"
+  }, {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd5"
+  } ]
+}

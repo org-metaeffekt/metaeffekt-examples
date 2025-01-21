@@ -1,0 +1,236 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:2aacf570-9804-4434-8157-8f91f8401161",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-01-21T12:10:25Z",
+    "tools" : [ {
+      "name" : "{metaeffekt} Kontinuum CycloneDx Exporter"
+    } ],
+    "authors" : [ { } ],
+    "manufacturer" : {
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com" ]
+    }
+  },
+  "components" : [ {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-1",
+    "group" : "net.bytebuddy",
+    "name" : "byte-buddy-1.14.11.jar",
+    "version" : "1.14.11",
+    "purl" : "pkg:maven/net.bytebuddy/byte-buddy@1.14.11?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "byte-buddy-1.14.11.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.14.11"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-2",
+    "publisher" : "https://commons.apache.org/proper/commons-codec/",
+    "group" : "commons-codec",
+    "name" : "commons-codec-1.16.1.jar",
+    "version" : "1.16.1",
+    "purl" : "pkg:maven/commons-codec/commons-codec@1.16.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/commons-codec/commons-codec/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-codec-1.16.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.16.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-3",
+    "publisher" : "http://www.jboss.org",
+    "group" : "org.jboss.logging",
+    "name" : "commons-logging-jboss-logging-1.0.0.Final.jar",
+    "version" : "1.0.0.Final",
+    "purl" : "pkg:maven/org.jboss.logging/commons-logging-jboss-logging@1.0.0.Final?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/commons-logging-jboss-logging/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-logging-jboss-logging-1.0.0.Final.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.0.0.Final"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-4",
+    "publisher" : "http://hc.apache.org/httpcomponents-client-ga",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpclient-4.5.14.jar",
+    "version" : "4.5.14",
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpclient/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "httpclient-4.5.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "4.5.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-5",
+    "publisher" : "http://hc.apache.org/httpcomponents-core-ga",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpcore-4.4.16.jar",
+    "version" : "4.4.16",
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.apache.httpcomponents/httpcore/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "httpcore-4.4.16.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "4.4.16"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-6",
+    "publisher" : "https://github.com/FasterXML/jackson-core",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-core-2.17.0.jar",
+    "version" : "2.17.0",
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-core-2.17.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-7",
+    "publisher" : "https://github.com/FasterXML/jackson",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-databind-2.17.0.jar",
+    "version" : "2.17.0",
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-databind-2.17.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-8",
+    "group" : "com.fasterxml.jackson.datatype",
+    "name" : "jackson-datatype-jdk8-2.17.0.jar",
+    "version" : "2.17.0",
+    "purl" : "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.17.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-datatype-jdk8-2.17.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-9",
+    "publisher" : "https://github.com/jakartaee/jaf-api",
+    "group" : "jakarta.activation",
+    "name" : "jakarta.activation-api-2.1.2.jar",
+    "version" : "2.1.2",
+    "purl" : "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jakarta.activation-api-2.1.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.1.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-10",
+    "group" : "org.jboss.logging",
+    "name" : "jboss-logging-3.5.3.Final.jar",
+    "version" : "3.5.3.Final",
+    "purl" : "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.jboss.logging/jboss-logging/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jboss-logging-3.5.3.Final.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.5.3.Final"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-11",
+    "group" : "org.keycloak",
+    "name" : "keycloak-admin-cli-25.0.2.jar",
+    "version" : "25.0.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "45eee565be17d928c3a51fc74e9742fd166f47d1"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ad4e7f688ffc6eb8d6083aaac7e7650dbf1e873725ff0dc2b7e8435059d64393"
+    } ],
+    "purl" : "pkg:maven/org.keycloak/keycloak-admin-cli@25.0.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "keycloak-admin-cli-25.0.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "25.0.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-12",
+    "group" : "org.eclipse.microprofile.openapi",
+    "name" : "microprofile-openapi-api-3.1.1.jar",
+    "version" : "3.1.1",
+    "purl" : "pkg:maven/org.eclipse.microprofile.openapi/microprofile-openapi-api@3.1.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "[keycloak-admin-cli-25.0.2.jar]/META-INF/maven/org.eclipse.microprofile.openapi/microprofile-openapi-api/pom.xml"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "microprofile-openapi-api-3.1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.1.1"
+    } ]
+  } ]
+}

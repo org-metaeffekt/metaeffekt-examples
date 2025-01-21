@@ -1,0 +1,228 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:ac7ce10d-2693-4085-8ce4-7429ee471baf",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-01-21T12:10:26Z",
+    "tools" : [ {
+      "name" : "{metaeffekt} Kontinuum CycloneDx Exporter"
+    } ],
+    "authors" : [ { } ],
+    "manufacturer" : {
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com" ]
+    }
+  },
+  "components" : [ {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-1",
+    "group" : "org.apache.logging.log4j",
+    "name" : "log4j-api-2.14.0.jar",
+    "version" : "2.14.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "9791ac85aa3cdad633e512192766f84995eddf4db188cc42facec52a0dae15e8"
+    }, {
+      "alg" : "MD5",
+      "content" : "4876a0d414b3c2a01c10b6e96d70b62d"
+    } ],
+    "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "log4j-api-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "log4j-api-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.14.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-2",
+    "group" : "org.apache.logging.log4j",
+    "name" : "log4j-core-2.14.0.jar",
+    "version" : "2.14.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e257b0562453f73eabac1bc3181ba33e79d193ed"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f04ee9c0ac417471d9127b5880b96c3147249f20674a8dbb88e9949d855382a8"
+    }, {
+      "alg" : "MD5",
+      "content" : "862c00b2e854f9c0f1e8d8409d23d899"
+    } ],
+    "purl" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "log4j-core-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "log4j-core-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.14.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-3",
+    "group" : "org.springframework",
+    "name" : "spring-aop-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "f049146a55991e89c0f04b9624f1f69e1763d80f"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "1f6bb90bc78fa69506841c24c33f29790650e092dab96a35e56441f045ae216d"
+    }, {
+      "alg" : "MD5",
+      "content" : "953a41d016a5bc9d9e8ace3d90d499c9"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-aop-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-aop-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-4",
+    "group" : "org.springframework",
+    "name" : "spring-beans-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "24cc27af89edc1581a57bb15bc160d2353f40a0e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b354f54923139b8d86bc594452a6f53329da7b1e0c2a6402f9d9ca24837091ad"
+    }, {
+      "alg" : "MD5",
+      "content" : "04f9dc60a62319c97f140b8ebc98f797"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-beans-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-beans-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-5",
+    "group" : "org.springframework",
+    "name" : "spring-context-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ce6042492f042131f602bdc83fcb412b142bdac5"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "25efd823c10f3afbe1b65efe97370def475d202dd91477f66eb5685e746e2819"
+    }, {
+      "alg" : "MD5",
+      "content" : "731eee1b78fa01375de10fd95b84455d"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-context-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-context-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-6",
+    "group" : "org.springframework",
+    "name" : "spring-core-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d87ad19f9d8b9a3f1a143db5a2be34c61751aaa2"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "00ffcfb2671e0c8cab33f75939c97e04127fcfd2e0670032c59b6f48d791b772"
+    }, {
+      "alg" : "MD5",
+      "content" : "b9d1f2454c4b7d94c058026d272dfc3c"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-core-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-core-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-7",
+    "group" : "org.springframework",
+    "name" : "spring-expression-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "5cd4c568522b7084afac5d2ac6cb945b797b3f16"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f196833d5bca28b12fbb4ae3265c0f0c4dc9fb4c726b3bfc4cabcc129cd21cf7"
+    }, {
+      "alg" : "MD5",
+      "content" : "1d268dba90b89964d97254bae133a431"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-expression-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-expression-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-8",
+    "group" : "org.springframework",
+    "name" : "spring-jcl-5.3.14.jar",
+    "version" : "5.3.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ffcf745ed5ba32930771378316fd08e97986bec2"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b522a60d1f37b8f8b3b6ab58617df850b55fee6d82011b879a62574e068946aa"
+    }, {
+      "alg" : "MD5",
+      "content" : "dd81ad7cd0aa5b6f0225d6a0341edd9a"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-jcl-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-jcl-5.3.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.14"
+    } ]
+  } ]
+}

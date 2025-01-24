@@ -3,23 +3,23 @@ description: Extracts the inventory from a container.
 
 inputs:
   image-registry:
-    description: The image registry
+    description: The container image registry.
     required: true
 
   image-repo:
-    description: The image repository
+    description: The container image repository.
     required: true
 
   image-tag:
-    description: The image tag
+    description: The container image tag.
     required: true
 
   target-dir:
-    description: The target directory
+    description: The target directory in which extracted information will be saved.
     required: true
 
   target-name:
-    description: The target name
+    description: The name of the target inventory containing the container information.
     required: true
 
 outputs:
@@ -30,6 +30,7 @@ outputs:
 runs:
   using: composite
   steps:
+    # Runs container extraction via the correct maven plugin.
     - name: Extract inventory
       shell: bash
       run: |
@@ -39,9 +40,9 @@ runs:
         -Dimage.tag=${{ inputs.image-tag }} \
         -DtargetInventoryDir=${{ inputs.target-dir }} \
         -DtargetInventoryPath=${{ inputs.target-name }}
-        rm -r target
       working-directory: processors
 
+    # Provides the extracted inventory path as an output.
     - name: Set output
       id: set-output
       shell: bash

@@ -1,0 +1,60 @@
+name: Container to inventory
+
+# Take a look at the caller workflow to see possible input choices.
+on:
+  workflow_dispatch:
+    inputs:
+      artifact:
+        description: "The artifact descriptor used to determine the pom to extract."
+        default: core
+        type: choice
+        options:
+          - ae-core
+          - ae-artifact-analysis
+          - ae-portfolio
+          - ae-dita
+
+  workflow_call:
+    inputs:
+      artifact:
+        description: "The artifact descriptor used to determine the pom to extract."
+        required: true
+        type: string
+
+    outputs:
+      extracted-inventory:
+        value: ${{ jobs.extract-inventory-from-pom.outputs.extracted-inventory }}
+
+jobs:
+  extract-inventory-from-pom:
+    runs-on: ubuntu-latest
+    outputs:
+      extracted-inventory: ${{ steps.extract.outputs.extracted-inventory }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup java environment
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+          cache: 'maven'
+          cache-dependency-path: './processors/processor-parent.xml'
+
+      - name: Configure runner
+        uses: ./.github/actions/util/configure-runner
+        with:
+          maven: true
+
+      - name: Extract inventory from pom
+        id: extract
+        uses: ./.github/actions/analyzed/pom-to-inventory
+        with:
+          artifact-id: ${{ inputs.artifact }}
+          target-directory: ../${{ inputs.artifact }}-0.134.0/01-analyzed
+          target-inventory: ${{ inputs.artifact }}-0.134.0-analyzed.xls
+
+      - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

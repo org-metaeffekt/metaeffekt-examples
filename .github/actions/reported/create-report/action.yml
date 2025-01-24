@@ -2,18 +2,19 @@ name: Create report
 description: A composite action which creates a report containing licensing, vulnerability etc. information.
 
 inputs:
-  asset-descriptor:
-    description: The asset descriptor file
+  asset-descriptor: # More information on this can be found in the processors/resources/README.md
+    description: The asset descriptor file containing all necessary parameters.
     required: true
 
 outputs:
   report:
-    description: The repository path of the report.
+    description: The file path of the final report.
     value: ${{ steps.set-output.outputs.enriched-inventory }}
 
 runs:
   using: composite
   steps:
+    # Runs the report generation via the correct maven plugin.
     - name: Create report
       shell: bash
       run: |
@@ -21,6 +22,7 @@ runs:
         -DassetDescriptorFile=${{ inputs.asset-descriptor }}
       working-directory: processors
 
+    # Provides the generated report path as an output.
     - name: Set output
       id: set-output
       shell: bash

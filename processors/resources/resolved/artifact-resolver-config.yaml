@@ -18,11 +18,6 @@ mavenConfig:
   mavenCentralIndexConfig:
     ndjsonDumpGzipUrl: "https://metaeffekt.com/mirror/maven-central-index-dump/nexus-maven-repository-index-dump.ndjson.gz"
 
-indexConfig:
-  purlMapping:
-    "ch.qos.reload4j_1.2.18.4.jar": "pkg:maven/ch.qos.reload4j/reload4j@1.2.18.4"
-    "jai-codec-1.1.3.jar": "pkg:maven/com.sun.media/jai-codec@1.1.3"
-
 rpmIndexConfig:
   rawIndexPath: "resources/resolved/raw-rpm-index.txt"
 

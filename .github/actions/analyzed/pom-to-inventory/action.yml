@@ -1,0 +1,42 @@
+name: Extract inventory from pom
+description: Extracts an inventory with information from a pom.
+
+inputs:
+  artifact-id:
+    description: The id of the artifact, determining the pom to extract.
+    required: true
+
+  target-directory:
+    description: The directory in which the target inventory will be saved.
+    required: true
+
+  target-inventory:
+    description: The name of the inventory file.
+    required: true
+
+outputs:
+  extracted-inventory:
+    description: The path of the extracted inventory.
+    value: ${{ steps.set-output.outputs.extracted-inventory }}
+
+runs:
+  using: composite
+  steps:
+    # Runs container extraction via the correct maven plugin.
+    - name: Extract inventory
+      shell: bash
+      run: |
+        mvn -f analyzed_extract-from-pom.xml process-resources \
+        -DdependencyArtifactId=${{ inputs.artifact-id }} \        
+        -DtargetInventoryDir=${{ inputs.target-directory }} \
+        -DtargetInventoryPath=${{ inputs.target-inventory }}
+      working-directory: processors
+
+    # Provides the extracted inventory path as an output.
+    - name: Set output
+      id: set-output
+      shell: bash
+      run: |
+        inventory_output_clean="${{ inputs.target-directory }}/${{ inputs.target-inventory }}"
+        inventory_output_clean="${inventory_output_clean#../}"
+        echo "extracted-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT

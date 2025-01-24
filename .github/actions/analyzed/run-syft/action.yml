@@ -1,22 +1,23 @@
-name: Run syft
+name: Install and run syft
 description: A composite action which creates a bom from a container image via syft.
 
 inputs:
   image:
-    description: The container image which to scan and extract
+    description: The container image which to scan and extract.
   spec:
-    description: The spec which to use when creating the bom (spdx or cyclonedx)
+    description: The specification which to use when creating the bom (spdx or cyclonedx).
   output-file:
-    description: The path of the output file.
+    description: The output file path.
 
 outputs:
   bom:
-    description: The repository path of the bom.
+    description: The output file path.
     value: ${{ steps.syft.outputs.bom }}
 
 runs:
   using: composite
   steps:
+    # Downloads syft, runs the install-script and calls the syft binary to extract the bom from the specified container.
     - name: Run syft
       id: syft
       shell: bash

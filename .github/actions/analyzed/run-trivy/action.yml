@@ -1,22 +1,23 @@
-name: Run trivy
-description: A composite action which creates a bom from a container image via syft.
+name: Install and run trivy
+description: A composite action which creates a bom from a container image via trivy.
 
 inputs:
   image:
-    description: The container image which to scan and extract
+    description: The container image which to scan and extract.
   spec:
-    description: The spec which to use when creating the bom (spdx or cyclonedx)
+    description: The spec which to use when creating the bom (spdx or cyclonedx).
   output-file:
     description: The path of the output file.
 
 outputs:
   bom:
-    description: The repository path of the bom.
+    description: The path of the output file.
     value: ${{ steps.syft.outputs.bom }}
 
 runs:
   using: composite
   steps:
+    # Installs trivy via the apt package-manager and extracts the bom from the specified container.
     - name: Run trivy
       id: trivy
       shell: bash

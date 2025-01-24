@@ -11,42 +11,97 @@
     </parent>
 
     <artifactId>analyzed_extract-from-pom</artifactId>
+    <packaging>pom</packaging>
 
     <properties>
-        <outputInventory></outputInventory>
+        <targetInventoryDir></targetInventoryDir>
+        <targetInventoryPath></targetInventoryPath>
+        <dependencyArtifactId></dependencyArtifactId>
     </properties>
+
+    <modules>
+        <module>resources/analyzed/${dependencyArtifactId}-dependencies.xml</module>
+    </modules>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+
+                        <configuration>
+                            <outputDirectory>/tmp/analyzed/extract/dependency</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.metaeffekt.core</groupId>
                 <artifactId>ae-inventory-maven-plugin</artifactId>
                 <version>${ae.core.version}</version>
                 <executions>
+
                     <execution>
+                        <id>create-scan-report</id>
                         <goals>
-                            <goal>create-pom-report</goal>
+                            <goal>create-directory-report</goal>
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <targetInventoryPath>${outputInventory}</targetInventoryPath>
-                            <sourceInventoryDir>resources/</sourceInventoryDir>
+                            <inputDirectory>/tmp/analyzed/extract/dependency</inputDirectory>
+                            <scanDirectory>/tmp/analyzed/extract/scan</scanDirectory>
+                            <artifactExcludes>-nothing-</artifactExcludes>
 
+                            <sourceInventoryDir>../../resources</sourceInventoryDir>
+                            <sourceInventoryIncludes>artifact-reference-inventory.xls</sourceInventoryIncludes>
+
+                            <targetInventoryDir>${targetInventoryDir}</targetInventoryDir>
+                            <targetInventoryPath>${targetInventoryPath}</targetInventoryPath>
+
+                            <scanIncludes>
+                                <include>**/*</include>
+                            </scanIncludes>
+
+                            <scanExcludes>
+                                <!-- These should not be included in the delivery artifacts -->
+                                <exclude>**/.svn/**/*</exclude>
+                                <exclude>**/.svn</exclude>
+                                <exclude>**/.git</exclude>
+                                <exclude>**/.git/**/*</exclude>
+                                <exclude>**/.github/**/*</exclude>
+                                <exclude>**/.github</exclude>
+                                <exclude>**/.git*</exclude>
+                            </scanExcludes>
+
+                            <!-- unwrap includes/excludes omitted -->
+                            <includeEmbedded>true</includeEmbedded>
+                            <enableDetectComponentPatterns>true</enableDetectComponentPatterns>
+                            <enableImplicitUnpack>true</enableImplicitUnpack>
+
+                            <!-- USE MORE STRICT CHECK FOR DISTRIBUTION -->
                             <failOnError>true</failOnError>
+                            <failOnBanned>true</failOnBanned>
+                            <failOnInternal>false}</failOnInternal>
+                            <failOnUnknownVersion>false</failOnUnknownVersion>
                             <failOnUnknown>false</failOnUnknown>
-                            <failOnDevelopment>false</failOnDevelopment>
-                            <failOnInternal>true</failOnInternal>
                             <failOnUpgrade>false</failOnUpgrade>
+                            <failOnDowngrade>false</failOnDowngrade>
+                            <failOnDevelopment>false</failOnDevelopment>
+                            <failOnMissingLicense>false</failOnMissingLicense>
+                            <failOnMissingLicenseFile>false</failOnMissingLicenseFile>
+                            <failOnMissingNotice>false</failOnMissingNotice>
                         </configuration>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.metaeffekt.core</groupId>
-                        <artifactId>ae-core-inventory</artifactId>
-                        <version>${ae.core.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>

@@ -3,20 +3,21 @@ description: Composite action which converts an inventory to a spdx document.
 
 inputs:
   inventory-input:
-    description: "Inventory input directory or file."
+    description: The input inventory file path which to convert.
     required: true
   spdx-output:
-    description: "Spdx output directory or file."
+    description: The spdx bom file path.
     required: true
 
 outputs:
   bom:
-    description: The repository path of the bom.
+    description: The spdx bom file path.
     value: ${{ steps.set-output.outputs.converted-inventory }}
 
 runs:
   using: "composite"
   steps:
+    # Runs the conversion process via the correct maven plugin.
     - name: convert-inventory-to-spdx
       shell: bash
       run: |
@@ -24,6 +25,7 @@ runs:
         -Dinput=${{ inputs.inventory-input }} -Doutput=${{ inputs.spdx-output }}
       working-directory: processors
 
+    # Provides the converted inventory path as an output.
     - name: Set output
       id: set-output
       shell: bash

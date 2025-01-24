@@ -3,26 +3,28 @@ description: Composite action which converts a cyclonedx document into an invent
 
 inputs:
   cyclonedx-input:
-    description: "CycloneDx input file."
+    description: CycloneDx bom input file.
     required: true
   inventory-output:
-    description: "Inventory output directory and file."
+    description: The inventory file path for the resulting inventory.
     required: true
 
 outputs:
   converted-inventory:
-    description: The repository path of the converted inventory.
+    description: The inventory file path for the resulting inventory.
     value: ${{ steps.set-output.outputs.converted-inventory }}
 
 runs:
   using: "composite"
   steps:
+    # Runs the conversion process via the correct maven plugin.
     - name: convert-cyclonedx-to-inventory
       shell: bash
       run: |
         mvn -f convert_cyclonedx-to-inventory.xml process-resources -Dinput=${{ inputs.cyclonedx-input }} -Doutput=${{ inputs.inventory-output }}
       working-directory: processors
 
+    # Provides the converted inventory path as an output.
     - name: Set output
       id: set-output
       shell: bash

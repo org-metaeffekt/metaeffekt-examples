@@ -22,8 +22,8 @@
         <image.qualifier>${image.repo}-${image.tag}</image.qualifier>
         <image.id>${image.registry}/${image.repo}:${image.tag}</image.id>
 
-        <ae.extractor.resources.dir>${project.build.directory}/extractor/resources</ae.extractor.resources.dir>
-        <ae.extractor.scan.dir>${project.build.directory}/extractor/scan</ae.extractor.scan.dir>
+        <ae.extractor.resources.dir>$/tmp/analyzed/extractor/resources</ae.extractor.resources.dir>
+        <ae.extractor.scan.dir>/tmp/analyzed/extractor/extractor/scan</ae.extractor.scan.dir>
 
         <targetInventoryDir></targetInventoryDir>
         <targetInventoryPath></targetInventoryPath>

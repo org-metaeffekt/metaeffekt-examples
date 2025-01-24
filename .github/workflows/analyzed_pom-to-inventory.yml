@@ -1,4 +1,4 @@
-name: Container to inventory
+name: Pom to inventory
 
 # Take a look at the caller workflow to see possible input choices.
 on:

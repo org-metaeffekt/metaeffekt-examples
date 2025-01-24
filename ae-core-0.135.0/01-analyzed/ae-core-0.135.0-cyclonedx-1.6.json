@@ -1,0 +1,2677 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:e6205aab-17bd-4736-bb86-6a5317a9ffdb",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-01-24T13:10:10Z",
+    "tools" : [ {
+      "name" : "{metaeffekt} Kontinuum CycloneDx Exporter"
+    } ],
+    "authors" : [ { } ],
+    "manufacturer" : {
+      "name" : "{metaeffekt} GmbH",
+      "url" : [ "https://metaeffekt.com" ]
+    }
+  },
+  "components" : [ {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-1",
+    "name" : "ae-7zip-java-util-0.4.0.jar",
+    "version" : "0.4.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "86c7e264ef095c4c612f5007bed85d278295f332"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "cf4bee09fcf2a315f080732dea5c337aa69fcf2e3219fca48a6c93bb0cbd63c8"
+    }, {
+      "alg" : "MD5",
+      "content" : "c056a6578d3d00d158435590ce1a8161"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-7zip-java-util-0.4.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-7zip-java-util-0.4.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.4.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-2",
+    "name" : "ae-api-compile-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "cc4a5ba46abb187a4cdf7141c1b46736622df1d7"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "6466c6ba0ea0ec46306f110b6f801b25d9b93d6f921a23298122a1c29bb7973d"
+    }, {
+      "alg" : "MD5",
+      "content" : "c8191c7299eda79d97d3e583397028e6"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-api-compile-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-api-compile-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-3",
+    "name" : "ae-api-publish-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "2d5e6c53f001bbecc01f3cbfd3fb5dff54f9b890"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "6839886a29e459b14551c9792fbf0e7a7f73e70206097cfab0aaec0ca4da10cf"
+    }, {
+      "alg" : "MD5",
+      "content" : "3e03763d7689b46b2bf33d9f9a0da411"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-api-publish-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-api-publish-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-4",
+    "name" : "ae-artifact-publish-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "126d3636c9ee9aaa1791f97d61ad15e7d22cb5ad"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "985ae7d75f35578b2065dfca92bae8f9eeb21d533ac5fa65fbef2ee0f2e849db"
+    }, {
+      "alg" : "MD5",
+      "content" : "68c74cb5e1e9ae04cbe8b1d7552121ce"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-artifact-publish-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-artifact-publish-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-5",
+    "name" : "ae-common-kernel-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "9389dd495a0d80d8f20bd6b884a7c049a7b43562"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "13c24fee5be359720f5940323dc1fc8e2ad88a4d523b4baf132d681acc0af8d0"
+    }, {
+      "alg" : "MD5",
+      "content" : "03b7b53fbd1afc44f6a48ed66797ef60"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-common-kernel-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-common-kernel-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-6",
+    "name" : "ae-dependency-analysis-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e7a55d0b8cc371215efe0f0fdceac59855f03719"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "50ce566d2be52ef04c27bf640e299016f9bd02aa6f81d6299ab4c7cbd8f396f8"
+    }, {
+      "alg" : "MD5",
+      "content" : "f7f5db63a3ff08673cdedf7322903929"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-dependency-analysis-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-dependency-analysis-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-7",
+    "name" : "ae-inspect-reader-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "60ec3ac4fb7fa07c858d3ca67d0b084c7bb1f8b7"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b37fed50f64419b502fedb433d40c9f1bf1eb161fba4a684595ddfb7cfce4d6e"
+    }, {
+      "alg" : "MD5",
+      "content" : "035ab7c5359c7a6bc48e9bfb5d2817a3"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-inspect-reader-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-inspect-reader-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-8",
+    "name" : "ae-inventory-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3ca1b836a33231ae34901f960cedc3940eb0c7b0"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "29810503846f250e464cc9dedaf0177c3172f058cecaddc9e4159ba0ea294b22"
+    }, {
+      "alg" : "MD5",
+      "content" : "147a7e2157249571cf0217cac75546f3"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-inventory-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-inventory-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-9",
+    "name" : "ae-inventory-processor-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "7a59c00da37e334260d2755182f2e9c21fea05fb"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ca008580256e9967e672353fff1237d1e53999711032684a911bcec64a88101b"
+    }, {
+      "alg" : "MD5",
+      "content" : "da8eaa83a87760f4a3c1e15d7c7d3be5"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-inventory-processor-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-inventory-processor-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-10",
+    "name" : "ae-jira-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "89992be9f9f75f32f669965caf93f195c459bf1b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "199d1f493e681d00fbc380600a390c9d5635676280ca889f915b4f1f3aa5dd24"
+    }, {
+      "alg" : "MD5",
+      "content" : "b3a82241a163feea10d157519a39a83f"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-jira-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-jira-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-11",
+    "name" : "ae-maven-kernel-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e4aa73ca7dc980011c57f18123bba8fe04b2ed89"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "669429b9093b25d2d31c6ac2a42b0a792909e5a650d72d0a8173a38eb1e202a6"
+    }, {
+      "alg" : "MD5",
+      "content" : "b9c2e7b6b9053f9cd4ce04b4277a6f59"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-maven-kernel-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-maven-kernel-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-12",
+    "name" : "ae-security-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6ad835233f94417ddcd7889e619690a600ec4d8a"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "9da457783db0ae84a52c923ffe168f6cc97ceacf355ffb0a22965441602b7b5d"
+    }, {
+      "alg" : "MD5",
+      "content" : "9eb73ffc2393cfa5c6b94fae87ec3478"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-security-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-security-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-13",
+    "name" : "ae-shell-script-assembler-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6478173d93b2d14afe2d9da9763a6728704c070f"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "61a772fc66063a6e6f6f9e8c113d3ff28210a1f63ccdfaf95ec513c9145a3908"
+    }, {
+      "alg" : "MD5",
+      "content" : "d4187876b97b5ff8ae7160fe7ce37216"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-shell-script-assembler-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-shell-script-assembler-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-14",
+    "name" : "ae-version-maven-plugin-0.135.0.jar",
+    "version" : "0.135.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b0f850cac2472c6ddcac6e41f4d5e888324a5139"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "3e96c22b72ce906062583ebb69ab31385a3b6cec1ac9cd7c29b5f9bdbb2188e0"
+    }, {
+      "alg" : "MD5",
+      "content" : "fdae9e94ec387d6e46e00e0cf21ccbe4"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ae-version-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ae-version-maven-plugin-0.135.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.135.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-15",
+    "name" : "ant-commons-logging-1.10.13.jar",
+    "version" : "1.10.13",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b5bb17cba4ff095e59f5ef15f05b425624659f96"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "5c4379019dce4d3d0ca777c48feb588e15373ecd3ddbfa602447e8cde49e63cc"
+    }, {
+      "alg" : "MD5",
+      "content" : "1a76382dbbbc3e6f546474750e0e5a7b"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ant-commons-logging-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ant-commons-logging-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.10.13"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-16",
+    "name" : "ant-launcher-1.10.13.jar",
+    "version" : "1.10.13",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "331234763210702757a5780437844c6aef5d2bdf"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "cd7695b3bfb6964ab71b6a0b31dad60005ae77fe502132364679aacf08f77970"
+    }, {
+      "alg" : "MD5",
+      "content" : "a52f8633aa56da6d33493def13829f3d"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ant-launcher-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ant-launcher-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.10.13"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-17",
+    "name" : "ant-1.10.13.jar",
+    "version" : "1.10.13",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "85fd5990a27ddafe8af3f7a6d7132d2c29a22a7c"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "befbfc79e744e9892cfa7db96df3b6e82dc17d2571af42aa427976fc22299838"
+    }, {
+      "alg" : "MD5",
+      "content" : "0781dacdb3a7af3a1c1f6d5187438da4"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "ant-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "ant-1.10.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.10.13"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-18",
+    "name" : "asm-6.0_ALPHA.jar",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ceaedaebaf6b74e9092959285fbc66cfbc03e43b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b927134b46b62efaa4fb43bbeefeb9d500f3764504a70bf4ca2b1d95b5b58ca2"
+    }, {
+      "alg" : "MD5",
+      "content" : "0e1aef8fb73904654f463d9ffa4af6e3"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "asm-6.0_ALPHA.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "asm-6.0_ALPHA.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-19",
+    "name" : "commons-chain-1.1.jar",
+    "version" : "1.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3038bd41dcdb2b63b8c6dcc8c15f0fdf3f389012"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e408f72da5ed4c5db6ae19e8c3b7ee36259c36c05f7a77f15509a014bfe7bcaa"
+    }, {
+      "alg" : "MD5",
+      "content" : "d4ce482153073855e7c6453dc3c725cb"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-chain-1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-chain-1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-20",
+    "name" : "commons-digester-1.8.jar",
+    "version" : "1.8",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "dc6a73fdbd1fa3f0944e8497c6c872fa21dca37e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "05662373044f3dff112567b7bb5dfa1174e91e074c0c727b4412788013f49d56"
+    }, {
+      "alg" : "MD5",
+      "content" : "cf89c593f0378e9509a06fce7030aeba"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-digester-1.8.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-digester-1.8.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.8"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-21",
+    "name" : "commons-validator-1.3.1.jar",
+    "version" : "1.3.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d1fd6b1510f25e827adffcf17de3c85fa00e9391"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d3680636c84e5cea6bfe43f338f8bab03d6a3e18cc663fc8b671684ef66c0c8d"
+    }, {
+      "alg" : "MD5",
+      "content" : "4fe711769d6d61f51c21d6c89d70e904"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-validator-1.3.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-validator-1.3.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.3.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-22",
+    "name" : "dom4j-1.6.1.jar",
+    "version" : "1.6.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "5d3ccc056b6f056dbf0dddfdf43894b9065a8f94"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "593552ffea3c5823c6602478b5002a7c525fd904a3c44f1abe4065c22edfac73"
+    }, {
+      "alg" : "MD5",
+      "content" : "4d8f51d3fe3900efc6e395be48030d6d"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "dom4j-1.6.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "dom4j-1.6.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.6.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-23",
+    "name" : "jackson-core-asl-1.9.13.jar",
+    "version" : "1.9.13",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3c304d70f42f832e0a86d45bd437f692129299a4"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "440a9cb5ca95b215f953d3a20a6b1a10da1f09b529a9ddea5f8a4905ddab4f5a"
+    }, {
+      "alg" : "MD5",
+      "content" : "319c49a4304e3fa9fe3cd8dcfc009d37"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-core-asl-1.9.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-core-asl-1.9.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.9.13"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-24",
+    "name" : "jackson-mapper-asl-1.9.13.jar",
+    "version" : "1.9.13",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "74e7a07a76f2edbade29312a5a2ebccfa019128bc021ece3856d76197e9be0c2"
+    }, {
+      "alg" : "MD5",
+      "content" : "1750f9c339352fc4b728d61b57171613"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-mapper-asl-1.9.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-mapper-asl-1.9.13.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.9.13"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-25",
+    "name" : "jelf-0.9.0.jar",
+    "version" : "0.9.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "93f06e03a900543651c121bdd112f384768c572b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "11ffbc494b76c275f3c0205031b20e9c66f5b4dbf2f0e435b8ca17e9526f15a7"
+    }, {
+      "alg" : "MD5",
+      "content" : "60d717e8330e77a27a32310b335a952b"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jelf-0.9.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jelf-0.9.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.9.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-26",
+    "name" : "poi-ooxml-lite-5.2.4.jar",
+    "version" : "5.2.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "4e413a95937211b858623cd87797960d97d5593b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "4fc2cf2d2536b1ad802e1767187a4d851462a535a57f17e3f542c189caac5bd2"
+    }, {
+      "alg" : "MD5",
+      "content" : "98e2269c3a267df51a397371ae2c9ab9"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "poi-ooxml-lite-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "poi-ooxml-lite-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.2.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-27",
+    "name" : "poi-ooxml-5.2.4.jar",
+    "version" : "5.2.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "4d3318079f3c7a17f73999b7d13f77f3d64c3665"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f0fd526fe9a3629988456b6ffc5d2a11bc7b679c39cb81a17bdff922b794ad51"
+    }, {
+      "alg" : "MD5",
+      "content" : "379afb88ac891246d4d74c2a35d1ec30"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "poi-ooxml-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "poi-ooxml-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.2.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-28",
+    "name" : "poi-5.2.4.jar",
+    "version" : "5.2.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6f68427791bf0c7ba1ec0aa48193211fd8955e2e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "a22b26284ce115174c5bd48905a10cf7512a1f89fc63da8772f4564a86a6bba4"
+    }, {
+      "alg" : "MD5",
+      "content" : "acf0d6bc1ef4e89d1ba430ca8c822592"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "poi-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "poi-5.2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.2.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-29",
+    "name" : "sisu-guava-0.9.9.jar",
+    "version" : "0.9.9",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "91395a7816ad64c5ef68e1a1b5b861463f0eb3e2"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "9897e80ff6c08fc45b5b5ebd81d9e943a1087bdf0ad50cda457d616abbdaacd9"
+    }, {
+      "alg" : "MD5",
+      "content" : "36484b30beda10de99c56801db4657e0"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "sisu-guava-0.9.9.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "sisu-guava-0.9.9.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.9.9"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-30",
+    "name" : "sisu-guice-3.1.0-no_aop.jar",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "97c87d15d749c86b2be1b9809b28321a1d926c7f"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "4b76079f35407e5682aac1ecbe67afd5f430ae619044a9d6a413666a45750c25"
+    }, {
+      "alg" : "MD5",
+      "content" : "19f877ae736fa153a545d0cf801dcec9"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "sisu-guice-3.1.0-no_aop.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "sisu-guice-3.1.0-no_aop.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-31",
+    "name" : "spring-beans-5.3.37.jar",
+    "version" : "5.3.37",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "baf443fbb94f9c0b8e3ab845c91898f1f8942741"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "96df4350a77692095490b8eeb2e8d5df4c121d38e6a68f9e75e2aeefc9bf4b60"
+    }, {
+      "alg" : "MD5",
+      "content" : "4fb485d952d8c81af2110a73610dca09"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-beans-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-beans-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.37"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-32",
+    "name" : "spring-core-5.3.37.jar",
+    "version" : "5.3.37",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a6664808571dcb93b2949c20c8af923a51946b1b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "fa368ec048ab821774c5259498462a53eb7c860c3ce876e427e1b18999efb4b8"
+    }, {
+      "alg" : "MD5",
+      "content" : "fbc5c33d34c54949e9f8cb07acf70e16"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-core-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-core-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.37"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-33",
+    "name" : "spring-jcl-5.3.37.jar",
+    "version" : "5.3.37",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "34c730fcd794a9dd59e8a9bb1b2e019d52822584"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "32e6f7d7e810e2582b39427f30f5b221954c8c37ddc25cd5e8497e544f9da918"
+    }, {
+      "alg" : "MD5",
+      "content" : "2a3f45b81c3f0d5ebbc4ae7ef99052c2"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "spring-jcl-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "spring-jcl-5.3.37.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.3.37"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-34",
+    "name" : "tools-1.8.0.jar",
+    "version" : "1.8.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "11a42864b113f2908dd0a605fe718b83e8ba0ce6"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "61737875bc42d0e2f51f3e716fa1471a2aa4fed9e5403ea9beee42df7625719a"
+    }, {
+      "alg" : "MD5",
+      "content" : "384d97924f2aa981579c5bbddf568ea1"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "tools-1.8.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "tools-1.8.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.8.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-35",
+    "name" : "velocity-tools-2.0.jar",
+    "version" : "2.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "69936384de86857018b023a8c56ae0635c56b6a0"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b174eb36bc48c25dce10571c7d3d5dca4e4c1b3e2e31a92b9ed68fe9dea688d9"
+    }, {
+      "alg" : "MD5",
+      "content" : "51ed2c6c0103cf3fdbeb9aa5170f5288"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "velocity-tools-2.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "velocity-tools-2.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-36",
+    "name" : "velocity-1.7.jar",
+    "version" : "1.7",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "2ceb567b8f3f21118ecdec129fe1271dbc09aa7a"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ec92dae810034f4b46dbb16ef4364a4013b0efb24a8c5dd67435cae46a290d8e"
+    }, {
+      "alg" : "MD5",
+      "content" : "3692dd72f8367cb35fb6280dc2916725"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "velocity-1.7.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "velocity-1.7.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.7"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-37",
+    "name" : "xml-apis-1.4.01.jar",
+    "version" : "1.4.01",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3789d9fada2d3d458c4ba2de349d48780f381ee3"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "a840968176645684bb01aed376e067ab39614885f9eee44abe35a5f20ebe7fad"
+    }, {
+      "alg" : "MD5",
+      "content" : "7eaad6fea5925cca6c36ee8b3e02ac9d"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "xml-apis-1.4.01.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "xml-apis-1.4.01.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.4.01"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-38",
+    "name" : "xz-1.9.jar",
+    "version" : "1.9",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "1ea4bec1a921180164852c65006d928617bd2caf"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "211b306cfc44f8f96df3a0a3ddaf75ba8c5289eed77d60d72f889bb855f535e5"
+    }, {
+      "alg" : "MD5",
+      "content" : "57c2fbfeb55e307ccae52e5322082e02"
+    } ],
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "xz-1.9.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "xz-1.9.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.9"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-39",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-annotations-2.17.2.jar",
+    "version" : "2.17.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "147b7b9412ffff24339f8aba080b292448e08698"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "873a606e23507969f9bbbea939d5e19274a88775ea5a169ba7e2d795aa5156e1"
+    }, {
+      "alg" : "MD5",
+      "content" : "e68e7e593ae47e106421688707683297"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-annotations-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-annotations-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-40",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-core-2.17.2.jar",
+    "version" : "2.17.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "969a35cb35c86512acbadcdbbbfb044c877db814"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "721a189241dab0525d9e858e5cb604d3ecc0ede081e2de77d6f34fa5779a5b46"
+    }, {
+      "alg" : "MD5",
+      "content" : "50c2dab1f29136714d5ef5c6c640336c"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-core-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-core-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-41",
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-databind-2.17.2.jar",
+    "version" : "2.17.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e6deb029e5901e027c129341fac39e515066b68c"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "c04993f33c0f845342653784f14f38373d005280e6359db5f808701cfae73c0c"
+    }, {
+      "alg" : "MD5",
+      "content" : "3e1ff7c1f0fda885946619a47ef9d5de"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-databind-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-databind-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-42",
+    "group" : "com.fasterxml.jackson.dataformat",
+    "name" : "jackson-dataformat-toml-2.17.2.jar",
+    "version" : "2.17.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "f085b1a94428c4546eef48f00cfa63286f54a8e2"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "bc7ecf3f1bf76a26daddf2c7ab4facc017ce6e8c5c8c6b8f29cb610494828017"
+    }, {
+      "alg" : "MD5",
+      "content" : "8de66b34d5acdf8b26227df2aa148cdb"
+    } ],
+    "purl" : "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-toml@2.17.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jackson-dataformat-toml-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jackson-dataformat-toml-2.17.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.17.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-43",
+    "group" : "com.github.package-url",
+    "name" : "packageurl-java-1.5.0.jar",
+    "version" : "1.5.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e6bf530f52feab911f4032604ca0b8216f7ff337"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e45551727707acc0c56ac62d56964332ea0f138d6cc3656d988b9369150f5247"
+    }, {
+      "alg" : "MD5",
+      "content" : "90856d8bb5b17e08fdf03b6a2f93b81c"
+    } ],
+    "purl" : "pkg:maven/com.github.package-url/packageurl-java@1.5.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "packageurl-java-1.5.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "packageurl-java-1.5.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.5.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-44",
+    "group" : "com.github.virtuald",
+    "name" : "curvesapi-1.08.jar",
+    "version" : "1.08",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3d3d36568154059825089b289dcfca481fe44e2c"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ad95b08b8bbf9d7d17e5e00814898fa23324f32bc5b62f1a37801e6a56ce0079"
+    }, {
+      "alg" : "MD5",
+      "content" : "fc3aed90346691e7c79da06bb6606beb"
+    } ],
+    "purl" : "pkg:maven/com.github.virtuald/curvesapi@1.08?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "curvesapi-1.08.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "curvesapi-1.08.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.08"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-45",
+    "group" : "com.thoughtworks.qdox",
+    "name" : "qdox-2.0-M6.jar",
+    "version" : "2.0-M6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a4fbddb37e355194ab3be4328fc1e565ecc76226"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "0fe231a0af37aaa44b214d0f21566e67f81235ed0ca38598119ffd37e2752905"
+    }, {
+      "alg" : "MD5",
+      "content" : "287ab4213b2bf1cf42d6cefd062c992b"
+    } ],
+    "purl" : "pkg:maven/com.thoughtworks.qdox/qdox@2.0-M6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "qdox-2.0-M6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "qdox-2.0-M6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.0-M6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-46",
+    "group" : "com.zaxxer",
+    "name" : "SparseBitSet-1.3.jar",
+    "version" : "1.3",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "533eac055afe3d5f614ea95e333afd6c2bde8f26"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f76b85adb0c00721ae267b7cfde4da7f71d3121cc2160c9fc00c0c89f8c53c8a"
+    }, {
+      "alg" : "MD5",
+      "content" : "fbe27bb4c05e8719b7fff5aa71a57364"
+    } ],
+    "purl" : "pkg:maven/com.zaxxer/SparseBitSet@1.3?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "SparseBitSet-1.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "SparseBitSet-1.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.3"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-47",
+    "group" : "commons-codec",
+    "name" : "commons-codec-1.15.jar",
+    "version" : "1.15",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63"
+    }, {
+      "alg" : "MD5",
+      "content" : "303baf002ce6d382198090aedd9d79a2"
+    } ],
+    "licenses" : [ {
+      "expression" : "((LicenseRef-unknown-Apache-License-2.0) AND (LicenseRef-unknown-BSD-alike) AND (LicenseRef-unknown-Public-Domain))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/commons-codec/commons-codec@1.15?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-codec-1.15.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-codec-1.15.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.15"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-48",
+    "group" : "commons-collections",
+    "name" : "commons-collections-3.2.1.jar",
+    "version" : "3.2.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "761ea405b9b37ced573d2df0d1e3a4e0f9edc668"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "87363a4c94eaabeefd8b930cb059f66b64c9f7d632862f23de3012da7660047b"
+    }, {
+      "alg" : "MD5",
+      "content" : "13bc641afd7fd95e09b260f69c1e4c91"
+    } ],
+    "purl" : "pkg:maven/commons-collections/commons-collections@3.2.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-collections-3.2.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-collections-3.2.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.2.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-49",
+    "group" : "commons-io",
+    "name" : "commons-io-2.14.0.jar",
+    "version" : "2.14.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a4c6e1f6c196339473cd2e1b037f0eb97c62755b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e35d1df7232568ed4b81d9a9ed94a0159b3ff6cf1915cc21eef5cb55d7b157a2"
+    }, {
+      "alg" : "MD5",
+      "content" : "4259c0bc6078e53a09883b521c1d53af"
+    } ],
+    "purl" : "pkg:maven/commons-io/commons-io@2.14.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-io-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-io-2.14.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.14.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-50",
+    "group" : "commons-lang",
+    "name" : "commons-lang-2.6.jar",
+    "version" : "2.6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "0ce1edb914c94ebc388f086c6827e8bdeec71ac2"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "50f11b09f877c294d56f24463f47d28f929cf5044f648661c0f0cfbae9a2f49c"
+    }, {
+      "alg" : "MD5",
+      "content" : "4d5c1693079575b362edf41500630bbd"
+    } ],
+    "purl" : "pkg:maven/commons-lang/commons-lang@2.6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-lang-2.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-lang-2.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-51",
+    "group" : "org.apache.commons",
+    "name" : "commons-collections4-4.4.jar",
+    "version" : "4.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "62ebe7544cb7164d87e0637a2a6a2bdc981395e8"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "1df8b9430b5c8ed143d7815e403e33ef5371b2400aadbe9bda0883762e0846d1"
+    }, {
+      "alg" : "MD5",
+      "content" : "4a37023740719b391f10030362c86be6"
+    } ],
+    "purl" : "pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-collections4-4.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-collections4-4.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "4.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-52",
+    "group" : "org.apache.commons",
+    "name" : "commons-compress-1.26.1.jar",
+    "version" : "1.26.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "44331c1130c370e726a2e1a3e6fba6d2558ef04a"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "27bb5d40f37c3bb7205b4a0540247df057715e9f6cbbd97d626ab8b50318bb04"
+    }, {
+      "alg" : "MD5",
+      "content" : "7af7d22a7280508327d809b183114a92"
+    } ],
+    "purl" : "pkg:maven/org.apache.commons/commons-compress@1.26.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-compress-1.26.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-compress-1.26.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.26.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-53",
+    "group" : "org.apache.commons",
+    "name" : "commons-lang3-3.12.0.jar",
+    "version" : "3.12.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d919d904486c037f8d193412da0c92e22a9fa24230b9d67a57855c5c31c7e94e"
+    }, {
+      "alg" : "MD5",
+      "content" : "19fe50567358922bdad277959ea69545"
+    } ],
+    "purl" : "pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-lang3-3.12.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-lang3-3.12.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.12.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-54",
+    "group" : "org.apache.commons",
+    "name" : "commons-math3-3.6.1.jar",
+    "version" : "3.6.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308"
+    }, {
+      "alg" : "MD5",
+      "content" : "5b730d97e4e6368069de1983937c508e"
+    } ],
+    "purl" : "pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "commons-math3-3.6.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "commons-math3-3.6.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.6.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-55",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpclient-4.5.14.jar",
+    "version" : "4.5.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "1194890e6f56ec29177673f2f12d0b8e627dec98"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+    }, {
+      "alg" : "MD5",
+      "content" : "2cb357c4b763f47e58af6cad47df6ba3"
+    } ],
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "httpclient-4.5.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "httpclient-4.5.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "4.5.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-56",
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpcore-4.4.16.jar",
+    "version" : "4.4.16",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "51cf043c87253c9f58b539c9f7e44c8894223850"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+    }, {
+      "alg" : "MD5",
+      "content" : "28d2cd9bf8789fd2ec774fb88436ebd1"
+    } ],
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "httpcore-4.4.16.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "httpcore-4.4.16.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "4.4.16"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-57",
+    "group" : "org.apache.logging.log4j",
+    "name" : "log4j-api-2.23.1.jar",
+    "version" : "2.23.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "9c15c29c526d9c6783049c0a77722693c66706e1"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "92ec1fd36ab3bc09de6198d2d7c0914685c0f7127ea931acc32fd2ecdd82ea89"
+    }, {
+      "alg" : "MD5",
+      "content" : "bee2e2dcbeeb983bdb6b71c9c3476b6a"
+    } ],
+    "purl" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.23.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "log4j-api-2.23.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "log4j-api-2.23.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.23.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-58",
+    "group" : "org.apache.maven.plugin-tools",
+    "name" : "maven-plugin-annotations-3.5.jar",
+    "version" : "3.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "403ab542cc88975c9fb41c0fba893d5b0d028c97"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d1e25a36f8b481cf55fe7d04a4f7aa354837b0e99ec7b7c1f8df35772611a1cb"
+    }, {
+      "alg" : "MD5",
+      "content" : "2c86a19e151273df9a35b19fd8a254dc"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven.plugin-tools/maven-plugin-annotations@3.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-plugin-annotations-3.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-plugin-annotations-3.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-59",
+    "group" : "org.apache.maven.plugins",
+    "name" : "maven-compiler-plugin-3.6.2.jar",
+    "version" : "3.6.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "09c0d81adb475b10d97927fd1c720128bc3bd52c"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "2630f725817a04a974a7c9bce924a973bb89e01dbbb54024092158fde3bea516"
+    }, {
+      "alg" : "MD5",
+      "content" : "f6f0915e098c0ae79ff5cbe35a833140"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin@3.6.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-compiler-plugin-3.6.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-compiler-plugin-3.6.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.6.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-60",
+    "group" : "org.apache.maven.shared",
+    "name" : "maven-shared-incremental-1.1.jar",
+    "version" : "1.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "9d017a7584086755445c0a260dd9a1e9eae161a5"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "61988e54486a5dc38f06c70fdae5b108556c63bd433697b9f4305fcdb30fa40e"
+    }, {
+      "alg" : "MD5",
+      "content" : "8a48e08aa027a7ac33fcc85054512021"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven.shared/maven-shared-incremental@1.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-shared-incremental-1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-shared-incremental-1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-61",
+    "group" : "org.apache.maven.shared",
+    "name" : "maven-shared-utils-3.1.0.jar",
+    "version" : "3.1.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "78d8798fe84d5e095577221d299e9a3c8e696bca"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "88e5334c4c29a6e81c74a1d814c54a9a3b1e4fc6560a95da196fe16928095471"
+    }, {
+      "alg" : "MD5",
+      "content" : "fae66822468c5f3e7853d1193f98b849"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven.shared/maven-shared-utils@3.1.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-shared-utils-3.1.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-shared-utils-3.1.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.1.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-62",
+    "group" : "org.apache.maven.wagon",
+    "name" : "wagon-provider-api-2.4.jar",
+    "version" : "2.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e40429d9dd849c5fe0bdf97062b1d9358d99826d"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f65d8d59d71bca18ffa259b5a6de67697bc65b9ff1142c7bb4417ab4b1cacd92"
+    }, {
+      "alg" : "MD5",
+      "content" : "882add48c16ceb068eacb5a19e636c1e"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven.wagon/wagon-provider-api@2.4?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "wagon-provider-api-2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "wagon-provider-api-2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-63",
+    "group" : "org.apache.maven",
+    "name" : "maven-aether-provider-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e0716af7536efeb1da5d90b12464fea2a6fb40ef"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "c74327cd5d7b137c8be3591c766271ac8ace1a617518f0410b8a95579f9839b0"
+    }, {
+      "alg" : "MD5",
+      "content" : "aad430d4111400e0d78c4e79eb0f9797"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-aether-provider@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-aether-provider-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-aether-provider-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-64",
+    "group" : "org.apache.maven",
+    "name" : "maven-archiver-3.1.1.jar",
+    "version" : "3.1.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "978c773786667a2f642b034e55fac72ad8215385"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f001bc8c7b2a378f50865799a85962dd9cc6d66f84a0bdeacc6333d72fd10788"
+    }, {
+      "alg" : "MD5",
+      "content" : "66d6f10af50840da5b7088bf0903356b"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-archiver@3.1.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-archiver-3.1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-archiver-3.1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.1.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-65",
+    "group" : "org.apache.maven",
+    "name" : "maven-artifact-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "7cd9aa7425c4a967bd39c2f6f61ab9535570fcb4"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "c6d5e244dd2329971f91b8df666ffe9e0b00a7dd014d6ee073b6f6cb82877f5c"
+    }, {
+      "alg" : "MD5",
+      "content" : "37818c6f0ef84b6338fdd1520e9831db"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-artifact@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-artifact-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-artifact-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-66",
+    "group" : "org.apache.maven",
+    "name" : "maven-compat-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "eba28d69a67413f5edcad8cfc826b9e0312a6d57"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "1e821ef210f502d541741e950399bf7db385dfbb07d6b09ab9d65ff3ff0567fc"
+    }, {
+      "alg" : "MD5",
+      "content" : "9e7496beab913c7eba402f4bf841ad33"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-compat@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-compat-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-compat-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-67",
+    "group" : "org.apache.maven",
+    "name" : "maven-core-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "27659b27346aff66d36e8ab16c7050220d875bca"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ac8e617f951ecde3c4f6bca4922fdd7861500fe7d58289f26ad5adac443075bc"
+    }, {
+      "alg" : "MD5",
+      "content" : "ee0bd82403231f5e268fd85044027221"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-core@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-core-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-core-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-68",
+    "group" : "org.apache.maven",
+    "name" : "maven-model-builder-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "f1e0b49ebe74335c11c93eec7549c65291053bc9"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "45a2c6ff76e12678eaf576bd7a68d028c5a5ba85fdc216a381ea86e9187e1b51"
+    }, {
+      "alg" : "MD5",
+      "content" : "98198ff5698781c9bf48b081bad49e62"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-model-builder@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-model-builder-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-model-builder-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-69",
+    "group" : "org.apache.maven",
+    "name" : "maven-model-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "490d7489dd73137f6afef52c5a3e465201c533bf"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "876a76b663db6c7326ad234afe430c473d3261a06b3284f31d5eb4889d1c3084"
+    }, {
+      "alg" : "MD5",
+      "content" : "40a2c5b201caf14b90faa27fd55f9515"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-model@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-model-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-model-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-70",
+    "group" : "org.apache.maven",
+    "name" : "maven-plugin-api-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "958b87b581d46e7958b39733b0cc600927e8521e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "469505f75b8526a338cfd7e0ec841655ae52ddbcc1b36482e97d72f52ce7d890"
+    }, {
+      "alg" : "MD5",
+      "content" : "cbe2f575d378fc6163c157a0e6af42a3"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-plugin-api@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-plugin-api-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-plugin-api-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-71",
+    "group" : "org.apache.maven",
+    "name" : "maven-repository-metadata-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "94475fff77103ae46a1b02284a0950ed74497fc3"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "c867b4e075a4548bf27422542f96b159f94c4e7ffaaf6427b10433afd6a3a38c"
+    }, {
+      "alg" : "MD5",
+      "content" : "2b5e8628b7d1d32829437dd1dc66f97a"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-repository-metadata@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-repository-metadata-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-repository-metadata-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-72",
+    "group" : "org.apache.maven",
+    "name" : "maven-settings-builder-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "7b87eb83abd6efa77e51882bbebc1b316739c681"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ac0e62e26b7f690e265ba75667531973b8a2da12b3b0ff102a612f05b42b6faf"
+    }, {
+      "alg" : "MD5",
+      "content" : "9446d7885d57cd95170f1c2cccd89564"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-settings-builder@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-settings-builder-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-settings-builder-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-73",
+    "group" : "org.apache.maven",
+    "name" : "maven-settings-3.0.5.jar",
+    "version" : "3.0.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "8e98d918ba2b41175d72307853f792e3bded4fc7"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d8f9f237afc21d8202eedffa29cbf6e9d46c78b3c22b217d16267216988221b9"
+    }, {
+      "alg" : "MD5",
+      "content" : "a608e0ce2bffaf9f89418e657746c894"
+    } ],
+    "purl" : "pkg:maven/org.apache.maven/maven-settings@3.0.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "maven-settings-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "maven-settings-3.0.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.0.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-74",
+    "group" : "org.apache.xmlbeans",
+    "name" : "xmlbeans-5.1.1.jar",
+    "version" : "5.1.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "48a369df0eccb509d46203104e4df9cb00f0f68b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "5f484a78bed71cbffe3709678b6bdd3463781a7c61c6d9872330aecbf150762a"
+    }, {
+      "alg" : "MD5",
+      "content" : "6f137af5334fbd77a2d64f5de8bf6ff6"
+    } ],
+    "purl" : "pkg:maven/org.apache.xmlbeans/xmlbeans@5.1.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "xmlbeans-5.1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "xmlbeans-5.1.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "5.1.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-75",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-archiver-3.3.jar",
+    "version" : "3.3",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e7e35d53a00a16984aae43d3025d6200523d6a59"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e361ea5331b86a6e5c19557035834773735fa38410f3106c368330583cd31634"
+    }, {
+      "alg" : "MD5",
+      "content" : "45b676f018ab436f5bd4576a3c8684d7"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-archiver@3.3?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-archiver-3.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-archiver-3.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.3"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-76",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-classworlds-2.4.jar",
+    "version" : "2.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ef38ff5c25f83a4a02fcd9843d85f3e47012873e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "259d528a29722cab6349d7e7d432e3fd4877c087ffcb04985a6612e97023bba8"
+    }, {
+      "alg" : "MD5",
+      "content" : "4b6ec19d96af7d901c1aad7d2415d498"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-classworlds@2.4?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-classworlds-2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-classworlds-2.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-77",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-compiler-api-2.8.2.jar",
+    "version" : "2.8.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b422e2a37528f318e9cc7be56b97762218bc3c22"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "643b756033ee640e681a62b4a78de1f11b2aceb129f4331d27809fa791d9685e"
+    }, {
+      "alg" : "MD5",
+      "content" : "a0cb3d1f54fe958ac6bece061ac09bb6"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-compiler-api@2.8.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-compiler-api-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-compiler-api-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.8.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-78",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-compiler-javac-2.8.2.jar",
+    "version" : "2.8.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "de0463391cef3d58448d465351be9eb9fb090e1b"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "0d83c0bd17953e929f4a6b28cb809a5a79e4fbae82340cfe93785f10ae0363e4"
+    }, {
+      "alg" : "MD5",
+      "content" : "bbb6a9e217ccb0306ecda19a1ca21753"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-compiler-javac@2.8.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-compiler-javac-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-compiler-javac-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.8.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-79",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-compiler-manager-2.8.2.jar",
+    "version" : "2.8.2",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ff249d5bc58eafab1f462aa044b52ae6f69a9821"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "56ccc3d5815133308b2edee65b8b0b041db14913f7459a46ab1e722e39b70d61"
+    }, {
+      "alg" : "MD5",
+      "content" : "c03840deb0a9cb9745600f42f6cd6606"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-compiler-manager@2.8.2?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-compiler-manager-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-compiler-manager-2.8.2.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.8.2"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-80",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-component-annotations-1.5.5.jar",
+    "version" : "1.5.5",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c72f2660d0cbed24246ddb55d7fdc4f7374d2078"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "4df7a6a7be64b35bbccf60b5c115697f9ea3421d22674ae67135dde375fcca1f"
+    }, {
+      "alg" : "MD5",
+      "content" : "ef37dcdb84030422db428b63c4354e5b"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-component-annotations@1.5.5?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-component-annotations-1.5.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-component-annotations-1.5.5.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.5.5"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-81",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-interpolation-1.14.jar",
+    "version" : "1.14",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c88dd864fe8b8256c25558ce7cd63be66ba07693"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "7fc63378d3e84663619b9bedace9f9fe78b276c2be3c62ca2245449294c84176"
+    }, {
+      "alg" : "MD5",
+      "content" : "f92db8b194fc417d72cc74c428afacf8"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-interpolation@1.14?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-interpolation-1.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-interpolation-1.14.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.14"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-82",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-io-2.7.1.jar",
+    "version" : "2.7.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e1cce34eca8f2c5fc053e1a15d1405984b527b32"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "20aa9dd74536ad9ce65d1253b5c4386747483a7a65c48008c9affb51854539cf"
+    }, {
+      "alg" : "MD5",
+      "content" : "34115f3dad3322f24be2682c45302540"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-io@2.7.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-io-2.7.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-io-2.7.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.7.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-83",
+    "group" : "org.codehaus.plexus",
+    "name" : "plexus-utils-2.0.6.jar",
+    "version" : "2.0.6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3a20c424a712a7c02b02af61dcad5f001b29a9fd"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "8b909f4ca9788647942f883d4e559bcc642123f7c6bcd3846983a2e465469c33"
+    }, {
+      "alg" : "MD5",
+      "content" : "64523c08c852c1ffb7650f207baca314"
+    } ],
+    "purl" : "pkg:maven/org.codehaus.plexus/plexus-utils@2.0.6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-utils-2.0.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-utils-2.0.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.0.6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-84",
+    "group" : "org.eclipse.packagedrone",
+    "name" : "org.eclipse.packagedrone.utils.rpm-0.14.6.jar",
+    "version" : "0.14.6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "15ee9e8cf562a1f16228817abf990b7a3c6b87ff"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "7f50c7f5e0a6302fd8e398ef6d917f3f8a9ab00f6923e414302714aee80dd071"
+    }, {
+      "alg" : "MD5",
+      "content" : "23020f1e71112d25d5850603c7e7fdef"
+    } ],
+    "purl" : "pkg:maven/org.eclipse.packagedrone/utils.rpm@0.14.6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "org.eclipse.packagedrone.utils.rpm-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "org.eclipse.packagedrone.utils.rpm-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.14.6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-85",
+    "group" : "org.eclipse.packagedrone",
+    "name" : "org.eclipse.packagedrone.utils.security-0.14.6.jar",
+    "version" : "0.14.6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d2498298a2012676e61f30c7a7e75b31785fe1cd"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "94cc4d78bab5f1143423b730e4d82e71d05d282ae4358ecb5bc5b00f33bea3a7"
+    }, {
+      "alg" : "MD5",
+      "content" : "a296829427d69d9d8d95fc9f6abb4e6e"
+    } ],
+    "purl" : "pkg:maven/org.eclipse.packagedrone/utils.security@0.14.6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "org.eclipse.packagedrone.utils.security-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "org.eclipse.packagedrone.utils.security-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.14.6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-86",
+    "group" : "org.eclipse.packagedrone",
+    "name" : "org.eclipse.packagedrone.utils-0.14.6.jar",
+    "version" : "0.14.6",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "404682b8727a63250bbf8aeae7db3f1c24770eb5"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "2644f00cfebe327eebf37e2a3e7e5e107c2e4d18e409fb27f1bbab42ae37b510"
+    }, {
+      "alg" : "MD5",
+      "content" : "c5272dccf447a42f1da5540288bf3d77"
+    } ],
+    "purl" : "pkg:maven/org.eclipse.packagedrone/utils@0.14.6?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "org.eclipse.packagedrone.utils-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "org.eclipse.packagedrone.utils-0.14.6.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.14.6"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-87",
+    "group" : "org.iq80.snappy",
+    "name" : "snappy-0.4.jar",
+    "version" : "0.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a42b2d92a89efd35bb14738000dabcac6bd07a8d"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "46a0c87d504ce9d6063e1ff6e4d20738feb49d8abf85b5071a7d18df4f11bac9"
+    }, {
+      "alg" : "MD5",
+      "content" : "f0792d1dbe7f90d8b34c7c19961e0073"
+    } ],
+    "purl" : "pkg:maven/org.iq80.snappy/snappy@0.4?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "snappy-0.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "snappy-0.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "0.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-88",
+    "group" : "org.json",
+    "name" : "json-20231013.jar",
+    "version" : "20231013",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e22e0c040fe16f04ffdb85d851d77b07fc05ea52"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "0f18192df289114e17aa1a0d0a7f8372cc9f5c7e4f7e39adcf8906fe714fa7d3"
+    }, {
+      "alg" : "MD5",
+      "content" : "1a0702c57783ce9e948252c34644f328"
+    } ],
+    "purl" : "pkg:maven/org.json/json@20231013?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "json-20231013.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "json-20231013.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "20231013"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-89",
+    "group" : "org.slf4j",
+    "name" : "jcl-over-slf4j-1.7.36.jar",
+    "version" : "1.7.36",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d877e195a05aca4a2f1ad2ff14bfec1393af4b5e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ab57ca8fd223772c17365d121f59e94ecbf0ae59d08c03a3cb5b81071c019195"
+    }, {
+      "alg" : "MD5",
+      "content" : "8065610cde33ed9fd5d34367912c1938"
+    } ],
+    "licenses" : [ {
+      "expression" : "((LicenseRef-unknown-Apache-License-2.0))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "jcl-over-slf4j-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "jcl-over-slf4j-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.7.36"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-90",
+    "group" : "org.slf4j",
+    "name" : "log4j-over-slf4j-1.7.36.jar",
+    "version" : "1.7.36",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "2a753acda077203a4794f106871bb237501c9a53"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "0a7e032bf5bcdd5b2bf8bf2e5cf02c5646f2aa6fee66933b8150dbe84e651e8a"
+    }, {
+      "alg" : "MD5",
+      "content" : "84f330e9fc7173791d253773b3575a63"
+    } ],
+    "purl" : "pkg:maven/org.slf4j/log4j-over-slf4j@1.7.36?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "log4j-over-slf4j-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "log4j-over-slf4j-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.7.36"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-91",
+    "group" : "org.slf4j",
+    "name" : "slf4j-api-1.7.36.jar",
+    "version" : "1.7.36",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6c62681a2f655b49963a5983b8b0950a6120ae14"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+    }, {
+      "alg" : "MD5",
+      "content" : "872da51f5de7f3923da4de871d57fd85"
+    } ],
+    "licenses" : [ {
+      "expression" : "((LicenseRef-unknown-MIT-License))",
+      "acknowledgement" : "concluded"
+    } ],
+    "purl" : "pkg:maven/org.slf4j/slf4j-api@1.7.36?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "slf4j-api-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "slf4j-api-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.7.36"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-92",
+    "group" : "org.slf4j",
+    "name" : "slf4j-simple-1.7.36.jar",
+    "version" : "1.7.36",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a41f9cfe6faafb2eb83a1c7dd2d0dfd844e2a936"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "2f39bed943d624dfa8f4102d0571283a10870b6aa36f197a8a506f147010c10f"
+    }, {
+      "alg" : "MD5",
+      "content" : "fd4a5fa54910b5ee561f639c903cf34a"
+    } ],
+    "purl" : "pkg:maven/org.slf4j/slf4j-simple@1.7.36?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "slf4j-simple-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "slf4j-simple-1.7.36.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.7.36"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-93",
+    "group" : "org.sonatype.aether",
+    "name" : "aether-api-1.13.1.jar",
+    "version" : "1.13.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e48292eae5e14ec44978aa53debb1af7ddd6df93"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "ae8dc80232771f8913febfa410c5719e9ba8ded81fb99788e214fd676dbbe13f"
+    }, {
+      "alg" : "MD5",
+      "content" : "6438f4b31d3f3220d88edc16abdc3721"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.aether/aether-api@1.13.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "aether-api-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "aether-api-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.13.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-94",
+    "group" : "org.sonatype.aether",
+    "name" : "aether-impl-1.13.1.jar",
+    "version" : "1.13.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ba2656934fa7c0f20c0c3882873dc705e16ae201"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "865511994805827e88f327944a089142bb7f3d88cde271ba3dceb732cb137a93"
+    }, {
+      "alg" : "MD5",
+      "content" : "4236e1586cfdd28f032bcf71293f6bb1"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.aether/aether-impl@1.13.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "aether-impl-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "aether-impl-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.13.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-95",
+    "group" : "org.sonatype.aether",
+    "name" : "aether-spi-1.13.1.jar",
+    "version" : "1.13.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c62b02d2a5a3939fded72039dd83e5b8ed42d45e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "d5de4e299be5a79feb1dbe8ff3814034c6e44314b4c00b92ffa8d97576ded5b3"
+    }, {
+      "alg" : "MD5",
+      "content" : "3f1881f890062e779fa27aa9a6789ceb"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.aether/aether-spi@1.13.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "aether-spi-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "aether-spi-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.13.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-96",
+    "group" : "org.sonatype.aether",
+    "name" : "aether-util-1.13.1.jar",
+    "version" : "1.13.1",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c8487ceb499b9ced96694731810acd1a70e13aca"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "687799a0ce988bee9e8eb9ae0ba870300adc0114248ad4a4327bdb625d27e010"
+    }, {
+      "alg" : "MD5",
+      "content" : "119757ef761de4a43c763622dcb1f56e"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.aether/aether-util@1.13.1?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "aether-util-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "aether-util-1.13.1.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.13.1"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-97",
+    "group" : "org.sonatype.plexus",
+    "name" : "plexus-cipher-1.4.jar",
+    "version" : "1.4",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "50ade46f23bb38cd984b4ec560c46223432aac38"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "5a15fdba22669e0fdd06e10dcce6320879e1f7398fbc910cd0677b50672a78c4"
+    }, {
+      "alg" : "MD5",
+      "content" : "7b2d6fcf0d5800d5b1ce09d98d98dcaf"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.plexus/plexus-cipher@1.4?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-cipher-1.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-cipher-1.4.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.4"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-98",
+    "group" : "org.sonatype.plexus",
+    "name" : "plexus-sec-dispatcher-1.3.jar",
+    "version" : "1.3",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "dedc02034fb8fcd7615d66593228cb71709134b4"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "3b0559bb8432f28937efe6ca193ef54a8506d0075d73fd7406b9b116c6a11063"
+    }, {
+      "alg" : "MD5",
+      "content" : "53160199f5667de3fca69b723173639b"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.plexus/plexus-sec-dispatcher@1.3?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "plexus-sec-dispatcher-1.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "plexus-sec-dispatcher-1.3.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "1.3"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-99",
+    "group" : "org.sonatype.sisu",
+    "name" : "sisu-inject-bean-2.3.0.jar",
+    "version" : "2.3.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "4767ee22f0b84fc0fe3af2095c30bfbdafba9459"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "75819b29737c2bee1bfbda1011d455c7036738e0ef32ffbf85ba1d8fa157ceb2"
+    }, {
+      "alg" : "MD5",
+      "content" : "27a128e32326472ebfec3a7b8cb2cdf9"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.sisu/sisu-inject-bean@2.3.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "sisu-inject-bean-2.3.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "sisu-inject-bean-2.3.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.3.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-100",
+    "group" : "org.sonatype.sisu",
+    "name" : "sisu-inject-plexus-2.3.0.jar",
+    "version" : "2.3.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "7d8ecdce497bf361b83cfbc890670ca50d6ec299"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "bf9083fb846993689409b2bdbc735048e53bac6cc32707cde7ef84817b6e9365"
+    }, {
+      "alg" : "MD5",
+      "content" : "5c35e512b479cc0d1c830c0cc9452504"
+    } ],
+    "purl" : "pkg:maven/org.sonatype.sisu/sisu-inject-plexus@2.3.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "sisu-inject-plexus-2.3.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "sisu-inject-plexus-2.3.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "2.3.0"
+    } ]
+  }, {
+    "type" : "library",
+    "bom-ref" : "https://metaeffekt.comComponent-101",
+    "group" : "org.xerial",
+    "name" : "sqlite-jdbc-3.46.0.0.jar",
+    "version" : "3.46.0.0",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "aa79a7b3fd17b70ca7cb4cc894d5c8488c60aabe"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e697df15be3f95219d80773c5f1002030e33e932adda186c1c86fd51df6691a9"
+    }, {
+      "alg" : "MD5",
+      "content" : "e711fe45b2095575aa7fc25866549e61"
+    } ],
+    "purl" : "pkg:maven/org.xerial/sqlite-jdbc@3.46.0.0?type=jar",
+    "properties" : [ {
+      "name" : "Path",
+      "value" : "sqlite-jdbc-3.46.0.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.id",
+      "value" : "sqlite-jdbc-3.46.0.0.jar"
+    }, {
+      "name" : "com.metaeffekt.component.version",
+      "value" : "3.46.0.0"
+    } ]
+  } ]
+}

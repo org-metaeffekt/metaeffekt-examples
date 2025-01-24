@@ -54,7 +54,7 @@ jobs:
         uses: ./.github/actions/analyzed/pom-to-inventory
         with:
           artifact-id: ${{ inputs.artifact }}
-          target-directory: ../${{ inputs.artifact }}-0.134.0/01-analyzed
-          target-inventory: ${{ inputs.artifact }}-0.134.0-analyzed.xls
+          target-directory: ../../../${{ inputs.artifact }}-0.135.0/01-analyzed
+          target-inventory: ${{ inputs.artifact }}-0.135.0-analyzed.xls
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

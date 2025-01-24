@@ -27,9 +27,9 @@ runs:
       shell: bash
       run: |
         mvn -f analyzed_extract-from-pom.xml process-resources \
-        -DdependencyArtifactId=${{ inputs.artifact-id }} \        
         -DtargetInventoryDir=${{ inputs.target-directory }} \
-        -DtargetInventoryPath=${{ inputs.target-inventory }}
+        -DtargetInventoryPath=${{ inputs.target-inventory }} \
+        -DdependencyArtifactId=${{ inputs.artifact-id }}
       working-directory: processors
 
     # Provides the extracted inventory path as an output.

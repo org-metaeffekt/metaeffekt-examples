@@ -31,11 +31,10 @@
                 <version>3.1.2</version>
                 <executions>
                     <execution>
-                        <phase>process-resources</phase>
+                        <phase>compile</phase>
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
-
                         <configuration>
                             <outputDirectory>/tmp/analyzed/extract/dependency</outputDirectory>
                         </configuration>

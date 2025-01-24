@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>analyzed_extract-from-pom</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>../../analyzed_extract-from-pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ae-artifact-analysis-dependencies</artifactId>
+    <packaging>jar</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.metaeffekt.core</groupId>
+                <artifactId>ae-inventory-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- PLUGINS -->
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-artifact-analysis-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-mirror-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-inventory-enrichment-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-inventory-conversion-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-kotlin-scripting-maven-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-tmd-packaging-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.metaeffekt.artifact.analysis</groupId>
+            <artifactId>ae-asset-descriptor-maven-plugin</artifactId>
+            <version>${ae.artifact.analysis.version}</version>
+        </dependency>
+    </dependencies>
+</project>

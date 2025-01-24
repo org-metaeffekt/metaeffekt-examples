@@ -29,7 +29,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.1.2</version>
-
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
@@ -89,7 +88,7 @@
                             <!-- USE MORE STRICT CHECK FOR DISTRIBUTION -->
                             <failOnError>true</failOnError>
                             <failOnBanned>true</failOnBanned>
-                            <failOnInternal>false}</failOnInternal>
+                            <failOnInternal>false</failOnInternal>
                             <failOnUnknownVersion>false</failOnUnknownVersion>
                             <failOnUnknown>false</failOnUnknown>
                             <failOnUpgrade>false</failOnUpgrade>

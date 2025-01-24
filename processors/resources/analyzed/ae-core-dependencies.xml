@@ -10,7 +10,7 @@
         <relativePath>../../analyzed_extract-from-pom.xml</relativePath>
     </parent>
 
-    <artifactId>ae-core</artifactId>
+    <artifactId>ae-core-dependencies</artifactId>
     <packaging>jar</packaging>
 
     <build>

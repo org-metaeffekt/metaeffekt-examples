@@ -23,7 +23,7 @@ runs:
       shell: bash
       run: |
         mvn -f reported_create-vuln-report.xml process-resources \
-        -DassetDescriptorFile=${{ inputs.asset-descriptor }} \
+        -DassetDescriptorFile=${{ inputs.asset-descriptor }}
       working-directory: processors
 
     - name: Transfer target report

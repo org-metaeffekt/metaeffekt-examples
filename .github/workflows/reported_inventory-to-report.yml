@@ -55,7 +55,7 @@ jobs:
         id: create-report
         uses: ./.github/actions/reported/create-report
         with:
-          asset-descriptor: resources/reported/${{ steps.process-input.outputs.asset-name }}-descriptor.yml
+          asset-descriptor: resources/reported/${{ steps.process-input.outputs.asset-name }}-descriptor.yaml
           output-report: ../${{ steps.process-input.outputs.asset-name }}/05-reported/${{ steps.process-input.outputs.asset-name }}-report.pdf
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

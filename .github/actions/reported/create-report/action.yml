@@ -36,6 +36,7 @@ runs:
           exit 1
         fi
       
+        mkdir -p ${{ inputs.output-report }}
         mv "$file" ${{ inputs.output-report }}
         echo "report file found"
       working-directory: processors

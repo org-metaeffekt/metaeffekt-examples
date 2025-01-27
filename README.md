@@ -34,7 +34,8 @@ are available. Larger and more complex workflows are defined by either connectin
 workflows or made up of many composite actions, defined in the .github/actions directory.
 
 To easily understand how the workflows are built exactly, we would recommend taking a look at the inventory-to-cyclonedx workflow,
-as it only calls a small number of composite actions.
+as it only calls a small number of composite actions. For a better understanding of multiple chained workflows, take a look at the 
+Single Full Cascade workflow.
 
 ## Evaluation Process
 

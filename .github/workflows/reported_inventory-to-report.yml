@@ -1,4 +1,5 @@
 name: Enriched inventory to report
+# Converts an inventory enriched with vulnerabilities into a pdf report.
 
 on:
   workflow_dispatch:
@@ -6,18 +7,13 @@ on:
       inventory:
         description: "The input inventory path."
         required: true
-        default: keycloak-25.0.4/04-scanned/keycloak-25.0.4-scanned.xls
+        default: keycloak-25.0.4/03-advised/keycloak-25.0.4-advised.xls
 
   workflow_call:
     inputs:
       inventory:
         description: "The input inventory path."
         required: true
-        type: string
-
-      suffix:
-        description: "File suffix to differentiate this outputs from the standard name."
-        required: false
         type: string
 
     outputs:
@@ -59,7 +55,7 @@ jobs:
         id: create-report
         uses: ./.github/actions/reported/create-report
         with:
-          input-document-descriptor: resources/document-descriptor/${{ steps.process-input.outputs.asset-name }}.yml
-          output-report: ../${{ steps.process-input.outputs.asset-name }}/05-reported/${{ steps.process-input.outputs.asset-name }}-report${{ inputs.suffix }}.pdf
+          asset-descriptor: resources/document-descriptor/${{ steps.process-input.outputs.asset-name }}-descriptor.yml
+          output-report: ../${{ steps.process-input.outputs.asset-name }}/05-reported/${{ steps.process-input.outputs.asset-name }}-report.pdf
 
       - uses: ./.github/actions/util/push-to-repository # Configures git and pushes changes.

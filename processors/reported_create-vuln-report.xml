@@ -11,12 +11,12 @@
     </parent>
 
     <artifactId>reported_create-vuln-report</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <assetDescriptorFile></assetDescriptorFile>
+        <ae.dita.version>0.29.0</ae.dita.version>
     </properties>
-
-    <!-- FIXME: Currently not running due to asset-descriptor changes -->
 
     <build>
         <plugins>
@@ -26,17 +26,93 @@
                 <version>${ae.artifact.analysis.version}</version>
                 <executions>
                     <execution>
-                        <phase>process-resources</phase>
-                        <id>generate-documents</id>
+                        <id>default-descriptor</id>
                         <goals>
                             <goal>generate-documents</goal>
                         </goals>
+                        <phase>process-resources</phase>
                         <configuration>
                             <assetDescriptorFile>${assetDescriptorFile}</assetDescriptorFile>
                             <targetReportDir>/tmp/reported</targetReportDir>
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>retrieve-branding</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <outputDirectory>/tmp/reported/dita</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <!-- Use the metaeffekt standard branding -->
+                                    <groupId>org.metaeffekt.dita</groupId>
+                                    <artifactId>ae-dita-branding</artifactId>
+                                    <type>zip</type>
+                                    <classifier>resources</classifier>
+                                    <version>${ae.dita.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.metaeffekt.dita</groupId>
+                <artifactId>ae-dita-maven-plugin</artifactId>
+                <version>${ae.dita.version}</version>
+                <executions>
+                    <execution>
+                        <id>install-dita-toolkit</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>ensure-dita-toolkit</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>aggregate-dita-content</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>aggregate-content</goal>
+                        </goals>
+                        <configuration>
+                            <ditaSourceDir>/tmp/reported/dita</ditaSourceDir>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-documentation</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>generate-documentation</goal>
+                        </goals>
+                        <configuration>
+                            <documentItems>
+                                <documentItem>
+                                    <ditaMap>map_vulnerability-report-bookmap.ditamap</ditaMap>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <artifactClassifier>en</artifactClassifier>
+                                </documentItem>
+                            </documentItems>
+                            <ditaGenerationDir>/tmp/reported/</ditaGenerationDir>
+                            <ditaBuildDir>/tmp/reported/</ditaBuildDir>
+                            <ditaTargetDir>/tmp/reported/target</ditaTargetDir>
+                            <ditaCustomizationDir>/tmp/reported/dita/ae-dita-branding</ditaCustomizationDir>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <ditaSourceGenDir>${dita.source.dir}/report</ditaSourceGenDir>
+                    <ditaCleanTemp>false</ditaCleanTemp>
+                </configuration>
             </plugin>
         </plugins>
     </build>

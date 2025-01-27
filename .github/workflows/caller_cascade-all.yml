@@ -1,26 +1,73 @@
 name: Repository Cascade [Caller]
 
+# This caller workflow implements almost all other actions/workflows in this repository. It calls the relevant
+# workflows to fill all stages for all assets, ultimately filling the entire repository with automatically generated documents.
+
 on:
   workflow_dispatch:
 
 jobs:
-  generate-boms:
-    strategy:
-      matrix:
-        inventory: [
-          example-0.1.0/01-analyzed/example-0.1.0-analyzed.xls,
-          keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xlsx,
-          keycloak-cli-25.0.2/01-analyzed/keycloak-cli-25.0.2-analyzed.xlsx,
-          nginx-1.27.3/01-analyzed/nginx-1.27.3-analyzed.xls,
-          apache-httpd-2.4.62/01-analyzed/apache-httpd-2.4.62-analyzed.xls,
-          openssl-1.1.1i/01-analyzed/openssl-1.1.1o-analyzed.xlsx,
-          openssl-3.0.6/01-analyzed/openssl-3.0.6-analyzed.xlsx]
+  generate-ae-dita:
     uses: ./.github/workflows/util_single-cascade.yml
     with:
-      inventory: ${{ matrix.inventory }}
+      inventory: ae-dita-0.135.0/01-analyzed/ae-dita-0.135.0-analyzed.xls
+
+  generate-ae-artifact-analysis:
+    needs: generate-ae-dita
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: ae-artifact-analysis-0.135.0/01-analyzed/ae-artifact-analysis-0.135.0-analyzed.xls
+
+  generate-ae-core:
+    needs: generate-ae-artifact-analysis
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: ae-core-0.135.0/01-analyzed/ae-core-0.135.0-analyzed.xls
+
+  generate-example:
+    needs: generate-ae-core
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: example-0.1.0/01-analyzed/example-0.1.0-analyzed.xls
+
+  generate-keycloak:
+    needs: generate-example
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: keycloak-25.0.4/01-analyzed/keycloak-25.0.4-analyzed.xlsx
+
+  generate-keycloak-cli:
+    needs: generate-keycloak
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: keycloak-cli-25.0.2/01-analyzed/keycloak-cli-25.0.2-analyzed.xlsx
+
+  generate-nginx:
+    needs: generate-keycloak-cli
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: nginx-1.27.3/01-analyzed/nginx-1.27.3-analyzed.xls
+
+  generate-apache-httpd:
+    needs: generate-nginx
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: apache-httpd-2.4.62/01-analyzed/apache-httpd-2.4.62-analyzed.xls
+
+  generate-openssl-old:
+    needs: generate-apache-httpd
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: openssl-1.1.1i/01-analyzed/openssl-1.1.1o-analyzed.xlsx
+
+  generate-openssl-current:
+    needs: generate-openssl-old
+    uses: ./.github/workflows/util_single-cascade.yml
+    with:
+      inventory: openssl-3.0.6/01-analyzed/openssl-3.0.6-analyzed.xlsx
 
   generate-sbomqs-scores:
-    needs: generate-boms
+    needs: generate-openssl-current
     uses: ./.github/workflows/util_generate-sbomqs-score.yml
 
 

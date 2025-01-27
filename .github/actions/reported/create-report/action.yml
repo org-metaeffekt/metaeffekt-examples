@@ -6,10 +6,14 @@ inputs:
     description: The asset descriptor file containing all necessary parameters.
     required: true
 
+  output-report:
+    description: The output report file path.
+    required: true
+
 outputs:
   report:
     description: The file path of the final report.
-    value: ${{ steps.set-output.outputs.enriched-inventory }}
+    value: ${{ steps.set-output.outputs.report }}
 
 runs:
   using: composite
@@ -19,8 +23,19 @@ runs:
       shell: bash
       run: |
         mvn -f reported_create-vuln-report.xml process-resources \
-        -DassetDescriptorFile=${{ inputs.asset-descriptor }}
+        -DassetDescriptorFile=${{ inputs.asset-descriptor }} \
       working-directory: processors
+
+    - name: Transfer target report
+      shell: bash
+      run: |
+        file=$(find /tmp/reported/target/ -type f -name '*.ditamap' | head -n 1)
+      
+        if [ -z "$file" ]; then
+          exit 1
+        fi
+      
+        mv "$file" ${{ inputs.output-report }}        
 
     # Provides the generated report path as an output.
     - name: Set output
@@ -29,4 +44,4 @@ runs:
       run: |
         inventory_output_clean="${{ inputs.output-inventory }}"
         inventory_output_clean="${inventory_output_clean#../}"
-        echo "enriched-inventory=${inventory_output_clean}" >> $GITHUB_OUTPUT
+        echo "report=${inventory_output_clean}" >> $GITHUB_OUTPUT

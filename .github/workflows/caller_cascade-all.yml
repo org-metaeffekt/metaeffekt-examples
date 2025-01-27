@@ -10,7 +10,7 @@ jobs:
   generate-ae-dita:
     uses: ./.github/workflows/util_single-cascade.yml
     with:
-      inventory: ae-dita-0.135.0/01-analyzed/ae-dita-0.135.0-analyzed.xls
+      inventory: ae-dita-0.29.0/01-analyzed/ae-dita-0.29.0-analyzed.xls
 
   generate-ae-artifact-analysis:
     needs: generate-ae-dita

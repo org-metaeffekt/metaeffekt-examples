@@ -36,6 +36,10 @@ runs:
           exit 1
         fi
       
+        if [-f "${{ inputs.output-report }}"]; then
+          rm -r ${{ inputs.output-report }}
+        fi
+
         mkdir -p ${{ inputs.output-report }}
         mv "$file" ${{ inputs.output-report }}
         echo "report file found"

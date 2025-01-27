@@ -1,0 +1,31 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Organization URL: https://metaeffekt.com\nBom iteration: 1",
+    "created" : "2025-01-27T13:21:56Z",
+    "creators" : [ "Organization: {metaeffekt} GmbH", "Tool: {metaeffekt} Kontinuum CycloneDx Exporter" ],
+    "licenseListVersion" : "3.25"
+  },
+  "name" : "A SPDX document",
+  "dataLicense" : "CC0-1.0",
+  "documentNamespace" : "https://metaeffekt.com/spdx/doc/1b4cf23d-a617-44bf-a168-6fc2e3943589",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-gnrtd0",
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "filesAnalyzed" : true,
+    "homepage" : "NOASSERTION",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "apache-httpd-2.4.62",
+    "primaryPackagePurpose" : "LIBRARY",
+    "sourceInfo" : "NOASSERTION",
+    "versionInfo" : "2.4.62"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-gnrtd0"
+  } ]
+}

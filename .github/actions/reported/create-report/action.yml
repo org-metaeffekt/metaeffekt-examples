@@ -29,15 +29,15 @@ runs:
     - name: Transfer target report
       shell: bash
       run: |
-        file=$(find /tmp/reported/target/ -type f -name '*.ditamap' | head -n 1)
+        file=$(find /tmp/reported/target/ -type f -name '*.pdf' | head -n 1)
       
         if [ -z "$file" ]; then
-          echo "ditamap file not found"
+          echo "report file not found"
           exit 1
         fi
       
         mv "$file" ${{ inputs.output-report }}
-        echo "ditamap file found"
+        echo "report file found"
 
     # Provides the generated report path as an output.
     - name: Set output

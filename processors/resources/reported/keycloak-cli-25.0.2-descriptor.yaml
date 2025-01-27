@@ -1,0 +1,23 @@
+inventories:
+  - "reference-keycloak-cli":
+      file: "../../../keycloak-cli-25.0.2/03-advised/keycloak-cli-25.0.2-advised.xls"
+      type: INPUT
+  - "keycloak-cli":
+      file: "../../../keycloak-cli-25.0.2/03-advised/keycloak-cli-25.0.2-advised.xls"
+      type: INPUT
+
+documents:
+  - inventories:
+      - inventoryRef: "keycloak-cli"
+        assetName: "keycloak-cli"
+        assetVersion: "25.0.2"
+        reportContextTitle: "keycloak-cli"
+        reportContext: "keycloak-cli"
+        referenceInventory: "reference-keycloak-cli"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

@@ -19,6 +19,5 @@ documents:
     params:
       "targetLicensesDir": "license"
       "targetComponentDir": "component"
-      "securityPolicyFile": "security-policy-report.json"
       "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
     language: "en"

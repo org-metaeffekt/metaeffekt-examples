@@ -1,0 +1,23 @@
+inventories:
+  - "reference-nginx":
+      file: "../../../nginx-1.27.3/03-advised/nginx-1.27.3-advised.xls"
+      type: INPUT
+  - "nginx":
+      file: "../../../nginx-1.27.3/03-advised/nginx-1.27.3-advised.xls"
+      type: INPUT
+
+documents:
+  - inventories:
+      - inventoryRef: "nginx"
+        assetName: "nginx"
+        assetVersion: "1.27.3"
+        reportContextTitle: "nginx"
+        reportContext: "nginx"
+        referenceInventory: "reference-nginx"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

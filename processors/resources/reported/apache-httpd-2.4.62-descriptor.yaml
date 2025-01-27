@@ -1,0 +1,23 @@
+inventories:
+  - "reference-apache-httpd":
+      file: "../../../apache-httpd-2.4.62/03-advised/apache-httpd-2.4.62-advised.xls"
+      type: INPUT
+  - "apache-httpd":
+      file: "../../../apache-httpd-2.4.62/03-advised/apache-httpd-2.4.62-advised.xls"
+      type: INPUT
+
+documents:
+  - inventories:
+      - inventoryRef: "apache-httpd"
+        assetName: "apache-httpd"
+        assetVersion: "2.4.62"
+        reportContextTitle: "apache-httpd"
+        reportContext: "apache-httpd"
+        referenceInventory: "reference-apache-httpd"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

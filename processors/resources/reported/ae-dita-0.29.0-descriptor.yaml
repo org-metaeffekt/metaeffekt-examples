@@ -1,0 +1,23 @@
+inventories:
+  - "reference-ae-dita":
+      file: "../../../ae-dita-0.29.0/03-advised/ae-dita-0.29.0-advised.xls"
+      type: INPUT
+  - "ae-dita":
+      file: "../../../ae-dita-0.29.0/03-advised/ae-dita-0.29.0-advised.xls"
+      type: INPUT
+
+documents:
+  - inventories:
+      - inventoryRef: "ae-dita"
+        assetName: "ae-dita"
+        assetVersion: "0.29.0"
+        reportContextTitle: "ae-dita"
+        reportContext: "ae-dita"
+        referenceInventory: "reference-ae-dita"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

@@ -1,0 +1,23 @@
+inventories:
+  - "reference-ae-artifact-analysis":
+      file: "../../../ae-artifact-analysis-0.135.0/03-advised/ae-artifact-analysis-0.135.0-advised.xls"
+      type: INPUT
+  - "ae-artifact-analysis":
+      file: "../../../ae-artifact-analysis-0.135.0/03-advised/ae-artifact-analysis-0.135.0-advised.xls"
+      type: INPUT
+
+documents:
+  - inventories:
+      - inventoryRef: "ae-artifact-analysis"
+        assetName: "ae-artifact-analysis"
+        assetVersion: "0.135.0"
+        reportContextTitle: "ae-artifact-analysis"
+        reportContext: "ae-artifact-analysis"
+        referenceInventory: "reference-ae-artifact-analysis"
+
+    type: VULNERABILITY_REPORT
+    params:
+      "targetLicensesDir": "license"
+      "targetComponentDir": "component"
+      "generateOverviewTablesForAdvisories": "[ {\"name\":\"CERT_EU\"} ]"
+    language: "en"

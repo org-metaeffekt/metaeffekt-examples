@@ -38,6 +38,7 @@ runs:
       
         mv "$file" ${{ inputs.output-report }}
         echo "report file found"
+      working-directory: processors
 
     # Provides the generated report path as an output.
     - name: Set output

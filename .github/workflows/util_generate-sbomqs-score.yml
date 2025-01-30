@@ -23,13 +23,11 @@ jobs:
       # This takes all .json files in the repository and runs them through sbomqs, as for now we only have boms as .json.
       - name: Run sbomqs score
         run: |
-          INCLUDE_DIRS=("example-0.1.0" "keycloak-25.0.4" "keycloak-cli-25.0.2" "openssl-1.1.1i" "openssl-3.0.6")
+          INCLUDE_DIRS=("example-0.1.0" "keycloak-25.0.4" "keycloak-cli-25.0.2" "openssl-1.1.1i" "openssl-3.0.6" "ae-artifact-analysis-0.135.0" "ae-core-0.135.0" "ae-dita-0.29.0")
           for dir in "${INCLUDE_DIRS[@]}"; do
             find "./$dir" -type f -name "*.json" | while read json_file; do
               output_file="${json_file%.json}.sbomqs.txt"
               sbomqs score "$json_file" > "$output_file"
-              output_file="${json_file%.json}.compliance.txt"
-              sbomqs compliance --bsi --json "$json_file" > "$output_file"
             done
           done
 

@@ -1,7 +1,5 @@
 # Pipelines
 
-
-
 ## Actions
 
 The actions directory contains simple modular tasks, also known as custom composite actions. These are used to build bigger

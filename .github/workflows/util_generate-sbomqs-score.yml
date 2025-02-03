@@ -29,6 +29,7 @@ jobs:
               output_file="${json_file%.json}.sbomqs.txt"
               sbomqs score "$json_file" > "$output_file"
               output_file="${json_file%.json}.compliance.txt"
+              echo "$json_file"
               sbomqs compliance --bsi "$json_file" > "$output_file"
             done
           done

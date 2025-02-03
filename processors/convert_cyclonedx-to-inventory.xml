@@ -39,6 +39,7 @@
                             <input>${input}</input>
                             <output>${output}</output>
                             <includeMetadataComponent>${includeMetadataComponent}</includeMetadataComponent>
+                            <deriveAttributesFromPurl>true</deriveAttributesFromPurl>
                         </configuration>
                     </execution>
                 </executions>

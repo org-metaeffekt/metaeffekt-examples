@@ -37,6 +37,12 @@ To easily understand how the workflows are built exactly, we would recommend tak
 as it only calls a small number of composite actions. For a better understanding of multiple chained workflows, take a look at the 
 Single Full Cascade workflow.
 
+### Scripts
+
+We will continuously provide more scripts which are meant to be used in conjunction with this repository. The scripts provided
+are the easiest way to execute any of the steps shown in this repository. They provide a guided experience with only the necessary
+parameters to achieve results. 
+
 ## Evaluation Process
 
 The example structure follows a baseline pipeline:

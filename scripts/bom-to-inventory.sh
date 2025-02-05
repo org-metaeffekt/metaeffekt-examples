@@ -7,6 +7,17 @@ error="\033[0;31m[ERROR]\033[0m"
 success="\033[0;32m[SUCCESS]\033[0m"
 info="\033[0;34m[INFO]\033[0m"
 
+# ---------- Main maven execution -------------------------------
+
+run_maven() {
+  mvn -f "../processors/convert_cyclonedx-to-inventory.xml" clean install \
+    -Dinput="$INPUT" \
+    -Doutput="$OUTPUT" \
+    -DincludeMetadataComponent="true" \
+    -DderiveAttributesFromPurl="true"
+  rm -rf target
+}
+
 # ---------- Prerequisites check --------------------------------
 
 check_prerequisites() {
@@ -103,12 +114,7 @@ echo "\n#################################################################"
 echo "$info Executing Maven conversion..."
 echo "#################################################################\n"
 
-mvn -f "../processors/convert_cyclonedx-to-inventory.xml" clean install \
-  -Dinput="$INPUT" \
-  -Doutput="$OUTPUT" \
-  -DincludeMetadataComponent="true" \
-  -DderiveAttributesFromPurl="true"
-rm -rf target
+run_maven
 
 echo "\n#################################################################"
 echo "$success Converted bom to inventory located at:"

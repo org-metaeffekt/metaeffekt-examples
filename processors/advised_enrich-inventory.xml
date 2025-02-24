@@ -252,4 +252,42 @@
             </build>
         </profile>
     </profiles>
+    <build>
+        <plugins>
+            <plugin>  <!-- This plugin is only relevant to deliver better error messages to the caller of this pom. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>enforce-property</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireProperty>
+                                    <property>input.inventory</property>
+                                    <message>You must set the parameter input.inventory</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>input.database</property>
+                                    <message>You must set the parameter input.database</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>output.inventory</property>
+                                    <message>You must set the parameter output.inventory</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>inventory.directory</property>
+                                    <message>You must set the parameter inventory.directory</message>
+                                </requireProperty>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -22,7 +22,8 @@ runs:
       shell: bash
       run: |
         mvn -f convert_inventory-to-spdx.xml process-resources \
-        -Dinput=${{ inputs.inventory-input }} -Doutput=${{ inputs.spdx-output }}
+        -Dinput=${{ inputs.inventory-input }} \
+        -Doutput=${{ inputs.spdx-output }}
       working-directory: processors
 
     # Provides the converted inventory path as an output.

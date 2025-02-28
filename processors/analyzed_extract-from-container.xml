@@ -133,6 +133,44 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>  <!-- This plugin is only relevant to deliver better error messages to the caller of this pom. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>enforce-property</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireProperty>
+                                    <property>image.registry</property>
+                                    <message>You must set the parameter image.registry</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>image.repo</property>
+                                    <message>You must set the parameter image.repo</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>image.tag</property>
+                                    <message>You must set the parameter image.tag</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>targetInventoryDir</property>
+                                    <message>You must set the parameter targetInventoryDir</message>
+                                </requireProperty>
+                                <requireProperty>
+                                    <property>targetInventoryPath</property>
+                                    <message>You must set the parameter targetInventoryPath</message>
+                                </requireProperty>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 

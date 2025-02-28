@@ -114,6 +114,29 @@
                     <ditaCleanTemp>false</ditaCleanTemp>
                 </configuration>
             </plugin>
+
+            <plugin>  <!-- This plugin is only relevant to deliver better error messages to the caller of this pom. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>enforce-property</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireProperty>
+                                    <property>assetDescriptorFile</property>
+                                    <message>You must set the parameter assetDescriptorFile</message>
+                                </requireProperty>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

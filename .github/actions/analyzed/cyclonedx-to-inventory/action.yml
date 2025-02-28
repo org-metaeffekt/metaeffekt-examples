@@ -21,7 +21,9 @@ runs:
     - name: convert-cyclonedx-to-inventory
       shell: bash
       run: |
-        mvn -f convert_cyclonedx-to-inventory.xml process-resources -Dinput=${{ inputs.cyclonedx-input }} -Doutput=${{ inputs.inventory-output }}
+        mvn -f convert_cyclonedx-to-inventory.xml process-resources \
+        -Dinput=${{ inputs.cyclonedx-input }} \
+        -Doutput=${{ inputs.inventory-output }}
       working-directory: processors
 
     # Provides the converted inventory path as an output.

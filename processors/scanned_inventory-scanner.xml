@@ -15,10 +15,21 @@
     <properties>
         <inputInventory></inputInventory>
         <targetFile></targetFile>
+        <scancodePath></scancodePath>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.3</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <scancode.toolkit.path>${scancodePath}</scancode.toolkit.path>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>com.metaeffekt.artifact.analysis</groupId>
                 <artifactId>ae-artifact-analysis-plugin</artifactId>

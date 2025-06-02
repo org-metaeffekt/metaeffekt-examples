@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.metaeffekt.examples.processor</groupId>
+    <artifactId>processor-parent</artifactId>
+    <version>EXAMPLES-SNAPSHOT</version>
+    <relativePath>processor-parent.xml</relativePath>
+  </parent>
+
+  <artifactId>extract-from-pom</artifactId>
+
+  <build>
+      <plugins>
+        <plugin>
+          <groupId>org.metaeffekt.core</groupId>
+          <artifactId>ae-inventory-maven-plugin</artifactId>
+          <version>${ae.core.version}</version>
+
+          <executions>
+            <execution>
+              <id>extract-inventory-from-pom</id>
+              <phase>generate-resources</phase>
+              <goals>
+                <goal>extract-inventory-from-pom</goal>
+              </goals>
+            </execution>
+          </executions>
+
+          <configuration>
+            <sourcePomFile>/Users/jfuegen/IdeaProjects/metaeffekt-workbench/pom.xml</sourcePomFile>
+            <targetInventoryFile>../metaeffekt-workbench/01-analyzed/metaeffekt-workbench-2.xlsx</targetInventoryFile>
+          </configuration>
+        </plugin>
+      </plugins>
+  </build>
+</project>

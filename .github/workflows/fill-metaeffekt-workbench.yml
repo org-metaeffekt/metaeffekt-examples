@@ -6,7 +6,7 @@ on:
 jobs:
   fill-metaeffekt-workbench-example:
     name: Fill metaeffekt-workbench Example
-    runs-on: ubuntu-latest  # Fixed: should be dash, not colon
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -19,7 +19,7 @@ jobs:
           java-version: '8'
 
       - name: Resolve Inventory
-        uses: org-metaeffekt/metaeffekt-components/resolve@v0.1.0
+        uses: org-metaeffekt/metaeffekt-components/resolve@19d839e
         with:
           input-path: './examples/software/metaeffekt-workbench/01-analyzed/metaeffekt-workbench.xlsx'
           output-path: './examples/software/metaeffekt-workbench/02-resolved/metaeffekt-workbench-resolved.xlsx'

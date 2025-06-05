@@ -6,7 +6,7 @@ on:
 jobs:
   fill-metaeffekt-workbench-example:
     name: Fill metaeffekt-workbench Example
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest  # Fixed: should be dash, not colon
 
     steps:
       - name: Checkout repository
@@ -26,10 +26,7 @@ jobs:
           cache-dependencies: 'true'
 
       - name: Push Changes
-      - uses: actions/checkout@v4
-        with:
-          clean: false
-      - shell: bash
+        shell: bash
         run: |
           git config --local user.name "ae-actions-runner"
           git config --local user.email "ae-actions-runner@metaeffekt.com"

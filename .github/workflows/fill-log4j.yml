@@ -1,4 +1,4 @@
-name: FILL log4j-2.14.1
+name: FILL log4j
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   fill-log4j:
-    name: Fill log4j-2.14
+    name: Fill log4j
     runs-on: ubuntu-latest
 
     steps:

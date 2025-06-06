@@ -5,6 +5,7 @@ on:
     inputs:
       target-location:
         description: "Whether the produced directories and files should be pushed to this repository or uploaded as an artifact."
+        default: artifact
         options:
           - repository
           - artifact

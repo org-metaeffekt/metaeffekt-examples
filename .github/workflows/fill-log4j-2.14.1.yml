@@ -1,4 +1,4 @@
-name: FILL metaeffekt-workbench
+name: FILL log4j-2.14.1
 
 on:
   workflow_dispatch:
@@ -8,9 +8,10 @@ on:
         options:
           - repository
           - artifact
+
 jobs:
-  fill-metaeffekt-workbench:
-    name: Fill metaeffekt-workbench
+  fill-log4j:
+    name: Fill log4j-2.14
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +27,8 @@ jobs:
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@0.1.1
         with:
-          input-path: './examples/software/metaeffekt-workbench/01-analyzed/metaeffekt-workbench.xlsx'
-          output-path: './examples/software/metaeffekt-workbench/02-resolved/metaeffekt-workbench-resolved.xlsx'
+          input-path: './examples/software/log4j-2.14.1/01-analyzed/log4j-2.14.1.xlsx'
+          output-path: './examples/software/log4j-2.14.1/02-resolved/log4j-2.14.1-resolved.xlsx'
           cache-dependencies: 'true'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
@@ -37,8 +38,8 @@ jobs:
         if: inputs.target-location == 'artifact'
         uses: actions/upload-artifact@4
         with:
-          name: 'metaeffekt-workbench'
-          path: './examples/software/metaeffekt-workbench'
+          name: 'log4j-2.14.1'
+          path: './examples/software/log4j-2.14.1'
 
       - name: Push Changes
         if: inputs.target-location == 'repository'

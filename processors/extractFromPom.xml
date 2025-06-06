@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.metaeffekt.examples.processor</groupId>
+        <artifactId>processor-parent</artifactId>
+        <version>EXAMPLES-SNAPSHOT</version>
+        <relativePath>processor-parent.xml</relativePath>
+    </parent>
+
+    <artifactId>extract-inventory-from-pom</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.metaeffekt.core</groupId>
+                <artifactId>ae-inventory-maven-plugin</artifactId>
+                <version>HEAD-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>extract-pom</id>
+                        <goals>
+                            <goal>create-pom-report</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <sourceInventoryDir>/tmp/nada</sourceInventoryDir>
+                            <securityPolicyOverwriteJson>{}</securityPolicyOverwriteJson>
+                            <failOnError>true</failOnError>
+                            <failOnUnknown>false</failOnUnknown>
+                            <failOnDevelopment>false</failOnDevelopment>
+                            <failOnInternal>true</failOnInternal>
+                            <failOnUpgrade>false</failOnUpgrade>
+                            <targetInventoryPath>${targetInventoryPath}</targetInventoryPath>
+                            <targetInventoryDir>${targetInventoryDir}</targetInventoryDir>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
+        </dependency>
+    </dependencies>
+
+</project>

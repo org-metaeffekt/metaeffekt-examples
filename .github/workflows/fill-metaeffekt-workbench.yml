@@ -24,6 +24,8 @@ jobs:
           input-path: './examples/software/metaeffekt-workbench/01-analyzed/metaeffekt-workbench.xlsx'
           output-path: './examples/software/metaeffekt-workbench/02-resolved/metaeffekt-workbench-resolved.xlsx'
           cache-dependencies: 'true'
+          resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
+          resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
 
       - name: Push Changes
         shell: bash

@@ -19,7 +19,7 @@ jobs:
           java-version: '8'
 
       - name: Resolve Inventory
-        uses: org-metaeffekt/metaeffekt-components/resolve@main
+        uses: org-metaeffekt/metaeffekt-components/resolve@0.1.1
         with:
           input-path: './examples/software/metaeffekt-workbench/01-analyzed/metaeffekt-workbench.xlsx'
           output-path: './examples/software/metaeffekt-workbench/02-resolved/metaeffekt-workbench-resolved.xlsx'

@@ -1,4 +1,4 @@
-name: [Fill][Software] log4j
+name: FILL log4j
 
 on:
   workflow_dispatch:

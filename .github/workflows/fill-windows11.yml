@@ -1,9 +1,6 @@
-name: [Fill][Operating System] Windows 11
+name: FILL Windows 11
 
 on:
-  push:
-    branches:
-      - experimental
   workflow_dispatch:
     inputs:
       target-location:

@@ -1,6 +1,9 @@
 name: FILL log4j
 
 on:
+  push:
+    branches:
+      - experimental
   workflow_dispatch:
     inputs:
       target-location:

@@ -9,7 +9,6 @@ on:
         options:
           - repository
           - artifact
-
 jobs:
   fill-log4j:
     name: Fill log4j

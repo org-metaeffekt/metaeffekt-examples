@@ -1,4 +1,4 @@
-name: FILL metaeffekt-workbench
+name: [Fill][Software] metaeffekt-workbench
 
 on:
   workflow_dispatch:

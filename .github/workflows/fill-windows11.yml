@@ -1,6 +1,9 @@
-name: [Fill][Software] log4j
+name: [Fill][Operating System] Windows 11
 
 on:
+  push:
+    branches:
+      - experimental
   workflow_dispatch:
     inputs:
       target-location:
@@ -10,8 +13,8 @@ on:
           - repository
           - artifact
 jobs:
-  fill-log4j:
-    name: Fill log4j
+  fill-windows11:
+    name: Fill Windows 11
     runs-on: ubuntu-latest
 
     steps:
@@ -27,8 +30,8 @@ jobs:
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@0.1.1
         with:
-          input-path: './examples/software/log4j-2.14.1/01-analyzed/log4j-2.14.1.xlsx'
-          output-path: './examples/software/log4j-2.14.1/02-resolved/log4j-2.14.1-resolved.xlsx'
+          input-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows11-23H2.xls'
+          output-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows11-23H2-resolved.xls'
           cache-dependencies: 'true'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
@@ -38,8 +41,8 @@ jobs:
         if: inputs.target-location == 'artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: 'log4j-2.14.1'
-          path: './examples/software/log4j-2.14.1'
+          name: '/windows11-23H2'
+          path: './examples/software/windows-11-23H2'
 
       - name: Push Changes
         if: inputs.target-location == 'repository'

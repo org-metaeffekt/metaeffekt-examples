@@ -1,4 +1,4 @@
-name: FILL Windows 11
+name: FILL windows-11-23H2
 
 on:
   workflow_dispatch:
@@ -9,9 +9,13 @@ on:
         options:
           - repository
           - artifact
+
+env:
+  COMPONENT_VERSION: '0.1.1'
+
 jobs:
   fill-windows11:
-    name: Fill Windows 11
+    name: Fill windows-11-23H2
     runs-on: ubuntu-latest
 
     steps:
@@ -25,21 +29,73 @@ jobs:
           java-version: '8'
 
       - name: Resolve Inventory
-        uses: org-metaeffekt/metaeffekt-components/resolve@0.1.1
+        uses: org-metaeffekt/metaeffekt-components/resolve@${{ env.COMPONENT_VERSION }}
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows11-23H2.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows11-23H2-resolved.xls'
-          cache-dependencies: 'true'
+          input-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows-11-23H2.xls'
+          output-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
+          cache-dependencies: 'true'
+
+
+      - name: Restore cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/vulnerability-mirror/index/
+          key: vulnerability-index-${{ env.date }}
+
+      - name: Download and unpack index
+        if: steps.restore-cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          mkdir -p /tmp/vulnerability-mirror
+          curl -L -o /tmp/index.zip https://metaeffekt.com/security/mirror/index_redux.zip
+          unzip /tmp/index.zip -d /tmp/vulnerability-mirror
+
+      - name: Save cache
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/vulnerability-mirror/index/
+          key: vulnerability-index-${{ env.date }}
+
+
+      - name: Enrich Inventory
+        uses: org-metaeffekt/metaeffekt-components/enrich@${{ env.COMPONENT_VERSION }}
+        with:
+          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
+          output-path: './examples/operating-systems/windows-11-23H2/03-enriched/windows-11-23H2-enriched.xls'
+          intermediary-dir-path: '/tmp/enrich'
+          security-policy-file-path: './processors/resources/security-policy-dashboard.json'
+          vulnerability-mirror-path: '/tmp/vulnerability-mirror'
+          cache-dependencies: 'true'
+
+      - name: Install ScanCode
+        shell: bash
+        run: |
+          apt install python3.9 -y
+          
+          curl -sL -o scancode.tar.gz https://github.com/aboutcode-org/scancode-toolkit/releases/download/v32.2.1/scancode-toolkit-v32.2.1_py3.9-linux.tar.gz
+          mkdir /tmp/scancode
+          tar -xzf scancode.tar.gz -C /tmp/scancode/ --strip-components=1          
+
+      - name: Scan Inventory
+        uses: org-metaeffekt/metaeffekt-components/scan@${{ env.COMPONENT_VERSION }}
+        with:
+          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
+          output-path: './examples/operating-systems/windows-11-23H2/04-scanned/windows-11-23H2-scanned.xls'
+          intermediary-dir-path: '/tmp/scan'
+          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
+          scancode-binary-path: '/tmp/scancode/scancode'
+          cache-dependencies: 'true'
 
 
       - name: Upload Artifact
         if: inputs.target-location == 'artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: '/windows11-23H2'
-          path: './examples/software/windows-11-23H2'
+          name: 'windows-11-23H2'
+          path: './examples/operating-systems/windows-11-23H2'
 
       - name: Push Changes
         if: inputs.target-location == 'repository'

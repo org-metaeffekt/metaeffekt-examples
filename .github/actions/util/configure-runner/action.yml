@@ -1,16 +1,15 @@
 name: Configure container
 description: Configures the container and installs needed packages if not already installed.
 
-# Official GitHub ubuntu runner images are expected to have the packages already installed. When
-# testing with a 3rd party runner locally however, we might need to install them manually.
-
 inputs:
   maven:
     description: True if maven should be checked/installed.
+    default: 'true'
     required: false
 
   docker:
     description: True if docker should be checked/installed.
+    default: 'true'
     required: false
 
 runs:
@@ -21,14 +20,10 @@ runs:
       shell: bash
       run: |
         if ! command -v mvn &> /dev/null; then
-          echo "Maven not installed: Installing ..."
-          curl -sL https://downloads.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip -o maven.zip
-          sudo apt-get update
-          sudo apt-get -y install unzip
-          unzip -d /usr/share maven.zip
-          sudo rm maven.zip
-          ln -s /usr/share/apache-maven-3.9.8/bin/mvn /usr/bin/mvn
-          echo "M2_HOME=/usr/share/apache-maven-3.9.8" | tee -a /etc/environment
+          echo 'Maven not installed: Installing ...'
+          sudo apt-get install maven
+        else
+          echo 'Maven already installed: Skipping ...'
         fi
 
     - name: get-docker

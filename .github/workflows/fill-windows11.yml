@@ -17,7 +17,7 @@ env:
 
 jobs:
   fill-example:
-    name: Fill ${{ env.EXAMPLE_NAME }}
+    name: fill-example
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
           java-version: '8'
 
       - name: Resolve Inventory
-        uses: org-metaeffekt/metaeffekt-components/resolve@${{ env.COMPONENT_VERSION }}
+        uses: org-metaeffekt/metaeffekt-components/resolve@$COMPONENT_VERSION
         with:
           input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/01-analyzed/$EXAMPLE_NAME.xls'
           output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
@@ -63,7 +63,7 @@ jobs:
 
 
       - name: Enrich Inventory
-        uses: org-metaeffekt/metaeffekt-components/enrich@${{ env.COMPONENT_VERSION }}
+        uses: org-metaeffekt/metaeffekt-components/enrich@$COMPONENT_VERSION
         with:
           input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
           output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/03-enriched/$EXAMPLE_NAME-enriched.xls'
@@ -82,7 +82,7 @@ jobs:
           tar -xzf scancode.tar.gz -C /tmp/scancode/ --strip-components=1          
 
       - name: Scan Inventory
-        uses: org-metaeffekt/metaeffekt-components/scan@${{ env.COMPONENT_VERSION }}
+        uses: org-metaeffekt/metaeffekt-components/scan@$COMPONENT_VERSION
         with:
           input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
           output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/04-scanned/$EXAMPLE_NAME-scanned.xls'

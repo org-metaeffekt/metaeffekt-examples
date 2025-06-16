@@ -12,10 +12,12 @@ on:
 
 env:
   COMPONENT_VERSION: '0.1.1'
+  EXAMPLE_NAME: 'windows-11-23H2'
+  EXAMPLE_CATEGORY: 'operating-systems'
 
 jobs:
-  fill-windows11:
-    name: Fill windows-11-23H2
+  fill-example:
+    name: Fill ${{ env.EXAMPLE_NAME }}
     runs-on: ubuntu-latest
 
     steps:
@@ -31,8 +33,8 @@ jobs:
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@${{ env.COMPONENT_VERSION }}
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows-11-23H2.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
+          input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/01-analyzed/$EXAMPLE_NAME.xls'
+          output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
           cache-dependencies: 'true'
@@ -63,8 +65,8 @@ jobs:
       - name: Enrich Inventory
         uses: org-metaeffekt/metaeffekt-components/enrich@${{ env.COMPONENT_VERSION }}
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/03-enriched/windows-11-23H2-enriched.xls'
+          input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
+          output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/03-enriched/$EXAMPLE_NAME-enriched.xls'
           intermediary-dir-path: '/tmp/enrich'
           security-policy-file-path: './processors/resources/security-policy-dashboard.json'
           vulnerability-mirror-path: '/tmp/vulnerability-mirror'
@@ -82,8 +84,8 @@ jobs:
       - name: Scan Inventory
         uses: org-metaeffekt/metaeffekt-components/scan@${{ env.COMPONENT_VERSION }}
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/04-scanned/windows-11-23H2-scanned.xls'
+          input-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/02-resolved/$EXAMPLE_NAME-resolved.xls'
+          output-path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME/04-scanned/$EXAMPLE_NAME-scanned.xls'
           intermediary-dir-path: '/tmp/scan'
           scanner-config-file: '.processors/resources/scanned/scan-control.properties'
           scancode-binary-path: '/tmp/scancode/scancode'
@@ -94,8 +96,8 @@ jobs:
         if: inputs.target-location == 'artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: 'windows-11-23H2'
-          path: './examples/operating-systems/windows-11-23H2'
+          name: '$EXAMPLE_NAME'
+          path: './examples/$EXAMPLE_CATEGORY/$EXAMPLE_NAME'
 
       - name: Push Changes
         if: inputs.target-location == 'repository'

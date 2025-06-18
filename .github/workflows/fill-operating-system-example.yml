@@ -1,6 +1,9 @@
 name: Fill Operating System Example
 
 on:
+  push:
+    branches:
+      - experimental
   workflow_dispatch:
     inputs:
       example-name:

@@ -1,8 +1,5 @@
 # Processors
 
-Processors are defined as maven poms. These allow combinations of maven executions, script execution and active
-dependency resolution.
-
 ## Usage
 
 If maven is already installed on the system, the pom files can be executed as follows.

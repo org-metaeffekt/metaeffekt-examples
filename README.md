@@ -12,32 +12,17 @@ This repository is split into three major sections.
 
 ### Example Assets
 
-Each example asset is contained in its own top level directory consisting of subdirectories which correlate to the basic
-pipeline steps explained below. All documents and files produced for this example by their respective stage can be found here.
-More information on what documents should be contained in each stage and what anomalies are to be expected can be found in
-the example-specific subdirectories.
+Each example asset is contained in the examples directory of this repository and split into different categories such as containers, software etc.
+Every single asset is made up of five sections which are further explained below.
 
-### Maven processors
+### Actions Resources
 
-The processor directory consist of the maven pom.xml files necessary to execute the different steps making up the basic pipeline.
-While these files can be executed manually via maven, they are mostly used in conjunction with our GitHub actions workflow described
-below. 
-
-While most maven executions can be executed locally without additional resources, some require resources such as properties
-files, vulnerability and license databases and more. Some of these resources can be found in the processors/resources directory
+While most utilized actions can be executed locally without additional resources, some require resources such as properties
+files, vulnerability and license databases and more. These resources can be found in the resources directory
 while others are managed on an "as-needed" basis by our GitHub actions.
 
-### GitHub actions
-
-GitHub actions serve as a way to showcase how the entirety of our pipeline is built and connected, as well as which configurations
-are available. Larger and more complex workflows are defined by either connecting multiple smaller workflows in so-called "caller"
-workflows or made up of many composite actions, defined in the .github/actions directory.
-
-To easily understand how the workflows are built exactly, we would recommend taking a look at the inventory-to-cyclonedx workflow,
-as it only calls a small number of composite actions. For a better understanding of multiple chained workflows, take a look at the 
-Single Full Cascade workflow.
-
 ### Scripts
+**This Section is currently under development.**
 
 We will continuously provide more scripts which are meant to be used in conjunction with this repository. The scripts provided
 are the easiest way to execute any of the steps shown in this repository. They provide a guided experience with only the necessary

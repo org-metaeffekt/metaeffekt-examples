@@ -1,16 +1,16 @@
 name: Configure container
 description: Configures the container and installs needed packages if not already installed.
 
-
 runs:
   using: composite
   steps:
     - name: get-maven
       shell: bash
       run: |
+        sudo apt update
         if ! command -v mvn &> /dev/null; then
           echo 'Maven not installed: Installing ...'
-          sudo apt-get install maven
+          sudo apt install -y maven
         else
           echo 'Maven already installed: Skipping ...'
         fi
@@ -20,14 +20,7 @@ runs:
       run: |
         if ! command -v docker &> /dev/null; then
           echo "Docker not installed: Installing ..."
-          sudo apt-get update
-          sudo apt-get install -y docker
+          sudo apt install -y docker
           sudo systemctl enable docker
           sudo systemctl start docker
         fi
-
-    - name: Setup Java
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'zulu'
-        java-version: '8'

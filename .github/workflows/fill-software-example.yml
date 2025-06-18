@@ -1,4 +1,4 @@
-name: Fill Software Exaxmple ${{ inputs.example-name }}
+name: Fill Software Example
 
 on:
   workflow_dispatch:

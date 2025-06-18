@@ -1,4 +1,4 @@
-name: Fill Container Exaxmple ${{ inputs.example-name }}
+name: Fill Container Example
 
 on:
   workflow_dispatch:

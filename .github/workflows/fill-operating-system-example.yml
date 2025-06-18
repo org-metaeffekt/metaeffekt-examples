@@ -1,4 +1,4 @@
-name: Fill OS Exaxmple ${{ inputs.example-name }}
+name: Fill Operating System Example
 
 on:
   workflow_dispatch:

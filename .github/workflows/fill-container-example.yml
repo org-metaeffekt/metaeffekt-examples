@@ -37,8 +37,8 @@ jobs:
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@0.1.2
         with:
-          input-path: './examples/containers/${{ inputs.example-name }}/01-analyzed/${{ inputs.example-name }}-analyzed.xls'
-          output-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
+          input-path: './examples/containers/${{ inputs.example-name }}/01-analyzed/${{ inputs.example-name }}-analyzed.xlsx'
+          output-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xlsx'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
           cache-dependencies: 'true'
@@ -67,8 +67,8 @@ jobs:
       - name: Enrich Inventory
         uses: org-metaeffekt/metaeffekt-components/enrich@0.1.2
         with:
-          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
-          output-path: './examples/containers/${{ inputs.example-name }}/03-enriched/${{ inputs.example-name }}-enriched.xls'
+          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xlsx'
+          output-path: './examples/containers/${{ inputs.example-name }}/03-enriched/${{ inputs.example-name }}-enriched.xlsx'
           intermediary-dir-path: '/tmp/enrich'
           security-policy-file-path: './processors/resources/security-policy-dashboard.json'
           vulnerability-mirror-path: '/tmp/vulnerability-mirror'
@@ -86,8 +86,8 @@ jobs:
       #      - name: Scan Inventory
       #        uses: org-metaeffekt/metaeffekt-components/scan@0.1.2
       #        with:
-      #          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
-      #          output-path: './examples/containers/${{ inputs.example-name }}/04-scanned/${{ inputs.example-name }}-scanned.xls'
+      #          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xlsx'
+      #          output-path: './examples/containers/${{ inputs.example-name }}/04-scanned/${{ inputs.example-name }}-scanned.xlsx'
       #          intermediary-dir-path: '/tmp/scan'
       #          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
       #          scancode-binary-path: '/tmp/scancode/scancode'

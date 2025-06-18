@@ -1,9 +1,6 @@
 name: Fill Software Example
 
 on:
-  push:
-    branches:
-      - experimental
   workflow_dispatch:
     inputs:
       example-name:

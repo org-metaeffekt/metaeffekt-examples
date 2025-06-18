@@ -1,17 +1,26 @@
-name: FILL windows-11-23H2
+name: Fill Container Exaxmple ${{ inputs.example-name }}
 
 on:
   workflow_dispatch:
     inputs:
+      example-name:
+        type: choice
+        options:
+          - 'alpine-3.20.3'
+          - 'apache-httpd-2.4.59'
+          - 'debian-11.8'
+          - 'fedora-41'
+          - 'keycloak-25.0.4'
+          - 'nginx-1.26'
+        description: "The example for which to trigger this workflow."
+        required: true
+        default: 'alpine-3.20.3'
       target-location:
         description: "Whether the produced directories and files should be pushed to this repository or uploaded as an artifact."
         default: artifact
         options:
           - repository
           - artifact
-
-env:
-  EXAMPLE_NAME: 'windows-11-23H2'
 
 jobs:
   fill-example:
@@ -25,21 +34,14 @@ jobs:
       - name: Configure Runner
         uses: ./.github/actions/util/configure-runner
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '8'
-
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@0.1.2
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/01-analyzed/windows-11-23H2.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
+          input-path: './examples/containers/${{ inputs.example-name }}/01-analyzed/${{ inputs.example-name }}.xls'
+          output-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'
           cache-dependencies: 'true'
-
 
       - name: Restore cache
         id: restore-cache
@@ -62,12 +64,11 @@ jobs:
           path: /tmp/vulnerability-mirror/index/
           key: vulnerability-index-${{ env.date }}
 
-
       - name: Enrich Inventory
         uses: org-metaeffekt/metaeffekt-components/enrich@0.1.2
         with:
-          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/03-enriched/windows-11-23H2-enriched.xls'
+          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
+          output-path: './examples/containers/${{ inputs.example-name }}/03-enriched/${{ inputs.example-name }}-enriched.xls'
           intermediary-dir-path: '/tmp/enrich'
           security-policy-file-path: './processors/resources/security-policy-dashboard.json'
           vulnerability-mirror-path: '/tmp/vulnerability-mirror'
@@ -82,23 +83,22 @@ jobs:
           mkdir /tmp/scancode
           tar -xzf scancode.tar.gz -C /tmp/scancode/ --strip-components=1          
 
-      - name: Scan Inventory
-        uses: org-metaeffekt/metaeffekt-components/scan@0.1.2
-        with:
-          input-path: './examples/operating-systems/windows-11-23H2/02-resolved/windows-11-23H2-resolved.xls'
-          output-path: './examples/operating-systems/windows-11-23H2/04-scanned/windows-11-23H2-scanned.xls'
-          intermediary-dir-path: '/tmp/scan'
-          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
-          scancode-binary-path: '/tmp/scancode/scancode'
-          cache-dependencies: 'true'
-
+      #      - name: Scan Inventory
+      #        uses: org-metaeffekt/metaeffekt-components/scan@0.1.2
+      #        with:
+      #          input-path: './examples/containers/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
+      #          output-path: './examples/containers/${{ inputs.example-name }}/04-scanned/${{ inputs.example-name }}-scanned.xls'
+      #          intermediary-dir-path: '/tmp/scan'
+      #          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
+      #          scancode-binary-path: '/tmp/scancode/scancode'
+      #          cache-dependencies: 'true'
 
       - name: Upload Artifact
         if: inputs.target-location == 'artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: 'windows-11-23H2'
-          path: './examples/operating-systems/windows-11-23H2'
+          name: '${{ inputs.example-name }}'
+          path: './examples/containers/${{ inputs.example-name }}'
 
       - name: Push Changes
         if: inputs.target-location == 'repository'

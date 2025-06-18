@@ -1,22 +1,11 @@
 name: Configure container
 description: Configures the container and installs needed packages if not already installed.
 
-inputs:
-  maven:
-    description: True if maven should be checked/installed.
-    default: 'true'
-    required: false
-
-  docker:
-    description: True if docker should be checked/installed.
-    default: 'true'
-    required: false
 
 runs:
   using: composite
   steps:
     - name: get-maven
-      if: ${{ inputs.maven == true}}
       shell: bash
       run: |
         if ! command -v mvn &> /dev/null; then
@@ -27,7 +16,6 @@ runs:
         fi
 
     - name: get-docker
-      if: ${{ inputs.docker == true}}
       shell: bash
       run: |
         if ! command -v docker &> /dev/null; then
@@ -37,3 +25,9 @@ runs:
           sudo systemctl enable docker
           sudo systemctl start docker
         fi
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '8'

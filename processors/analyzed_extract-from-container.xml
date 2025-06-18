@@ -11,33 +11,73 @@
         <relativePath>processor-parent.xml</relativePath>
     </parent>
 
-    <artifactId>analyze_extract-from-container</artifactId>
+    <artifactId>extract-inventory-from-container</artifactId>
+    <packaging>pom</packaging>
 
     <properties>
-        <!-- use there properties to explicitly define image repo and tag to use -->
-        <image.registry></image.registry>
-        <image.repo></image.repo>
-        <image.tag></image.tag>
-
-        <image.qualifier>${image.repo}-${image.tag}</image.qualifier>
-        <image.id>${image.registry}/${image.repo}:${image.tag}</image.id>
-
-        <ae.extractor.resources.dir>$/tmp/analyzed/extractor/resources</ae.extractor.resources.dir>
-        <ae.extractor.scan.dir>/tmp/analyzed/extractor/extractor/scan</ae.extractor.scan.dir>
-
-        <targetInventoryDir></targetInventoryDir>
-        <targetInventoryPath></targetInventoryPath>
-
+        <output.inventory>/home/jonas/IdeaProjects/metaeffekt-github-examples/examples/containers/nginx-1.26/01-analyzed/nginx-1.26-analyzed.xlsx</output.inventory>
+        <intermediates.dir>temp</intermediates.dir>
+        <image.id>nginx:1.26</image.id>
     </properties>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>run-image-inspect</id>
+                        <id>unpack-container-scripts</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <outputDirectory>${intermediates.dir}</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.metaeffekt.core</groupId>
+                                    <artifactId>ae-system-analysis-scripts</artifactId>
+                                    <version>${ae.core.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                            <includes>**/container-extractors/*.sh</includes>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>container-extractors-chmod</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <chmod perm="+x">
+                                    <fileSet dir="${intermediates.dir}/ae-system-analysis-scripts-assembled/container-extractors" includes="**/*.sh"/>
+                                </chmod>
+                                <mkdir dir="${intermediates.dir}/analysis"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <executions>
+                    <execution>
+                        <id>run-inventory-extractor</id>
                         <goals>
                             <goal>exec</goal>
                         </goals>
@@ -45,14 +85,22 @@
                         <configuration>
                             <executable>docker</executable>
                             <arguments>
-                                <argument>inspect</argument>
+                                <argument>run</argument>
+                                <argument>--rm</argument>
+                                <argument>-i</argument>
+                                <argument>-v</argument>
+                                <argument>${project.basedir}/${intermediates.dir}/ae-system-analysis-scripts-assembled/container-extractors/:/container-extractors:Z</argument>
+                                <argument>-v</argument>
+                                <argument>${project.basedir}/${intermediates.dir}/analysis/:/analysis:Z</argument>
+                                <argument>--entrypoint</argument>
+                                <argument>/container-extractors/extract.sh</argument>
                                 <argument>${image.id}</argument>
                             </arguments>
-                            <outputFile>${ae.extractor.resources.dir}/${image.qualifier}.json</outputFile>
+                            <outputFile>${intermediates.dir}/analysis/docker.extract.out.txt</outputFile>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>run-image-save</id>
+                        <id>run-file-extractor</id>
                         <goals>
                             <goal>exec</goal>
                         </goals>
@@ -60,11 +108,18 @@
                         <configuration>
                             <executable>docker</executable>
                             <arguments>
-                                <argument>save</argument>
+                                <argument>run</argument>
+                                <argument>--rm</argument>
+                                <argument>-i</argument>
+                                <argument>-v</argument>
+                                <argument>${project.basedir}/${intermediates.dir}/ae-system-analysis-scripts-assembled/container-extractors/:/container-extractors:Z</argument>
+                                <argument>-v</argument>
+                                <argument>${project.basedir}/${intermediates.dir}/analysis/:/analysis:Z</argument>
+                                <argument>--entrypoint</argument>
+                                <argument>/container-extractors/extract-filtered-files.sh</argument>
                                 <argument>${image.id}</argument>
-                                <argument>-o</argument>
-                                <argument>${ae.extractor.resources.dir}/${image.qualifier}.tar</argument>
                             </arguments>
+                            <outputFile>${intermediates.dir}/analysis/docker.extract-files.out.txt</outputFile>
                         </configuration>
                     </execution>
                 </executions>
@@ -76,102 +131,17 @@
                 <version>${ae.core.version}</version>
                 <executions>
                     <execution>
-                        <id>image-scan</id>
                         <goals>
-                            <goal>create-directory-report</goal>
+                            <goal>extract-container-inventory</goal>
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <inputDirectory>${ae.extractor.resources.dir}</inputDirectory>
-                            <scanDirectory>${ae.extractor.scan.dir}/extracted-scan</scanDirectory>
-
-                            <scanIncludes>**/*</scanIncludes>
-
-                            <!-- general exclude for containers; review constantly; minimize -->
-                            <scanExcludes>
-                                <exclude>**/var/log/**/*</exclude>
-
-                                <exclude>**/sys/**/*</exclude>
-                                <exclude>**/proc/**/*</exclude>
-
-                                <exclude>**/dev/*</exclude>
-
-                                <exclude>**/run/utmp</exclude>
-                                <exclude>**/var/lib/alternatives/*</exclude>
-
-                                <exclude>**/etc/**/*.bak</exclude>
-                                <exclude>**/etc/**/*.repo</exclude>
-
-                                <exclude>**/usr/share/terminfo/**/*</exclude>
-                                <exclude>**/var/lib/dnf/history.sqlite-shm/**/*</exclude>
-                            </scanExcludes>
-
-                            <includeEmbedded>true</includeEmbedded>
-                            <enableDetectComponentPatterns>true</enableDetectComponentPatterns>
-                            <enableImplicitUnpack>true</enableImplicitUnpack>
-
-                            <sourceInventoryDir>resources/</sourceInventoryDir>
-                            <sourceInventoryIncludes>artifact-reference-inventory.xls</sourceInventoryIncludes>
-
-                            <targetInventoryDir>${targetInventoryDir}</targetInventoryDir>
-                            <targetInventoryPath>${targetInventoryPath}</targetInventoryPath>
-
-                            <!-- configure validation during extraction -->
-                            <failOnError>true</failOnError>
-                            <failOnBanned>false</failOnBanned>
-                            <failOnInternal>false</failOnInternal>
-                            <failOnUnknownVersion>false</failOnUnknownVersion>
-                            <failOnUnknown>false</failOnUnknown>
-                            <failOnUpgrade>false</failOnUpgrade>
-                            <failOnDowngrade>false</failOnDowngrade>
-                            <failOnDevelopment>false</failOnDevelopment>
-                            <failOnMissingLicense>false</failOnMissingLicense>
-                            <failOnMissingLicenseFile>false</failOnMissingLicenseFile>
-                            <failOnMissingNotice>false</failOnMissingNotice>
-
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>  <!-- This plugin is only relevant to deliver better error messages to the caller of this pom. -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.5.0</version>
-                <executions>
-                    <execution>
-                        <id>enforce-property</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireProperty>
-                                    <property>image.registry</property>
-                                    <message>You must set the parameter image.registry</message>
-                                </requireProperty>
-                                <requireProperty>
-                                    <property>image.repo</property>
-                                    <message>You must set the parameter image.repo</message>
-                                </requireProperty>
-                                <requireProperty>
-                                    <property>image.tag</property>
-                                    <message>You must set the parameter image.tag</message>
-                                </requireProperty>
-                                <requireProperty>
-                                    <property>targetInventoryDir</property>
-                                    <message>You must set the parameter targetInventoryDir</message>
-                                </requireProperty>
-                                <requireProperty>
-                                    <property>targetInventoryPath</property>
-                                    <message>You must set the parameter targetInventoryPath</message>
-                                </requireProperty>
-                            </rules>
-                            <fail>true</fail>
+                            <analysisDir>${intermediates.dir}/analysis</analysisDir>
+                            <targetInventoryFile>${output.inventory}</targetInventoryFile>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>

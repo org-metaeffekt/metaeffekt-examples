@@ -32,7 +32,7 @@ jobs:
       - name: Resolve Inventory
         uses: org-metaeffekt/metaeffekt-components/resolve@0.1.2
         with:
-          input-path: './examples/operating-systems/${{ inputs.example-name }}/01-analyzed/${{ inputs.example-name }}.xls'
+          input-path: './examples/operating-systems/${{ inputs.example-name }}/01-analyzed/${{ inputs.example-name }}-analyzed.xls'
           output-path: './examples/operating-systems/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xls'
           resolver-config: './processors/resources/resolved/artifact-resolver-config.yaml'
           resolver-proxy: './processors/resources/resolved/artifact-resolver-proxy.yaml'

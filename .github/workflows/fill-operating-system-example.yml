@@ -78,15 +78,15 @@ jobs:
           mkdir /tmp/scancode
           tar -xzf scancode.tar.gz -C /tmp/scancode/ --strip-components=1          
 
-      #      - name: Scan Inventory
-      #        uses: org-metaeffekt/metaeffekt-components/scan@0.1.2
-      #        with:
-      #          input-path: './examples/operating-systems/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xlsx'
-      #          output-path: './examples/operating-systems/${{ inputs.example-name }}/04-scanned/${{ inputs.example-name }}-scanned.xlsx'
-      #          intermediary-dir-path: '/tmp/scan'
-      #          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
-      #          scancode-binary-path: '/tmp/scancode/scancode'
-      #          cache-dependencies: 'true'
+      - name: Scan Inventory
+        uses: org-metaeffekt/metaeffekt-components/scan@0.1.2
+        with:
+          input-path: './examples/operating-systems/${{ inputs.example-name }}/02-resolved/${{ inputs.example-name }}-resolved.xlsx'
+          output-path: './examples/operating-systems/${{ inputs.example-name }}/04-scanned/${{ inputs.example-name }}-scanned.xlsx'
+          intermediary-dir-path: '/tmp/scan'
+          scanner-config-file: '.processors/resources/scanned/scan-control.properties'
+          scancode-binary-path: '/tmp/scancode/scancode'
+          cache-dependencies: 'true'
 
       - name: Upload Artifact
         if: inputs.target-location == 'artifact'
